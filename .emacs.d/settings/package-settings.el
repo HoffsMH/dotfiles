@@ -1,11 +1,22 @@
+;; This is only needed once, near the top of the file
+(eval-when-compile
+  ;; Following line is not needed if use-package.el is in ~/.emacs.d
+  (add-to-list 'load-path "<path where use-package is installed>")
+  (require 'use-package))
+
+(use-package flycheck)
+(use-package projectile)
+(use-package no-littering)
+
 ;; http://www.flycheck.org/manual/latest/index.html
 
 (require 'flycheck)
 (require 'projectile)
+(require 'no-littering)
 
 ;; now even #files# shouldn't litter current directory
 (setq auto-save-file-name-transforms
-      `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+     `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
 ;; adjust indents for web-mode to 2 spaces
 (defun my-web-mode-hook ()

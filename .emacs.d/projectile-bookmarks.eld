@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/work/wms-btt/" "~/work/wms-outbound/" "~/work/wms-mart/")
+("~/code/unpaid/dotfiles/" "~/.emacs.d/")

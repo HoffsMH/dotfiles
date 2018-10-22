@@ -1,13 +1,11 @@
 (defvar settings-dir
   (expand-file-name "settings" user-emacs-directory))
 
-(require 'no-littering)
-
+(load (expand-file-name "melpa.el" settings-dir))
+(load (expand-file-name "package-settings.el" settings-dir))
 (load (expand-file-name "default-variables.el" settings-dir))
 (load (expand-file-name "mac-functions.el" settings-dir))
 (load (expand-file-name "editor-functions.el" settings-dir))
-(load (expand-file-name "package-settings.el" settings-dir))
-(load (expand-file-name "melpa.el" settings-dir))
 (load (expand-file-name "basic.el" settings-dir))
 (load (expand-file-name "keybindings.el" settings-dir))
 
