@@ -1,0 +1,1 @@
+("~/.emacs.d/" "~/work/wms-btt/" "~/work/wms-outbound/" "~/work/wms-mart/")
