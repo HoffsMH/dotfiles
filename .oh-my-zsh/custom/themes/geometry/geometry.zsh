@@ -17,20 +17,21 @@ PROMPT_GEOMETRY_ENABLE_PLUGINS=${PROMPT_GEOMETRY_ENABLE_PLUGINS:-true}
 PROMPT_GEOMETRY_PRIMARY_SUFFIX=${PROMPT_GEOMETRY_PRIMARY_SUFFIX:-" "}
 
 prompt_geometry_render() {
-  PROMPT="$(geometry_plugin_render primary)$PROMPT_GEOMETRY_PRIMARY_SUFFIX"
+  PROMPT="$(geometry_plugin_render primary)$(geometry_plugin_render secondary)
+🌸  "
 
-  PROMPT2=" $GEOMETRY_SYMBOL_RPROMPT "
+  # PROMPT2=" $GEOMETRY_SYMBOL_RPROMPT taco"
 
-  if $PROMPT_GEOMETRY_SHOW_RPROMPT; then
-    if $PROMPT_GEOMETRY_RPROMPT_ASYNC; then
-        # On render we reset rprompt until async process
-        # comes with newer git info
-        RPROMPT=""
-    else
-        setopt localoptions no_prompt_subst
-        RPROMPT="$(geometry_plugin_render secondary)"
-    fi
-  fi
+  # if $PROMPT_GEOMETRY_SHOW_RPROMPT; then
+  #   if $PROMPT_GEOMETRY_RPROMPT_ASYNC; then
+  #       # On render we reset rprompt until async process
+  #       # comes with newer git info
+  #       RPROMPT=""
+  #   else
+  #       setopt localoptions no_prompt_subst
+  #       RPROMPT="$(geometry_plugin_render secondary)"
+  #   fi
+  # fi
 }
 
 prompt_geometry_setup() {
