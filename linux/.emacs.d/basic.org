@@ -1,0 +1,37 @@
+  #+BEGIN_SRC emacs-lisp
+  (org-babel-load-file (expand-file-name "basic.org" "~/personal/dotfiles/common/.emacs.d/"))
+  #+END_SRC
+
+* Basic
+
+*** Font
+
+    #+BEGIN_SRC emacs-lisp
+    (set-frame-font "Fira Code:antialias-none")
+    (set-face-attribute 'default nil :weight 'Light :height 120)
+    #+END_SRC
+
+  * the ability to comment stuff easily
+
+  #+BEGIN_SRC emacs-lisp
+  (eval-after-load "evil-maps"
+  (dolist (map '(evil-motion-state-map
+  evil-insert-state-map
+  evil-normal-state-map
+  evil-emacs-state-map))
+  (define-key (eval map) (kbd "C-e") nil)
+  (define-key (eval map) (kbd "C-/") nil)
+  (define-key (eval map) (kbd "C-n") nil)
+  (define-key (eval map) (kbd "C-p") nil)
+  (define-key (eval map) (kbd "C-z") nil)))
+
+  (global-set-key (kbd "C-/") nil)
+  (global-set-key (kbd "C-z") nil)
+  (define-key undo-tree-map (kbd "C-/") nil)
+  
+  (global-set-key (kbd "C-z") 'undo)
+  (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+
+  (global-set-key (kbd "C-S-f") 'counsel-ag)
+  (menu-bar-mode -1)
+  #+END_SRC

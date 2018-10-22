@@ -1,0 +1,16 @@
+.emacs.d/var/
+.emacs.d/elpa
+.emacs.d/*~
+.emacs.d/auto-save-list/
+.emacs.d/desktop/*
+.emacs.d/eshell/*
+.emacs.d/history
+.emacs.d/erc/*
+.emacs.d/image-dired/
+.emacs.d/url
+.emacs.d/var/auto-save
+.emacs.d/session.*
+.emacs.d/my-lisp/*.elc
+.emacs.d/settings/*.el
+.emacs.d/projectile-bookmarks.eld
+common/bin/ytgo

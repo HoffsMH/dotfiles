@@ -1,0 +1,6 @@
+[user]
+  name = HoffsMH
+  email = matthecker@pm.me
+[core]
+  editor = emacs
+  excludesfile = ~/.gitignore_global

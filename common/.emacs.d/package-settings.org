@@ -1,0 +1,132 @@
+* Packages
+** auto-compile
+    - https://github.com/emacscollective/auto-compile
+    - not sure if this is detecting when stuff changes or we are
+    indiscriminately re-compiling
+
+    #+BEGIN_SRC emacs-lisp
+       (use-package auto-compile
+         :config (auto-compile-on-load-mode))
+    #+END_SRC
+
+*** TODO should compare startup time with and without
+
+** Ivy
+  - completion front-end for fuzzy search
+  - comes with counsel and swiper
+  - [[https://github.com/abo-abo/swiper]]
+
+  #+BEGIN_SRC emacs-lisp
+    (setq ivy-use-virtual-buffers t)
+    (setq ivy-count-format "%d/%d ")
+
+    (global-set-key (kbd "C-s-y") 'counsel-yank-pop)
+    (global-set-key (kbd "C-s-<268632089>") 'counsel-yank-pop)
+
+    (global-set-key (kbd "C-s-<268632070>") 'counsel-ag)
+
+    (setq ivy-re-builders-alist
+    '((counsel-ag . ivy--regex-plus)
+    (counsel-projectile-find-file . ivy--regex-fuzzy)
+    (t . ivy--regex-fuzzy)))
+  #+END_SRC
+
+** projectile
+  - fuzzy find backend for project search
+  - [[https://github.com/bbatsov/projectile]]
+    - probably too many features for me should maybe revert to counsel-git
+      in the future when I figure out the prefix command thing
+
+  #+BEGIN_SRC emacs-lisp
+    (setq frame-title-format '((:eval (projectile-project-name))))
+  #+END_SRC
+
+  #+BEGIN_SRC emacs-lisp
+    (setq projectile-completion-system 'ivy)
+  #+END_SRC
+
+** web-mode
+   - used for almost everything
+   - [[http://web-mode.org/]]
+   - set up making indent everything 2 spaces no matter what
+   - I prefer to have
+
+   #+BEGIN_SRC emacs-lisp
+     (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+     (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+     (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+     (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
+     (add-to-list 'auto-mode-alist '("\\.eex$" . web-mode))
+   #+END_SRC
+
+** exec-path-from-shell
+   - first use case is that I want to use my app specific version of
+     eslint but in general I would like my shell path to match my emacs exec path
+     https://github.com/purcell/exec-path-from-shell
+
+   #+BEGIN_SRC emacs-lisp
+     (setq exec-path-from-shell-debug nil)
+     (setq exec-path-from-shell-shell-name "/bin/zsh")
+
+     ;; https://github.com/purcell/exec-path-from-shell
+     ;; only need exec-path-from-shell on OSX
+     ;; this hopefully sets up path and other vars better
+
+     (when (memq window-system '(mac ns))
+       (exec-path-from-shell-initialize))
+   #+END_SRC
+
+** smartparens
+   #+BEGIN_SRC emacs-lisp
+     (smartparens-global-mode 1)
+   #+END_SRC
+
+** move-text
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "C-s-<268632078>") 'move-text-down)
+     (global-set-key (kbd "C-s-n") 'move-text-down)
+
+     (global-set-key (kbd "C-s-<268632080>") 'move-text-up)
+     (global-set-key (kbd "C-s-p") 'move-text-up)
+   #+END_SRC
+
+** diff-hl
+   - https://github.com/dgutov/diff-hl
+   git diff shows up in margin after saving
+
+   #+BEGIN_SRC emacs-lisp
+     (global-diff-hl-mode)
+     (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+     (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+   #+END_SRC
+
+
+** language specific
+*** Org
+    - twitter bootstrapize export
+    - requires htmlize
+    - babel
+    - elixir
+
+    #+BEGIN_SRC emacs-lisp
+      (org-babel-do-load-languages
+       'org-babel-load-languages
+       '((emacs-lisp . t)
+      (elixir . t))
+      ;; ...
+      )
+   #+END_SRC
+
+** magit
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "C-x g") 'magit-status)
+     (global-set-key (kbd "C-x C-g p") 'magit-push-current)
+     (global-set-key (kbd "C-x C-g o") 'magit-pull-popup)
+   #+END_SRC
+** multi-cursor
+
+   #+BEGIN_SRC emacs-lisp
+     (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+   #+END_SRC
+** org-mode
+* Themes
