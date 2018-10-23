@@ -97,7 +97,7 @@ prompt_geometry_git_remote_check() {
     elif [[ $common_base == $local_commit ]]; then
       echo $GEOMETRY_GIT_UNPULLED
     else
-      echo "$GEOMETRY_GIT_UNPUSHED$GEOMETRY_GIT_UNPULLED"
+      echo "$GEOMETRY_GIT_UNPUSHED $GEOMETRY_GIT_UNPULLED"
     fi
   fi
 }
@@ -172,21 +172,21 @@ geometry_prompt_git_render() {
   if $PROMPT_GEOMETRY_GIT_TIME; then
     local git_time_since_commit=$(prompt_geometry_git_time_since_commit)
     if [[ -n $git_time_since_commit ]]; then
-        time="$git_time_since_commit$GEOMETRY_GIT_SEPARATOR"
+        time=" $git_time_since_commit $GEOMETRY_GIT_SEPARATOR"
     fi
   fi
 
   if $PROMPT_GEOMETRY_GIT_SHOW_STASHES && git rev-parse --quiet --verify refs/stash >/dev/null; then
-      stashes="$GEOMETRY_GIT_STASHES$GEOMETRY_GIT_SEPARATOR";
+      stashes=" $GEOMETRY_GIT_STASHES $GEOMETRY_GIT_SEPARATOR";
   fi
 
   local render="$(prompt_geometry_git_symbol)"
 
   if [[ -n $render ]]; then
-    render+=""
+    render+=" "
   fi
 
-  render+="$(prompt_geometry_git_branch)${conflicts}${GEOMETRY_GIT_SEPARATOR}${time}${stashes}$(prompt_geometry_git_status)"
+  render+="$(prompt_geometry_git_branch) ${conflicts}${GEOMETRY_GIT_SEPARATOR}${time}${stashes} $(prompt_geometry_git_status)"
 
   echo -n $render
 }

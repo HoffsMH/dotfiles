@@ -72,7 +72,7 @@ geometry_prompt_path_render() {
     dir=$(basename $PWD)
   fi
 
-  # local prompt_prefix="$GEOMETRY_PROMPT_PREFIX$GEOMETRY_PROMPT_PREFIX_SPACER"
+  local prompt_prefix="$GEOMETRY_PROMPT_PREFIX$GEOMETRY_PROMPT_PREFIX_SPACER"
 
   # Getting the correct symbol width is not as simple as getting the variable length
   # There are zero width characters that should not be accounted for.

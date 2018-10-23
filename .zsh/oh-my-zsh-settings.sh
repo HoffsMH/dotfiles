@@ -7,7 +7,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="avit"
 export PROMPT_GEOMETRY_SHOW_RPROMPT=false
-GEOMETRY_PROMPT_PLUGINS=(exec_time git hg)
+GEOMETRY_PROMPT_PLUGINS=(git)
 ZSH_THEME="geometry/geometry"
 # ZSH_THEME="lambda-pure"
 #ZSH_THEME="bullet-train"

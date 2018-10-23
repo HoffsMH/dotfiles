@@ -14,24 +14,25 @@ source "$GEOMETRY_ROOT/lib/title.zsh"
 PROMPT_GEOMETRY_SHOW_RPROMPT=${PROMPT_GEOMETRY_SHOW_RPROMPT:-true}
 PROMPT_GEOMETRY_RPROMPT_ASYNC=${PROMPT_GEOMETRY_RPROMPT_ASYNC:-true}
 PROMPT_GEOMETRY_ENABLE_PLUGINS=${PROMPT_GEOMETRY_ENABLE_PLUGINS:-true}
-PROMPT_GEOMETRY_PRIMARY_SUFFIX=${PROMPT_GEOMETRY_PRIMARY_SUFFIX:-" "}
+PROMPT_GEOMETRY_PRIMARY_SUFFIX=${PROMPT_GEOMETRY_PRIMARY_SUFFIX:-"🌸  "}
+OKWAT=$'> '
+NL=$'\n'
 
 prompt_geometry_render() {
-  PROMPT="$(geometry_plugin_render primary)$(geometry_plugin_render secondary)
-🌸  "
+  PROMPT="$(geometry_plugin_render primary)$(geometry_plugin_render secondary)$NL $OKWAT"
 
-  # PROMPT2=" $GEOMETRY_SYMBOL_RPROMPT taco"
+  PROMPT2=" $GEOMETRY_SYMBOL_RPROMPT "
 
-  # if $PROMPT_GEOMETRY_SHOW_RPROMPT; then
-  #   if $PROMPT_GEOMETRY_RPROMPT_ASYNC; then
-  #       # On render we reset rprompt until async process
-  #       # comes with newer git info
-  #       RPROMPT=""
-  #   else
-  #       setopt localoptions no_prompt_subst
-  #       RPROMPT="$(geometry_plugin_render secondary)"
-  #   fi
-  # fi
+  if $PROMPT_GEOMETRY_SHOW_RPROMPT; then
+    if $PROMPT_GEOMETRY_RPROMPT_ASYNC; then
+        # On render we reset rprompt until async process
+        # comes with newer git info
+        RPROMPT=""
+    else
+        setopt localoptions no_prompt_subst
+        RPROMPT=""
+    fi
+  fi
 }
 
 prompt_geometry_setup() {
