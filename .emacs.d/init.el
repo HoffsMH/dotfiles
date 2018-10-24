@@ -1,9 +1,8 @@
-
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;; (package-initialize)
 
 (defvar settings-dir
   (expand-file-name "settings" user-emacs-directory))
@@ -48,4 +47,4 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(line-number-mode nil)
  '(package-selected-packages
-   '(git-link flycheck exec-path-from-shell web-mode js2-mode counsel ag "js-mode" "js" async with-editor treepy tablist s epl pkg-info popup dash magit-popup graphql ghub git-commit json-snatcher json-reformat json-mode helm-core flx docker-tramp eslint-fix expand-region swiper dockerfile-mode docker ivy projectile smex flx-ido magit better-defaults no-littering oceanic-theme elixir-mode)))
+   '(multiple-cursors git-link flycheck exec-path-from-shell web-mode js2-mode counsel ag "js-mode" "js" async with-editor treepy tablist s epl pkg-info popup dash magit-popup graphql ghub git-commit json-snatcher json-reformat json-mode helm-core flx docker-tramp eslint-fix expand-region swiper dockerfile-mode docker ivy projectile smex flx-ido magit better-defaults no-littering oceanic-theme elixir-mode)))

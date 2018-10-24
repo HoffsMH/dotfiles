@@ -21,10 +21,13 @@
 (global-set-key (kbd "C-x v") 'describe-variable)
 
 (define-key global-map (kbd "C-s-s") 'counsel-ag)
-
 (define-key global-map (kbd "C-s-<268632083>") 'counsel-ag)
 
 
 ;; set keys for Apple keyboard, for emacs in OS X
 (setq mac-command-modifier 'super) ; make cmd key do Meta
 ;; (setq mac-option-modifier 'super) ; make opt key do Super
+
+
+
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
