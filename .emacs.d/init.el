@@ -39,7 +39,7 @@
  '(js-chain-indent nil)
  '(js-indent-align-list-continuation nil)
  '(js-indent-first-init nil)
- '(js-indent-level 2)
+ '(js-indent-level 1)
  '(js-js-switch-tabs nil)
  '(js-square-indent-offset 0)
  '(js2-allow-member-expr-as-function-name nil)
@@ -47,4 +47,4 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(line-number-mode nil)
  '(package-selected-packages
-   '(multiple-cursors git-link flycheck exec-path-from-shell web-mode js2-mode counsel ag "js-mode" "js" async with-editor treepy tablist s epl pkg-info popup dash magit-popup graphql ghub git-commit json-snatcher json-reformat json-mode helm-core flx docker-tramp eslint-fix expand-region swiper dockerfile-mode docker ivy projectile smex flx-ido magit better-defaults no-littering oceanic-theme elixir-mode)))
+	 '(smartparens syntax-subword multiple-cursors git-link flycheck exec-path-from-shell web-mode counsel ag "js-mode" "js" async with-editor treepy tablist s epl pkg-info popup dash magit-popup graphql ghub git-commit json-snatcher json-reformat json-mode helm-core flx docker-tramp eslint-fix expand-region swiper dockerfile-mode docker ivy projectile smex flx-ido magit better-defaults no-littering oceanic-theme elixir-mode)))

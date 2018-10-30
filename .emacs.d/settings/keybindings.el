@@ -31,3 +31,8 @@
 
 
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+
+(global-set-key (kbd "C-f") 'syntax-subword-forward)
+(global-set-key (kbd "C-b") 'syntax-subword-backward)
+(global-set-key (kbd "s-]") 'my-indent-region)
+(global-set-key (kbd "s-[") 'unindent-region)

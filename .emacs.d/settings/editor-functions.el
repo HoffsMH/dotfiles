@@ -66,13 +66,13 @@
   ;; (setq-local c-basic-offset n)
 		;; web development
   ;; (setq-local coffee-tab-width n) ; coffeescript
-  (setq-local javascript-indent-level 1) ; javascript-mode
-  (setq-local js-indent-level 1) ; js-mode
+  (setq-local javascript-indent-level n) ; javascript-mode
+  (setq-local js-indent-level n) ; js-mode
 
   ;; (setq-local web-mode-markup-indent-offset n) ; web-mode, html tag in html file
   ;; (setq-local web-mode-css-indent-offset n) ; web-mode, css in html file
   ;; (setq-local web-mode-code-indent-offset n) ; web-mode, js code in html file
-   (setq-local css-indent-offset 1)) ; css-mode
+  (setq-local css-indent-offset n)) ; css-mode
 
 (defun two-space-indent ()
   (interactive)
@@ -82,4 +82,18 @@
   (setq indent-line-function 'insert-tab)
 
   ;; indent 2 spaces width
-  (my-setup-indent 1))
+  (my-setup-indent 2))
+
+(defun unindent-region (N)
+  (interactive "p")
+  (if (use-region-p)
+      (progn (indent-rigidly (region-beginning) (region-end) (* N -2))
+             (setq deactivate-mark nil))
+    (self-insert-command N)))
+
+(defun my-indent-region (N)
+  (interactive "p")
+  (if (use-region-p)
+      (progn (indent-rigidly (region-beginning) (region-end) (* N 2))
+             (setq deactivate-mark nil))
+    (self-insert-command N)))
