@@ -3,9 +3,11 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-	))
+				))
 
 (setq mc/cmds-to-run-once
       '(
-	indent-for-tab-command
-	))
+				indent-for-tab-command
+				projectile-find-file
+				syntax-subword-forward
+				))
