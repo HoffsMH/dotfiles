@@ -8,12 +8,13 @@
   whitespace-style       '(face lines-tail trailing empty))
 
 (setq default-tab-width 2)
+(set-frame-font "Fira Code-15:antialias-none")
+
 
 ;; formatting behavior
 (whitespace-mode 1)
 (hl-line-mode 1)
 (pending-delete-mode 1)
-(electric-indent-mode 1)
 (setq-default cursor-type 'box)
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
