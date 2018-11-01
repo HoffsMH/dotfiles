@@ -1,2 +1,12 @@
 .emacs.d/var/projectile/known-projects.el
 .emacs.d/elpa
+.emacs.d/*~
+.emacs.d/auto-save-list/
+.emacs.d/desktop/*
+.emacs.d/eshell/*
+.emacs.d/history
+.emacs.d/erc/*
+.emacs.d/image-dired/
+.emacs.d/url
+.emacs.dsession.*
+.emacs.d/my-lisp/*.elc
