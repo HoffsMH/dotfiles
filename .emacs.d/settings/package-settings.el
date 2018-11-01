@@ -4,17 +4,30 @@
    ;; Following line is not needed if use-package.el is in ~/.emacs.d
    (add-to-list 'load-path "<path where use-package is installed>")
    (require 'use-package))
+(setq use-package-always-ensure t)
 
- (use-package flycheck)
- (use-package projectile)
- (use-package no-littering)
- (use-package ivy)
+(use-package syntax-subword)
+(use-package smartparens)
+(use-package flx)
+(use-package elixir-mode)
+(use-package projectile)
+(use-package magit)
+(use-package multiple-cursors)
+(use-package swiper)
+(use-package exec-path-from-shell)
+(use-package oceanic-theme)
+(use-package flycheck)
+(use-package projectile)
+(use-package no-littering)
+(use-package ivy)
+(use-package expand-region)
+
 
 ;; http://www.flycheck.org/manual/latest/index.html
 
 ;; (require 'flycheck)
 ;;(require 'projectile)
-;;(require 'no-littering)
+;; (require 'no-littering)
 
 ;; now even #files# shouldn't litter current directory
 (setq auto-save-file-name-transforms

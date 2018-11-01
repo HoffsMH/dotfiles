@@ -47,7 +47,8 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(line-number-mode nil)
  '(package-selected-packages
-	 '(smartparens syntax-subword multiple-cursors git-link exec-path-from-shell web-mode counsel ag "js-mode" "js" async with-editor treepy tablist s epl pkg-info popup dash magit-popup graphql ghub git-commit json-snatcher json-reformat json-mode helm-core flx docker-tramp eslint-fix expand-region swiper dockerfile-mode docker ivy projectile smex flx-ido magit better-defaults no-littering oceanic-theme elixir-mode))
+   (quote
+    (smartparens syntax-subword multiple-cursors git-link exec-path-from-shell web-mode counsel ag "js-mode" "js" async with-editor treepy tablist s epl pkg-info popup dash magit-popup graphql ghub git-commit json-snatcher json-reformat json-mode helm-core flx docker-tramp eslint-fix expand-region swiper dockerfile-mode docker ivy projectile smex flx-ido magit better-defaults no-littering oceanic-theme elixir-mode)))
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-closing nil)
  '(web-mode-enable-auto-indentation nil)
