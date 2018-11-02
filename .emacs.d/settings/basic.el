@@ -10,6 +10,7 @@
 
 (setq default-tab-width 2)
 (set-frame-font "Fira Code-15:antialias-none")
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
 
 ;; formatting behavior
@@ -25,7 +26,7 @@
 
 
 ;; font
-(set-face-attribute 'default nil :weight 'extra-light :height 160)
+(set-face-attribute 'default nil :weight 'light :height 160)
 (setq backup-directory-alist `(("." . "~/.emacs-saves")))
 (load-theme 'oceanic t)
 
