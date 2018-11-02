@@ -22,7 +22,6 @@
 (use-package ivy)
 (use-package expand-region)
 
-
 ;; http://www.flycheck.org/manual/latest/index.html
 
 ;; (require 'flycheck)

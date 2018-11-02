@@ -2,5 +2,5 @@
 	name = HoffsMH
 	email = hecker.matthew@gmail.com
 [core]
-	editor = emacs
+	editor = subl -n -w
 	excludesfile = ~/.gitignore_global
