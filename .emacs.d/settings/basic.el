@@ -2,6 +2,7 @@
 (menu-bar-mode 0)
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
+(show-paren-mode 1)
 (setq inhibit-startup-screen t)
 (setq-default
   whitespace-line-column 80
