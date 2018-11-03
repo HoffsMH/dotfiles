@@ -32,41 +32,40 @@ pbcopyCurrentLine() {
 zle -N pbcopyCurrentLine pbcopyCurrentLine
 bindkey '^[copycurrentline' pbcopyCurrentLine
 
-mv() {
-  local last_arg last_char
-  last_arg="${@: -1}"
-  last_char=${last_arg: -1}
+# mv() {
+#   local last_arg last_char
+#   last_arg="${@: -1}"
+#   last_char=${last_arg: -1}
 
-  if [ "$#" -gt "2" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
-    mkdir -p "$last_arg"
-  elif [ -d "$1" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
-    mkdir -p "$last_arg"
-  elif [ -f "$1" ] && [ "$last_char" = "/" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
-    mkdir -p "$last_arg"
-  elif [ -f "$1" ] && [ "$last_char" != "/" ] && [ ! -d "$(dirname $last_arg)" ]; then # last argument COULD be intended as a filename
-    mkdir -p "$(dirname $last_arg)"
-  fi
+#   if [ "$#" -gt "2" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
+#     mkdir -p "$last_arg"
+#   elif [ -d "$1" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
+#     mkdir -p "$last_arg"
+#   elif [ -f "$1" ] && [ "$last_char" = "/" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
+#     mkdir -p "$last_arg"
+#   elif [ -f "$1" ] && [ "$last_char" != "/" ] && [ ! -d "$(dirname $last_arg)" ]; then # last argument COULD be intended as a filename
+#     mkdir -p "$(dirname $last_arg)"
+#   fi
 
-  /bin/mv -i $@
-}
+#   /bin/mv -i $@
+# }
 
-cp() {
-  local last_arg last_char
-  last_arg="${@: -1}"
-  last_char=${last_arg: -1}
+# cp() {
+#   local last_arg last_char
+#   last_arg="${@: -1}"
+#   last_char=${last_arg: -1}
 
-  if [ "$#" -gt "2" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
-    mkdir -p "$last_arg"
-  elif [ -d "$1" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
-    mkdir -p "$last_arg"
-  elif [ -f "$1" ] && [ "$last_char" = "/" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
-    mkdir -p "$last_arg"
-  elif [ -f "$1" ] && [ "$last_char" != "/" ] && [ ! -d "$(dirname $last_arg)" ]; then # last argument COULD be intended as a filename
-    mkdir -p "$(dirname $last_arg)"
-  fi
-
-  /bin/cp -R $@
-}
+#   if [ "$#" -gt "2" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
+#     mkdir -p "$last_arg"
+#   elif [ -d "$1" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
+#     mkdir -p "$last_arg"
+#   elif [ -f "$1" ] && [ "$last_char" = "/" ] && [ ! -d "$last_arg" ]; then # last argument MUST be intended as a directory
+#     mkdir -p "$last_arg"
+#   elif [ -f "$1" ] && [ "$last_char" != "/" ] && [ ! -d "$(dirname $last_arg)" ]; then # last argument COULD be intended as a filename
+#     mkdir -p "$(dirname $last_arg)"
+#   fi
+#   /bin/cp -R $@
+# }
 
 # # touch that builds path to the file if it doesnt exist
 t() {

@@ -8,5 +8,6 @@
 .emacs.d/erc/*
 .emacs.d/image-dired/
 .emacs.d/url
-.emacs.dsession.*
+.emacs.d/var/auto-save
+.emacs.d/session.*
 .emacs.d/my-lisp/*.elc
