@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="avit"
 export PROMPT_GEOMETRY_SHOW_RPROMPT=false
 
-# GEOMETRY_PROMPT_PLUGINS=(git)
+GEOMETRY_PROMPT_PLUGINS=(git)
 
 ZSH_THEME="geometry/geometry"
 
