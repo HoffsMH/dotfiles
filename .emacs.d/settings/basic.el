@@ -3,13 +3,13 @@
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 (show-paren-mode 1)
+(global-auto-revert-mode t)
 (setq inhibit-startup-screen t)
 (setq-default
   whitespace-line-column 80
   whitespace-style       '(face lines-tail trailing empty))
 
 (setq default-tab-width 2)
-(set-frame-font "Fira Code-15:antialias-none")
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
 
@@ -31,7 +31,10 @@
 
 
 ;; font
-(set-face-attribute 'default nil :weight 'light :height 160)
+(set-frame-font "Fira Code-15:antialias-none")
+(set-face-attribute 'default nil :weight 'ExtraLight :height 160)
+
+
 (setq backup-directory-alist `(("." . "~/.emacs-saves")))
 (load-theme 'oceanic t)
 
