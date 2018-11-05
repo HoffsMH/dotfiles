@@ -18,6 +18,10 @@
 ;;counsel-ag
 (global-set-key (kbd "C-s-s") 'counsel-ag)
 
+(global-unset-key (kbd "C-e"))
+(global-set-key (kbd "s-p") 'counsel-git)
+
+
 (global-set-key (kbd "C-x v") 'describe-variable)
 
 (define-key global-map (kbd "C-s-s") 'counsel-ag)

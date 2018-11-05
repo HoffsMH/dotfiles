@@ -14,14 +14,19 @@
 
 
 ;; formatting behavior
-(whitespace-mode 1)
+(whitespace-mode +1)
 (hl-line-mode 1)
 (pending-delete-mode 1)
 (setq-default cursor-type 'box)
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; this can over heat my laptop during editing auto reload
+;; js apps if enabled
 (auto-save-mode 0)
 (auto-save-visited-mode 0)
+
+;; I don't care Ill just use git and commit often :)
 (setq create-lockfiles nil)
 
 

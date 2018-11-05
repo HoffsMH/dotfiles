@@ -7,20 +7,21 @@
 (setq use-package-always-ensure t)
 
 (use-package syntax-subword)
+(use-package counsel)
+(use-package projectile)
 (use-package smartparens)
 (use-package flx)
 (use-package elixir-mode)
-(use-package projectile)
 (use-package magit)
 (use-package multiple-cursors)
 (use-package swiper)
 (use-package exec-path-from-shell)
 (use-package oceanic-theme)
 (use-package flycheck)
-(use-package projectile)
 (use-package no-littering)
 (use-package ivy)
 (use-package expand-region)
+(use-package web-mode)
 
 ;; http://www.flycheck.org/manual/latest/index.html
 
