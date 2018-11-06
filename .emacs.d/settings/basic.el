@@ -14,8 +14,8 @@
 
 
 ;; formatting behavior
-(whitespace-mode +1)
-(hl-line-mode 1)
+(global-whitespace-mode +1)
+(global-hl-line-mode +1)
 (pending-delete-mode 1)
 (setq-default cursor-type 'box)
 (add-hook 'before-save-hook 'whitespace-cleanup)

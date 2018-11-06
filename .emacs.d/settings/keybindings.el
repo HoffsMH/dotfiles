@@ -18,7 +18,6 @@
 ;;counsel-ag
 (global-set-key (kbd "C-s-s") 'counsel-ag)
 
-(global-unset-key (kbd "C-e"))
 (global-set-key (kbd "s-p") 'counsel-git)
 
 
