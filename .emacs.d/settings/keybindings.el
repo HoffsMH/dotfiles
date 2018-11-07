@@ -21,6 +21,9 @@
 
 ;; magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x C-g p") 'magit-push-current)
+(global-set-key (kbd "C-x C-g o") 'magit-pull-popup)
+
 
 ;;counsel-ag
 (global-set-key (kbd "C-s-s") 'counsel-ag)
