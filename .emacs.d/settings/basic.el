@@ -12,6 +12,9 @@
 (setq default-tab-width 2)
 (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
 
+(setq org-log-done 'time)
+
+
 
 ;; formatting behavior
 (global-whitespace-mode +1)
