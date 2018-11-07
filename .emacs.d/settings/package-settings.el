@@ -29,7 +29,35 @@
 (use-package org-bullets
   :init
   (add-hook 'org-mode-hook #'org-bullets-mode))
+(use-package powerline)
+(use-package doom-themes)
+(use-package ox-twbs)
+
+(use-package diff-hl)
+
+(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+
+;; disables bell alltogether
+(setq ring-bell-function 'ignore)
+
 (setq org-ellipsis "⤵")
+
+(use-package auto-compile
+    :config (auto-compile-on-load-mode))
+(setq load-prefer-newer t)
+
+(setq user-full-name "Harry R. Schwartz"
+      user-mail-address "hello@harryrschwartz.com")
+
+(setq frame-title-format '((:eval (projectile-project-name))))
+
+(defun transparency (value)
+    "Sets the transparency of the frame window. 0=transparent/100=opaque."
+    (interactive "nTransparency Value 0 - 100 opaque:")
+    (set-frame-parameter (selected-frame) 'alpha value))
+
+(transparency 90)
 
 
 (org-babel-do-load-languages

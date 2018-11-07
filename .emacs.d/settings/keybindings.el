@@ -17,7 +17,10 @@
 
 ;;move-text
 (global-set-key (kbd "C-s-<268632078>") 'move-text-down)
+(global-set-key (kbd "C-s-n") 'move-text-down)
+
 (global-set-key (kbd "C-s-<268632080>") 'move-text-up)
+(global-set-key (kbd "C-s-p") 'move-text-up)
 
 ;; magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
