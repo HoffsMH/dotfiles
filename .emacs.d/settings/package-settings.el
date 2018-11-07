@@ -26,6 +26,11 @@
 (use-package ox-twbs)
 (use-package htmlize)
 (use-package ob-elixir)
+(use-package org-bullets
+  :init
+  (add-hook 'org-mode-hook #'org-bullets-mode))
+(setq org-ellipsis "⤵")
+
 
 (org-babel-do-load-languages
  'org-babel-load-languages
