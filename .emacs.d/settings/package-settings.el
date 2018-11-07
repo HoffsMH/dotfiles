@@ -22,6 +22,7 @@
 (use-package ivy)
 (use-package expand-region)
 (use-package web-mode)
+(use-package move-text)
 
 ;; http://www.flycheck.org/manual/latest/index.html
 

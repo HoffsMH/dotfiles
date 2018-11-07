@@ -47,6 +47,9 @@
  '(js2-bounce-indent-p t)
  '(js2-mode-indent-ignore-first-tab t)
  '(line-number-mode nil)
+ '(package-selected-packages
+   (quote
+    (move-text web-mode use-package syntax-subword smartparens projectile oceanic-theme no-littering multiple-cursors magit flycheck flx expand-region exec-path-from-shell elixir-mode counsel)))
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-closing nil)
  '(web-mode-enable-auto-indentation nil)

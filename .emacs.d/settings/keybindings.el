@@ -12,6 +12,10 @@
 (global-set-key (kbd "s-<right>") 'move-end-of-line)
 (global-set-key (kbd "s-<left>") 'move-beginning-of-line)
 
+;;move-text
+(global-set-key (kbd "C-s-<268632078>") 'move-text-down)
+(global-set-key (kbd "C-s-<268632080>") 'move-text-up)
+
 ;; magit-status
 (global-set-key (kbd "C-x g") 'magit-status)
 
