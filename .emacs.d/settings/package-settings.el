@@ -23,6 +23,14 @@
 (use-package expand-region)
 (use-package web-mode)
 (use-package move-text)
+(use-package ox-twbs)
+(use-package htmlize)
+(use-package ob-elixir)
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (elixir . t)))
 
 ;; http://www.flycheck.org/manual/latest/index.html
 
