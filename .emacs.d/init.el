@@ -14,6 +14,7 @@
 (load (expand-file-name "editor-functions.el" settings-dir))
 (load (expand-file-name "basic.el" settings-dir))
 (load (expand-file-name "keybindings.el" settings-dir))
+(load (expand-file-name "aliases.el" settings-dir))
 
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

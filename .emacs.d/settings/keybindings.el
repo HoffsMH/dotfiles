@@ -6,6 +6,9 @@
 (global-set-key (kbd "C-s") 'swiper)
 (global-set-key (kbd "C-/") 'hippie-expand)
 
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+(global-set-key (kbd "C-x m") 'execute-extended-command)
+
 ;; expand region
 (global-set-key (kbd "s-d") 'er/expand-region)
 
@@ -25,8 +28,8 @@
 (global-set-key (kbd "s-p") 'counsel-git)
 
 
-(global-set-key (kbd "C-x v") 'describe-variable)
 
+(global-set-key (kbd "C-x v") 'describe-variable)
 (define-key global-map (kbd "C-s-s") 'counsel-ag)
 (define-key global-map (kbd "C-s-<268632083>") 'counsel-ag)
 
@@ -43,3 +46,6 @@
 (global-set-key (kbd "C-b") 'syntax-subword-backward)
 (global-set-key (kbd "s-]") 'my-indent-region)
 (global-set-key (kbd "s-[") 'unindent-region)
+
+(global-set-key (kbd "s-=") 'text-scale-increase)
+(global-set-key (kbd "s--") 'text-scale-decrease)
