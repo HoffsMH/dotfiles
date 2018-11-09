@@ -55,3 +55,7 @@
 
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "s--") 'text-scale-decrease)
+(global-set-key (kbd "C-0") 'delete-window)
+(global-set-key (kbd "C-o") 'other-window)
+
+(global-unset-key (kbd "M-c"))
