@@ -1,0 +1,156 @@
+This shouldn't include any custom functions or any code that depends
+on packages
+
+* Interaction
+  Don't ask `yes/no?', ask `y/n?'
+
+  #+BEGIN_SRC emacs-lisp
+    (fset 'yes-or-no-p 'y-or-n-p)
+  #+END_SRC
+
+  get rid of bell
+
+  #+BEGIN_SRC emacs-lisp
+    (setq visible-bell t)
+    (setq ring-bell-function 'ignore)
+  #+END_SRC
+
+* Automation
+  - Make it to where when git or something else edits the file that
+  it updates the buffer.
+
+  #+BEGIN_SRC emacs-lisp
+    (global-auto-revert-mode t)
+  #+END_SRC
+
+  - Don't present the usual startup message,
+  and clear the scratch buffer.
+
+  #+BEGIN_SRC emacs-lisp
+    (setq require-final-newline t)
+  #+END_SRC
+
+  - save when I alt-tab
+
+  #+BEGIN_SRC emacs-lisp
+    (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+    (auto-save-visited-mode 0)
+    (auto-save-mode 0)
+  #+END_SRC
+
+  - save all backups in one directory
+
+  #+BEGIN_SRC emacs-lisp
+    (setq backup-directory-alist `(("." . "~/.emacs-saves")))
+  #+END_SRC
+
+  I don't care Ill just use git and commit often :)
+
+  #+BEGIN_SRC emacs-lisp
+    (setq create-lockfiles nil)
+  #+END_SRC
+
+  - when we highlight a region and begin typing we delete
+    the region
+
+  #+BEGIN_SRC emacs-lisp
+    (pending-delete-mode 1)
+  #+END_SRC
+
+  - cleanup all the whitespace when we save
+
+  #+BEGIN_SRC emacs-lisp
+    (add-hook 'before-save-hook 'whitespace-cleanup)
+    (add-hook 'before-save-hook 'delete-trailing-whitespace)
+  #+END_SRC
+
+  #+BEGIN_SRC emacs-lisp
+    (defun hrs/add-auto-mode (mode &rest patterns)
+      "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
+      (dolist (pattern patterns)
+	(add-to-list 'auto-mode-alist (cons pattern mode))))
+  #+END_SRC
+
+* Formatting
+  - Highlight Parens
+
+  #+BEGIN_SRC emacs-lisp
+    (show-paren-mode t)
+  #+END_SRC
+
+  - Font
+
+  #+BEGIN_SRC emacs-lisp
+    (set-frame-font "Fira Code-15:antialias-none")
+    (set-face-attribute 'default nil :weight 'ExtraLight :height 160)
+    (setq line-height 100)
+  #+END_SRC
+
+  - Theme
+
+  #+BEGIN_SRC emacs-lisp
+    (load-theme 'doom-vibrant t)
+  #+END_SRC
+
+  - highlight my current line
+
+  #+BEGIN_SRC emacs-lisp
+    (global-hl-line-mode t)
+  #+END_SRC
+
+  - not for every language
+
+  #+BEGIN_SRC emacs-lisp
+    (setq default-tab-width 2)
+  #+END_SRC
+
+* UI
+  - Don't need any of this stuff
+
+  #+BEGIN_SRC emacs-lisp
+    (menu-bar-mode nil)
+    (scroll-bar-mode nil)
+    (tool-bar-mode 0)
+  #+END_SRC
+
+  #+BEGIN_SRC emacs-lisp
+    (setq-default cursor-type 'box)
+  #+END_SRC
+
+  - transparency function with a default of 90
+
+  #+BEGIN_SRC emacs-lisp
+    (defun transparency (value)
+	"Sets the transparency of the frame window. 0=transparent/100=opaque."
+	(interactive "nTransparency Value 0 - 100 opaque:")
+	(set-frame-parameter (selected-frame) 'alpha value))
+
+    (transparency 90)
+  #+END_SRC
+
+* Misc
+  - Contact info.
+
+  #+BEGIN_SRC emacs-lisp
+    (setq user-full-name "Matthew Hecker"
+	  user-mail-address "hecker.matthew@gmail.com")
+  #+END_SRC
+
+  - Inhibit the dumb startup screen and message
+
+  #+BEGIN_SRC emacs-lisp
+    (setq inhibit-startup-message t)
+    (setq initial-scratch-message nil)
+  #+END_SRC
+
+  - When opening a file, always follow symlinks.
+
+  #+BEGIN_SRC emacs-lisp
+    (setq vc-follow-symlinks t)
+  #+END_SRC
+
+  - default directory when opening emacs and saing files
+
+  #+BEGIN_SRC emacs-lisp
+    (setq default-directory "~/")
+  #+END_SRC
