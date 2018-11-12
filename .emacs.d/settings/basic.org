@@ -5,7 +5,7 @@ on packages
   Don't ask `yes/no?', ask `y/n?'
 
   #+BEGIN_SRC emacs-lisp
-	  (fset 'yes-or-no-p 'y-or-n-p)
+    (fset 'yes-or-no-p 'y-or-n-p)
   #+END_SRC
 
   get rid of bell
