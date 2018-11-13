@@ -181,40 +181,45 @@ on packages
 
 * Misc
   - Contact info.
-
   #+BEGIN_SRC emacs-lisp
-	  (setq user-full-name "Matthew Hecker"
-	  user-mail-address "hecker.matthew@gmail.com")
+    (setq user-full-name "Matthew Hecker"
+      user-mail-address "hecker.matthew@gmail.com")
   #+END_SRC
 
   - Inhibit the dumb startup screen and message
 
   #+BEGIN_SRC emacs-lisp
-	  (setq inhibit-startup-message t)
-	  (setq initial-scratch-message nil)
+    (setq inhibit-startup-message t)
+    (setq initial-scratch-message nil)
   #+END_SRC
 
   - When opening a file, always follow symlinks.
 
   #+BEGIN_SRC emacs-lisp
-	  (setq vc-follow-symlinks t)
+    (setq vc-follow-symlinks t)
   #+END_SRC
 
   - default directory when opening emacs and saing files
 
   #+BEGIN_SRC emacs-lisp
-	  (setq default-directory "~/")
+    (setq default-directory "~/")
   #+END_SRC
 
   - set keys for Apple keyboard, for emacs in OS X
 
   #+BEGIN_SRC emacs-lisp
-	  (setq mac-command-modifier 'super) ; make cmd key do Meta
-	  ;; (setq mac-option-modifier 'super) ; make opt key do Super
+    (setq mac-command-modifier 'super) ; make cmd key do Meta
+    ;; (setq mac-option-modifier 'super) ; make opt key do Super
   #+END_SRC
 
   - unbinding annoying keybinds that I sometimes fatfinger
 
   #+BEGIN_SRC emacs-lisp
-	  (global-unset-key (kbd "M-c"))
+    (global-unset-key (kbd "M-c"))
+  #+END_SRC
+
+  - loading elisp files always preffer a newer version?
+
+  #+BEGIN_SRC emacs-lisp
+    (setq load-prefer-newer t)
   #+END_SRC
