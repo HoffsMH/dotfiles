@@ -1,7 +1,6 @@
 autoconf
 cairo
 direnv
-docker
 elixir
 elixir-build
 emacs-plus
@@ -11,6 +10,7 @@ fasd
 fontconfig
 freetype
 fribidi
+fzf
 gdk-pixbuf
 gettext
 glib
@@ -18,6 +18,8 @@ gmp
 gnutls
 graphite2
 harfbuzz
+heroku
+heroku-node
 icu4c
 imagemagick@6
 jpeg
