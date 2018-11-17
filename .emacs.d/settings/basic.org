@@ -50,7 +50,7 @@ on packages
   #+END_SRC
 
   - when we highlight a region and begin typing we delete
-	  the region
+    the region
 
   #+BEGIN_SRC emacs-lisp
     (pending-delete-mode 1)
@@ -63,10 +63,12 @@ on packages
     (add-hook 'before-save-hook 'delete-trailing-whitespace)
   #+END_SRC
 
+  still need to figure out how to regist and use this it looks great
+
   #+BEGIN_SRC emacs-lisp
     (defun hrs/add-auto-mode (mode &rest patterns)
-	    "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
-	    (dolist (pattern patterns)
+      "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
+      (dolist (pattern patterns)
     (add-to-list 'auto-mode-alist (cons pattern mode))))
   #+END_SRC
 
@@ -120,40 +122,40 @@ on packages
 *** Font
 
     #+BEGIN_SRC emacs-lisp
-      (set-frame-font "Fira Code-15:antialias-none")
+      (set-frame-font "FuraCode Nerd Font-15:antialias-none")
       (set-face-attribute 'default nil :weight 'ExtraLight :height 160)
     #+END_SRC
 
 **** ligatures with Fira Code
        #+BEGIN_SRC emacs-lisp
-	 (let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
-	   (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
-	   (36 . ".\\(?:>\\)")
-	   (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
-	   (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
-	   (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
-	   (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
-	   (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-	   (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
-	   (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
-	   (48 . ".\\(?:x[a-zA-Z]\\)")
-	   (58 . ".\\(?:::\\|[:=]\\)")
-	   (59 . ".\\(?:;;\\|;\\)")
-	   (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
-	   (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
-	   (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
-	   (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
-	   (91 . ".\\(?:]\\)")
-	   (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
-	   (94 . ".\\(?:=\\)")
-	   (119 . ".\\(?:ww\\)")
-	   (123 . ".\\(?:-\\)")
-	   (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-	   (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)"))))
+	(let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
+	    (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
+	    (36 . ".\\(?:>\\)")
+	    (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
+	    (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
+	    (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
+	    (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
+	    (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
+	    (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+	    (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
+	    (48 . ".\\(?:x[a-zA-Z]\\)")
+	    (58 . ".\\(?:::\\|[:=]\\)")
+	    (59 . ".\\(?:;;\\|;\\)")
+	    (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
+	    (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
+	    (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
+	    (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
+	    (91 . ".\\(?:]\\)")
+	    (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
+	    (94 . ".\\(?:=\\)")
+	    (119 . ".\\(?:ww\\)")
+	    (123 . ".\\(?:-\\)")
+	    (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
+	    (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)"))))
 
-	 (dolist (char-regexp alist)
-	   (set-char-table-range composition-function-table (car char-regexp)
-	   `([,(cdr char-regexp) 0 font-shape-gstring]))))
+	(dolist (char-regexp alist)
+	    (set-char-table-range composition-function-table (car char-regexp)
+	    `([,(cdr char-regexp) 0 font-shape-gstring]))))
        #+END_SRC
 * UI
   - Don't need any of this stuff
