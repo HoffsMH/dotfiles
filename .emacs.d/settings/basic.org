@@ -2,226 +2,239 @@ This shouldn't include any custom functions or any code that depends
 on packages
 
 * Interaction
-  Don't ask `yes/no?', ask `y/n?'
+	Don't ask `yes/no?', ask `y/n?'
 
-  #+BEGIN_SRC emacs-lisp
-    (fset 'yes-or-no-p 'y-or-n-p)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(fset 'yes-or-no-p 'y-or-n-p)
+	#+END_SRC
 
-  get rid of bell
+	get rid of bell
 
-  #+BEGIN_SRC emacs-lisp
-    (setq visible-bell t)
-    (setq ring-bell-function 'ignore)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq visible-bell t)
+		(setq ring-bell-function 'ignore)
+	#+END_SRC
 * Automation
-  - Make it to where when git or something else edits the file that
-  it updates the buffer.
+	- Make it to where when git or something else edits the file that
+	it updates the buffer.
 
-  #+BEGIN_SRC emacs-lisp
-    (global-auto-revert-mode t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(global-auto-revert-mode t)
+	#+END_SRC
 
-  - Don't present the usual startup message,
-  and clear the scratch buffer.
+	- Don't present the usual startup message,
+	and clear the scratch buffer.
 
-  #+BEGIN_SRC emacs-lisp
-    (setq require-final-newline t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq require-final-newline t)
+	#+END_SRC
 
-  - save when I alt-tab
+	- save when I alt-tab
 
-  #+BEGIN_SRC emacs-lisp
-    (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
-    (auto-save-visited-mode 0)
-    (auto-save-mode 0)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+		(auto-save-visited-mode 0)
+		(auto-save-mode 0)
+	#+END_SRC
 
-  - save all backups in one directory
+	- save all backups in one directory
 
-  #+BEGIN_SRC emacs-lisp
-    (setq backup-directory-alist `(("." . "~/.emacs-saves")))
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq backup-directory-alist `(("." . "~/.emacs-saves")))
+	#+END_SRC
 
-  I don't care Ill just use git and commit often :)
+	I don't care Ill just use git and commit often :)
 
-  #+BEGIN_SRC emacs-lisp
-    (setq create-lockfiles nil)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq create-lockfiles nil)
+	#+END_SRC
 
-  - when we highlight a region and begin typing we delete
-    the region
+	- when we highlight a region and begin typing we delete
+		the region
 
-  #+BEGIN_SRC emacs-lisp
-    (pending-delete-mode 1)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(pending-delete-mode 1)
+	#+END_SRC
 
-  - cleanup all the whitespace when we save
+	- cleanup all the whitespace when we save
 
-  #+BEGIN_SRC emacs-lisp
-    (add-hook 'before-save-hook 'whitespace-cleanup)
-    (add-hook 'before-save-hook 'delete-trailing-whitespace)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(add-hook 'before-save-hook 'whitespace-cleanup)
+		(add-hook 'before-save-hook 'delete-trailing-whitespace)
+	#+END_SRC
 
-  still need to figure out how to regist and use this it looks great
+	still need to figure out how to regist and use this it looks great
 
-  #+BEGIN_SRC emacs-lisp
-    (defun hrs/add-auto-mode (mode &rest patterns)
-      "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
-      (dolist (pattern patterns)
-    (add-to-list 'auto-mode-alist (cons pattern mode))))
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(defun hrs/add-auto-mode (mode &rest patterns)
+			"Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
+			(dolist (pattern patterns)
+		(add-to-list 'auto-mode-alist (cons pattern mode))))
+	#+END_SRC
+
+	the ability to comment stuff easily
+
+	#+BEGIN_SRC emacs-lisp
+		(defun comment-or-uncomment-region-or-line ()
+	"Comments or uncomments the region or the current line if there's no active region." (interactive)
+	(let (beg end)
+			(if (region-active-p)
+		(setq beg (region-beginning) end (region-end))
+		(setq beg (line-beginning-position) end (line-end-position)))
+		(comment-or-uncomment-region beg end)))
+		 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
+	 #+END_SRC
 
 *** keybindings
-    #+BEGIN_SRC emacs-lisp
-      (global-set-key (kbd "s-<right>") 'move-end-of-line)
-      (global-set-key (kbd "s-<left>") 'move-beginning-of-line)
+		#+BEGIN_SRC emacs-lisp
+			(global-set-key (kbd "s-<right>") 'move-end-of-line)
+			(global-set-key (kbd "s-<left>") 'move-beginning-of-line)
 
-      (global-set-key (kbd "C-x C-m") 'execute-extended-command)
-      (global-set-key (kbd "C-x m") 'execute-extended-command)
+			(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+			(global-set-key (kbd "C-x m") 'execute-extended-command)
 
-      ;; command backspace mac style
-      (global-set-key (kbd "s-<backspace>") '(lambda () (interactive) (kill-line 0)) )
+			;; command backspace mac style
+			(global-set-key (kbd "s-<backspace>") '(lambda () (interactive) (kill-line 0)) )
 
-      ;; essential for demoing and showing stuff
-      (global-set-key (kbd "s-=") 'text-scale-increase)
-      (global-set-key (kbd "s--") 'text-scale-decrease)
+			;; essential for demoing and showing stuff
+			(global-set-key (kbd "s-=") 'text-scale-increase)
+			(global-set-key (kbd "s--") 'text-scale-decrease)
 
-      ;; instead of having to press cx every time since i do these alot
-      (global-set-key (kbd "C-0") 'delete-window)
-      (global-set-key (kbd "C-o") 'other-window)
-    #+END_SRC
+			;; instead of having to press cx every time since i do these alot
+			(global-set-key (kbd "C-0") 'delete-window)
+			(global-set-key (kbd "C-o") 'other-window)
+		#+END_SRC
 
 * Formatting
-  - Highlight Parens
+	- Highlight Parens
 
-  #+BEGIN_SRC emacs-lisp
-    (show-paren-mode t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(show-paren-mode t)
+	#+END_SRC
 
 
 
-  - Theme
+	- Theme
 
-  #+BEGIN_SRC emacs-lisp
-    (load-theme 'doom-vibrant t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(load-theme 'doom-vibrant t)
+	#+END_SRC
 
-  - highlight my current line
+	- highlight my current line
 
-  #+BEGIN_SRC emacs-lisp
-    (global-hl-line-mode t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(global-hl-line-mode t)
+	#+END_SRC
 
-  - not for every language
+	- not for every language
 
-  #+BEGIN_SRC emacs-lisp
-    (setq default-tab-width 2)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq default-tab-width 2)
+	#+END_SRC
 
 *** Font
 
-    #+BEGIN_SRC emacs-lisp
-      (set-frame-font "FuraCode Nerd Font-15:antialias-none")
-      (set-face-attribute 'default nil :weight 'ExtraLight :height 160)
-    #+END_SRC
+		#+BEGIN_SRC emacs-lisp
+			(set-frame-font "FuraCode Nerd Font-15:antialias-none")
+			(set-face-attribute 'default nil :weight 'ExtraLight :height 160)
+		#+END_SRC
 
 **** ligatures with Fira Code
-       #+BEGIN_SRC emacs-lisp
+			 #+BEGIN_SRC emacs-lisp
 	(let ((alist '((33 . ".\\(?:\\(?:==\\|!!\\)\\|[!=]\\)")
-	    (35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
-	    (36 . ".\\(?:>\\)")
-	    (37 . ".\\(?:\\(?:%%\\)\\|%\\)")
-	    (38 . ".\\(?:\\(?:&&\\)\\|&\\)")
-	    (42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
-	    (43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
-	    (45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
-	    (46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
-	    (47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
-	    (48 . ".\\(?:x[a-zA-Z]\\)")
-	    (58 . ".\\(?:::\\|[:=]\\)")
-	    (59 . ".\\(?:;;\\|;\\)")
-	    (60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
-	    (61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
-	    (62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
-	    (63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
-	    (91 . ".\\(?:]\\)")
-	    (92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
-	    (94 . ".\\(?:=\\)")
-	    (119 . ".\\(?:ww\\)")
-	    (123 . ".\\(?:-\\)")
-	    (124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
-	    (126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)"))))
+			(35 . ".\\(?:###\\|##\\|_(\\|[#(?[_{]\\)")
+			(36 . ".\\(?:>\\)")
+			(37 . ".\\(?:\\(?:%%\\)\\|%\\)")
+			(38 . ".\\(?:\\(?:&&\\)\\|&\\)")
+			(42 . ".\\(?:\\(?:\\*\\*/\\)\\|\\(?:\\*[*/]\\)\\|[*/>]\\)")
+			(43 . ".\\(?:\\(?:\\+\\+\\)\\|[+>]\\)")
+			(45 . ".\\(?:\\(?:-[>-]\\|<<\\|>>\\)\\|[<>}~-]\\)")
+			(46 . ".\\(?:\\(?:\\.[.<]\\)\\|[.=-]\\)")
+			(47 . ".\\(?:\\(?:\\*\\*\\|//\\|==\\)\\|[*/=>]\\)")
+			(48 . ".\\(?:x[a-zA-Z]\\)")
+			(58 . ".\\(?:::\\|[:=]\\)")
+			(59 . ".\\(?:;;\\|;\\)")
+			(60 . ".\\(?:\\(?:!--\\)\\|\\(?:~~\\|->\\|\\$>\\|\\*>\\|\\+>\\|--\\|<[<=-]\\|=[<=>]\\||>\\)\\|[*$+~/<=>|-]\\)")
+			(61 . ".\\(?:\\(?:/=\\|:=\\|<<\\|=[=>]\\|>>\\)\\|[<=>~]\\)")
+			(62 . ".\\(?:\\(?:=>\\|>[=>-]\\)\\|[=>-]\\)")
+			(63 . ".\\(?:\\(\\?\\?\\)\\|[:=?]\\)")
+			(91 . ".\\(?:]\\)")
+			(92 . ".\\(?:\\(?:\\\\\\\\\\)\\|\\\\\\)")
+			(94 . ".\\(?:=\\)")
+			(119 . ".\\(?:ww\\)")
+			(123 . ".\\(?:-\\)")
+			(124 . ".\\(?:\\(?:|[=|]\\)\\|[=>|]\\)")
+			(126 . ".\\(?:~>\\|~~\\|[>=@~-]\\)"))))
 
 	(dolist (char-regexp alist)
-	    (set-char-table-range composition-function-table (car char-regexp)
-	    `([,(cdr char-regexp) 0 font-shape-gstring]))))
-       #+END_SRC
+			(set-char-table-range composition-function-table (car char-regexp)
+			`([,(cdr char-regexp) 0 font-shape-gstring]))))
+			 #+END_SRC
 * UI
-  - Don't need any of this stuff
+	- Don't need any of this stuff
 
-  #+BEGIN_SRC emacs-lisp
-    (menu-bar-mode nil)
-    (scroll-bar-mode nil)
-    (tool-bar-mode 0)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(menu-bar-mode nil)
+		(scroll-bar-mode nil)
+		(tool-bar-mode 0)
+	#+END_SRC
 
-  #+BEGIN_SRC emacs-lisp
-    (setq-default cursor-type 'box)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq-default cursor-type 'box)
+	#+END_SRC
 
-  - transparency function with a default of 90
+	- transparency function with a default of 90
 
-  #+BEGIN_SRC emacs-lisp
-    (defun transparency (value)
-      "Sets the transparency of the frame window. 0=transparent/100=opaque."
-      (interactive "nTransparency Value 0 - 100 opaque:")
-      (set-frame-parameter (selected-frame) 'alpha value))
+	#+BEGIN_SRC emacs-lisp
+		(defun transparency (value)
+			"Sets the transparency of the frame window. 0=transparent/100=opaque."
+			(interactive "nTransparency Value 0 - 100 opaque:")
+			(set-frame-parameter (selected-frame) 'alpha value))
 
-    (transparency 90)
-  #+END_SRC
+		(transparency 90)
+	#+END_SRC
 
 * Misc
-  - Contact info.
-  #+BEGIN_SRC emacs-lisp
-    (setq user-full-name "Matthew Hecker"
-      user-mail-address "hecker.matthew@gmail.com")
-  #+END_SRC
+	- Contact info.
+	#+BEGIN_SRC emacs-lisp
+		(setq user-full-name "Matthew Hecker"
+			user-mail-address "hecker.matthew@gmail.com")
+	#+END_SRC
 
-  - Inhibit the dumb startup screen and message
+	- Inhibit the dumb startup screen and message
 
-  #+BEGIN_SRC emacs-lisp
-    (setq inhibit-startup-message t)
-    (setq initial-scratch-message nil)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq inhibit-startup-message t)
+		(setq initial-scratch-message nil)
+	#+END_SRC
 
-  - When opening a file, always follow symlinks.
+	- When opening a file, always follow symlinks.
 
-  #+BEGIN_SRC emacs-lisp
-    (setq vc-follow-symlinks t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq vc-follow-symlinks t)
+	#+END_SRC
 
-  - default directory when opening emacs and saing files
+	- default directory when opening emacs and saing files
 
-  #+BEGIN_SRC emacs-lisp
-    (setq default-directory "~/")
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq default-directory "~/")
+	#+END_SRC
 
-  - set keys for Apple keyboard, for emacs in OS X
+	- set keys for Apple keyboard, for emacs in OS X
 
-  #+BEGIN_SRC emacs-lisp
-    (setq mac-command-modifier 'super) ; make cmd key do Meta
-    ;; (setq mac-option-modifier 'super) ; make opt key do Super
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq mac-command-modifier 'super) ; make cmd key do Meta
+		;; (setq mac-option-modifier 'super) ; make opt key do Super
+	#+END_SRC
 
-  - unbinding annoying keybinds that I sometimes fatfinger
+	- unbinding annoying keybinds that I sometimes fatfinger
 
-  #+BEGIN_SRC emacs-lisp
-    (global-unset-key (kbd "M-c"))
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(global-unset-key (kbd "M-c"))
+	#+END_SRC
 
-  - loading elisp files always preffer a newer version?
+	- loading elisp files always preffer a newer version?
 
-  #+BEGIN_SRC emacs-lisp
-    (setq load-prefer-newer t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq load-prefer-newer t)
+	#+END_SRC
