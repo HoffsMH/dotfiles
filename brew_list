@@ -1,5 +1,6 @@
 autoconf
 cairo
+chunkwm
 direnv
 elixir
 elixir-build
@@ -46,10 +47,13 @@ pango
 pcre
 pixman
 pkg-config
+postgresql
 ranger
 rbenv
+readline
 ruby-build
 screenfetch
+skhd
 the_silver_searcher
 webp
 wxmac
