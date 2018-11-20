@@ -112,7 +112,9 @@ on packages
 		(show-paren-mode t)
 	#+END_SRC
 
-
+	#+BEGIN_SRC emacs-lisp
+		(set-face-attribute 'region nil :background "#C325D1")
+	#+END_SRC
 
 	- Theme
 
