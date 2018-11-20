@@ -1,5 +1,4 @@
-.emacs.d/var/projectile/known-projects.el
-.emacs.d/var/backup
+.emacs.d/var/
 .emacs.d/elpa
 .emacs.d/*~
 .emacs.d/auto-save-list/
