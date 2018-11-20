@@ -1,5 +1,7 @@
 (package-initialize)
 
+(setq evil-want-keybinding nil)
+
 (defvar settings-dir
 	(expand-file-name "settings" user-emacs-directory))
 
@@ -20,7 +22,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
 	 (quote
-		(org evil-mode web-mode use-package syntax-subword smartparens projectile ox-twbs org-bullets oceanic-theme ob-elixir no-littering multiple-cursors move-text htmlize flycheck flx expand-region exec-path-from-shell evil-magit elixir-mode doom-themes diff-hl counsel auto-compile))))
+		(evil-collection org evil-mode web-mode use-package syntax-subword smartparens projectile ox-twbs org-bullets oceanic-theme ob-elixir no-littering multiple-cursors move-text htmlize flycheck flx expand-region exec-path-from-shell evil-magit elixir-mode doom-themes diff-hl counsel auto-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

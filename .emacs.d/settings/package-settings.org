@@ -1,89 +1,89 @@
 * use-package install
-  - install use package
-  #+BEGIN_SRC emacs-lisp
-    (eval-when-compile
-       (add-to-list 'load-path "<path where use-package is installed>")
-       (require 'use-package))
+	- install use package
+	#+BEGIN_SRC emacs-lisp
+		(eval-when-compile
+			 (add-to-list 'load-path "<path where use-package is installed>")
+			 (require 'use-package))
 
-    (setq use-package-always-ensure t)
-  #+END_SRC
+		(setq use-package-always-ensure t)
+	#+END_SRC
 
 * Packages
 ** auto-compile
-    - https://github.com/emacscollective/auto-compile
-    - not sure if this is detecting when stuff changes or we are
-    indiscriminately re-compiling
+		- https://github.com/emacscollective/auto-compile
+		- not sure if this is detecting when stuff changes or we are
+		indiscriminately re-compiling
 
-    #+BEGIN_SRC emacs-lisp
-      (use-package auto-compile
-      :config (auto-compile-on-load-mode))
-    #+END_SRC
+		#+BEGIN_SRC emacs-lisp
+			(use-package auto-compile
+			:config (auto-compile-on-load-mode))
+		#+END_SRC
 
 *** TODO should compare startup time with and without
 
 ** flx
-  better fuzzy matching engine to sit behind
-  ivy and projectile
-  https://github.com/lewang/flx
+	better fuzzy matching engine to sit behind
+	ivy and projectile
+	https://github.com/lewang/flx
 
-  #+BEGIN_SRC emacs-lisp
-    (use-package flx)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(use-package flx)
+	#+END_SRC
 
 ** Ivy
-  - completion front-end for fuzzy search
-  - comes with counsel and swiper
-  - [[https://github.com/abo-abo/swiper]]
+	- completion front-end for fuzzy search
+	- comes with counsel and swiper
+	- [[https://github.com/abo-abo/swiper]]
 
-  #+BEGIN_SRC emacs-lisp
-    (setq ivy-use-virtual-buffers t)
-    (setq ivy-count-format "%d/%d ")
-    (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+	#+BEGIN_SRC emacs-lisp
+		(setq ivy-use-virtual-buffers t)
+		(setq ivy-count-format "%d/%d ")
+		(setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
 
-    (use-package ivy)
-    (use-package counsel)
-    (use-package swiper)
-    (ivy-mode 1)
+		(use-package ivy)
+		(use-package counsel)
+		(use-package swiper)
+		(ivy-mode 1)
 
-    (global-set-key (kbd "C-x C-y") 'counsel-yank-pop)
-    (global-set-key (kbd "C-s") 'swiper)
+		(global-set-key (kbd "C-x C-y") 'counsel-yank-pop)
+		(global-set-key (kbd "C-s") 'swiper)
 
-    (define-key global-map (kbd "C-s-s") 'counsel-ag)
-    (define-key global-map (kbd "C-s-<268632083>") 'counsel-ag)
-    (global-set-key (kbd "C-s-s") 'counsel-ag)
-  #+END_SRC
+		(define-key global-map (kbd "C-s-s") 'counsel-ag)
+		(define-key global-map (kbd "C-s-<268632083>") 'counsel-ag)
+		(global-set-key (kbd "C-s-s") 'counsel-ag)
+	#+END_SRC
 
 ** projectile
-  - fuzzy find backend for project search
-  - [[https://github.com/bbatsov/projectile]]
-    - probably too many features for me should maybe revert to counsel-git
-      in the future when I figure out the prefix command thing
+	- fuzzy find backend for project search
+	- [[https://github.com/bbatsov/projectile]]
+		- probably too many features for me should maybe revert to counsel-git
+			in the future when I figure out the prefix command thing
 
-  #+BEGIN_SRC emacs-lisp
-    (use-package projectile)
-    (setq frame-title-format '((:eval (projectile-project-name))))
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(use-package projectile)
+		(setq frame-title-format '((:eval (projectile-project-name))))
+	#+END_SRC
 
-  #+BEGIN_SRC emacs-lisp
-    (setq projectile-completion-system 'ivy)
-    (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-    (projectile-mode t)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(setq projectile-completion-system 'ivy)
+		(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+		(projectile-mode t)
+	#+END_SRC
 
 ** web-mode
-   - used for almost everything
-   - [[http://web-mode.org/]]
-   - set up making indent everything 2 spaces no matter what
-   - I prefer to have
+	 - used for almost everything
+	 - [[http://web-mode.org/]]
+	 - set up making indent everything 2 spaces no matter what
+	 - I prefer to have
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package web-mode)
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package web-mode)
 
-     (defun my-setup-indent (n)
+		 (defun my-setup-indent (n)
 	(setq-default tab-width n)
 	(setq-local css-indent-offset n)) ; css-mode
 
-     (defun two-space-indent ()
+		 (defun two-space-indent ()
 	(interactive)
 	(message "2 space indent Active!")
 	;; use space instead of tab
@@ -94,207 +94,213 @@
 	(my-setup-indent 2))
 
 
-     (defun my-web-mode-hook ()
-       "Hooks for Web mode. Adjust indents"
-       (two-space-indent))
+		 (defun my-web-mode-hook ()
+			 "Hooks for Web mode. Adjust indents"
+			 (two-space-indent))
 
-     (two-space-indent)
+		 (two-space-indent)
 
-     (add-hook 'web-mode-hook  'my-web-mode-hook)
-   #+END_SRC
+		 (add-hook 'web-mode-hook  'my-web-mode-hook)
+	 #+END_SRC
 
-   - indenting levels
+	 - indenting levels
 
-   #+BEGIN_SRC emacs-lisp
-    (setq web-mode-code-indent-offset 2)
-    (setq web-mode-indent-style 1)
-    (setq web-mode-css-indent-offset 2)
-    (setq web-mode-markup-indent-offset 2)
-    (setq web-mode-code-indent-offset 2)
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		(setq web-mode-code-indent-offset 2)
+		(setq web-mode-indent-style 1)
+		(setq web-mode-css-indent-offset 2)
+		(setq web-mode-markup-indent-offset 2)
+		(setq web-mode-code-indent-offset 2)
+	 #+END_SRC
 
-   - turn off annoying automation
+	 - turn off annoying automation
 
-   #+BEGIN_SRC emacs-lisp
-    (setq web-mode-enable-auto-closing nil)
-    (setq web-mode-enable-auto-indentation nil)
-    (setq web-mode-enable-auto-opening nil)
-    (setq web-mode-enable-auto-pairing nil)
-    (setq web-mode-enable-control-block-indentation nil)
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		(setq web-mode-enable-auto-closing nil)
+		(setq web-mode-enable-auto-indentation nil)
+		(setq web-mode-enable-auto-opening nil)
+		(setq web-mode-enable-auto-pairing nil)
+		(setq web-mode-enable-control-block-indentation nil)
+	 #+END_SRC
 
-   #+BEGIN_SRC emacs-lisp
-     (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-     (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-     (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
-     (add-to-list 'auto-mode-alist '("\\.eex$" . web-mode))
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+		 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+		 (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
+		 (add-to-list 'auto-mode-alist '("\\.eex$" . web-mode))
+	 #+END_SRC
 
 ** flycheck
-   #+BEGIN_SRC emacs-lisp
-     (use-package flycheck)
-     ;; use eslint with web-mode for jsx files
-     (flycheck-add-mode 'javascript-eslint 'web-mode)
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package flycheck)
+		 ;; use eslint with web-mode for jsx files
+		 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
 
-     ;; turn on flychecking globally
-     (add-hook 'after-init-hook #'global-flycheck-mode)
+		 ;; turn on flychecking globally
+		 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-     ;; disable jshint since we prefer eslint checking
-     (setq-default flycheck-disabled-checkers
-       (append flycheck-disabled-checkers
-       '(javascript-jshint)))
+		 ;; disable jshint since we prefer eslint checking
+		 (setq-default flycheck-disabled-checkers
+			 (append flycheck-disabled-checkers
+			 '(javascript-jshint)))
 
-    ;; customize flycheck temp file prefix
-    (setq-default flycheck-temp-prefix ".flycheck")
+		;; customize flycheck temp file prefix
+		(setq-default flycheck-temp-prefix ".flycheck")
 
-    ;; disable json-jsonlist checking for json files
-    (setq-default flycheck-disabled-checkers
-      (append flycheck-disabled-checkers
+		;; disable json-jsonlist checking for json files
+		(setq-default flycheck-disabled-checkers
+			(append flycheck-disabled-checkers
 	'(json-jsonlist)))
 
-    ;; use local eslint from node_modules before global
-    ;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
-    (defun my/use-eslint-from-node-modules ()
-      (let* ((root (locate-dominating-file
+		;; use local eslint from node_modules before global
+		;; http://emacs.stackexchange.com/questions/21205/flycheck-with-file-relative-eslint-executable
+		(defun my/use-eslint-from-node-modules ()
+			(let* ((root (locate-dominating-file
 	(or (buffer-file-name) default-directory)
 	"node_modules"))
-       (eslint (and root
+			 (eslint (and root
 	(expand-file-name "node_modules/eslint/bin/eslint.js"
-	      root))))
+				root))))
 	(when (and eslint (file-executable-p eslint))
-    (setq-local flycheck-javascript-eslint-executable eslint))))
-    (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
-   #+END_SRC
+		(setq-local flycheck-javascript-eslint-executable eslint))))
+		(add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
+	 #+END_SRC
 
 ** exec-path-from-shell
-   - first use case is that I want to use my app specific version of
-     eslint but in general I would like my shell path to match my emacs exec path
-     https://github.com/purcell/exec-path-from-shell
+	 - first use case is that I want to use my app specific version of
+		 eslint but in general I would like my shell path to match my emacs exec path
+		 https://github.com/purcell/exec-path-from-shell
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package exec-path-from-shell)
-     ;; https://github.com/purcell/exec-path-from-shell
-     ;; only need exec-path-from-shell on OSX
-     ;; this hopefully sets up path and other vars better
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package exec-path-from-shell)
+		 ;; https://github.com/purcell/exec-path-from-shell
+		 ;; only need exec-path-from-shell on OSX
+		 ;; this hopefully sets up path and other vars better
 
-     (when (memq window-system '(mac ns))
-       (exec-path-from-shell-initialize))
-   #+END_SRC
+		 (when (memq window-system '(mac ns))
+			 (exec-path-from-shell-initialize))
+	 #+END_SRC
 
 ** syntax-subword
-   f and b should now traverse smarter works
+	 f and b should now traverse smarter works
 P   can use left and right arrow for char by char which is needed less often
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package syntax-subword)
-     (global-syntax-subword-mode 1)
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package syntax-subword)
+		 (global-syntax-subword-mode 1)
 
-     (global-set-key (kbd "C-f") 'syntax-subword-forward)
-     (global-set-key (kbd "C-b") 'syntax-subword-backward)
-   #+END_SRC
+		 (global-set-key (kbd "C-f") 'syntax-subword-forward)
+		 (global-set-key (kbd "C-b") 'syntax-subword-backward)
+	 #+END_SRC
 
 ** smartparens
-   #+BEGIN_SRC emacs-lisp
-     (use-package smartparens)
-     (smartparens-global-mode 1)
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package smartparens)
+		 (smartparens-global-mode 1)
+	 #+END_SRC
 
 ** move-text
-   #+BEGIN_SRC emacs-lisp
-     (use-package move-text)
-     (global-set-key (kbd "C-s-<268632078>") 'move-text-down)
-     (global-set-key (kbd "C-s-n") 'move-text-down)
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package move-text)
+		 (global-set-key (kbd "C-s-<268632078>") 'move-text-down)
+		 (global-set-key (kbd "C-s-n") 'move-text-down)
 
-     (global-set-key (kbd "C-s-<268632080>") 'move-text-up)
-     (global-set-key (kbd "C-s-p") 'move-text-up)
-   #+END_SRC
+		 (global-set-key (kbd "C-s-<268632080>") 'move-text-up)
+		 (global-set-key (kbd "C-s-p") 'move-text-up)
+	 #+END_SRC
 
 ** diff-hl
-   - https://github.com/dgutov/diff-hl
-   git diff shows up in margin after saving
+	 - https://github.com/dgutov/diff-hl
+	 git diff shows up in margin after saving
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package diff-hl)
-     (global-diff-hl-mode)
-     (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
-     (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package diff-hl)
+		 (global-diff-hl-mode)
+		 (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+		 (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+	 #+END_SRC
 
 ** expand-region
-   #+BEGIN_SRC emacs-lisp
-     (use-package expand-region)
-     (global-set-key (kbd "s-d") 'er/expand-region)
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package expand-region)
+		 (global-set-key (kbd "s-d") 'er/expand-region)
+	 #+END_SRC
 ** language specific
 *** Org
-    - twitter bootstrapize export
-    - requires htmlize
-    - babel
-    - elixir
+		- twitter bootstrapize export
+		- requires htmlize
+		- babel
+		- elixir
 
-    #+BEGIN_SRC emacs-lisp
-      (use-package ox-twbs)
-      (use-package htmlize)
-      (use-package ob-elixir)
+		#+BEGIN_SRC emacs-lisp
+			(use-package ox-twbs)
+			(use-package htmlize)
+			(use-package ob-elixir)
 
-      (org-babel-do-load-languages
-       'org-babel-load-languages
-       '((emacs-lisp . t)
-      (elixir . t))
-      ;; ...
-      )
-   #+END_SRC
+			(org-babel-do-load-languages
+			 'org-babel-load-languages
+			 '((emacs-lisp . t)
+			(elixir . t))
+			;; ...
+			)
+	 #+END_SRC
 *** Elixir
-    #+BEGIN_SRC emacs-lisp
-      (use-package elixir-mode)
-    #+END_SRC
+		#+BEGIN_SRC emacs-lisp
+			(use-package elixir-mode)
+		#+END_SRC
 ** magit
-   #+BEGIN_SRC emacs-lisp
-     (use-package magit)
-     (use-package evil-magit)
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package magit)
+		 (use-package evil-magit)
 
-     (global-set-key (kbd "C-x g") 'magit-status)
-     (global-set-key (kbd "C-x C-g p") 'magit-push-current)
-     (global-set-key (kbd "C-x C-g o") 'magit-pull-popup)
-   #+END_SRC
+		 (global-set-key (kbd "C-x g") 'magit-status)
+		 (global-set-key (kbd "C-x C-g p") 'magit-push-current)
+		 (global-set-key (kbd "C-x C-g o") 'magit-pull-popup)
+	 #+END_SRC
 ** multi-cursor
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package multiple-cursors)
-     (global-set-key (kbd "C->") 'mc/mark-next-like-this)
-   #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package multiple-cursors)
+		 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
+	 #+END_SRC
 ** no-littering
-   lockfiles and save files should never go in current directory
-   causing things to rebuild for no reason
+	 lockfiles and save files should never go in current directory
+	 causing things to rebuild for no reason
 
-   #+BEGIN_SRC emacs-lisp
-     (use-package no-littering)
+	 #+BEGIN_SRC emacs-lisp
+		 (use-package no-littering)
 
-     ;; now even #files# shouldn't litter current directory
-     (setq auto-save-file-name-transforms
-       `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
-   #+END_SRC
+		 ;; now even #files# shouldn't litter current directory
+		 (setq auto-save-file-name-transforms
+			 `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
+	 #+END_SRC
 ** org-mode
 *** org-bullets
-    #+BEGIN_SRC emacs-lisp
-      (use-package org-bullets
+		#+BEGIN_SRC emacs-lisp
+			(use-package org-bullets
 	:init
 	(add-hook 'org-mode-hook #'org-bullets-mode))
-    #+END_SRC
+		#+END_SRC
 
 ** evil
-   #+BEGIN_SRC emacs-lisp
-     (add-to-list 'load-path "~/.emacs.d/evil")
-     (require 'evil)
-     (evil-mode 1)
-    #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+		(add-to-list 'load-path "~/.emacs.d/evil")
+		(require 'evil)
+		(evil-mode 1)
+	 #+END_SRC
+
+	 enable keybindings in alot of random modes
+
+	 #+BEGIN_SRC emacs-lisp
+		(evil-collection-init)
+	 #+END_SRC
 
 * Themes
-  #+BEGIN_SRC emacs-lisp
-    (use-package doom-themes)
-    (use-package oceanic-theme)
-  #+END_SRC
+	#+BEGIN_SRC emacs-lisp
+		(use-package doom-themes)
+		(use-package oceanic-theme)
+	#+END_SRC
 
 * package list
 
