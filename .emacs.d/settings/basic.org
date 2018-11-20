@@ -83,7 +83,13 @@ on packages
 		(setq beg (line-beginning-position) end (line-end-position)))
 		(comment-or-uncomment-region beg end)))
 		 (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
-	 #+END_SRC
+	#+END_SRC
+
+	This makes it to where I dont have to type zsh every time I Ansi Term
+
+	#+BEGIN_SRC emacs-lisp
+		(setq explicit-shell-file-name "/bin/zsh")
+	#+END_SRC
 
 *** keybindings
 		#+BEGIN_SRC emacs-lisp
@@ -112,14 +118,16 @@ on packages
 		(show-paren-mode t)
 	#+END_SRC
 
-	#+BEGIN_SRC emacs-lisp
-		(set-face-attribute 'region nil :background "#C325D1")
-	#+END_SRC
-
 	- Theme
 
 	#+BEGIN_SRC emacs-lisp
 		(load-theme 'doom-vibrant t)
+	#+END_SRC
+
+	Setting the region color has to happen AFTER the theme
+
+	#+BEGIN_SRC emacs-lisp
+		(set-face-attribute 'region nil :background "#C325D1")
 	#+END_SRC
 
 	- highlight my current line
@@ -239,4 +247,10 @@ on packages
 
 	#+BEGIN_SRC emacs-lisp
 		(setq load-prefer-newer t)
+	#+END_SRC
+
+	This sets region to bright pink!
+
+	#+BEGIN_SRC emacs-lisp
+		(set-face-attribute 'region nil :background "#C325D1")
 	#+END_SRC
