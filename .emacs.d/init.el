@@ -13,8 +13,8 @@
 (org-babel-load-file (expand-file-name "basic.org" settings-dir))
 (org-babel-load-file (expand-file-name "melpa.org" settings-dir))
 (org-babel-load-file (expand-file-name "package-settings.org" settings-dir))
-(org-babel-load-file (expand-file-name "web-mode.org" settings-dir))
 (org-babel-load-file (expand-file-name "org-configuration.org" settings-dir))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
