@@ -12,3 +12,4 @@
 .emacs.d/session.*
 .emacs.d/my-lisp/*.elc
 .emacs.d/settings/*.el
+.emacs.d/projectile-bookmarks.eld

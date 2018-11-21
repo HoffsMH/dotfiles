@@ -289,6 +289,10 @@ P   can use left and right arrow for char by char which is needed less often
 		(require 'evil)
 		(evil-mode 1)
 	 #+END_SRC
+	 #+BEGIN_SRC emacs-lisp
+	  (use-package evil-collection)
+	 #+END_SRC
+
 
 	 enable keybindings in alot of random modes
 
