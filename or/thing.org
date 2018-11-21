@@ -2,13 +2,21 @@
 ** DONE fix region color in emacs
 	 CLOSED: [2018-11-19 Mon 22:36]
 ** TODO get good matching color schemes in terminal and emacs
-** TODO fix keybinds in kitty to match what I had in iterm
-*** TODO beginning and end of line with command arrows
-*** TODO kill line backards with command backspace
-*** TODO switch tabs with command option arrow
+** DONE fix keybinds in kitty to match what I had in iterm
+	 CLOSED: [2018-11-21 Wed 09:00]
+*** DONE beginning and end of line with command arrows
+		CLOSED: [2018-11-21 Wed 07:58]
+*** DONE kill line backards with command backspace
+		CLOSED: [2018-11-21 Wed 07:58]
+*** DONE switch tabs with command option arrow
+		CLOSED: [2018-11-21 Wed 07:58]
+*** DONE alt-arrow to let me navigate words
+		CLOSED: [2018-11-21 Wed 09:00]
 ** DONE syntax highlighting to work everytime from dotfiles
 	 CLOSED: [2018-11-20 Tue 13:18]
-** TODO zsh auto-pair to work everytime from dotfiles
+** DONE zsh auto-pair to work everytime from dotfiles
+	 CLOSED: [2018-11-21 Wed 07:38]
+	 afaict its working now
 ** TODO all of this persisted into dotfiles repo
 ** TODO brew list persisted into dotfiles and schema to install base things
 ** TODO work on cloud storage
@@ -67,26 +75,39 @@
 		must've been cash, ammuntion going forward is that the lease states deposit and I have the withdrawal record
 *** DONE goto therapy
 		CLOSED: [2018-11-20 Tue 19:24]
-*** TODO finishing touches on apartment
-**** TODO bed made
+*** DONE finishing touches on apartment
+		CLOSED: [2018-11-20 Tue 22:51]
+**** DONE bed made
+		 CLOSED: [2018-11-20 Tue 22:50]
 **** DONE second trashcan gone
 		 CLOSED: [2018-11-20 Tue 19:55]
-**** TODO mouse traps gone
-**** TODO tools hidden
-**** TODO bathroom cleaned
-**** TODO valuables hidden
-**** TODO clothes cleaned up
-**** TODO all apartment in general cleaned up
-**** TODO DONOT spend any of tomorrow selling stuff or working too hard on work
-**** TODO kithen sink cleared
-**** TODO touchup livingroom paint
+**** DONE mouse traps gone
+		 CLOSED: [2018-11-20 Tue 22:50]
+**** DONE tools hidden
+		 CLOSED: [2018-11-20 Tue 22:51]
+**** DONE bathroom cleaned
+		 CLOSED: [2018-11-20 Tue 22:50]
+**** DONE valuables hidden
+		 CLOSED: [2018-11-20 Tue 22:50]
+**** DONE clothes cleaned up
+		 CLOSED: [2018-11-20 Tue 22:50]
+**** DONE all apartment in general cleaned up
+		 CLOSED: [2018-11-20 Tue 22:50]
+**** DONE kithen sink cleared
+		 CLOSED: [2018-11-20 Tue 22:51]
+**** DONE touchup livingroom paint
+		 CLOSED: [2018-11-20 Tue 22:51]
 **** DONE tape peeled
 		 CLOSED: [2018-11-20 Tue 19:55]
-**** TODO floors swept and mopped
+**** DONE floors swept and mopped
+		 CLOSED: [2018-11-20 Tue 22:51]
+
 * Wed walkthrough
-*** TODO 8am handoff keys and give briefing
+*** DONE 8am handoff keys and give briefing
+		CLOSED: [2018-11-21 Wed 08:10]
 *** TODO pair on btp deployment with Andrei
-*** TODO pair with Susan on outbound development deployment
+*** DONE pair with Susan on outbound development deployment
+		CLOSED: [2018-11-21 Wed 12:30]
 *** TODO briefing on ES issue from Andrei
 		Hes WFH today, will take notes on this later this week, but maybe not since im wfh on wed?
 *** TODO Kevin 1:1 later in day
@@ -96,6 +117,10 @@
 
 ** TODO fes working in development
 ** TODO fes request working and test passing
+** TODO btt presentation
+** TODO knowledge gist update
+** TODO label gen zpl template
+** TODO mart deploy investigation
 
 * Ok this section is about the week talkthrough
 ** Money stream list
@@ -110,7 +135,8 @@
 		need to see when this is vesting
 *** TODO Security Deposit from Apartment $1800
 *** TODO Robin hood $300
-*** TODO home depot return $20
+*** DONE home depot return $20
+		CLOSED: [2018-11-21 Wed 12:31]
 
 ** What is my briefing to her?
 	 Heres the key, I work home on some days, Please call or text before bringing a potential tenant over. This is so If I am home I can get ready.
