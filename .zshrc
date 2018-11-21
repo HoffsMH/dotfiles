@@ -280,3 +280,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
 
 export PATH="/Users/matthew.hecker/Downloads/google-cloud-sdk/bin:$PATH"
+
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
