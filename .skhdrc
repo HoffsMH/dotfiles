@@ -2,6 +2,7 @@
 cmd + shift + alt + ctrl - p : chunkc tiling::window --toggle fullscreen;\
 															 chunkc tiling::window --grid-layout 1:1:0:0:1:1
 
+
 # make floating window fill left-half of screen
 cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1
 
