@@ -1,5 +1,13 @@
 # enter fullscreen mode for the focused container
-cmd + shift + alt + ctrl - p : chunkc tiling::window --toggle fullscreen
+cmd + shift + alt + ctrl - p : chunkc tiling::window --toggle fullscreen;\
+															 chunkc tiling::window --grid-layout 1:1:0:0:1:1
+
+# make floating window fill left-half of screen
+cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1
+
+# make floating window fill left-half of screen
+cmd + shift + alt + ctrl - 0x1E : chunkc tiling::window --grid-layout 1:2:1:0:1:1
+
 
 # change focus between tiling / floating windows
 cmd + shift + alt + ctrl - space : chunkc tiling::window --toggle float
