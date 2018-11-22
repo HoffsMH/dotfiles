@@ -2,6 +2,11 @@
 cmd + shift + alt + ctrl - p : chunkc tiling::window --toggle fullscreen;\
 															 chunkc tiling::window --grid-layout 1:1:0:0:1:1
 
+# change layout of desktop
+# this is the only thing I could find that will let me reset from bug where I
+# am in clamshell mode and i unplug monitor
+ctrl + alt - a : chunkc tiling::desktop --layout bsp
+# ctrl + alt - s : chunkc tiling::desktop --layout monocle
 
 # make floating window fill left-half of screen
 cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1

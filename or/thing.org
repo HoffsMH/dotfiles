@@ -1,22 +1,5 @@
 * Things to Do
-** DONE fix region color in emacs
-	 CLOSED: [2018-11-19 Mon 22:36]
 ** TODO get good matching color schemes in terminal and emacs
-** DONE fix keybinds in kitty to match what I had in iterm
-	 CLOSED: [2018-11-21 Wed 09:00]
-*** DONE beginning and end of line with command arrows
-		CLOSED: [2018-11-21 Wed 07:58]
-*** DONE kill line backards with command backspace
-		CLOSED: [2018-11-21 Wed 07:58]
-*** DONE switch tabs with command option arrow
-		CLOSED: [2018-11-21 Wed 07:58]
-*** DONE alt-arrow to let me navigate words
-		CLOSED: [2018-11-21 Wed 09:00]
-** DONE syntax highlighting to work everytime from dotfiles
-	 CLOSED: [2018-11-20 Tue 13:18]
-** DONE zsh auto-pair to work everytime from dotfiles
-	 CLOSED: [2018-11-21 Wed 07:38]
-	 afaict its working now
 ** TODO all of this persisted into dotfiles repo
 ** TODO brew list persisted into dotfiles and schema to install base things
 ** TODO work on cloud storage
@@ -58,59 +41,25 @@
 ** TODO configure ftp server on camera so I never have to worry about connectivity again
 	 - make it secure
 ** TODO chunkwm work
+*** DONE floating and non-floating
+		CLOSED: [2018-11-21 Wed 12:44]
+		Yes hyper-space
+*** TODO rotation
+		yes alt-r needs work
+*** TODO moving
+		yes alt-shift-hjkl
+*** DONE fullscreen
+		CLOSED: [2018-11-21 Wed 12:44]
+		yes Hyper-p as it has always been
+*** DONE manually split right left
+		CLOSED: [2018-11-21 Wed 12:44]
+		yes hyper [] as it has always been
+*** TODO learn about desktop/workspace and splitting inner
+				[[https://koekeishiya.github.io/chunkwm/]]
+
 ** TODO bullet journal work
 ** TODO DDD work
 ** TODO sql queries work
-
-* Tomorrow walkthrough
-*** DONE text dad to see if there is anything else I should do to prepare apartment
-		CLOSED: [2018-11-20 Tue 12:49]
-		nothing much but we will also be asking the broker
-*** DONE text rodney to arrange final invoices
-		CLOSED: [2018-11-20 Tue 09:11]
-*** DONE attempt to deposit check
-		CLOSED: [2018-11-20 Tue 11:20]
-*** DONE attempt to get all cashier check numbers
-		CLOSED: [2018-11-20 Tue 11:21]
-		must've been cash, ammuntion going forward is that the lease states deposit and I have the withdrawal record
-*** DONE goto therapy
-		CLOSED: [2018-11-20 Tue 19:24]
-*** DONE finishing touches on apartment
-		CLOSED: [2018-11-20 Tue 22:51]
-**** DONE bed made
-		 CLOSED: [2018-11-20 Tue 22:50]
-**** DONE second trashcan gone
-		 CLOSED: [2018-11-20 Tue 19:55]
-**** DONE mouse traps gone
-		 CLOSED: [2018-11-20 Tue 22:50]
-**** DONE tools hidden
-		 CLOSED: [2018-11-20 Tue 22:51]
-**** DONE bathroom cleaned
-		 CLOSED: [2018-11-20 Tue 22:50]
-**** DONE valuables hidden
-		 CLOSED: [2018-11-20 Tue 22:50]
-**** DONE clothes cleaned up
-		 CLOSED: [2018-11-20 Tue 22:50]
-**** DONE all apartment in general cleaned up
-		 CLOSED: [2018-11-20 Tue 22:50]
-**** DONE kithen sink cleared
-		 CLOSED: [2018-11-20 Tue 22:51]
-**** DONE touchup livingroom paint
-		 CLOSED: [2018-11-20 Tue 22:51]
-**** DONE tape peeled
-		 CLOSED: [2018-11-20 Tue 19:55]
-**** DONE floors swept and mopped
-		 CLOSED: [2018-11-20 Tue 22:51]
-
-* Wed walkthrough
-*** DONE 8am handoff keys and give briefing
-		CLOSED: [2018-11-21 Wed 08:10]
-*** TODO pair on btp deployment with Andrei
-*** DONE pair with Susan on outbound development deployment
-		CLOSED: [2018-11-21 Wed 12:30]
-*** TODO briefing on ES issue from Andrei
-		Hes WFH today, will take notes on this later this week, but maybe not since im wfh on wed?
-*** TODO Kevin 1:1 later in day
 
 * Thur Walkthrough
 	Its TG use this time to catch up on work
@@ -124,8 +73,6 @@
 
 * Ok this section is about the week talkthrough
 ** Money stream list
-*** DONE old check from surgery $33
-		CLOSED: [2018-11-20 Tue 11:20]
 *** TODO Insurance claim on therapy $300
 *** TODO Arlington Expenses  $600
 *** TODO Payment from consulting $450
@@ -135,8 +82,6 @@
 		need to see when this is vesting
 *** TODO Security Deposit from Apartment $1800
 *** TODO Robin hood $300
-*** DONE home depot return $20
-		CLOSED: [2018-11-21 Wed 12:31]
 
 ** What is my briefing to her?
 	 Heres the key, I work home on some days, Please call or text before bringing a potential tenant over. This is so If I am home I can get ready.
@@ -158,10 +103,10 @@
 **** TODO curtains
 
 *** Each day I am planning on doing these things to help the apartment
+		she doesn't care lol
 **** open up windows
 **** make bed
 **** tidy up
 
 *** Would you want the spare a/c?
-
-*** Is there anything else I can do to help this along?
+		She will check with landlord

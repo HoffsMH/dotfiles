@@ -118,12 +118,6 @@ on packages
 		(show-paren-mode t)
 	#+END_SRC
 
-	- Theme
-
-	#+BEGIN_SRC emacs-lisp
-		(load-theme 'doom-vibrant t)
-	#+END_SRC
-
 	Setting the region color has to happen AFTER the theme
 
 	#+BEGIN_SRC emacs-lisp
@@ -253,4 +247,9 @@ on packages
 
 	#+BEGIN_SRC emacs-lisp
 		(set-face-attribute 'region nil :background "#C325D1")
+	#+END_SRC
+
+	set the default shell to zsh
+	#+BEGIN_SRC emacs-lisp
+		(setenv "SHELL" "/bin/zsh")
 	#+END_SRC

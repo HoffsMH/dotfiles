@@ -51,6 +51,8 @@
 		(define-key global-map (kbd "C-s-s") 'counsel-ag)
 		(define-key global-map (kbd "C-s-<268632083>") 'counsel-ag)
 		(global-set-key (kbd "C-s-s") 'counsel-ag)
+		(global-set-key (kbd "C-s-y") 'counsel-yank-pop)
+		(global-set-key (kbd "C-s-<268632089>") 'counsel-yank-pop)
 	#+END_SRC
 
 ** projectile
@@ -174,6 +176,9 @@
 
 	 #+BEGIN_SRC emacs-lisp
 		 (use-package exec-path-from-shell)
+		 (setq exec-path-from-shell-debug nil)
+		 (setq exec-path-from-shell-shell-name "/bin/zsh")
+
 		 ;; https://github.com/purcell/exec-path-from-shell
 		 ;; only need exec-path-from-shell on OSX
 		 ;; this hopefully sets up path and other vars better
@@ -289,8 +294,9 @@ P   can use left and right arrow for char by char which is needed less often
 		(require 'evil)
 		(evil-mode 1)
 	 #+END_SRC
+
 	 #+BEGIN_SRC emacs-lisp
-	  (use-package evil-collection)
+		(use-package evil-collection)
 	 #+END_SRC
 
 
@@ -302,8 +308,13 @@ P   can use left and right arrow for char by char which is needed less often
 
 * Themes
 	#+BEGIN_SRC emacs-lisp
-		(use-package doom-themes)
-		(use-package oceanic-theme)
+		;;(use-package doom-themes)
+		;;(use-package oceanic-theme)
+		(use-package snazzy-theme)
+	#+END_SRC
+
+	#+BEGIN_SRC emacs-lisp
+		(load-theme 'snazzy t)
 	#+END_SRC
 
 * package list
