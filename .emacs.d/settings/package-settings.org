@@ -82,8 +82,8 @@
 		 (use-package web-mode)
 
 		 (defun my-setup-indent (n)
-	(setq-default tab-width n)
-	(setq-local css-indent-offset n)) ; css-mode
+		 (setq-default tab-width n)
+		 (setq-local css-indent-offset n)) ; css-mode
 
 		 (defun two-space-indent ()
 	(interactive)
@@ -127,6 +127,7 @@
 
 	 #+BEGIN_SRC emacs-lisp
 		 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+		 (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
 		 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 		 (add-to-list 'auto-mode-alist '("\\.hbs$" . web-mode))
 		 (add-to-list 'auto-mode-alist '("\\.eex$" . web-mode))

@@ -253,3 +253,8 @@ on packages
 	#+BEGIN_SRC emacs-lisp
 		(setenv "SHELL" "/bin/zsh")
 	#+END_SRC
+
+	command t no longer annoyingly brings up font selection
+	#+BEGIN_SRC emacs-lisp
+		(global-set-key (kbd "s-t") nil)
+	#+END_SRC
