@@ -2,12 +2,6 @@
 cmd + shift + alt + ctrl - p : chunkc tiling::window --toggle fullscreen;\
 															 chunkc tiling::window --grid-layout 1:1:0:0:1:1
 
-# change layout of desktop
-# this is the only thing I could find that will let me reset from bug where I
-# am in clamshell mode and i unplug monitor
-ctrl + alt - a : chunkc tiling::desktop --layout bsp
-# ctrl + alt - s : chunkc tiling::desktop --layout monocle
-
 # make floating window fill left-half of screen
 cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1
 
@@ -19,11 +13,11 @@ cmd + shift + alt + ctrl - 0x1E : chunkc tiling::window --grid-layout 1:2:1:0:1:
 cmd + shift + alt + ctrl - space : chunkc tiling::window --toggle float
 
 # change layout of desktop
+# this is the only thing I could find that will let me reset from bug where I
+# am in clamshell mode and i unplug monitor
+# change layout of desktop
 alt - e : chunkc tiling::desktop --layout bsp
 alt - s : chunkc tiling::desktop --layout monocle
-
-# kill focused window
-shift + alt - q : chunkc tiling::window --close
 
 # change focus
 alt - h : chunkc tiling::window --focus west
@@ -31,24 +25,12 @@ alt - j : chunkc tiling::window --focus south
 alt - k : chunkc tiling::window --focus north
 alt - l : chunkc tiling::window --focus east
 
-alt - p : chunkc tiling::window --focus prev
-alt - n : chunkc tiling::window --focus next
-
 # move focused window
 shift + alt - h : chunkc tiling::window --warp west
 shift + alt - j : chunkc tiling::window --warp south
 shift + alt - k : chunkc tiling::window --warp north
 shift + alt - l : chunkc tiling::window --warp east
 
-alt - r : chunkc tiling::desktop --rotate 90
+shift + ctrl + cmd + alt - r : chunkc tiling::desktop --rotate 90
 
-# move focused container to workspace
-shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
-shift + alt - p : chunkc tiling::window --send-to-desktop prev
-shift + alt - n : chunkc tiling::window --send-to-desktop next
-shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
-shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
-shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
-shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
-shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
-shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+cmd + shift + alt + ctrl - o : chunkc tiling::window --focus next
