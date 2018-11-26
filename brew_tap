@@ -1,3 +1,30 @@
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/cask-versions, homebrew/core and homebrew/cask).
+==> New Formulae
+curl-openssl
+qalculate-gtk
+==> Updated Formulae
+cabal-install
+circleci
+fluent-bit
+ghostscript
+latex2html
+libspectre
+libtiff
+octave
+openssl
+openssl@1.1
+parallel
+php
+pip-completion
+pipenv
+pqiv
+presto
+ps2eps
+redis
+termius
+webpack
+
 crisidev/chunkwm
 d12frosted/emacs-plus
 heroku/brew
