@@ -33,7 +33,7 @@ shift + alt - l : chunkc tiling::window --warp east
 
 shift + ctrl + cmd + alt - c : open -a  Google\ Chrome
 shift + ctrl + cmd + alt - t : open -a  Kitty
-shift + ctrl + cmd + alt - e : open -a  Emacs
+shift + ctrl + cmd + alt - e : open -a  Sublime\ Text
 shift + ctrl + cmd + alt - s : open -a  Slack
 
 shift + ctrl + cmd + alt - r : chunkc tiling::desktop --rotate 90
