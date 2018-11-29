@@ -24,9 +24,9 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   # export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs'
-  export EDITORNAME='emacs'
-  export EDITOR='open -a "emacs" --args --chdir $PWD "$@"'
-  # export EDITOR='atom'
+
+  export EDITORNAME='Sublime Text'
+  export EDITOR='subl'
 fi
 
 # /Applications/Emacs.app/Contents/MacOS/Emacs "$@"
