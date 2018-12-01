@@ -22,6 +22,7 @@ graphite2
 harfbuzz
 heroku
 heroku-node
+htop
 icu4c
 imagemagick
 imagemagick@6
@@ -46,6 +47,7 @@ lua@5.1
 mujs
 ncurses
 neofetch
+nethack
 nettle
 node-build
 nodenv
@@ -59,6 +61,8 @@ pcre
 pixman
 pkg-config
 postgresql
+pstree
+pyenv
 ranger
 rbenv
 readline
