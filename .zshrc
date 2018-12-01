@@ -224,6 +224,8 @@ genbabelrc() {
 
 alias enablebin="chmod +x ~/Sync/settings_backup/Mackup/bin/*"
 
+alias pyenvinstall="CPPFLAGS='-I/usr/local/opt/zlib/include' pyenv install -v"
+
 # Ruby/Rails
 alias be="bundle exec"
 alias b="bundle"
