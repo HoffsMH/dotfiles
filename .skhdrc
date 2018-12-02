@@ -32,7 +32,7 @@ shift + ctrl + cmd + alt - m : chunkc tiling::window --send-to-desktop next
 
 # change focus
 shift + ctrl + cmd + alt - j : chunkc tiling::window --focus next
-shift + ctrl + cmd + alt - k : chunkc tiling::window --focus previous
+shift + ctrl + cmd + alt - k : chunkc tiling::window --focus prev
 
 # warp around current desktop
 shift + ctrl + cmd + alt - l : chunkc tiling::window --warp next
