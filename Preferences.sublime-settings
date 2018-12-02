@@ -58,6 +58,7 @@
 	"index_files": false,
 	"line_numbers": false,
 	"margin": 0,
+	"minimap": false,
 	"open_files_in_new_window": false,
 	"original_color_scheme": "Packages/Agila Theme/Agila Oceanic Next.tmTheme",
 	"remember_open_files": false,
