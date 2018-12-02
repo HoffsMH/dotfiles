@@ -1,4 +1,10 @@
 [
   {"keys": ["shift+control+."], "command": "find_under_expand" },
   {"keys": ["super+d"], "command": "expand_region" },
+  {
+    "keys": ["ctrl+l"],
+    "command": "toggle_setting",
+    "args": {
+        "setting": "line_numbers"
+    }}
 ]
