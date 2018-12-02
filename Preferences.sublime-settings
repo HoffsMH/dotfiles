@@ -49,6 +49,7 @@
 	"ignored_packages":
 	[
 		"1Self",
+		"Copy Filepath With Line Numbers",
 		"Elm Language Support",
 		"Parinfer",
 		"Six",
