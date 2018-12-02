@@ -1,0 +1,61 @@
+{
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#C1C1C1C4",
+        "font" : "FuraCode Nerd Font",
+        "color" : "#F5F5F565"
+      },
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#FFFFFFFF",
+        "font" : "FuraCode Nerd Font",
+        "color" : "#CBC3C7FF"
+      },
+      "backgroundSelected" : "#807E88E4",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#B8B8B8FF",
+        "font" : "FuraCode Nerd Font",
+        "color" : "#C7C7C7E5"
+      },
+      "iconPaddingHorizontal" : 4,
+      "paddingVertical" : 3,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 4,
+      "background" : "#0000002D",
+      "spacing" : 4,
+      "text" : {
+        "size" : 34,
+        "colorSelected" : "#000000FF",
+        "font" : "FuraCode Nerd Font",
+        "color" : "#CDCDCDFF"
+      },
+      "backgroundSelected" : "#FCCAE2FF"
+    },
+    "window" : {
+      "color" : "#414141FF",
+      "paddingHorizontal" : 4,
+      "width" : 559,
+      "borderPadding" : 0,
+      "borderColor" : "#0000007F",
+      "blur" : 0,
+      "roundness" : 3,
+      "paddingVertical" : 6
+    },
+    "credit" : "Matt",
+    "separator" : {
+      "color" : "#CBCBCBF3",
+      "thickness" : 0
+    },
+    "scrollbar" : {
+      "color" : "#949797FF",
+      "thickness" : 2
+    },
+    "name" : "grey"
+  }
+}
