@@ -126,36 +126,21 @@ on packages
 
   - highlight my current line
 
-<<<<<<< HEAD
   #+BEGIN_SRC emacs-lisp
     (global-hl-line-mode t)
-=======
-  #+BEGIN_SRC emacs-lisp
-  (global-hl-line-mode t)
->>>>>>> things im relatively sure about
   #+END_SRC
 
   - not for every language
 
-<<<<<<< HEAD
   #+BEGIN_SRC emacs-lisp
     (setq default-tab-width 2)
-=======
-  #+BEGIN_SRC emacs-lisp
-  (setq default-tab-width 2)
->>>>>>> things im relatively sure about
   #+END_SRC
 
 *** Font
 
     #+BEGIN_SRC emacs-lisp
-<<<<<<< HEAD
-      (set-frame-font "FuraCode Nerd Font-12:antialias-none")
-      (set-face-attribute 'default nil :weight 'ExtraLight :height 120)
-=======
       (set-frame-font "FuraCode Nerd Font-13:antialias-none")
       (set-face-attribute 'default nil :weight 'ExtraLight :height 130)
->>>>>>> things im relatively sure about
     #+END_SRC
 
 **** ligatures with Fira Code
