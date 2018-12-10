@@ -27,8 +27,8 @@
   /* Bar's total height including --pecan-border and excluding padding */
   --pecan-height: 22px;
   /* Entire bar's outer padding (use --pecan-border for space between widgets) */
-  --pecan-padding-left: 1.74%;
-  --pecan-padding-right: 1.74%;
+  --pecan-padding-left: 25px;
+  --pecan-padding-right: 25px;
   --pecan-padding-v: 0;
   /* Border size.  Also functions as space between widgets, */
   /* so set --pecan-opacity to 0 if you want widgets to appear independent */

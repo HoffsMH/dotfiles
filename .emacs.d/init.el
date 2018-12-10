@@ -32,3 +32,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(if (daemonp)
+    (add-hook 'after-make-frame-functions
+	(lambda (frame)
+	    (select-frame frame)
+	    (set-frame-font "FuraCode Nerd Font-13:antialias-none")
+	    (set-face-attribute 'default nil :weight 'ExtraLight :height 130))))
