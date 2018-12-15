@@ -1,1 +1,1 @@
-export ORG_DIR="~/personal/org/"
+export ORG_DIR="~/personal/orgtest/"
