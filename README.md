@@ -16,13 +16,13 @@
   - network and name the computer
   - install Xcode by typing git in terminal
 
-## Homebrew
+## Homebrew (this part will take a while)
 - install homebrew
   - brew tap everything in tap list
   - go through everything on the brew_list
   - go through everything in brew_cast_list one by one taking time to open the installer
 
-### work on linking everything in dotfiles
+### work on linking everything in dotfiles (you wont get everything first time)
   - Open apps for first time to generate file structures if you need to remember Or see where stuff goes
 
 ### Brew services that need to be started
@@ -31,13 +31,16 @@
   - Redis
   - Chunkwm
   - Skhd
+  - syncthing
 
 ## Misc things to do after brew install
   - chsh to zsh
   - switch mission control to hyper U
-  - fully enable chunkwm by restarting and disabling csrutil
+  - fully enable chunkwm by restarting and disabling csrutil `csrutil disable`
+  - `sudo chunkwm --install-sa`
+  - `chunkwm --load-sa`
 
-## Chrome
+## Firefox dev edition 
   - chrome settings -> password -> offer to save password off
   - chrome extensions
     -- extensions
@@ -52,6 +55,14 @@
     - hook up vault, yes to 1passowrd mini
     - restore ssh keys from 1Password if needed
 
+## vault retrieval chart
+
+-> phone via syncthing
+-> pi via vpn and syncthing
+-> backblaze backup
+-> physical disk if available
+
+
 ## Proton email retrieve software keys
   - sublime
     - immediately download package control
@@ -63,8 +74,6 @@
 
 ## Github
 - github login
-- github generate ssh keys
-- github add ssh keys remove old ones
 
 ## Ending Misc
   - App Store

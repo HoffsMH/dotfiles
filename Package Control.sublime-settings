@@ -2,6 +2,8 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"A File Icon",
+		"Boxy Theme"
 	],
 	"installed_packages":
 	[
@@ -30,6 +32,7 @@
 		"Enhanced Clojure",
 		"ExpandRegion",
 		"External REPL",
+		"FileIcons",
 		"Future Funk - Codeception",
 		"Future Funk - Color Scheme",
 		"Git",
