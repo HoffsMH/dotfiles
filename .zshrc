@@ -107,7 +107,16 @@ alias ze="fasd -f -e $EDITOR"
 # unmounts my camera and external HD
 alias utsp="diskutil umount /Volumes/tsp* |
   diskutil umount /Volumes/Untitled* |
-  diskutil umount /Volumes/PMHOME"
+  diskutil umount /Volumes/PMHOME |
+  diskutil umount /Volumes/pi_* |
+  diskutil umount /Volumes/phone_*"
+
+# assumes fio is installed
+# https://github.com/axboe/fio
+# taken from: https://www.binarylane.com.au/support/solutions/articles/1000055889-how-to-benchmark-disk-i-o
+alias testdiskwrite="fio --randrepeat=1 --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=1G --readwrite=randwrite"
+alias testdiskread="fio --randrepeat=1 --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=1G --readwrite=randread"
+alias testdiskdumb="dd if=/dev/zero of=test bs=64k count=16k "
 
 alias e=$EDITOR
 
