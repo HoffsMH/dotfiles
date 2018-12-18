@@ -12,6 +12,12 @@ trsh() {
   mv $1 ~/.Trash
 }
 
+# This will open a fuzzy finder of all my history items and once selected
+# will output to current editing buffer so that I can either copy or enter
+fh() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+}
+
 selectdir() {
   local dir
   local realdir
@@ -29,8 +35,8 @@ pbcopyCurrentLine() {
   echo "$BUFFER" | tr -d '\n' | pbcopy
 }
 
+bindkey '^i' pbcopyCurrentLine
 zle -N pbcopyCurrentLine pbcopyCurrentLine
-bindkey '^[copycurrentline' pbcopyCurrentLine
 
 # mv() {
 #   local last_arg last_char
