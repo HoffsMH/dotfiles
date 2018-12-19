@@ -261,6 +261,8 @@ cmuc() {
   cmus-remote -c "$x"
 }
 
+alias tsource="tmux source-file ~/.tmux.conf"
+
 # elixir
 alias miex="iex -S mix"
 alias mphx="iex -S mix phx.server"

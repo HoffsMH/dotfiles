@@ -2,8 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"A File Icon",
-		"Boxy Theme"
 	],
 	"installed_packages":
 	[
@@ -58,6 +56,7 @@
 		"Path Tools",
 		"Pretty JSON",
 		"Sass",
+		"Sort Lines By Selection",
 		"Splunk Conf File Syntax Highlighting",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
