@@ -20,6 +20,10 @@ source ~/.zsh/fzf-settings.sh
 # GENERAL ALIAS TIME BROTHERS AND SISTERS
 # =============================================
 
+alias binstall="brew install $1 && brew list | sort > ~/personal/dotfiles/brew_list"
+alias bcaskinstall="brew cask install $1 && brew cask list | sort > ~/personal/dotfiles/brew_cask_list"
+alias daisy="du -hs * | sort -hr"
+
 alias cl='clear'
 alias cll='clear && l'
 
