@@ -87,7 +87,6 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktopicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktopicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-alias movescs="mv ~/Desktop/Screen\ Shot* ~/Desktop/screenshot_archive/"
 alias rmtl='rm -rf testlog'
 
 alias sc='screen'
