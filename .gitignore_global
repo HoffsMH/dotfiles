@@ -9,6 +9,7 @@
 /bower_components
 
 # misc
+secret.yml
 testlog**
 test.log
 db_dump.bak

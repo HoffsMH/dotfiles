@@ -38,6 +38,10 @@ alias dl="~/Downloads"
 alias rmdl="rm -rf ~/Downloads/*"
 alias dt="~/Desktop"
 
+# connects to my pi-vpn
+alias pi-vpn="sudo /usr/local/Cellar/openvpn/2.4.6/sbin/openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
+
+
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
@@ -143,8 +147,34 @@ alias dockercleani='docker rmi -f $(docker images -q)'
 alias dockermojo='rm -rf ~/Library/Containers/com.docker.docker/Data/*'
 
 alias dockernuke='dockerstopc || dockercleanc || dockercleani || dockercleanv'
+alias dcm='docker-compose'
+alias dcmweb='dcm build && dcm run web'
 
+# getting into and out of
+# listed containers and images with ease
+drun () {
+  docker run -it $1 ${2:-/bin/bash}
+}
 
+dexec () {
+  docker exec -it $1 ${2:-/bin/bash}
+}
+
+dgetimg() {
+  docker images | fzf | awk '{print $3}'
+}
+
+dgetc() {
+  docker ps | fzf | awk '{print $1}'
+}
+
+fdrun () {
+  drun $(dgetimg) $1
+}
+
+fdexec () {
+  dexec $(dgetc) $1
+}
 # git
 alias g="git"
 alias gco="git checkout"
@@ -302,3 +332,7 @@ tmux attach
 
 # bindkey "^[[1;3C" forward-word
 # bindkey "^[[1;3D" backward-word
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+export PATH="/usr/local/opt/openssl/bin:$PATH"
