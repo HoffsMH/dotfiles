@@ -1,38 +1,38 @@
 * Basic Settings
-	Record the time that a todo was archived.
+  Record the time that a todo was archived.
 
-	#+BEGIN_SRC emacs-lisp
-	 (setq org-log-done 'time)
-	#+END_SRC
+  #+BEGIN_SRC emacs-lisp
+   (setq org-log-done 'time)
+  #+END_SRC
 
-	#+BEGIN_SRC emacs-lisp
-		(setq org-ellipsis "⤵")
-	#+END_SRC
+  #+BEGIN_SRC emacs-lisp
+    (setq org-ellipsis "⤵")
+  #+END_SRC
 
 * Archiving
-	Store my org files in =~/org=, and archive finished tasks in
-	=~/documents/org/archive.org=.
+  Store my org files in =~/org=, and archive finished tasks in
+  =~/documents/org/archive.org=.
 
-	#+BEGIN_SRC emacs-lisp
-		(setq org-directory "~/personal/org")
+  #+BEGIN_SRC emacs-lisp
+    (setq org-directory "~/personal/")
 
-		(defun org-file-path (filename)
-			"Return the absolute address of an org file, given its relative name."
-			(concat (file-name-as-directory org-directory) filename))
+    (defun org-file-path (filename)
+      "Return the absolute address of an org file, given its relative name."
+      (concat (file-name-as-directory org-directory) filename))
 
-		(setq org-archive-location
-		(concat (org-file-path "archive.org") "::* From %s"))
-	#+END_SRC
+    (setq org-archive-location
+    (concat (org-file-path "archive/archive.org") "::* From %s"))
+  #+END_SRC
 
-	Hitting =C-c C-x C-s= will mark a todo as done and move it to an appropriate
-	place in the archive.
+  Hitting =C-c C-x C-s= will mark a todo as done and move it to an appropriate
+  place in the archive.
 
-	#+BEGIN_SRC emacs-lisp
-		(defun hrs/mark-done-and-archive ()
-			"Mark the state of an org-mode item as DONE and archive it."
-			(interactive)
-			(org-todo 'done)
-			(org-archive-subtree))
+  #+BEGIN_SRC emacs-lisp
+    (defun hrs/mark-done-and-archive ()
+      "Mark the state of an org-mode item as DONE and archive it."
+      (interactive)
+      (org-todo 'done)
+      (org-archive-subtree))
 
-		(define-key org-mode-map (kbd "C-c C-x C-s") 'hrs/mark-done-and-archive)
-	#+END_SRC
+    (define-key org-mode-map (kbd "C-c C-x C-s") 'hrs/mark-done-and-archive)
+  #+END_SRC
