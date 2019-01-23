@@ -25,7 +25,6 @@ alias bcaskinstall="brew cask install $1 && brew cask list | sort > ~/personal/d
 alias daisy="du -hs * | sort -hr"
 
 alias cl='clear'
-alias cll='clear && l'
 
 #######################
 # fasd
@@ -34,8 +33,6 @@ alias cll='clear && l'
 alias z='fasd_cd -d'
 # open directory in finder
 alias o='fasd -a -e open'
-# bring up menu
-alias zz='fasd_cd -d -i'
 
 # shortcuts
 alias dl="~/Downloads"
@@ -43,15 +40,16 @@ alias rmdl="rm -rf ~/Downloads/*"
 alias dt="~/Desktop"
 
 # connects to my pi-vpn
-alias pi-vpn="sudo /usr/local/Cellar/openvpn/2.4.6/sbin/openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
-
+alias pi-vpn="sudo openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
 
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
 tarmake () {
   tar -cvzf "$1.tar.gz" "$1"
 }
+
 untar(){
     if [ -f $1 ] ; then
             case $1 in
@@ -76,6 +74,7 @@ untar(){
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
+alias firefox='/Applications/Firefox\ Developer\ Edition.app/'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -116,7 +115,8 @@ alias utsp="diskutil umount /Volumes/tsp* |
   diskutil umount /Volumes/Untitled* |
   diskutil umount /Volumes/PMHOME |
   diskutil umount /Volumes/pi_* |
-  diskutil umount /Volumes/phone_*"
+  diskutil umount /Volumes/phone_* |
+  diskutil umount /Volumes/black_*"
 
 # assumes fio is installed
 # https://github.com/axboe/fio
@@ -127,8 +127,9 @@ alias testdiskdumb="dd if=/dev/zero of=test bs=64k count=16k "
 
 alias e=$EDITOR
 
-alias amacs='/Applications/Aquamacs.app/Contents/MacOS/Aquamacs'
-
+tdate() {
+ touch $(date "+%Y-%m-%d-$1.org")
+}
 
 # docker
 # stop the docker daemon
