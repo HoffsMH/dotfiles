@@ -10,7 +10,10 @@ export PROMPT_GEOMETRY_SHOW_RPROMPT=false
 
 GEOMETRY_PROMPT_PLUGINS=(git)
 
-ZSH_THEME="geometry/geometry"
+# ZSH_THEME="geometry/geometry"
+
+ZSH_THEME="spaceship-prompt/spaceship"
+export SPACESHIP_CHAR_SYMBOL="-> "
 
 # ZSH_THEME="lambda-pure"
 #ZSH_THEME="bullet-train"
