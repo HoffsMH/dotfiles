@@ -15,6 +15,8 @@ export PATH=$HOME/.nodenv/shims:$PATH
 export PATH=$HOME/.rbenv/shims:$HOME/.rvm/bin:$PATH
 
 export PATH=$HOME/.exenv/bin:$PATH
+export PATH=$HOME/.goenv/bin:$PATH
+export PATH=$HOME/.goenv/shims:$PATH
 export PATH=$HOME/.pyenv/bin:$PATH
 export PATH=$HOME/.pyenv/shims:$PATH
 
