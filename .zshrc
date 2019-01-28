@@ -46,10 +46,12 @@ alias pi-vpn="sudo openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
 
+# makes a generic tar.gz file for the given folder
 tarmake () {
   tar -cvzf "$1.tar.gz" "$1"
 }
 
+# found this thing on SO it supposed to extract most things
 untar(){
     if [ -f $1 ] ; then
             case $1 in
@@ -86,10 +88,21 @@ alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktopicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktopicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# This should allow me to change the directory that screenshots go to at will
+chscreenshotdir() {
+    defaults write com.apple.screencapture location $1 &&killall SystemUIServer
+}
+
+# if a headline with a timestamp gets placed in here it ends up on my gcal
+heckerschedule() {
+    pbpaste >> ~/personal/00_schedule/hecker.matthew@gmail.com.org
+}
+
 alias rmtl='rm -rf testlog'
 
-alias sc='screen'
-alias scr='screen -r'
+# takes large amount of text wraps it at 80 characters and puts it back into register
+alias wrap80="pbpaste | fold -w 80 -s | pbcopy"
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
