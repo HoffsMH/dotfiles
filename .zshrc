@@ -329,9 +329,6 @@ alias mtex="iex -S mix test"
 #################################################
 source ~/.zsh/path-and-shims.sh
 
-# my custom env vars like org dir and go dir
-source ~/.zsh/env-vars.sh
-
 # interactive cd
 source ~/.oh-my-zsh/custom/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
 
