@@ -96,7 +96,7 @@ chscreenshotdir() {
 
 # if a headline with a timestamp gets placed in here it ends up on my gcal
 heckerschedule() {
-    pbpaste >> ~/personal/00_schedule/hecker.matthew@gmail.com.org
+    pbpaste >> ~/personal/01-schedule/hecker.matthew@gmail.com.org
 }
 
 alias rmtl='rm -rf testlog'
@@ -118,10 +118,6 @@ alias ls='ls -Fa'
 alias lg='l | grep -i'
 
 alias zource="source ~/.zshrc"
-alias zshrc="$EDITOR ~/.zshrc"
-alias zshdir="$EDITOR ~/.zsh"
-alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
-alias ze="fasd -f -e $EDITOR"
 
 # unmounts my camera and external HD
 alias utsp="diskutil umount /Volumes/tsp* |
@@ -131,17 +127,19 @@ alias utsp="diskutil umount /Volumes/tsp* |
   diskutil umount /Volumes/phone_* |
   diskutil umount /Volumes/black_*"
 
-# assumes fio is installed
-# https://github.com/axboe/fio
-# taken from: https://www.binarylane.com.au/support/solutions/articles/1000055889-how-to-benchmark-disk-i-o
-alias testdiskwrite="fio --randrepeat=1 --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=1G --readwrite=randwrite"
-alias testdiskread="fio --randrepeat=1 --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=1G --readwrite=randread"
 alias testdiskdumb="dd if=/dev/zero of=test bs=64k count=16k "
 
 alias e=$EDITOR
 
 tdate() {
  touch $(date "+%Y-%m-%d-$1.org")
+}
+# append filename with a string
+appendmv() {
+    for i in "${@:2}"
+    do
+        mv $i "$1$i"
+    done
 }
 
 # docker
