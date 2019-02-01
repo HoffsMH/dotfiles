@@ -36,3 +36,17 @@
 
     (define-key org-mode-map (kbd "C-c C-x C-s") 'hrs/mark-done-and-archive)
   #+END_SRC
+
+  #+BEGIN_SRC emacs-lisp
+;;    (require 'org-gcal)
+;;    (setq calendar-org-file
+;;     (concat "~/personal/01-schedule/" (getenv "GCAL_CALENDAR_MAIN") ".org")
+;;    )
+;;
+;;    (setq org-gcal-client-id (getenv "GCAL_CLIENT_ID")
+;;          org-gcal-client-secret (getenv "GCAL_CLIENT_SECRET")
+;;          org-gcal-file-alist '(("some email"   .  "some org files")))
+  #+END_SRC
+
+  #+BEGIN_SRC emacs-lisp
+  #+END_SRC
