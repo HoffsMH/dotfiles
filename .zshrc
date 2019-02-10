@@ -125,6 +125,7 @@ alias utsp="diskutil umount /Volumes/tsp* |
   diskutil umount /Volumes/PMHOME |
   diskutil umount /Volumes/pi_* |
   diskutil umount /Volumes/phone_* |
+  diskutil umount /Volumes/camera_* |
   diskutil umount /Volumes/black_*"
 
 alias testdiskdumb="dd if=/dev/zero of=test bs=64k count=16k "
@@ -134,6 +135,7 @@ alias e=$EDITOR
 tdate() {
  touch $(date "+%Y-%m-%d-$1.org")
 }
+
 # append filename with a string
 appendmv() {
     for i in "${@:2}"
