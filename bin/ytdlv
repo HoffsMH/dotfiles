@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # -x, --extract-audio              Convert video files to audio-only files
 #                                (requires ffmpeg or avconv and ffprobe or
@@ -39,4 +39,4 @@ yturl=${1:-$clipboard}
 
 echo  downloading "$yturl"
 
-youtube-dl  -x  -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/personal/media/.yt-dl-archive/archive --audio-format 'mp3' -i --audio-quality 0 -o "~/personal/media/audio/capture/%(title)s-%(id)s.%(ext)s" $yturl
+youtube-dl -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/personal/media/.yt-dl-archive/archive -o "~/personal/media/video/capture/%(title)s-%(id)s.%(ext)s" $yturl
