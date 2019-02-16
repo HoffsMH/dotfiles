@@ -137,17 +137,6 @@
        (exec-path-from-shell-initialize))
    #+END_SRC
 
-** syntax-subword
-   f and b should now traverse smarter works
-P   can use left and right arrow for char by char which is needed less often
-
-   #+BEGIN_SRC emacs-lisp
-     (global-syntax-subword-mode 1)
-
-     (global-set-key (kbd "C-f") 'syntax-subword-forward)
-     (global-set-key (kbd "C-b") 'syntax-subword-backward)
-   #+END_SRC
-
 ** smartparens
    #+BEGIN_SRC emacs-lisp
      (smartparens-global-mode 1)
