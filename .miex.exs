@@ -1,6 +1,4 @@
-defmodule Miex do
-  import System
-
+defmodule M do
   def mx(task) do
     Mix.Task.reenable task
     Mix.Task.run task, []

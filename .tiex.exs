@@ -1,4 +1,4 @@
-defmodule Tiex do
+defmodule T do
   def start_testing() do
     ExUnit.start()
     Code.eval_file("test/test_helper.exs", File.cwd!())
@@ -12,9 +12,9 @@ defmodule Tiex do
     Mix.env(:test)
     start_testing()
     if line do
-      ExUnit.configure(exclude: [:test], include: [line: line])
+      ExUnit.configure(exclude: [:test], include: [line: line], timeout: 600_000)
     else
-      ExUnit.configure(exclude: [], include: [])
+      ExUnit.configure(exclude: [], include: [], timeout: 600_000)
     end
 
     if File.regular?(path) do

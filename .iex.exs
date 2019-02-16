@@ -8,6 +8,3 @@ import_file("~/.miex.exs")
 
 IO.puts("current PID is:")
 IO.inspect(self())
-
-# can use this thing to conditionally import modules that are already defined loaded and compiled
-# import_if_available Tiex
