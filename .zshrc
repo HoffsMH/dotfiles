@@ -295,25 +295,38 @@ alias yombom='yarn cache clean && bower cache clean && rm -rf node_modules bower
 
 alias tree="tree -L 3"
 
-# https://github.com/cmus/cmus/wiki/detachable-cmus
-# dont forget to run bind in cmus after installing to work
-# :bind -f common q shell screen -d cmus
-# to change volume in app with + and -
-# :set softvol=true
-alias cmux='screen -q -r -D cmus ~/Sync/muse || screen -S cmus $(which cmus)'
-# clears playlist then adds new items to playlist
-cmuc() {
-  local dire=${1:-~/Sync/muse}
-  local x="$(selectdir $dire)"
-  cmus-remote -c "$x"
+play() {
+    dir=${1:-"$HOME/personal/media/audio"}
+    chdir $dir
+
+    selection=$(ag --silent --hidden --ignore-dir=".git" -g "" "." | fzf -m --preview=false --preview-window=hidden)
+
+    mails=$(echo $selection | tr '\n' '\0')
+    # mails="$mails"
+    # echo $mails
+
+    mpg123 $mails
+
+
+    # for i in $(echo $selection)
+    # do
+    #     echo "hi"
+    #     echo $i
+    # done
+
+
+    # mpg123 $selection
+    # popd
 }
+
 
 alias tsource="tmux source-file ~/.tmux.conf"
 
 # elixir
 alias miex="iex -S mix"
+alias tmiex="MIX_ENV=test iex -S mix"
+alias ctmiex="MIX_ENV=test mix compile --force && tmiex"
 alias mphx="iex -S mix phx.server"
-alias mtex="iex -S mix test"
 
 # POSTGRES
 # To have launchd start postgresql now and restart at login:
