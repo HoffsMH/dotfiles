@@ -22,8 +22,10 @@ chunkc core::unload border.so
 #
 
 chunkc set global_desktop_mode           bsp
-# chunkc set 2_desktop_mode                monocle
-# chunkc set 5_desktop_mode                float
+chunkc set window_fade_inactive          1
+chunkc set window_fade_alpha             0.85
+chunkc set window_fade_duration          0.1
+chunkc set window_use_cgs_move           1
 
 chunkc set global_desktop_offset_top     25
 chunkc set global_desktop_offset_bottom  25
@@ -42,10 +44,10 @@ chunkc set bsp_split_ratio               0.5
 chunkc set monitor_focus_cycle           0
 chunkc set window_focus_cycle            monitor
 
-chunkc set mouse_follows_focus           1
 chunkc set window_float_next             0
 chunkc set window_float_center           1
 chunkc set window_region_locked          1
+chunkc set window_float_topmost          1
 
 chunkc set mouse_modifier                fn
 
@@ -67,4 +69,5 @@ chunkc core::load border.so
 chunkc core::load tiling.so
 # this should make sure to never exclude emacs from tiling
 chunkc tiling::rule --owner "Emacs.*" --state tile
+chunkc tiling::rule --owner "dwarfort.*" --state tile
 # chunkc core::load ffm.so

@@ -11,6 +11,8 @@ cmd + shift + alt + ctrl - 0x1E : chunkc tiling::window --grid-layout 1:2:1:0:1:
 
 # change focus between tiling / floating windows
 cmd + shift + alt + ctrl - space : chunkc tiling::window --toggle float
+#cmd + shift + alt + ctrl - 0x18 : chunkc tiling::window --toggle parent
+cmd + shift + alt + ctrl - i : chunkc tiling::window --toggle parent
 
 # change layout of desktop
 # this is the only thing I could find that will let me reset from bug where I
@@ -42,7 +44,5 @@ shift + ctrl + cmd + alt - r : chunkc tiling::desktop --rotate 90
 # app specific focus
 shift + ctrl + cmd + alt - c : open -a  Firefox\ Developer\ Edition
 shift + ctrl + cmd + alt - t : open -a  Kitty
-shift + ctrl + cmd + alt - e : open -a  Sublime\ Text
+shift + ctrl + cmd + alt - e : open -a  Emacs
 shift + ctrl + cmd + alt - s : open -a  Slack
-
-
