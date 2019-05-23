@@ -1,3 +1,5 @@
+Code.compiler_options(ignore_module_conflict: false)
+
 defmodule M do
   def mx(task) do
     Mix.Task.reenable task
@@ -9,13 +11,19 @@ defmodule M do
     Mix.Task.run task, args
   end
 
+  def mxf() do
+    if File.regular?("./formatter.exs") do
+      mx("format")
+    end
+  end
+
   def r do
-    mx("format")
+    mxf()
     IEx.Helpers.recompile()
   end
 
   def lookup(call) do
-    [Enum, Map, List]
+    [Enum, Map, List, String, Kernel]
     |> Enum.group_by(&(&1), &lookup(&1, call))
   end
 
