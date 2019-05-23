@@ -33,6 +33,13 @@ export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
 export KEEP_BUILD_PATH=true
 
+# rust env
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# openssl on path
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+
 eval "$(exenv init -)"
 nodenv rehash
 rbenv rehash

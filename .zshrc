@@ -20,11 +20,12 @@ source ~/.zsh/fzf-settings.sh
 # GENERAL ALIAS TIME BROTHERS AND SISTERS
 # =============================================
 
-alias binstall="brew install $1 && brew list | sort > ~/personal/dotfiles/brew_list"
-alias bcaskinstall="brew cask install $1 && brew cask list | sort > ~/personal/dotfiles/brew_cask_list"
 alias daisy="du -hs * | sort -hr"
-
 alias cl='clear'
+
+hist() {
+ cat ~/.zsh_history | ag $@
+}
 
 #######################
 # fasd
@@ -35,9 +36,7 @@ alias z='fasd_cd -d'
 alias o='fasd -a -e open'
 
 # shortcuts
-alias dl="~/Downloads"
 alias rmdl="rm -rf ~/Downloads/*"
-alias dt="~/Desktop"
 
 # connects to my pi-vpn
 alias pi-vpn="sudo openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
@@ -94,11 +93,6 @@ chscreenshotdir() {
     defaults write com.apple.screencapture location $1 &&killall SystemUIServer
 }
 
-# if a headline with a timestamp gets placed in here it ends up on my gcal
-heckerschedule() {
-    pbpaste >> ~/personal/01-schedule/hecker.matthew@gmail.com.org
-}
-
 alias rmtl='rm -rf testlog'
 
 # takes large amount of text wraps it at 80 characters and puts it back into register
@@ -113,9 +107,12 @@ ding() {
 }
 
 #fancy ls command
-alias l="ls -laFGgohq"
-alias ls='ls -Fa'
-alias lg='l | grep -i'
+alias l="exa -laFGgh"
+alias ls="exa -Fa"
+
+# alias l="ls -laFGgohq"
+# alias ls='ls -Fa'
+# alias lg='l | grep -i'
 
 alias zource="source ~/.zshrc"
 
@@ -132,9 +129,6 @@ alias testdiskdumb="dd if=/dev/zero of=test bs=64k count=16k "
 
 alias e=$EDITOR
 
-tdate() {
- touch $(date "+%Y-%m-%d-$1.org")
-}
 
 # append filename with a string
 appendmv() {
@@ -327,6 +321,7 @@ alias miex="iex -S mix"
 alias tmiex="MIX_ENV=test iex -S mix"
 alias ctmiex="MIX_ENV=test mix compile --force && tmiex"
 alias mphx="iex -S mix phx.server"
+alias mt="mix test"
 
 # POSTGRES
 # To have launchd start postgresql now and restart at login:
@@ -342,24 +337,15 @@ alias mphx="iex -S mix phx.server"
 #################################################
 source ~/.zsh/path-and-shims.sh
 
-# interactive cd
-source ~/.oh-my-zsh/custom/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
-
 # autoclose delimiters
 source ~/.oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
 
+
+# vault completion
+complete -o nospace -C /usr/local/bin/vault vault
+
+# alias reminder
+source /Users/hoffs/ripz/ripz.zsh
+
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="/usr/local/opt/postgresql@9.4/bin:$PATH"
-
-export PATH="/Users/matthew.hecker/Downloads/google-cloud-sdk/bin:$PATH"
-
-tmux attach
-
-# bindkey "^[[1;3C" forward-word
-# bindkey "^[[1;3D" backward-word
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
-export PATH="/usr/local/opt/openssl/bin:$PATH"
