@@ -37,6 +37,7 @@
 
     (setq ivy-re-builders-alist
     '((counsel-ag . ivy--regex-plus)
+    (counsel-projectile-find-file . ivy--regex-fuzzy)
     (t . ivy--regex-fuzzy)))
   #+END_SRC
 
