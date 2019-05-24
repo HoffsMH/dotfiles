@@ -62,6 +62,7 @@
 	"line_numbers": false,
 	"margin": 0,
 	"minimap": false,
+	"neovintageous_build_version": 11100,
 	"open_files_in_new_window": false,
 	"original_color_scheme": "Packages/Agila Theme/Agila Oceanic Next.tmTheme",
 	"remember_open_files": false,
@@ -79,6 +80,7 @@
 	"theme": "ayu-mirage.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_super_keys": null,
 	"vintageous_use_sys_clipboard": true,
 	"wide_caret": true
 }
