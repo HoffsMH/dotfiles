@@ -25,8 +25,8 @@ if [[ -n $SSH_CONNECTION ]]; then
 else
   # export EDITOR='/Applications/Emacs.app/Contents/MacOS/Emacs'
 
-  export EDITORNAME='Sublime Text'
-  export EDITOR='subl'
+  export EDITORNAME='emacs'
+  export EDITOR='emacs'
 fi
 
 # /Applications/Emacs.app/Contents/MacOS/Emacs "$@"

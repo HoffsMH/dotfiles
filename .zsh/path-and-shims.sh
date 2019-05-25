@@ -41,6 +41,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 
 eval "$(exenv init -)"
+eval "$(nodenv init -)"
 nodenv rehash
 rbenv rehash
 exenv rehash
