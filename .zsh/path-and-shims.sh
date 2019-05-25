@@ -46,6 +46,9 @@ nodenv rehash
 rbenv rehash
 exenv rehash
 
+# init thefuck tool
+eval $(thefuck --alias)
+
 # should end up with something like
 
 # /Users/<user>/.rbenv/shims:
