@@ -353,3 +353,6 @@ source /Users/hoffs/ripz/ripz.zsh
 
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# lsing on my music directory was getting annoying with the default color
+export EXA_COLORS="*.mp3=34"
