@@ -38,7 +38,7 @@ defmodule M do
 
   def start_testing() do
     ExUnit.start()
-    # Code.eval_file("test/test_helper.exs", File.cwd!())
+    Code.eval_file("test/test_helper.exs", File.cwd!())
     :ok
   end
 

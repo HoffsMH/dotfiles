@@ -41,6 +41,10 @@ alias rmdl="rm -rf ~/Downloads/*"
 # connects to my pi-vpn
 alias pi-vpn="sudo openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
 
+# redshift automation
+alias blueoff="launchctl load ~/Library/LaunchAgents/com.me.start-redshift.plist"
+alias blueon="launchctl unload ~/Library/LaunchAgents/com.me.start-redshift.plist"
+
 # Merge PDF files
 # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
 alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
