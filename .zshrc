@@ -346,7 +346,7 @@ source ~/.oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
 
 
 # vault completion
-complete -o nospace -C /usr/local/bin/vault vault
+# complete -o nospace -C /usr/local/bin/vault vault
 
 # alias reminder
 source /Users/hoffs/ripz/ripz.zsh
