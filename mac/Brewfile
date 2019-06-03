@@ -63,6 +63,7 @@ brew "bitwarden-cli"
 brew "redshift"
 brew "thefuck"
 brew "coreutils"
+brew "poppler"
 
 cask "1password6"
 cask "bitwarden"
