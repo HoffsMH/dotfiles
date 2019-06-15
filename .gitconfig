@@ -1,6 +1,6 @@
 [user]
 	name = HoffsMH
-	email = hecker.matthew@gmail.com
+	email = matthecker@pm.me
 [core]
 	editor = subl -n -w
 	excludesfile = ~/.gitignore_global

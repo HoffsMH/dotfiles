@@ -6,7 +6,6 @@ bindkey -s '^[yzff' '^t'
 # brings up fuzzy finder for history
 bindkey -s '^[yzfh' '^r'
 
-
 # moves file to default trash
 trsh() {
   mv $1 ~/.Trash
