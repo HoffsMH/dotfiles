@@ -1,14 +1,9 @@
 # shell hooks
 source ~/.zsh/hooks.sh
 
-#optional vanilla zsh settings I may want to change
-source ~/.zsh/optional-zsh-settings.sh
-
 # sets up oh-my-zsh
 source ~/.zsh/oh-my-zsh-settings.sh
-
-# exclusive to development
-source ~/.zsh/local.sh
+source ~/code/util/spaceship-prompt/spaceship.zsh
 
 #small hacks and widgets
 source ~/.zsh/widgets.sh
@@ -147,6 +142,7 @@ appendmv() {
 dockerstopdaemon() {
   osascript -e 'quit app "Docker"'
 }
+
 # start the docker daemon
 alias dockerstartdaemon='open -a Docker'
 # stops containers
@@ -190,6 +186,7 @@ fdrun () {
 fdexec () {
   dexec $(dgetc) $1
 }
+
 # git
 alias g="git"
 alias gco="git checkout"
@@ -221,7 +218,6 @@ alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
 alias grbs='git rebase --skip'
-alias gb='git branch'
 alias gm='git merge'
 
 
@@ -293,33 +289,6 @@ alias yombom='yarn cache clean && bower cache clean && rm -rf node_modules bower
 
 alias tree="tree -L 3"
 
-play() {
-    dir=${1:-"$HOME/personal/media/audio"}
-    chdir $dir
-
-    selection=$(ag --silent --hidden --ignore-dir=".git" -g "" "." | fzf -m --preview=false --preview-window=hidden)
-
-    mails=$(echo $selection | tr '\n' '\0')
-    # mails="$mails"
-    # echo $mails
-
-    mpg123 $mails
-
-
-    # for i in $(echo $selection)
-    # do
-    #     echo "hi"
-    #     echo $i
-    # done
-
-
-    # mpg123 $selection
-    # popd
-}
-
-
-alias tsource="tmux source-file ~/.tmux.conf"
-
 # elixir
 alias miex="iex -S mix"
 alias tmiex="MIX_ENV=test iex -S mix"
@@ -341,18 +310,9 @@ alias mt="mix test"
 #################################################
 source ~/.zsh/path-and-shims.sh
 
-# autoclose delimiters
-source ~/.oh-my-zsh/custom/plugins/zsh-autopair/autopair.zsh
-
-
-# vault completion
-# complete -o nospace -C /usr/local/bin/vault vault
-
-# alias reminder
-source /Users/hoffs/ripz/ripz.zsh
 
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/code/util/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # lsing on my music directory was getting annoying with the default color
 export EXA_COLORS="*.mp3=34"
