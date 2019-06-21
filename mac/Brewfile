@@ -65,6 +65,7 @@ brew "thefuck"
 brew "coreutils"
 brew "poppler"
 brew "ext4fuse"
+brew "maven"
 
 cask "1password6"
 cask "bitwarden"
