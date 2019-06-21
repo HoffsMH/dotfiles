@@ -84,6 +84,7 @@ on packages
     (setq beg (line-beginning-position) end (line-end-position)))
     (comment-or-uncomment-region beg end)))
      (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
+     (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
   #+END_SRC
 
   This makes it to where I dont have to type zsh every time I Ansi Term
