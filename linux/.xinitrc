@@ -67,3 +67,5 @@ get_session(){
 xcape -t 200 -e "Control_L=Escape"
 
 exec $(get_session)
+
+xcape -t 200 -e "Control_L=Escape"
