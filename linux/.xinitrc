@@ -63,9 +63,7 @@ get_session(){
   echo "dbus-launch ${dbus_args[*]}"
 }
 
-# Tapping L Control triggers Escape
-xcape -t 200 -e "Control_L=Escape"
-
 [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+xcape -t 200 -e "Control_L=Escape"
 
 exec $(get_session)
