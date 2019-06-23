@@ -220,7 +220,6 @@ alias grbc='git rebase --continue'
 alias grbs='git rebase --skip'
 alias gm='git merge'
 
-
 # I don't trust git stash so sometimes store incomplete work on top of the branch
 # in a commit that is always called 'reset me'
 alias greset="git add . && git commit -m 'reset me'"
@@ -313,6 +312,11 @@ source ~/.zsh/path-and-shims.sh
 
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
 source ~/code/util/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source "$HOME/code/util/spaceship-prompt/spaceship.zsh"
+export SPACESHIP_CHAR_SYMBOL="-> "
+
+source ~/code/util/zsh-autopair/autopair.zsh
 
 # lsing on my music directory was getting annoying with the default color
 export EXA_COLORS="*.mp3=34"
