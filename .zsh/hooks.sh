@@ -4,9 +4,6 @@ eval "$(direnv hook zsh)"
 # https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
 
-# init thefuck tool
-eval $(thefuck --alias)
-
 eval "$(exenv init -)"
 eval "$(nodenv init -)"
 
