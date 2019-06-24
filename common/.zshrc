@@ -72,10 +72,6 @@ untar(){
     fi
 }
 
-# Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
-alias firefox='/Applications/Firefox\ Developer\ Edition.app/'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
