@@ -6,11 +6,6 @@ bindkey -s '^[yzff' '^t'
 # brings up fuzzy finder for history
 bindkey -s '^[yzfh' '^r'
 
-# moves file to default trash
-trsh() {
-  mv $1 ~/.Trash
-}
-
 # This will open a fuzzy finder of all my history items and once selected
 # will output to current editing buffer so that I can either copy or enter
 
@@ -26,12 +21,7 @@ selectdir() {
   && echo "$realdir"
 }
 
-# # copys the current terminal line to clipboard
-pbcopyCurrentLine() {
-  echo "$BUFFER" | tr -d '\n' | pbcopy
-}
 
-zle -N pbcopyCurrentLine pbcopyCurrentLine
 
 
 # # touch that builds path to the file if it doesnt exist

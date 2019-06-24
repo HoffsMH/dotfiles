@@ -3,7 +3,6 @@ agg() {
 }
 
 
-
 export FZF_DEFAULT_OPTS='
                   --border
                   --bind "ctrl-y:execute-silent(echo {} | pbcopy)+abort"
@@ -22,5 +21,3 @@ export FZF_DEFAULT_COMMAND='ag --silent --hidden --ignore-dir=".git" -g "" .'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_CTRL_T_OPTS=$FZF_DEFAULT_OPTS
 export FZF_CTRL_R_OPTS="--height 40% --reverse --no-preview "
-
-alias af='fzf'

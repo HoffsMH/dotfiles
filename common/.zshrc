@@ -3,6 +3,7 @@ source ~/.zsh/hooks.sh
 
 # sets up oh-my-zsh
 source ~/.zsh/oh-my-zsh-settings.sh
+
 source ~/code/util/spaceship-prompt/spaceship.zsh
 
 #small hacks and widgets
