@@ -6,8 +6,3 @@ pbcopyCurrentLine() {
 }
 
 zle -N pbcopyCurrentLine pbcopyCurrentLine
-
-# Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
-alias canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
-alias firefox='/Applications/Firefox\ Developer\ Edition.app/'
