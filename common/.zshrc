@@ -66,6 +66,14 @@ untar(){
     fi
 }
 
+yvid() {
+    echo "ytdlv $(pbpaste)" >> ~/personal/media/dlscript
+}
+
+yaud() {
+    echo "ytdla $(pbpaste)" >> ~/personal/media/dlscript
+}
+
 
 
 
