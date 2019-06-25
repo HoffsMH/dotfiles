@@ -6,3 +6,7 @@ pbcopyCurrentLine() {
 }
 
 zle -N pbcopyCurrentLine pbcopyCurrentLine
+
+# redshift automation
+alias blueoff="launchctl load ~/Library/LaunchAgents/com.me.start-redshift.plist"
+alias blueon="launchctl unload ~/Library/LaunchAgents/com.me.start-redshift.plist"
