@@ -317,6 +317,7 @@ you should place your code here."
   (org-babel-load-file (expand-file-name "org-configuration.org" "~/personal/dotfiles/.emacs.d/settings"))
 
   (org-babel-load-file (expand-file-name "basic.org" "~/personal/dotfiles/.emacs.d/settings"))
+  (menu-bar-mode -1)
 )
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
