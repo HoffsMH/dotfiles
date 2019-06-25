@@ -62,5 +62,7 @@ fi
  }
 
 xcape -t 200 -e "Control_L=Escape"
+clipmenud &
 
-exec $SESSION
+
+exec dwm
