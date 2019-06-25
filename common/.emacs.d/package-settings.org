@@ -100,10 +100,6 @@
      (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
    #+END_SRC
 
-** expand-region
-   #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "s-d") 'er/expand-region)
-   #+END_SRC
 
 ** language specific
 *** Org

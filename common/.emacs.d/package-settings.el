@@ -46,8 +46,6 @@
 (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
-(global-set-key (kbd "s-d") 'er/expand-region)
-
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((emacs-lisp . t)

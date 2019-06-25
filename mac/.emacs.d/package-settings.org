@@ -4,5 +4,5 @@
 
 ** expand-region
    #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "C-s") 'er/expand-region)
+     (global-set-key (kbd "s-d") 'er/expand-region)
    #+END_SRC
