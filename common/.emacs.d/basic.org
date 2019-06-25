@@ -30,7 +30,7 @@ on packages
     (setq require-final-newline t)
   #+END_SRC
 
-  - save when I alt-tab
+  - save when I switch window
 
   #+BEGIN_SRC emacs-lisp
     (add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
@@ -47,44 +47,30 @@ on packages
   I don't care Ill just use git and commit often :)
 
   #+BEGIN_SRC emacs-lisp
-    (setq create-lockfiles nil)
+  (setq create-lockfiles nil)
   #+END_SRC
 
-  - when we highlight a region and begin typing we delete
+  * when we highlight a region and begin typing we delete
     the region
 
   #+BEGIN_SRC emacs-lisp
-    (pending-delete-mode 1)
+  (pending-delete-mode 1)
   #+END_SRC
 
-  - cleanup all the whitespace when we save
+  * get rid of menu bar
 
   #+BEGIN_SRC emacs-lisp
-    (add-hook 'before-save-hook 'whitespace-cleanup)
-    (add-hook 'before-save-hook 'delete-trailing-whitespace)
+  (menu-bar-mode -1)
   #+END_SRC
-
-  still need to figure out how to regist and use this it looks great
-
-  #+BEGIN_SRC emacs-lisp
-    (defun hrs/add-auto-mode (mode &rest patterns)
-      "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
-      (dolist (pattern patterns)
-    (add-to-list 'auto-mode-alist (cons pattern mode))))
-  #+END_SRC
-
-  the ability to comment stuff easily
 
   #+BEGIN_SRC emacs-lisp
     (defun comment-or-uncomment-region-or-line ()
-  "Comments or uncomments the region or the current line if there's no active region." (interactive)
-  (let (beg end)
-      (if (region-active-p)
+    "Comments or uncomments the region or the current line if there's no active region." (interactive)
+    (let (beg end)
+    (if (region-active-p)
     (setq beg (region-beginning) end (region-end))
     (setq beg (line-beginning-position) end (line-end-position)))
     (comment-or-uncomment-region beg end)))
-     (global-set-key (kbd "s-/") 'comment-or-uncomment-region-or-line)
-     (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
   #+END_SRC
 
   This makes it to where I dont have to type zsh every time I Ansi Term
@@ -166,7 +152,7 @@ on packages
   - Contact info.
   #+BEGIN_SRC emacs-lisp
     (setq user-full-name "Matthew Hecker"
-      user-mail-address "hecker.matthew@gmail.com")
+      user-mail-address "matthecker@pm.me")
   #+END_SRC
 
   - Inhibit the dumb startup screen and message
