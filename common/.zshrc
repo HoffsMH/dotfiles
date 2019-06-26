@@ -74,16 +74,6 @@ chscreenshotdir() {
 
 alias rmtl='rm -rf testlog'
 
-# takes large amount of text wraps it at 80 characters and puts it back into register
-alias wrap80="pbpaste | fold -w 80 -s | pbcopy"
-
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-
-# provide a notification that a long runnning script is complete e.g long_running_script && ding
-ding() {
-  osascript -e 'display notification "'$1'" with title "'$2'" sound name "Glass"'
-}
 
 #fancy ls command
 alias l="exa -laFGgh"
@@ -95,19 +85,8 @@ alias ls="exa -Fa"
 
 alias zource="source ~/.zshrc"
 
-# unmounts my camera and external HD
-alias utsp="diskutil umount /Volumes/tsp* |
-  diskutil umount /Volumes/Untitled* |
-  diskutil umount /Volumes/PMHOME |
-  diskutil umount /Volumes/pi_* |
-  diskutil umount /Volumes/phone_* |
-  diskutil umount /Volumes/camera_* |
-  diskutil umount /Volumes/black_*"
-
 alias testdiskdumb="dd if=/dev/zero of=test bs=64k count=16k "
-
 alias e=$EDITOR
-
 
 # append filename with a string
 appendmv() {
@@ -247,7 +226,6 @@ alias pyenvinstall="CPPFLAGS='-I/usr/local/opt/zlib/include' pyenv install -v"
 
 # Ruby/Rails
 alias be="bundle exec"
-alias b="bundle"
 
 # JS/Ember
 alias ya='yarn'
@@ -277,7 +255,6 @@ alias mt="mix test"
 # is purged
 #################################################
 source ~/.zsh/path-and-shims.sh
-
 
 # https://github.com/zsh-users/zsh-syntax-highlighting#why-must-zsh-syntax-highlightingzsh-be-sourced-at-the-end-of-the-zshrc-file
 source ~/code/util/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

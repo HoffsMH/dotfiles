@@ -5,3 +5,18 @@ source "$HOME/personal/dotfiles/common/.zshrc"
 # alias blueon="launchctl stop ~/Library/LaunchAgents/com.me.start-redshift.plist"
 
 alias endx="killall xinit"
+
+# unmounts my camera and external HD
+alias utsp="sudo umount /mnt/tsp* |
+  sudo umount /mnt/Untitled* |
+  sudo umount /mnt/PMHOME |
+  sudo umount /mnt/pi_* |
+  sudo umount /mnt/phone_* |
+  sudo umount /mnt/camera_* |
+  sudo umount /mnt/black_*"
+
+# takes large amount of text wraps it at 80 characters and puts it back into register
+alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
+alias xpaste="xclip -o"
+
+alias cmenu="clipmenu"
