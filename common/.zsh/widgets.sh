@@ -21,9 +21,6 @@ selectdir() {
   && echo "$realdir"
 }
 
-
-
-
 # # touch that builds path to the file if it doesnt exist
 t() {
   if [ $# -lt 1 ]; then

@@ -96,8 +96,6 @@ appendmv() {
     done
 }
 
-
-
 # stops containers
 alias dockerstopc='docker stop $(docker ps -aq)'
 # cleans containers
