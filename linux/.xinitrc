@@ -58,11 +58,10 @@ fi
      *) dbus_args+=("$SESSION") ;;
    esac
 
-   echo "dbus-launch ${dbus_args[*]}"
+   export XSESSION=dbus_args
  }
 
 xcape -t 200 -e "Control_L=Escape"
 clipmenud &
 
-
-exec dwm
+exec $XSESSION
