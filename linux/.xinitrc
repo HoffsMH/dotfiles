@@ -58,10 +58,11 @@ fi
      *) dbus_args+=("$SESSION") ;;
    esac
 
-   export XSESSION=dbus_args
+   exec dbus_args
  }
 
 xcape -t 200 -e "Control_L=Escape"
 clipmenud &
+xset r rate 200 30
 
-exec $XSESSION
+exec $SESSION
