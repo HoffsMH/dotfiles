@@ -28,11 +28,6 @@ hist() {
 ######################
 # cd into directory
 alias z='fasd_cd -d'
-# open directory in finder
-alias o='fasd -a -e open'
-
-# shortcuts
-alias rmdl="rm -rf ~/Downloads/*"
 
 # connects to my pi-vpn
 alias pi-vpn="sudo openvpn --keepalive 10 60 --config ~/personal/sec/indus.ovpn"
@@ -70,16 +65,7 @@ untar(){
 }
 
 
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
 
-# Show active network interfaces
-alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktopicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktopicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 # This should allow me to change the directory that screenshots go to at will
 chscreenshotdir() {
@@ -242,15 +228,6 @@ gdo() {
   git diff "$branchname" "origin/$branchname" $1
 }
 
-# write modern javascript in a js file and have it just work
-ecma() {
-  if hash babel 2>/dev/null; then
-    babel  $1 -d .__babel_tmp && node .__babel_tmp/$1 && rm -rf .__babel_tmp
-  elif hash yarn 2>/dev/null; then
-    yarn babel  $1 -d .__babel_tmp && node .__babel_tmp/$1 && rm -rf .__babel_tmp
-  fi
-}
-
 genbabelinstall() {
   npm install --save-dev babel-cli babel-core babel babel-preset-env
 }
@@ -265,8 +242,6 @@ genbabelrc() {
 }' > .babelrc
   fi
 }
-
-alias enablebin="chmod +x ~/Sync/settings_backup/Mackup/bin/*"
 
 alias pyenvinstall="CPPFLAGS='-I/usr/local/opt/zlib/include' pyenv install -v"
 
