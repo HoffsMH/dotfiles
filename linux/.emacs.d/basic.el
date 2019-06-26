@@ -2,12 +2,14 @@
 
 (eval-after-load "evil-maps"
 (dolist (map '(evil-motion-state-map
-               evil-insert-state-map
-               evil-emacs-state-map))
-  (define-key (eval map) (kbd "C-e") nil)
-  (define-key (eval map) (kbd "C-/") nil)
-  (define-key (eval map) (kbd "C-n") nil)
-  (define-key (eval map) (kbd "C-z") nil)))
+evil-insert-state-map
+evil-normal-state-map
+evil-emacs-state-map))
+(define-key (eval map) (kbd "C-e") nil)
+(define-key (eval map) (kbd "C-/") nil)
+(define-key (eval map) (kbd "C-n") nil)
+(define-key (eval map) (kbd "C-p") nil)
+(define-key (eval map) (kbd "C-z") nil)))
 
 (global-set-key (kbd "C-/") nil)
 (global-set-key (kbd "C-z") nil)
@@ -15,3 +17,6 @@
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+
+(global-set-key (kbd "C-S-f") 'counsel-ag)
+(menu-bar-mode -1)

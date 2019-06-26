@@ -24,16 +24,7 @@
   
   (global-set-key (kbd "C-z") 'undo)
   (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+
+  (global-set-key (kbd "C-S-f") 'counsel-ag)
+  (menu-bar-mode -1)
   #+END_SRC
-
-      (define-key evil-normal-state-map (kbd "C-n") nil)
-
-    (with-eval-after-load 'evil-maps
-      (define-key evil-normal-state-map (kbd "C-n") nil)
-      (define-key evil-normal-state-map (kbd "C-p") nil))
-
-(with-eval-after-load 'evil-maps
-  (define-key evil-normal-state-map (kbd "C-n") nil)
-  (define-key evil-normal-state-map (kbd "C-p") nil))
-
-
