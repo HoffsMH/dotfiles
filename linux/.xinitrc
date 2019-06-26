@@ -61,8 +61,9 @@ fi
    exec dbus_args
  }
 
-xcape -t 200 -e "Control_L=Escape"
 clipmenud &
+(conky | while read LINE; do xsetroot -name "$LINE"; done) &
 xset r rate 200 30
+xcape -t 200 -e "Control_L=Escape"
 
 exec $SESSION
