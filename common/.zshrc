@@ -96,14 +96,8 @@ appendmv() {
     done
 }
 
-# docker
-# stop the docker daemon
-dockerstopdaemon() {
-  osascript -e 'quit app "Docker"'
-}
 
-# start the docker daemon
-alias dockerstartdaemon='open -a Docker'
+
 # stops containers
 alias dockerstopc='docker stop $(docker ps -aq)'
 # cleans containers
@@ -113,38 +107,7 @@ alias dockercleanv='docker volume rm $(docker volume ls --filter dangling=true -
 # cleans images
 alias dockercleani='docker rmi -f $(docker images -q)'
 
-# removes extra data restart of docker demon will be required
-alias dockermojo='rm -rf ~/Library/Containers/com.docker.docker/Data/*'
-
 alias dockernuke='dockerstopc || dockercleanc || dockercleani || dockercleanv'
-alias dcm='docker-compose'
-alias dcmweb='dcm build && dcm run web'
-
-# getting into and out of
-# listed containers and images with ease
-drun () {
-  docker run -it $1 ${2:-/bin/bash}
-}
-
-dexec () {
-  docker exec -it $1 ${2:-/bin/bash}
-}
-
-dgetimg() {
-  docker images | fzf | awk '{print $3}'
-}
-
-dgetc() {
-  docker ps | fzf | awk '{print $1}'
-}
-
-fdrun () {
-  drun $(dgetimg) $1
-}
-
-fdexec () {
-  dexec $(dgetc) $1
-}
 
 # git
 alias g="git"
@@ -158,7 +121,6 @@ alias gcf="git clean -f -d"
 # finds text across all commits, be careful when searching to not use common terms
 # useful for searching for code that you knew existed at one point
 gsearch() { git log -S$1 -p }
-
 gpoc() { git pull origin $(gbn) --rebase }
 gpuc() { git push origin $(gbn) $1 }
 gpuc:() { git push origin $(gbn):$1 }

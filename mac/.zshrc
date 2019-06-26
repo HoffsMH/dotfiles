@@ -18,6 +18,15 @@ alias localip="ipconfig getifaddr en0"
 # Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 
+# start the docker daemon
+alias dockerstartdaemon='open -a Docker'
+
+# docker
+# stop the docker daemon
+dockerstopdaemon() {
+    osascript -e 'quit app "Docker"'
+}
+
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktopicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktopicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"

@@ -20,3 +20,10 @@ alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 alias xpaste="xclip -o"
 
 alias cmenu="clipmenu"
+
+# start the docker daemon
+alias dockerstartdaemon='sudo systemctl stop docker.service'
+
+# docker
+# stop the docker daemon
+alias dockerstopdaemon='sudo systemctl start docker.service'
