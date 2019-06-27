@@ -18,6 +18,7 @@ alias utsp="sudo umount /mnt/tsp* |
 # takes large amount of text wraps it at 80 characters and puts it back into register
 alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 alias xpaste="xclip -o"
+alias xclip="/usr/bin/xclip -selection clipboard"
 
 alias cmenu="clipmenu"
 

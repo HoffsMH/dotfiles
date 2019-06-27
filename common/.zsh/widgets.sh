@@ -9,6 +9,11 @@ bindkey -s '^[yzfh' '^r'
 # This will open a fuzzy finder of all my history items and once selected
 # will output to current editing buffer so that I can either copy or enter
 
+# history
+fh() {
+    print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed -r 's/ *[0-9]*\*? *//' | sed -r 's/\\/\\\\/g')
+}
+
 selectdir() {
   local dir
   local realdir
