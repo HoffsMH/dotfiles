@@ -64,7 +64,7 @@ ytdlv() {
 }
 
 ytdla() {
-    clipboard=$(/usr/bin/xlcip -o)
+    clipboard=$(/usr/bin/xclip -o)
     yturl=${1:-$clipboard}
 
     echo  downloading "$yturl"
