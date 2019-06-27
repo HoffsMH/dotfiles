@@ -28,3 +28,24 @@ alias dockerstartdaemon='sudo systemctl stop docker.service'
 # docker
 # stop the docker daemon
 alias dockerstopdaemon='sudo systemctl start docker.service'
+
+#######################
+# youtube-dl
+######################
+
+ytv() {
+    local clip=$(/usr/bin/xclip -o)
+    local url=${1:-$clip}
+
+    echo "ytdlv $url" >> ~/personal/media/dlscript.sh
+    echo "ytdlv $url"
+}
+
+yta() {
+    local clip=$(/usr/bin/xclip -o)
+    local url=${1:-$clip}
+
+    echo "ytdla $url" >> ~/personal/media/dlscript.sh
+    echo "ytdla $url"
+}
+
