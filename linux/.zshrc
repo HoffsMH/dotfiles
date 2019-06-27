@@ -1,4 +1,5 @@
 source "$HOME/personal/dotfiles/common/.zshrc"
+source "$HOME/personal/dotfiles/linux/.zsh/ytdl_widgets.sh"
 
 # redshift automation
 # alias blueoff="sudo systemctl start ~/Library/LaunchAgents/com.me.start-redshift.plist"
@@ -29,23 +30,4 @@ alias dockerstartdaemon='sudo systemctl stop docker.service'
 # stop the docker daemon
 alias dockerstopdaemon='sudo systemctl start docker.service'
 
-#######################
-# youtube-dl
-######################
-
-ytv() {
-    local clip=$(/usr/bin/xclip -o)
-    local url=${1:-$clip}
-
-    echo "ytdlv $url" >> ~/personal/media/dlscript.sh
-    echo "ytdlv $url"
-}
-
-yta() {
-    local clip=$(/usr/bin/xclip -o)
-    local url=${1:-$clip}
-
-    echo "ytdla $url" >> ~/personal/media/dlscript.sh
-    echo "ytdla $url"
-}
 
