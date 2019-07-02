@@ -24,6 +24,7 @@ hist() {
 }
 
 
+alias dl="axel -o $HOME/Downloads/"
 #######################
 # fasd
 ######################
