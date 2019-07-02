@@ -1,5 +1,8 @@
 (org-babel-load-file (expand-file-name "basic.org" "~/personal/dotfiles/common/.emacs.d/"))
 
+(set-frame-font "Fira Code:antialias-none")
+(set-face-attribute 'default nil :weight 'Light :height 120)
+
 (eval-after-load "evil-maps"
 (dolist (map '(evil-motion-state-map
 evil-insert-state-map

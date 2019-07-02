@@ -4,6 +4,13 @@
 
 * Basic
 
+*** Font
+
+    #+BEGIN_SRC emacs-lisp
+    (set-frame-font "Fira Code:antialias-none")
+    (set-face-attribute 'default nil :weight 'Light :height 120)
+    #+END_SRC
+
   * the ability to comment stuff easily
 
   #+BEGIN_SRC emacs-lisp
