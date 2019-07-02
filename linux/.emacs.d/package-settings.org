@@ -6,4 +6,5 @@
    #+BEGIN_SRC emacs-lisp
      (global-set-key (kbd "C-e") nil)
      (global-set-key (kbd "C-e") 'er/expand-region)
+
    #+END_SRC
