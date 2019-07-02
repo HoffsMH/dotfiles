@@ -1,0 +1,11 @@
+@XF86MonBrightnessDown
+  light -U 5
+
+@XF86MonBrightnessUp
+  light -A 5
+
+@XF86AudioLowerVolume
+  pulsemixer --change-volume -5
+
+@XF86AudioRaiseVolume
+  pulsemixer --change-volume +5

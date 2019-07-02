@@ -63,7 +63,10 @@ fi
 
 clipmenud &
 (conky | while read LINE; do xsetroot -name "$LINE"; done) &
+sxhkd &
+
 xset r rate 200 30
+
 xcape -t 200 -e "Control_L=Escape"
 
 feh --bg-scale ~/.wall.jpg
