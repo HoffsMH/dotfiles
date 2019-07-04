@@ -10,5 +10,11 @@
 @XF86AudioRaiseVolume
   pulsemixer --change-volume +3
 
+@XF86KbdBrightnessUp
+  light -As "sysfs/leds/smc::kbd_backlight" 3
+
+@XF86KbdBrightnessDown
+  light -Us "sysfs/leds/smc::kbd_backlight" 3
+
 control + shift + 4
   flameshot gui
