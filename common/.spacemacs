@@ -37,6 +37,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ivy
+     markdown
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
