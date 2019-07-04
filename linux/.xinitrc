@@ -71,7 +71,14 @@ xset r rate 200 30
 when we tap Control_L it also presses escape
 xcape -t 200 -e "Control_L=Escape"
 
+# set the background
 feh --bg-scale ~/.wall.jpg
+
+# start redshift to make it easy on eyes
 redshift &
+
+# start gnome keyring so I dont have to type password on every git push
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
 exec $SESSION
