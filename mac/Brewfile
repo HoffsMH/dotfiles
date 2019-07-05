@@ -66,6 +66,8 @@ brew "coreutils"
 brew "poppler"
 brew "ext4fuse"
 brew "maven"
+brew "lf"
+brew "taskell"
 
 cask "1password6"
 cask "bitwarden"
