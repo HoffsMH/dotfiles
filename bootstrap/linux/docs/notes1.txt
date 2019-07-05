@@ -1,0 +1,43 @@
+    4  pacman -S xorg-server xorg-xinit
+    5  sudo pacman -S xorg-server xorg-xinit
+   18  pacman -S git
+   19  sudo pacman -S git
+   42  pacman -S st
+   43  sudo pacman -S st
+   57  pacman -S xorg-xinit
+   58  sudo pacman -S xorg-xinit
+   59  sudo pacman -S xorg-utils xorg-server-utils
+   60  sudo pacman -S xterm
+   61  sudo pacman -S twm
+   62  sudo pacman -S xorg-utils
+   69  pacman -Ss xf86-video-intel
+   70  pacman -Ss xf86-video-inte
+   71  sudo pacman -S xf86-video-intel
+   81  pacman -S zsh
+   82  sudo pacman -S zsh
+   88  sudo pacman -S fbdev
+   89  sudo pacman -Ss xf86-video
+   91  pacman -S xorg-server
+   92  sudo pacman -S xorg-server
+   93  sudo pacman -S xorg-apps
+   94  sudo pacman -S xf86-video-intel
+  116  pacman -S ag
+  117  sudo pacman -S ag
+  118  sudo pacman -S the_silver_searcher
+  131  sudo pacman -S nerd-fonts-complete
+  133  sudo pacman -S emacs
+  153  history | ag "pacman -S"
+  154  cat ~/.bash_history  | ag "pacman -S"
+  156  cat ~/.bash_history  | ag "pacman -S" > ~/install_history_so_far
+  157  history | ag "pacman -S" > ~/install_history_so_far
+pacman -S xorg-server xorg-xinit
+sudo pacman -S xorg-server xorg-xinit
+pacman -S git
+sudo pacman -S git
+sudo cat /root/.bash_history  | ag "pacman -S"
+pacman -S networkmanager
+pacman -S grub
+pacman -S dialog
+pacman -S neofetch
+autoconf 2.69-5
+xclip 0.13-2
