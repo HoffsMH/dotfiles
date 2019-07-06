@@ -2,7 +2,7 @@
 #cmd + shift + alt + ctrl - p : yabai -m space --layout float
 
 # change focus between tiling / floating windows
-#cmd + shift + alt + ctrl - space : yabai -m window --toggle float
+cmd + shift + alt + ctrl - space : yabai -m window --toggle float
 
 #cmd + shift + alt + ctrl - 0x18 : chunkc tiling::window --toggle parent
 cmd + shift + alt + ctrl - i : yabai -m window --toggle zoom-parent
@@ -28,8 +28,8 @@ shift + ctrl + cmd + alt - 4: yabai -m space --focus 4
 shift + ctrl + cmd + alt - 5: yabai -m space --focus 5
 
 # change focus
-shift + ctrl + cmd + alt - j : yabai -m window --focus next
-shift + ctrl + cmd + alt - k : yabai -m window --focus prev
+shift + ctrl + cmd + alt - j : yabai -m window --focus prev
+shift + ctrl + cmd + alt - k : yabai -m window --focus next
 
 # warp around current desktop
 shift + ctrl + cmd + alt - l : yabai -m window --warp next
