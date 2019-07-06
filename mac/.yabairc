@@ -26,6 +26,6 @@ yabai -m config auto_balance on
 yabai -m config window_topmost on
 
 yabai -m signal --add event=space_changed \
-    action="yabai -m window --focus west"
+    action="yabai -m window --focus first"
 
 yabai -m rule --add app="^Emacs$" border=on
