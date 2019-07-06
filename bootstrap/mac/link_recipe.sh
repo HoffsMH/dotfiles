@@ -7,10 +7,12 @@ echo "###############################################"
 mkdir -p ~/.config/kitty
 mkdir -p "$HOME/.config/lf"
 
+mkdir -p ~/.ssh
 mkdir -p ~/.config/karabiner
 mkdir -p ~/.config/skhd
 mkdir -p ~/.config/redshift
 
+ln -sf ~/personal/dotfiles/mac/.sshconfig ~/.ssh/config
 ln -sf ~/personal/dotfiles/mac/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf ~/personal/dotfiles/mac/karabiner.json ~/.config/karabiner/karabiner.json
 ln -sf ~/personal/dotfiles/mac/.zshrc ~/.zshrc
