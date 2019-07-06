@@ -8,7 +8,7 @@ echo "###############################################"
 echo "MISC ADMIN"
 echo "###############################################"
 
-cp "$PERSONAL_DIR/dotfiles/linux/dlscript.sh" "$PERSONAL_DIR/media/dlscript.sh"
+cp "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/personal/media/dlscript.sh"
 
 #speed up aur makepkg
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
@@ -26,7 +26,7 @@ sudo pacman -Rs --noconfirm lightdm light-locker lightdm-gtk-greeter lightdm-gtk
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
 
-sudo systemctl enable "syncthing@$USERNAME.service"
-sudo systemctl start "syncthing@$USERNAME.service"
+sudo systemctl enable "syncthing@$USER.service"
+sudo systemctl start "syncthing@$USER.service"
 
 chsh

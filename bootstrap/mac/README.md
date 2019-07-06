@@ -3,6 +3,7 @@
   - make dock small
   - auto hide dock
   - auto hide menu bar
+  - highlight color pink
   - keyboard -> key repeat fast
   - function keys to actually be function keys
   - battery in menu bar -> show percentage
@@ -16,6 +17,8 @@
   - network and name the computer
 
 ## ./run_after_install.sh
+- run karabiner elements first time
+- run Docker first time
 
 ### work on linking everything in dotfiles (you wont get everything first time)
   - Open apps for first time to generate file structures if you need to remember Or see where stuff goes
@@ -24,38 +27,27 @@
   - Docker
   - Postgres
   - Redis
-  - Chunkwm
+  - yabai
   - Skhd
   - syncthing
 
 ## Misc things to do after brew install
   - switch mission control to hyper U
-  - fully enable chunkwm by restarting and disabling csrutil `csrutil disable`
-  - `sudo chunkwm --install-sa`
-  - `chunkwm --load-sa`
+  - fully enable yabai by restarting and disabling csrutil `csrutil disable`
+  - `sudo yabai --install-sa`
+  - `sudo yabai --load-sa`
 
 ## Firefox dev edition 
-  - chrome settings -> password -> offer to save password off
-  - chrome extensions
-    -- extensions
-      - ublock
-      - json formatter
-      - edit this cookie
-      - vimium
-      - duck duck go
+  - install addons from common dir in dotfile
+  - go ahead and fill out the rest of the settings
 
-## Pcloud and 1Password
+## Pcloud
   - download pcloud and login
-    - hook up vault, yes to 1passowrd mini
-    - restore ssh keys from 1Password if needed
 
 ## vault retrieval chart
 
--> phone via syncthing
--> pi via vpn and syncthing
--> backblaze backup
+-> backblaze backup inherit backup
 -> physical disk if available
-
 
 ## Proton email retrieve software keys
   - sublime
@@ -66,10 +58,7 @@
     - will probably have to tweak settings more -really annoying should figure this out
   - switch out spotlight key bind with Alfred
 
-## Github
-- github login
 
 ## Ending Misc
   - App Store
     - daisy disk since I already bought it
-  - check out optional brew list
