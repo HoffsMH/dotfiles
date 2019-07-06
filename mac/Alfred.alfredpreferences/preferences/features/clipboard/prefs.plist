@@ -5,11 +5,11 @@
 	<key>hotkey</key>
 	<dict>
 		<key>key</key>
-		<integer>49</integer>
+		<integer>97</integer>
 		<key>mod</key>
-		<integer>524288</integer>
+		<integer>10354688</integer>
 		<key>string</key>
-		<string>Space</string>
+		<string></string>
 	</dict>
 	<key>persistFor</key>
 	<integer>3</integer>

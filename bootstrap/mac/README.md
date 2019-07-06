@@ -13,52 +13,34 @@
     -> scroll direction -> normal
     -> smart zoom disabled
     -> disabled all "more gestures"
+    -> keyboard shortcut  cmd alt ctrl shift u for mission control
+  - disable command space to make room for alfred
   - date and time preferences
-  - network and name the computer
+  - network and name the computer <-- under "sharing"
 
 ## ./run_after_install.sh
 - run karabiner elements first time
 - run Docker first time
-
-### work on linking everything in dotfiles (you wont get everything first time)
-  - Open apps for first time to generate file structures if you need to remember Or see where stuff goes
-
-### Brew services that need to be started
-  - Docker
-  - Postgres
-  - Redis
-  - yabai
-  - Skhd
-  - syncthing
+- run karabiner first time
+- run alfred first time
+- run sublime first time
+- emacs
+- firefox
 
 ## Misc things to do after brew install
-  - switch mission control to hyper U
   - fully enable yabai by restarting and disabling csrutil `csrutil disable`
   - `sudo yabai --install-sa`
   - `sudo yabai --load-sa`
+  - restart
 
 ## Firefox dev edition 
   - install addons from common dir in dotfile
-  - go ahead and fill out the rest of the settings
+  - customize and remove everything
+  - dont save passwords
+  - dont autofill
+  - dont send data
 
-## Pcloud
+## Data
+  - syncthing -> 01 -> task
   - download pcloud and login
-
-## vault retrieval chart
-
--> backblaze backup inherit backup
--> physical disk if available
-
-## Proton email retrieve software keys
-  - sublime
-    - immediately download package control
-    - wire up settings and package settings and keybinding files
-
-  - Alfred
-    - will probably have to tweak settings more -really annoying should figure this out
-  - switch out spotlight key bind with Alfred
-
-
-## Ending Misc
-  - App Store
-    - daisy disk since I already bought it
+  - backblaze backup inherit backup
