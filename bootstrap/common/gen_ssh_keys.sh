@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source "$HOME/personal/dotfile/bootstrap/config.sh"
+source "$HOME/personal/dotfiles/bootstrap/config.sh"
 set -e
 
 ssh-keygen -t rsa -b 4096 -C "$EMAIL"
