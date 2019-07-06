@@ -14,13 +14,8 @@
     -> disabled all "more gestures"
   - date and time preferences
   - network and name the computer
-  - install Xcode by typing git in terminal
 
-## Homebrew (this part will take a while)
-- install homebrew
-  - brew tap everything in tap list
-  - go through everything on the brew_list
-  - go through everything in brew_cast_list one by one taking time to open the installer
+## ./run_after_install.sh
 
 ### work on linking everything in dotfiles (you wont get everything first time)
   - Open apps for first time to generate file structures if you need to remember Or see where stuff goes
@@ -34,7 +29,6 @@
   - syncthing
 
 ## Misc things to do after brew install
-  - chsh to zsh
   - switch mission control to hyper U
   - fully enable chunkwm by restarting and disabling csrutil `csrutil disable`
   - `sudo chunkwm --install-sa`
