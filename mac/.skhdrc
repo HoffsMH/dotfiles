@@ -1,6 +1,6 @@
 # enter fullscreen mode for the focused container
-cmd + shift + alt + ctrl - p : chunkc tiling::window --toggle fullscreen;\
-															 chunkc tiling::window --grid-layout 1:1:0:0:1:1
+cmd + shift + alt + ctrl - p : yabai -m window --toggle zoom-fullscreen;\
+                               yabai -m window --grid 1:1:0:0:1:1 
 
 # make floating window fill left-half of screen
 cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1
@@ -10,7 +10,9 @@ cmd + shift + alt + ctrl - 0x1E : chunkc tiling::window --grid-layout 1:2:1:0:1:
 
 
 # change focus between tiling / floating windows
-cmd + shift + alt + ctrl - space : chunkc tiling::window --toggle float
+cmd + shift + alt + ctrl - space : yabai -m window --toggle float; \
+ 				   yabai -m window --grid 4:4:1:1:2:2
+
 #cmd + shift + alt + ctrl - 0x18 : chunkc tiling::window --toggle parent
 cmd + shift + alt + ctrl - i : chunkc tiling::window --toggle parent
 
@@ -25,16 +27,16 @@ shift + ctrl + cmd + alt - f : chunkc tiling::desktop --layout float
 # I have hyper - u bound to show mission control
 
 # switch desktop
-shift + ctrl + cmd + alt - x: chunkc tiling::desktop -f next
-shift + ctrl + cmd + alt - z: chunkc tiling::desktop -f prev
+shift + ctrl + cmd + alt - z : yabai -m space --focus prev
+shift + ctrl + cmd + alt - x : yabai -m space --focus next
 
 # send window to next or previous desktop
 shift + ctrl + cmd + alt - n : chunkc tiling::window --send-to-desktop prev
 shift + ctrl + cmd + alt - m : chunkc tiling::window --send-to-desktop next
 
 # change focus
-shift + ctrl + cmd + alt - j : chunkc tiling::window --focus next
-shift + ctrl + cmd + alt - k : chunkc tiling::window --focus prev
+shift + ctrl + cmd + alt - j : yabai -m window --focus west
+shift + ctrl + cmd + alt - k : yabai -m window --focus east
 
 # warp around current desktop
 shift + ctrl + cmd + alt - l : chunkc tiling::window --warp next
@@ -46,3 +48,4 @@ shift + ctrl + cmd + alt - c : open -a  Firefox\ Developer\ Edition
 shift + ctrl + cmd + alt - t : open -a  Kitty
 shift + ctrl + cmd + alt - e : open -a  Emacs
 shift + ctrl + cmd + alt - s : open -a  Slack
+
