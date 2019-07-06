@@ -1,6 +1,6 @@
 # enter fullscreen mode for the focused container
-cmd + shift + alt + ctrl - p : yabai -m window --toggle zoom-fullscreen;\
-                               yabai -m window --grid 1:1:0:0:1:1 
+cmd + shift + alt + ctrl - p : yabai -m space --layout float
+
 
 # make floating window fill left-half of screen
 cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1
@@ -20,7 +20,7 @@ cmd + shift + alt + ctrl - i : chunkc tiling::window --toggle parent
 # this is the only thing I could find that will let me reset from bug where I
 # am in clamshell mode and i unplug monitor
 # change layout of desktop
-shift + ctrl + cmd + alt - b : chunkc tiling::desktop --layout bsp
+shift + ctrl + cmd + alt - t : yabai -m space --layout bsp
 shift + ctrl + cmd + alt - v : chunkc tiling::desktop --layout monocle
 shift + ctrl + cmd + alt - f : chunkc tiling::desktop --layout float
 

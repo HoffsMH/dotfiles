@@ -1,0 +1,14 @@
+yabai -m config top_padding    20
+yabai -m config bottom_padding 20
+yabai -m config left_padding   20
+yabai -m config right_padding  20
+yabai -m config window_gap     20
+
+yabai -m config window_border on
+yabai -m config window_border_width 4
+
+yabai -m config active_window_border_color 0x9498FFff
+yabai -m config normal_window_border_color 0xff505050
+yabai -m config insert_window_border_color 0xffd75f5f
+
+
