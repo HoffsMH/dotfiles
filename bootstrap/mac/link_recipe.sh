@@ -21,4 +21,5 @@ ln -sf ~/personal/dotfiles/mac/redshift.conf ~/.config/redshift/
 
 
 ln -sf ~/personal/dotfiles/linu/lfrc ~/.config/lf/lfrc
-ln -sf ~/personal/dotfiles/mac/skhdrc ~/.config/skhd/.skhdrc
+ln -sf ~/personal/dotfiles/mac/.skhdrc ~/.skhdrc
+ln -sf ~/personal/dotfiles/mac/.yabairc ~/.yabairc
