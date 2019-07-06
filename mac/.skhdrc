@@ -1,51 +1,37 @@
 # enter fullscreen mode for the focused container
 cmd + shift + alt + ctrl - p : yabai -m space --layout float
 
-
-# make floating window fill left-half of screen
-cmd + shift + alt + ctrl - 0x21 : chunkc tiling::window --grid-layout 1:2:0:0:1:1
-
-# make floating window fill left-half of screen
-cmd + shift + alt + ctrl - 0x1E : chunkc tiling::window --grid-layout 1:2:1:0:1:1
-
-
 # change focus between tiling / floating windows
-cmd + shift + alt + ctrl - space : yabai -m window --toggle float; \
- 				   yabai -m window --grid 4:4:1:1:2:2
+#cmd + shift + alt + ctrl - space : yabai -m window --toggle float
 
 #cmd + shift + alt + ctrl - 0x18 : chunkc tiling::window --toggle parent
-cmd + shift + alt + ctrl - i : chunkc tiling::window --toggle parent
+cmd + shift + alt + ctrl - i : yabai -m window --toggle zoom-parent
 
 # change layout of desktop
 # this is the only thing I could find that will let me reset from bug where I
 # am in clamshell mode and i unplug monitor
 # change layout of desktop
 shift + ctrl + cmd + alt - t : yabai -m space --layout bsp
-shift + ctrl + cmd + alt - v : chunkc tiling::desktop --layout monocle
-shift + ctrl + cmd + alt - f : chunkc tiling::desktop --layout float
-
-# I have hyper - u bound to show mission control
 
 # switch desktop
 shift + ctrl + cmd + alt - z : yabai -m space --focus prev
 shift + ctrl + cmd + alt - x : yabai -m space --focus next
 
 # send window to next or previous desktop
-shift + ctrl + cmd + alt - n : chunkc tiling::window --send-to-desktop prev
-shift + ctrl + cmd + alt - m : chunkc tiling::window --send-to-desktop next
+shift + ctrl + cmd + alt - m : yabai -m window --space next
+shift + ctrl + cmd + alt - n : yabai -m window --space prev
+
+shift + ctrl + cmd + alt - 1: yabai -m space --focus 1
+shift + ctrl + cmd + alt - 2: yabai -m space --focus 2
+shift + ctrl + cmd + alt - 3: yabai -m space --focus 3
+shift + ctrl + cmd + alt - 4: yabai -m space --focus 4
+shift + ctrl + cmd + alt - 5: yabai -m space --focus 5
 
 # change focus
-shift + ctrl + cmd + alt - j : yabai -m window --focus west
-shift + ctrl + cmd + alt - k : yabai -m window --focus east
+shift + ctrl + cmd + alt - j : yabai -m window --focus next
+shift + ctrl + cmd + alt - k : yabai -m window --focus prev
 
 # warp around current desktop
 shift + ctrl + cmd + alt - l : chunkc tiling::window --warp next
 shift + ctrl + cmd + alt - h : chunkc tiling::window --warp prev
 shift + ctrl + cmd + alt - r : chunkc tiling::desktop --rotate 90
-
-# app specific focus
-shift + ctrl + cmd + alt - c : open -a  Firefox\ Developer\ Edition
-shift + ctrl + cmd + alt - t : open -a  Kitty
-shift + ctrl + cmd + alt - e : open -a  Emacs
-shift + ctrl + cmd + alt - s : open -a  Slack
-
