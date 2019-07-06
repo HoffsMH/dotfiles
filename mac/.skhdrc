@@ -1,5 +1,5 @@
 # enter fullscreen mode for the focused container
-cmd + shift + alt + ctrl - p : yabai -m space --layout float
+#cmd + shift + alt + ctrl - p : yabai -m space --layout float
 
 # change focus between tiling / floating windows
 #cmd + shift + alt + ctrl - space : yabai -m window --toggle float
@@ -32,6 +32,6 @@ shift + ctrl + cmd + alt - j : yabai -m window --focus next
 shift + ctrl + cmd + alt - k : yabai -m window --focus prev
 
 # warp around current desktop
-shift + ctrl + cmd + alt - l : chunkc tiling::window --warp next
-shift + ctrl + cmd + alt - h : chunkc tiling::window --warp prev
-shift + ctrl + cmd + alt - r : chunkc tiling::desktop --rotate 90
+shift + ctrl + cmd + alt - l : yabai -m window --warp next
+shift + ctrl + cmd + alt - h : yabai -m window --warp prev
+shift + ctrl + cmd + alt - r : yabai -m space --rotate 90
