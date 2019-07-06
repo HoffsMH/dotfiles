@@ -46,9 +46,6 @@
 
 (setq default-tab-width 2)
 
-(set-frame-font "Fira Code:antialias-none")
-(set-face-attribute 'default nil :weight 'Light :height 120)
-
 (menu-bar-mode nil)
 (scroll-bar-mode nil)
 (tool-bar-mode 0)

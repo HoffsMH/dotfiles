@@ -1,4 +1,5 @@
 (load (expand-file-name ".spacemacs" "~/personal/dotfiles/common/"))
+
 (defun dotspacemacs/init ()
   "Initialization function.
 This function is called at the very startup of Spacemacs initialization
@@ -64,7 +65,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too
    dotspacemacs-default-font '("FuraCode Nerd Font"
-                               :size 20
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)

@@ -1,5 +1,5 @@
   #+BEGIN_SRC emacs-lisp
-  (load (expand-file-name "basic.org" "~/personal/dotfiles/common/.emacs.d/"))
+  (org-babel-load-file (expand-file-name "basic.org" "~/personal/dotfiles/common/.emacs.d/"))
   #+END_SRC
 
 * Basic

@@ -1,5 +1,4 @@
-This shouldn't include any custom functions or any code that depends
-on packages
+
 
 * Interaction
   Don't ask `yes/no?', ask `y/n?'
@@ -116,13 +115,6 @@ on packages
   #+BEGIN_SRC emacs-lisp
     (setq default-tab-width 2)
   #+END_SRC
-
-*** Font
-
-    #+BEGIN_SRC emacs-lisp
-    (set-frame-font "Fira Code:antialias-none")
-    (set-face-attribute 'default nil :weight 'Light :height 120)
-    #+END_SRC
 
 * UI
   - Don't need any of this stuff
