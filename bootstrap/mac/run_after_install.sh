@@ -12,6 +12,6 @@ brew bundle
 ./link_recipe.sh
 
 
+./misc_admin.sh
 
-
-chsh
+../common/gen_ssh_keys.sh
