@@ -24,10 +24,8 @@ set -e
 # link common
 ../common/link_recipe.sh
 
-# link linux
-./link_recipe.sh
-
-# if on mac hardware
+# one OR the other depending on what hardware im installing to
+#./link_recipe.sh
 ./link_recipe_mac_hardware.sh
 
 ../common/gen_ssh_keys.sh

@@ -18,7 +18,9 @@ rm -rf dmenu
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git
 git clone git://github.com/denysdovhan/spaceship-prompt.git
-git clone git://github.com/mururu/exenv.git
+git clone git://github.com/exenv/exenv.git
+git clone git://github.com/mururu/elixir-build.git ~/code/util/exenv/plugins/elixir-build
+
 git clone git://github.com/hlissner/zsh-autopair.git
 git clone git://github.com/syl20bnr/spacemacs.git
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
