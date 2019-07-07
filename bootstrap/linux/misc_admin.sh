@@ -2,7 +2,6 @@
 
 set -e
 
-source "$HOME/code/util/bootstrap/config.sh"
 
 echo "###############################################"
 echo "MISC ADMIN"

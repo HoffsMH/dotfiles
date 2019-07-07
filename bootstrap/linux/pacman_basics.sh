@@ -10,7 +10,7 @@ echo "###############################################"
 sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
        pulsemixer \
-       gnutls
+       gnutls \
        vim \
        fzf \
        fasd \

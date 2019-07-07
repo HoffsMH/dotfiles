@@ -2,7 +2,6 @@
 
 set -e
 
-source "$HOME/personal/dotfiles/bootstrap/config.sh"
 
 # probably dont need to do this
 #./setup_networking.sh
@@ -18,7 +17,6 @@ source "$HOME/personal/dotfiles/bootstrap/config.sh"
 
 ./yay_basics.sh
 
-
 ./misc_admin.sh
 
 ./gen_util.sh
@@ -30,7 +28,7 @@ source "$HOME/personal/dotfiles/bootstrap/config.sh"
 ./link_recipe.sh
 
 # if on mac hardware
-#./link_recipe_mac_hardware.sh
+./link_recipe_mac_hardware.sh
 
 ../common/gen_ssh_keys.sh
 

@@ -1,7 +1,5 @@
 set -e
 
-source "$HOME/personal/dotfiles/bootstrap/config.sh"
-
 echo "###############################################"
 echo "GET UTILS"
 echo "###############################################"
@@ -29,7 +27,7 @@ git clone git://github.com/HoffsMH/dwm.git
 git clone git://github.com/HoffsMH/dmenu.git
 
 
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o ~/code/util/youtube-dl
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 
 
 popd
