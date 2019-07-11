@@ -6,7 +6,7 @@ ytv() {
     local clip=$(pbpaste)
     local url=${1:-$clip}
 
-    echo "ytdlv $url" >> ~/personal/media/dlscript.sh
+    echo "ytdlv $url" >> ~/bin/ytgo
     echo "ytdlv $url"
 }
 
@@ -14,7 +14,7 @@ yta() {
     local clip=$(pbpaste)
     local url=${1:-$clip}
 
-    echo "ytdla $url" >> ~/personal/media/dlscript.sh
+    echo "ytdla $url" >> ~/bin/ytgo
     echo "ytdla $url"
 }
 

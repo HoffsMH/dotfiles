@@ -8,6 +8,7 @@ alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 alias xpaste="xclip -o"
 alias xclip="/usr/bin/xclip -selection clipboard"
 alias cmenu="clipmenu"
+alias clearclip="rm -fr /run/user/1000/clipmenu*"
 
 
 alias endx="killall xinit"
@@ -43,6 +44,11 @@ alias utsp="sudo umount /mnt/tsp* |
   sudo umount /mnt/camera_* |
   sudo umount /mnt/black_*"
 
+######################################################
+# files
+######################################################
+
+alias open="xdg-open"
 
 ######################################################
 # docker
