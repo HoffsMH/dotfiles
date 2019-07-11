@@ -71,6 +71,7 @@ xset r rate 200 30
 when we tap Control_L it also presses escape
 xcape -t 200 -e "Control_L=Escape"
 
+pcloud &
 # set the background
 feh --bg-scale ~/.wall.jpg
 
