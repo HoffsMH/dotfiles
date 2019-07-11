@@ -38,6 +38,7 @@ values."
      ;; ----------------------------------------------------------------
      ivy
      markdown
+     ruby
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
