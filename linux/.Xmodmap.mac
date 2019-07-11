@@ -13,7 +13,7 @@ keysym Caps_Lock = Control_L
 ! 56 is tty keycode for Alt_L on x220
 ! keycode 64 = Control_L
 
-!keysym Alt_L = Control_L
+keysym Alt_L = Control_L
 
 ! 133 is x keycode for Super_L on x220
 ! 125 is tty keycode for Super_L on x220
