@@ -7,7 +7,7 @@ echo "###############################################"
 echo "MISC ADMIN"
 echo "###############################################"
 
-cp "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/personal/media/dlscript.sh"
+cp "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
 
 #speed up aur makepkg
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
