@@ -20,6 +20,9 @@ yay -S --noconfirm \
     google-chrome \
     deluge-git \
     ruby-build \
-    python-grip
+    python-grip \
+    pcloud-drive \
+    pmount \
+    vtop
 
 
