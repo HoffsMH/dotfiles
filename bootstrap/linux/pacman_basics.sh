@@ -64,4 +64,7 @@ sudo pacman -S --noconfirm \
        syncthing \
        zathura \
        zathura-pdf-poppler \
-       flameshot
+       flameshot \
+       seahorse \
+       entr \
+       blueman
