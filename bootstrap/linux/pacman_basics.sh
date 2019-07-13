@@ -67,4 +67,8 @@ sudo pacman -S --noconfirm \
        flameshot \
        seahorse \
        entr \
-       blueman
+       blueman \
+       pyenv \
+       filezilla \
+       st \
+       zeal

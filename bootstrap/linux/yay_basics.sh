@@ -23,6 +23,7 @@ yay -S --noconfirm \
     python-grip \
     pcloud-drive \
     pmount \
-    vtop
+    vtop \
+    soulseekqt
 
 
