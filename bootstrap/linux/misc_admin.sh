@@ -9,6 +9,8 @@ echo "###############################################"
 
 cp "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
 
+cp  ~/personal/dotfiles/common/.envrc.sample ~/.envrc
+
 #speed up aur makepkg
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers

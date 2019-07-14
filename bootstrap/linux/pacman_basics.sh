@@ -71,4 +71,6 @@ sudo pacman -S --noconfirm \
        pyenv \
        filezilla \
        st \
-       zeal
+       zeal \
+       restic \
+       gwenview
