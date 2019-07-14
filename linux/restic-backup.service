@@ -1,0 +1,9 @@
+# https://fedoramagazine.org/automate-backups-with-restic-and-systemd/
+
+[Unit]
+Description=Restic backup service
+
+[Service]
+Type=oneshot
+ExecStart=restic backup --verbose --tag systemd.timer $BACKUP_EXCLUDES $BACKUP_PATHS
+EnvironmentFile=%h/.config/restic/restic-backup.conf
