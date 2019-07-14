@@ -30,4 +30,6 @@ sudo systemctl start docker.service
 sudo systemctl enable "syncthing@$USER.service"
 sudo systemctl start "syncthing@$USER.service"
 
+./setup_restic.sh
+
 chsh
