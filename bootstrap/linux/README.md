@@ -16,3 +16,8 @@ Things that can't be automated yet
   localhost:8384
 
 - emacs font tweeking for screen dpi on different monitors
+
+## Backups
+- restic-backup.conf configured and hooked up to my b2 bucket
+- after that `systemctl --user enable --now restic-backup.timer
+`
