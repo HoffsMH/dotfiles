@@ -24,8 +24,8 @@ export PATH=$HOME/.pyenv/bin:$PATH
 export PATH=$HOME/.pyenv/shims:$PATH
 
 export PATH=/usr/local/go/bin:$PATH
-export GOPATH=$HOME/code/unpaid/go
-export GOBIN=$HOME/code/unpaid/go/bin/
+export GOPATH=$HOME/code/go
+export GOBIN=$HOME/code/go/bin
 
 
 # rust env

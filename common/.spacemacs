@@ -39,12 +39,15 @@ values."
      ivy
      markdown
      ruby
+     javascript
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org
+      git
+      markdown
+     org
+     html
+     go
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
