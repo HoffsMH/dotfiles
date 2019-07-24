@@ -10,5 +10,7 @@
     "command": "toggle_setting",
     "args": {
         "setting": "line_numbers"
-    }}
+    }},
+    { "keys": ["ctrl+w"], "command": "close" },
+      { "keys": ["ctrl+s"], "command": "save" },
 ]
