@@ -25,6 +25,7 @@ yay -S --noconfirm \
     pmount \
     vtop \
     soulseekqt \
-    colorgrab
-
+    colorgrab \
+    mbpfan-git \
+    bcwc-pcie-git
 
