@@ -11,7 +11,7 @@ cmd open ${{
     case $(file --mime-type $f -b) in
         text/*) $EDITOR $fx;;
 	image/*) setsid feh $fx > /dev/null 2>&1 & ;;
-	audio/*) mpv --input-ipc-server=/tmp/mpvsoc$(date +%%s) $f   ;;
+	audio/*) mpv --no-audio-display --input-ipc-server=/tmp/mpvsoc$(date +%%s) $f   ;;
 	video/*) setsid mpv --input-ipc-server=/tmp/mpvsoc$(date +%%s) $f -quiet >/dev/null 2>&1 & ;;
 	application/pdf) setsid zathura $fx >/dev/null 2>&1 & ;;
         *) for f in $fx; do setsid $OPENER $f >/dev/null 2>&1 & done;;
@@ -47,7 +47,6 @@ cmd copyto ${{
 # Bindings
 map c $lf -remote "send $id cd $(cut -d'	' -f2 ~/.config/directories | fzf)"
 map J $lf -remote "send $id cd $(cut -d'	' -f2 ~/.config/directories | fzf)"
-map gh
 map g top
 map D delete
 map C copyto
