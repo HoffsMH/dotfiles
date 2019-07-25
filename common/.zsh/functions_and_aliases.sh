@@ -96,6 +96,10 @@ selectdir() {
         && echo "$realdir"
 }
 
+printdirs() {
+    find $@ -type d -printf '%d\t%P\n'| sort -r -nk1 | cut -f2- | sed /.git/d | sed /.stfolder/d
+}
+
 # touch that builds path to the file if it doesnt exist
 t() {
     if [ $# -lt 1 ]; then
