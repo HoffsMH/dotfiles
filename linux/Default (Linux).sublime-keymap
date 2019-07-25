@@ -11,6 +11,8 @@
     "args": {
         "setting": "line_numbers"
     }},
-    { "keys": ["ctrl+w"], "command": "close" },
-      { "keys": ["ctrl+s"], "command": "save" },
+  { "keys": ["ctrl+w"], "command": "close" },
+  { "keys": ["ctrl+s"], "command": "save" },
+  { "keys": ["ctrl+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+  { "keys": ["ctrl+|"], "command": "toggle_side_bar" },
 ]

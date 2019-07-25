@@ -24,6 +24,7 @@ yay -S --noconfirm \
     pcloud-drive \
     pmount \
     vtop \
-    soulseekqt
+    soulseekqt \
+    colorgrab
 
 
