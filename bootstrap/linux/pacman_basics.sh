@@ -55,7 +55,6 @@ sudo pacman -S --noconfirm \
        clipnotify \
        i3-gaps \
        i3status \
-       ttf-fira-code \
        mpg123 \
        ntfs-3g \
        poppler \
@@ -73,4 +72,5 @@ sudo pacman -S --noconfirm \
        st \
        zeal \
        restic \
-       gwenview
+       gwenview \
+       xorg-xfontsel
