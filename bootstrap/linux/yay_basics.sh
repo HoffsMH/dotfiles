@@ -13,7 +13,6 @@ yay -S --noconfirm \
     nodenv \
     nodenv-node-build \
     slack-desktop-dark \
-    taskell \
     lf-bin \
     sublime-text-dev \
     visual-studio-code-bin \
@@ -29,5 +28,6 @@ yay -S --noconfirm \
     colorgrab \
     mbpfan-git \
     bcwc-pcie-git \
-    bitwarden-bin
+    bitwarden-bin \
+    taskell-bin
 
