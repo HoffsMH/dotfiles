@@ -33,6 +33,66 @@
 	},
 	"rules": [
 		{
+			"foreground": "#C4C4C4FF",
+			"background": "#444444FF",
+			"scope": "col_444444FF"
+		},
+		{
+			"foreground": "#E1E1E1FF",
+			"background": "#008C87FF",
+			"scope": "col_008C87FF"
+		},
+		{
+			"foreground": "#3B3B3BFF",
+			"background": "#BBBBBBFF",
+			"scope": "col_BBBBBBFF"
+		},
+		{
+			"foreground": "#6E6E6EFF",
+			"background": "#EEEEEEFF",
+			"scope": "col_EEEEEEFF"
+		},
+		{
+			"foreground": "#2D2D2DFF",
+			"scope": "col_FB9A4BFF",
+			"background": "#FB9A4BFF"
+		},
+		{
+			"foreground": "#616161FF",
+			"scope": "col_9EFFFFFF",
+			"background": "#9EFFFFFF"
+		},
+		{
+			"foreground": "#C5C5C5FF",
+			"scope": "col_99772266",
+			"background": "#99772266"
+		},
+		{
+			"foreground": "#434343FF",
+			"scope": "col_FFAAAAFF",
+			"background": "#FFAAAAFF"
+		},
+		{
+			"foreground": "#757575FF",
+			"scope": "col_FFFFAAFF",
+			"background": "#FFFFAAFF"
+		},
+		{
+			"foreground": "#F6F6F6FF",
+			"scope": "col_0099FFFF",
+			"background": "#0099FFFF"
+		},
+		{
+			"foreground": "#5B5B5BFF",
+			"scope": "col_AAFFAAFF",
+			"background": "#AAFFAAFF"
+		},
+		{
+			"foreground": "#545454FF",
+			"scope": "col_FFC0CBFF",
+			"background": "#FFC0CBFF"
+		},
+		{
 			"background": "#0000DDFF",
 			"foreground": "#999999FF",
 			"scope": "col_0000DDFF"

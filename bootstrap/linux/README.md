@@ -18,3 +18,10 @@ Things that can't be automated yet
 - restic-backup.conf configured and hooked up to my b2 bucket
 - after that `systemctl --user enable --now restic-backup.timer
 `
+
+# Just finished running run after install
+bitwaren-bin sign in
+pcloud signin
+firefox
+b2 backblaze
+github login and add key

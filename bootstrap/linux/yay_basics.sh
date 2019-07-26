@@ -19,6 +19,7 @@ yay -S --noconfirm \
     visual-studio-code-bin \
     google-chrome \
     deluge-git \
+    otf-fira-code \
     ruby-build \
     python-grip \
     pcloud-drive \
@@ -27,5 +28,6 @@ yay -S --noconfirm \
     soulseekqt \
     colorgrab \
     mbpfan-git \
-    bcwc-pcie-git
+    bcwc-pcie-git \
+    bitwarden-bin
 

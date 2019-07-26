@@ -24,6 +24,7 @@ ln -sf ~/personal/dotfiles/linux/redshift.conf ~/.config/redshift/
 ln -sf ~/code/util/exenv ~/.exenv
 
 # st3
+mkdir -p ~/.config/sublime-text-3/Packages/User
 ln -sf ~/personal/dotfiles/linux/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ln -sf ~/personal/dotfiles/linux/Package\ Control.sublime-settings ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 ln -sf ~/personal/dotfiles/linux/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/Default\ \(Linux\).sublime-keymap
