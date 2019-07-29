@@ -33,7 +33,7 @@
   - `sudo yabai --load-sa`
   - restart
 
-## Firefox dev edition 
+## Firefox dev edition
   - install addons from common dir in dotfile
   - customize and remove everything
   - dont save passwords
