@@ -73,4 +73,5 @@ sudo pacman -S --noconfirm \
        zeal \
        restic \
        gwenview \
-       xorg-xfontsel
+       xorg-xfontsel \
+       xdotool
