@@ -1,4 +1,5 @@
 cask_args appdir: "/Applications"
+
 tap "homebrew/cask"
 tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
