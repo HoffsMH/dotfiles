@@ -1,4 +1,4 @@
-export EDITOR="emacs"
+export EDITOR="subl3"
 export BROWSER="firefox"
 export TERMINAL="kitty"
 export READER="zathura"

@@ -29,5 +29,9 @@ yay -S --noconfirm \
     mbpfan-git \
     bcwc-pcie-git \
     bitwarden-bin \
-    taskell-bin
+    taskell-bin \
+    arandr \
+    peek \
+    libratbag \
+    piper
 
