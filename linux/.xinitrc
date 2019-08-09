@@ -74,6 +74,7 @@ xcape -t 200 -e "Control_L=Escape"
 pcloud &
 # set the background
 feh --bg-scale ~/.wall.jpg
+  
 
 # start redshift to make it easy on eyes
 redshift &

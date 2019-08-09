@@ -72,3 +72,17 @@ task() {
 # Text Editing
 ######################################################
 alias subl="subl3"
+
+######################################################
+# Displays and wallpaper
+######################################################
+
+setdmonpicale() {
+  xrandr --output $1 --scale $2
+}
+
+setdp1cale() {
+  setdmonpicale "DisplayPort-1" $1
+}
+
+alias setwall="feh --bg-scale ~/.wall.jpg"
