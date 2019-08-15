@@ -2,6 +2,10 @@ source "$HOME/personal/dotfiles/common/.zsh/functions_and_aliases.sh"
 # takes large amount of text wraps it at 80 characters and puts it back into register
 alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 
+######################################################
+# media
+######################################################
+alias play="mpv --no-audio-display"
 
 ######################################################
 # clipboard
