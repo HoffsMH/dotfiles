@@ -54,6 +54,8 @@ alias utsp="sudo umount /mnt/tsp* |
 ######################################################
 
 alias open="xdg-open"
+alias sucap="subl ~/personal/00-capture/capture.org"
+alias jf='SHELL=~/bin/r.shell ranger'
 
 ######################################################
 # docker
