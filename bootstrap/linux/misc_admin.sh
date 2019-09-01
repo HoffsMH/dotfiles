@@ -7,7 +7,7 @@ echo "###############################################"
 echo "MISC ADMIN"
 echo "###############################################"
 
-cp "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
+cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
 
 # cp  ~/personal/dotfiles/common/.envrc.sample ~/.envrc
 

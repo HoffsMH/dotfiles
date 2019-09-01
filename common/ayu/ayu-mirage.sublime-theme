@@ -642,7 +642,7 @@
 		"fg": "#707a8c",
 		"font.italic": false,
 		"font.bold": false,
-		"font.size": 26,
+		"font.size": 30,
 	},
 	{
 		"class": "tab_label",
@@ -899,7 +899,7 @@
 		],
 		"layer0.tint": "#232834",
 		"layer0.opacity": 1,
-		"font.size": 26
+		"font.size": 40
 	},
 	{
 		"class": "quick_panel",
@@ -914,7 +914,7 @@
 		],
 		"layer0.tint": "#232834",
 		"layer0.opacity": 1,
-		"font.size": 26
+		"font.size": 40
 	},
 	{
 		"class": "mini_quick_panel_row",
@@ -926,14 +926,15 @@
 			2
 		],
 		"layer0.opacity": 1,
-		"font.size": 16
+		"font.size": 40
 	},
 	{
 		"class": "mini_quick_panel_row",
 		"attributes": [
 			"selected"
 		],
-		"layer0.tint": "#191e2a"
+		"layer0.tint": "#191e2a",
+		"font.size": 40
 	},
 	{
 		"class": "quick_panel_row",
@@ -950,7 +951,9 @@
 			}
 		],
 		"layer0.tint": "#232834",
-		"layer0.opacity": 1
+		"layer0.opacity": 1,
+		"font.size": 40
+
 	},
 	{
 		"class": "quick_panel_row",
@@ -965,7 +968,7 @@
 		"match_fg": "#ffcc66",
 		"selected_fg": "#cbccc6",
 		"selected_match_fg": "#ffcc66",
-		"font.size": 29
+		"font.size": 45
 	},
 	{
 		"class": "quick_panel_label",
@@ -977,7 +980,8 @@
 		"fg": "#707a8c",
 		"match_fg": "#ffcc66",
 		"selected_fg": "#cbccc6",
-		"selected_match_fg": "#ffcc66"
+		"selected_match_fg": "#ffcc66",
+		"font.size": 45
 	},
 	{
 		"class": "quick_panel_path_label",
@@ -985,7 +989,7 @@
 		"match_fg": "#b6b7b2",
 		"selected_fg": "#5f6878",
 		"selected_match_fg": "#b6b7b2",
-		"font.size": 20
+		"font.size": 30
 	},
 	{
 		"class": "grid_layout_control",
