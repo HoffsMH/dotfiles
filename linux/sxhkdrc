@@ -1,13 +1,25 @@
 @XF86MonBrightnessDown
   light -U 5
 
+hyper + F1
+  light -U 5
+
 @XF86MonBrightnessUp
+  light -A 5
+
+hyper + F2
   light -A 5
 
 @XF86AudioLowerVolume
   pulsemixer --change-volume -3
 
+hyper + F11
+  pulsemixer --change-volume -3
+
 @XF86AudioRaiseVolume
+  pulsemixer --change-volume +3
+
+hyper + F12
   pulsemixer --change-volume +3
 
 @XF86KbdBrightnessUp

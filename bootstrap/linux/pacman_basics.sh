@@ -40,6 +40,7 @@ sudo pacman -S --noconfirm \
        the_silver_searcher \
        ttf-linux-libertine \
        ttf-inconsolata \
+       erlang \
        elixir \
        kitty \
        fzf \

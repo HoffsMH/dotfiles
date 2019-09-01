@@ -2,6 +2,8 @@ source "$HOME/personal/dotfiles/common/.zsh/functions_and_aliases.sh"
 # takes large amount of text wraps it at 80 characters and puts it back into register
 alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 
+alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"'
+
 ######################################################
 # media
 ######################################################
@@ -89,6 +91,9 @@ setdmonpicale() {
 
 setdp1cale() {
   setdmonpicale "DisplayPort-1" $1
+}
+sethdmiscale() {
+  setdmonpicale "HDMI-0" $1
 }
 
 alias setwall="feh --bg-scale ~/.wall.jpg"
