@@ -8,6 +8,7 @@ alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo
 # media
 ######################################################
 alias play="mpv --no-audio-display"
+alias pm="pulsemixer"
 
 ######################################################
 # clipboard
@@ -56,7 +57,7 @@ alias utsp="sudo umount /mnt/tsp* |
 ######################################################
 
 alias open="xdg-open"
-alias sucap="subl ~/personal/00-capture/capture.org"
+alias sucap="subl ~/personal/00-capture/capture.md"
 alias jf='SHELL=~/bin/r.shell ranger'
 
 ######################################################
