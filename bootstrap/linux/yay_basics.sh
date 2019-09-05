@@ -33,5 +33,8 @@ yay -S --noconfirm \
     arandr \
     peek \
     libratbag \
-    piper
+    piper \
+    inotify-tools \
+    bfg \
+    cronie
 
