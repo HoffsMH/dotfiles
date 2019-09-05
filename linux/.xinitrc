@@ -80,6 +80,8 @@ pcloudcc -u matthecker@protonmail.com &
 # start redshift to make it easy on eyes
 redshift &
 
+~/bin/tl start-server &
+
 # start gnome keyring so I dont have to type password on every git push
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
