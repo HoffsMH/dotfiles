@@ -37,5 +37,6 @@ yay -S --noconfirm \
     inotify-tools \
     bfg \
     cronie \
-    discord
+    discord \
+    gnome-calculator
 
