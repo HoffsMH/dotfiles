@@ -36,5 +36,6 @@ yay -S --noconfirm \
     piper \
     inotify-tools \
     bfg \
-    cronie
+    cronie \
+    discord
 
