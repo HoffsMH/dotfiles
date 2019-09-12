@@ -7,7 +7,7 @@ alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo
 ######################################################
 # media
 ######################################################
-alias play="mpv --no-audio-display"
+alias play="mpv --no-audio-display --loop-playlist"
 alias pm="pulsemixer"
 
 ######################################################
