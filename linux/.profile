@@ -13,5 +13,5 @@ export SESSION=dwm
 source "$HOME/personal/dotfiles/common/.zsh/path_and_shims.sh"
 
 
-startx &
+# startx &
 

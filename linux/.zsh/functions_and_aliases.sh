@@ -98,3 +98,10 @@ sethdmiscale() {
 }
 
 alias setwall="feh --bg-scale ~/.wall.jpg"
+
+######################################################
+# WM and session
+######################################################
+
+alias xfcesesh="export SESSION=xfce4-session"
+alias dwmsesh="export SESSION=dwm"
