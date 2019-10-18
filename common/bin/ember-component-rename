@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# purpose: rename files, in same path
+# if you make a mistake to defining the name of ember component, 
+# and you want to rename the files. This snippet is for you. 
+# NOTE: You should change the component calls in your code, 
+# this feature is not implemented yet.
+
+# For DEBUG purposes uncomment the following line:
+# set -x
+if [ ! -z $1 ] && [ ! -z $2 ]
+ then
+   NAME="$1"
+   RENAME="$2"
+   for i in $(find . -path ./tmp -prune -o -name "${NAME}*")
+   do
+    if [[ $i != "./tmp" ]]
+     then
+       OUT=$(echo $i | sed -e "s/${NAME}/${RENAME}/g")
+       echo "rename $i to $OUT"
+       mv $i $OUT
+     fi
+   done
+else
+   echo "You must specify the NAME and RENAME parameters to rename the file";
+fi
