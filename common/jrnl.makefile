@@ -1,6 +1,6 @@
 GPGID = matthecker@pm.me
 GPG = gpg
-DATE = $$(date +"%Y-%m-%d")
+DATE = $$(date --iso-8601=seconds)
 DATETAR = $(DATE)-$(FINGER_PRINT).tar
 
 ORGFILES=$(wildcard *.org)
@@ -18,8 +18,17 @@ all:
 	@echo "* make archive"
 	@echo ""
 
+thing: $(ORGFILES)
+	for orgfile in $(ORGFILES) ; do \
+		echo orgfile-$$(cat $$orgfile | sha1sum) ; \
+	done;
+
+entry:
+	touch $(DATE)-$(title).md
+
+
 lock: $(ORGFILES)
-	@umask 0077;\
+	@umask 0077; \
 		tar -cf $(DATETAR) $(ORGFILES) && \
 	  $(GPG) --encrypt --recipient $(GPGID) $(DATETAR)
 		rm -fr $(wildcard *.org) && \

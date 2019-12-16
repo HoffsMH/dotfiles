@@ -11,9 +11,7 @@ source "$HOME/personal/dotfiles/linux/.zsh/functions_and_aliases.sh"
 
 # shell hooks
 source ~/personal/dotfiles/common/.zsh/hooks.sh
-
 source ~/personal/dotfiles/common/.zsh/util.sh
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/hoffs/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hoffs/google-cloud-sdk/path.zsh.inc'; fi

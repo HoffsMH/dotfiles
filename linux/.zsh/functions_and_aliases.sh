@@ -16,10 +16,6 @@ alias pm="pulsemixer"
 alias xpaste="xclip -o"
 alias xclip="/usr/bin/xclip -selection clipboard"
 alias cmenu="clipmenu"
-alias clearclip="rm -fr /run/user/1000/clipmenu*"
-
-
-alias endx="killall xinit"
 
 ######################################################
 # history
@@ -93,6 +89,7 @@ setdmonpicale() {
 setdp1cale() {
   setdmonpicale "DisplayPort-1" $1
 }
+
 sethdmiscale() {
   setdmonpicale "HDMI-0" $1
 }
