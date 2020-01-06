@@ -26,7 +26,6 @@ yay -S --noconfirm \
     vtop \
     soulseekqt \
     colorgrab \
-    mbpfan-git \
     bcwc-pcie-git \
     bitwarden-bin \
     taskell-bin \
