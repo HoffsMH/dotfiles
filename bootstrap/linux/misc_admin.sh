@@ -33,9 +33,6 @@ sudo systemctl start "syncthing@$USER.service"
 sudo systemctl enable "cpupower"
 sudo systemctl start "cpupower"
 
-sudo systemctl enable "mbpfan"
-sudo systemctl start "mbpfan"
-
 ./setup_restic.sh
 
 chsh
