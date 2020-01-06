@@ -137,7 +137,7 @@ alias gco="git checkout"
 # get branch name
 alias gbn="git rev-parse --abbrev-ref HEAD"
 
-alias gopen="git open origin"
+alias gopen="git open origin &"
 alias gcf="git clean -f -d"
 
 # finds text across all commits, be careful when searching to not use common terms
