@@ -54,9 +54,6 @@ sudo pacman -S --noconfirm \
        jdk-openjdk \
        clipmenu \
        clipnotify \
-       i3-gaps \
-       i3status \
-       mpg123 \
        ntfs-3g \
        poppler \
        redshift \
