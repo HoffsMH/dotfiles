@@ -14,8 +14,8 @@ yay -S --noconfirm \
     nodenv-node-build \
     slack-desktop-dark \
     lf-bin \
+    ranger \
     sublime-text-dev \
-    visual-studio-code-bin \
     google-chrome \
     deluge-git \
     otf-fira-code \
@@ -23,7 +23,7 @@ yay -S --noconfirm \
     python-grip \
     pcloud-drive \
     pmount \
-    vtop \
+    htop \
     soulseekqt \
     colorgrab \
     bcwc-pcie-git \
