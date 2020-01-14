@@ -11,8 +11,8 @@ yay -S --noconfirm \
     direnv \
     rbenv \
     nodenv \
-    nodenv-node-build \
-    slack-desktop-dark \
+    nodenv-node-build-git \
+    slack-desktop \
     lf-bin \
     ranger \
     sublime-text-dev \
@@ -21,7 +21,7 @@ yay -S --noconfirm \
     otf-fira-code \
     ruby-build \
     python-grip \
-    pcloud-drive \
+    pcloudcc \
     pmount \
     htop \
     soulseekqt \
