@@ -24,6 +24,7 @@ fi
 sudo systemctl disable lightdm.service
 sudo ntpd -qg
 sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
+sudo hwclock -w
 
 # I dont want a greeter
 sudo pacman -Rs --noconfirm lightdm light-locker lightdm-gtk-greeter lightdm-gtk-greeter-settings
