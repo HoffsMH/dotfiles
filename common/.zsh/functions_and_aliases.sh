@@ -6,7 +6,6 @@ alias zource="source ~/.zshrc"
 ######################################################
 # misc
 ######################################################
-alias cl='clear'
 
 task() {
     pushd $HOME/personal/01-schedule/board
@@ -26,6 +25,7 @@ daisy() {
 ######################################################
 # history
 ######################################################
+
 hist() {
     cat ~/.zsh_history | ag $@
 }
@@ -75,15 +75,6 @@ untar(){
     fi
 }
 
-# append filename with a given string
-# appendmv prefix file => new file called prefixfile
-appendmv() {
-    for i in "${@:2}"
-    do
-        mv $i "$1$i"
-    done
-}
-
 selectdir() {
     local dir
     local realdir
@@ -94,10 +85,6 @@ selectdir() {
         && realdir="$(realpath $dir)" \
         && popd > /dev/null \
         && echo "$realdir"
-}
-
-printdirs() {
-    find $@ -type d -printf '%d\t%P\n'| sort -r -nk1 | cut -f2- | sed /.git/d | sed /.stfolder/d
 }
 
 # touch that builds path to the file if it doesnt exist
@@ -145,6 +132,7 @@ alias gcf="git clean -f -d"
 gsearch() { git log -S$1 -p }
 gpoc() { git pull origin $(gbn) --rebase }
 gpuc() { git push origin $(gbn) $1 }
+
 alias gcopybranchname="gbn | tr -d '\r\n' |tee /dev/stderr | pbcopy"
 # if working in a repository where the convention is to name prs after branches
 alias gcopyprname="gbn | sed -e 's/-/ /g' | tr -d '\r\n' |tee /dev/stderr | pbcopy"
