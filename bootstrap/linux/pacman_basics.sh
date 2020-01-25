@@ -46,6 +46,9 @@ sudo pacman -S --noconfirm \
        fzf \
        evtest \
        xcape \
+       noto-fonts \
+       noto-fonts-cjk \
+       noto-fonts-emoji \
        xorg-fonts-misc \
        xorg-font-util \
        xorg-fonts-alias \
