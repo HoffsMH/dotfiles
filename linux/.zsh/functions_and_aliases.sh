@@ -55,6 +55,7 @@ alias utsp="sudo umount /mnt/tsp* |
 alias open="xdg-open"
 alias sucap="subl ~/personal/00-capture/capture.md"
 alias jf='SHELL=~/bin/r.shell ranger'
+alias jfa='jf ~/personal/media/audio'
 
 ######################################################
 # docker
@@ -100,5 +101,5 @@ alias setwall="feh --bg-scale ~/.wall.jpg"
 # WM and session
 ######################################################
 
-alias xfcesesh="export SESSION=xfce4-session"
-alias dwmsesh="export SESSION=dwm"
+alias xfcesesh="export SESSION=xfce4-session && startx"
+alias dwmsesh="export SESSION=dwm && startx"
