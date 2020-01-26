@@ -15,21 +15,17 @@ cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 
-sudo mkdir -p /usr/local/opt/zlib/lib
 
 if [  -f /etc/sudoers.d/10-installer ]; then
   sudo sed -i 's/^\s*\(%wheel\s\+ALL=(ALL)\)\sALL/\1 NOPASSWD: ALL/' /etc/sudoers.d/10-installer
 fi
 
-sudo systemctl disable lightdm.service
 
 # get the time right
 sudo ntpd -qg
 sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
 sudo hwclock -w
 
-# I dont want a greeter
-sudo pacman -Rs --noconfirm lightdm light-locker lightdm-gtk-greeter lightdm-gtk-greeter-settings
 
 sudo systemctl enable docker.service
 sudo systemctl start docker.service
@@ -43,6 +39,7 @@ sudo systemctl start "cpupower"
 ./setup_restic.sh
 
 
+sudo mkdir -p /usr/local/opt/zlib/lib
 rbenv install 2.7.0
 exenv install 1.9.4
 nodenv install 13.6.0

@@ -4,7 +4,7 @@ set -e
 
 
 echo "###############################################"
-echo "PACMAN BASIC RECIPE"
+echo "PACMAN INSTALL BASIC RECIPE"
 echo "###############################################"
 
 sudo pacman -Syu --noconfirm
@@ -76,3 +76,15 @@ sudo pacman -S --noconfirm \
        gwenview \
        xorg-xfontsel \
        xdotool
+
+
+echo "###############################################"
+echo "PACMAN UNINSTALL BASIC RECIPE (remove cruft)"
+echo "###############################################"
+
+# I dont want a greeter
+sudo systemctl disable lightdm.service
+sudo pacman -Rs --noconfirm lightdm \
+       light-locker \
+       lightdm-gtk-greeter \
+       lightdm-gtk-greeter-settings
