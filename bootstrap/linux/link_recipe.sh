@@ -12,15 +12,18 @@ mkdir -p "$HOME/.config/lf"
 mkdir -p ~/.config/conky
 mkdir -p ~/.config/sxhkd
 mkdir -p ~/.config/redshift
+mkdir -p ~/.config/ranger
 
 ln -sf ~/personal/dotfiles/linux/kitty.conf ~/.config/kitty/kitty.conf
 ln -sf ~/personal/dotfiles/linux/.xinitrc ~/.xinitrc
 ln -sf ~/personal/dotfiles/linux/.Xmodmap ~/.Xmodmap
 ln -sf ~/personal/dotfiles/linux/.profile ~/.zprofile
 ln -sf ~/personal/dotfiles/linux/.zshrc ~/.zshrc
-ln -sf ~/personal/dotfiles/linux/.spacemacs ~/.spacemacs
 ln -sf ~/personal/dotfiles/linux/conky.conf ~/.config/conky/conky.conf
 ln -sf ~/personal/dotfiles/linux/redshift.conf ~/.config/redshift/
+ln -sf ~/personal/dotfiles/linux/rc.conf ~/.config/ranger/
+ln -sf ~/personal/dotfiles/common/.iex.exs ~/
+ln -sf ~/personal/dotfiles/common/.miex_helpers.exs ~/
 ln -sf ~/code/util/exenv ~/.exenv
 
 # st3
