@@ -32,5 +32,13 @@ git clone git://github.com/HoffsMH/dmenu.git
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
 sudo chmod +x /usr/local/bin/youtube-dl
 
+pushd ~/code/util/dwm
+sudo make clean install
+popd
+
+pushd ~/code/util/dmenu
+sudo make clean install
+popd
+
 
 popd
