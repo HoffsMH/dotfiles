@@ -9,7 +9,8 @@ echo "###############################################"
 
 cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
 
-# cp  ~/personal/dotfiles/common/.envrc.sample ~/.envrc
+cp  ~/personal/dotfiles/common/.envrc.sample ~/.envrc
+sudo chmod 600 ~/.envrc
 
 #speed up aur makepkg
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
