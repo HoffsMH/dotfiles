@@ -13,7 +13,6 @@ yay -S --noconfirm \
     nodenv \
     nodenv-node-build-git \
     slack-desktop \
-    lf-bin \
     ranger \
     sublime-text-dev \
     google-chrome \
