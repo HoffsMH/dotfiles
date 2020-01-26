@@ -1,8 +1,0 @@
-  #+BEGIN_SRC emacs-lisp
-  (org-babel-load-file (expand-file-name "package-settings.org" "~/personal/dotfiles/common/.emacs.d/"))
-  #+END_SRC
-
-** expand-region
-   #+BEGIN_SRC emacs-lisp
-     (global-set-key (kbd "s-d") 'er/expand-region)
-   #+END_SRC
