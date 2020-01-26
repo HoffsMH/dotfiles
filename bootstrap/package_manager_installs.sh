@@ -77,9 +77,44 @@ sudo pacman -S --noconfirm \
        xorg-xfontsel \
        xdotool
 
+echo "###############################################"
+echo "YAY BASIC RECIPE"
+echo "###############################################"
+
+yay -S --noconfirm \
+    direnv \
+    rbenv \
+    nodenv \
+    nodenv-node-build-git \
+    slack-desktop \
+    ranger \
+    sublime-text-dev \
+    google-chrome \
+    deluge-git \
+    otf-fira-code \
+    ruby-build \
+    python-grip \
+    pcloudcc \
+    pmount \
+    htop \
+    soulseekqt \
+    colorgrab \
+    bcwc-pcie-git \
+    bitwarden-bin \
+    taskell-bin \
+    arandr \
+    peek \
+    libratbag \
+    piper \
+    inotify-tools \
+    bfg \
+    cronie \
+    discord \
+    gnome-calculator \
+    lolcat
 
 echo "###############################################"
-echo "PACMAN UNINSTALL BASIC RECIPE (remove cruft)"
+echo "UNINSTALL BASIC RECIPE (remove cruft)"
 echo "###############################################"
 
 # I dont want a greeter
@@ -88,3 +123,32 @@ sudo pacman -Rs --noconfirm lightdm \
        light-locker \
        lightdm-gtk-greeter \
        lightdm-gtk-greeter-settings
+
+echo "###############################################"
+echo "install lanuguages and enable services"
+echo "###############################################"
+
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+
+sudo systemctl enable "syncthing@$USER.service"
+sudo systemctl start "syncthing@$USER.service"
+
+sudo systemctl enable "cpupower"
+sudo systemctl start "cpupower"
+
+# stable versions of everything as my default
+rbenv install 2.7.0
+exenv install 1.9.4
+nodenv install 13.6.0
+
+cd "$HOME"
+
+rbenv local 2.7.0
+exenv local 1.9.4
+nodenv local 13.6.0
+
+# install gcloud
+curl https://sdk.cloud.google.com | bash
+
+exec -l $SHELL

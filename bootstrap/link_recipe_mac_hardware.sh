@@ -1,5 +1,3 @@
-./link_recipe.sh
-
 rm -fr ~/.Xresources
 rm -fr ~/.Xmodmap
 
