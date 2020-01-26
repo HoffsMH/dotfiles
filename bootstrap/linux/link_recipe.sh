@@ -35,5 +35,4 @@ ln -sf ~/personal/dotfiles/common/ayu ~/.config/sublime-text-3/Packages/
 
 
 
-ln -sf ~/personal/dotfiles/linux/lfrc ~/.config/lf/lfrc
 ln -sf ~/personal/dotfiles/linux/sxhkdrc ~/.config/sxhkd/sxhkdrc
