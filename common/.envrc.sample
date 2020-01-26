@@ -1,0 +1,24 @@
+###############################################
+# RESTIC
+###############################################
+
+export BACKUP_PATHS="/home/hoffs/"
+export BACKUP_EXCLUDES="--exclude-file=/home/hoffs/.restic_excludes"
+
+export B2_ACCOUNT_ID=xxxxxxxxxxxxxxxxxxxxxx
+
+# Only see one time when creating the key, labeled: applicationKey:
+export B2_ACCOUNT_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# the full dasherized name of the bucket
+export RESTIC_REPOSITORY=xxxxxxxxxxxxxxxxxxxxxxxx
+
+# you make this up when you create the restic back up
+# remember to save in password manager
+# this is so b2 doesn't have access to your data either
+# make sure permissions on this file are tight
+# then export B2_ACCOUNT_KEY=...
+#  export B2_ACCOUNT_ID=...
+# export RESTIC_REPOSITORY=b2:.....
+# restic init
+export RESTIC_PASSWORD=xxxxxxxxxxxxxxxxxxxxxxxxxxxx
