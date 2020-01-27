@@ -152,3 +152,12 @@ nodenv local 13.6.0
 curl https://sdk.cloud.google.com | bash
 
 exec -l $SHELL
+
+echo "###############################################"
+echo "Install TL"
+echo "###############################################"
+
+pushd ~/code/util/ex-tl
+mix deps.get
+mix escript.build
+mv ./tl ~/bin
