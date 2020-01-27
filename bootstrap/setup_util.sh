@@ -25,6 +25,7 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 
 git clone git://github.com/HoffsMH/dwm.git
 git clone git://github.com/HoffsMH/dmenu.git
+git clone git://github.com/HoffsMH/ex-tl.git
 
 
 # Install absolute latest of yt-dl
@@ -47,4 +48,3 @@ pushd ~/code/util/exenv
 popd
 
 
-popd
