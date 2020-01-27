@@ -94,14 +94,14 @@ yay -S --noconfirm \
     otf-fira-code \
     ruby-build \
     python-grip \
-    pcloudcc \
+    pcloud-drive \
     pmount \
     htop \
     soulseekqt \
     colorgrab \
     bcwc-pcie-git \
     bitwarden-bin \
-    taskell-bin \
+    taskell \
     arandr \
     peek \
     libratbag \

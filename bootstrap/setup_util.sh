@@ -40,5 +40,11 @@ pushd ~/code/util/dmenu
 sudo make clean install
 popd
 
+# will get exenv on our path
+source ~/.zprofile
+pushd ~/code/util/exenv
+ ./src/configure && make -C src
+popd
+
 
 popd

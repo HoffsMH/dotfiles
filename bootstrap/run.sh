@@ -12,6 +12,6 @@ set -e
 
 #./link_recipe_mac_hardware.sh
 
-../common/gen_ssh_keys.sh
+./misc/gen_ssh_keys.sh
 
 
