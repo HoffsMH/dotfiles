@@ -642,7 +642,7 @@
 		"fg": "#3d424d",
 		"font.italic": false,
 		"font.bold": false,
-		"font.size": 12
+		"font.size": 5
 	},
 	{
 		"class": "tab_label",
