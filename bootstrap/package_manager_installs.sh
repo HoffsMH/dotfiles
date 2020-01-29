@@ -70,7 +70,6 @@ sudo pacman -S --noconfirm \
        blueman \
        pyenv \
        filezilla \
-       st \
        zeal \
        restic \
        gwenview \
@@ -108,7 +107,6 @@ yay -S --noconfirm \
     piper \
     inotify-tools \
     bfg \
-    cronie \
     discord \
     gnome-calculator \
     lolcat
