@@ -3,7 +3,6 @@
 
 ## Warm
 
-- get rid of ST its no longer needed
 
 ## Selected
 
@@ -15,6 +14,7 @@
 ## Doing
 
 - exenv installation automated
+- get rid of ST its no longer needed
 
 ## Done
 
