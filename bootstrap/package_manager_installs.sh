@@ -153,11 +153,18 @@ curl https://sdk.cloud.google.com | bash
 
 exec -l $SHELL
 
+sudo chmod -x "$HOME/.config/systemd/user/restic-backup.timer"
+sudo chmod -x "$HOME/.config/systemd/user/restic-backup.service"
+
+systemctl --user enable restic-backup.timer
+systemctl --user start restic-backup.timer
+
 echo "###############################################"
 echo "Install TL"
 echo "###############################################"
 
 pushd ~/code/util/ex-tl
-mix deps.get
+mix local.hex --force
+mix deps.get --force
 mix escript.build
 mv ./tl ~/bin
