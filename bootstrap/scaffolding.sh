@@ -90,12 +90,7 @@ echo "###############################################"
 chmod +x "$HOME/bin/ytgo"
 sudo chmod 600 "$HOME/.envrc"
 sudo chown $USER /media/restic
-sudo chmod -x "$HOME/.config/systemd/user/restic-backup.timer"
-sudo chmod -x "$HOME/.config/systemd/user/restic-backup.service"
 
-
-systemctl --user enable restic-backup.timer
-systemctl --user start restic-backup.timer
 
 source ~/.zshrc
 source ~/.zprofile
