@@ -98,3 +98,4 @@ systemctl --user enable restic-backup.timer
 systemctl --user start restic-backup.timer
 
 source ~/.zshrc
+source ~/.zprofile

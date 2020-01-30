@@ -135,16 +135,18 @@ sudo systemctl enable "cpupower"
 sudo systemctl start "cpupower"
 
 source ~/.zshrc
+source ~/.zprofile
+
 # stable versions of everything as my default
-rbenv install 2.7.0
-exenv install 1.9.4
-nodenv install 13.6.0
+/usr/bin/rbenv install 2.7.0
+~/.exenv/bin/exenv install 1.9.4
+/usr/bin/nodenv install 13.6.0
 
 cd "$HOME"
 
-rbenv local 2.7.0
-exenv local 1.9.4
-nodenv local 13.6.0
+/usr/bin/rbenv local 2.7.0
+~/.exenv/bin/exenv local 1.9.4
+/usr/bin/nodenv local 13.6.0
 
 # install gcloud
 curl https://sdk.cloud.google.com | bash
