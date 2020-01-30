@@ -16,7 +16,6 @@ sudo pacman -S --noconfirm \
        fasd \
        exa \
        jq \
-       emacs \
        xclip \
        xorg-xclipboard \
        xorg-xsetroot \
@@ -135,6 +134,7 @@ sudo systemctl start "syncthing@$USER.service"
 sudo systemctl enable "cpupower"
 sudo systemctl start "cpupower"
 
+source ~/.zshrc
 # stable versions of everything as my default
 rbenv install 2.7.0
 exenv install 1.9.4

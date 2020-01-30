@@ -96,3 +96,5 @@ sudo chmod -x "$HOME/.config/systemd/user/restic-backup.service"
 
 systemctl --user enable restic-backup.timer
 systemctl --user start restic-backup.timer
+
+source ~/.zshrc
