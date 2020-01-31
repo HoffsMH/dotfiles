@@ -108,7 +108,8 @@ yay -S --noconfirm \
     bfg \
     discord \
     gnome-calculator \
-    lolcat
+    lolcat \
+    rescuetime2
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
