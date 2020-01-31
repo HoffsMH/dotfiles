@@ -137,9 +137,9 @@ sudo systemctl start "cpupower"
 source ~/.zprofile
 
 # stable versions of everything as my default
-/usr/bin/rbenv install 2.7.0
-~/.exenv/bin/exenv install 1.9.4
-/usr/bin/nodenv install 13.6.0
+/usr/bin/rbenv install 2.7.0 || echo "ruby install failed"
+~/.exenv/bin/exenv install 1.9.4 || echo "elixir install failed"
+/usr/bin/nodenv install 13.6.0 || echo "node install failed"
 
 pushd "$HOME"
 
@@ -150,13 +150,11 @@ pushd "$HOME"
 # install gcloud
 curl https://sdk.cloud.google.com | bash
 
-exec -l $SHELL
-
 sudo chmod -x "$HOME/.config/systemd/user/restic-backup.timer"
 sudo chmod -x "$HOME/.config/systemd/user/restic-backup.service"
 
-systemctl --user enable restic-backup.timer
-systemctl --user start restic-backup.timer
+systemctl --user enable restic-backup.timer || echo "restic systemctl failing"
+systemctl --user start restic-backup.timer || echo "restic systemctl failing"
 
 echo "###############################################"
 echo "Install TL"
