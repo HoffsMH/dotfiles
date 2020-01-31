@@ -93,5 +93,3 @@ sudo chmod 600 "$HOME/.envrc"
 sudo chown $USER /media/restic
 
 
-source ~/.zshrc
-source ~/.zprofile

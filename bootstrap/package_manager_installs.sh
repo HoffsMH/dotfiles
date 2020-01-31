@@ -115,11 +115,11 @@ echo "UNINSTALL BASIC RECIPE (remove cruft)"
 echo "###############################################"
 
 # I dont want a greeter
-sudo systemctl disable lightdm.service
-sudo pacman -Rs --noconfirm lightdm \
+ sudo systemctl disable lightdm.service || echo "lightdm already uninstalled"
+ sudo pacman -Rs --noconfirm lightdm \
        light-locker \
        lightdm-gtk-greeter \
-       lightdm-gtk-greeter-settings
+       lightdm-gtk-greeter-settings || echo "lightdm already uninstalled"
 
 echo "###############################################"
 echo "install lanuguages and enable services"
@@ -134,7 +134,6 @@ sudo systemctl start "syncthing@$USER.service"
 sudo systemctl enable "cpupower"
 sudo systemctl start "cpupower"
 
-source ~/.zshrc
 source ~/.zprofile
 
 # stable versions of everything as my default
@@ -142,11 +141,11 @@ source ~/.zprofile
 ~/.exenv/bin/exenv install 1.9.4
 /usr/bin/nodenv install 13.6.0
 
-cd "$HOME"
+pushd "$HOME"
 
 /usr/bin/rbenv local 2.7.0
 ~/.exenv/bin/exenv local 1.9.4
-/usr/bin/nodenv local 13.6.0
+/usr/bin/nodenv local 13.6.0 --compile
 
 # install gcloud
 curl https://sdk.cloud.google.com | bash
@@ -168,3 +167,5 @@ mix local.hex --force
 mix deps.get --force
 mix escript.build
 mv ./tl ~/bin
+
+popd
