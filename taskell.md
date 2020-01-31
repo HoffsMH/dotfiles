@@ -5,6 +5,7 @@
 
 - get rid of ST its no longer needed
 - systemctl scripts that work only if the service or unit is found
+- xsel spam on stopping xinit
 
 ## Selected
 

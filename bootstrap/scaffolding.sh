@@ -40,7 +40,7 @@ echo "###############################################"
 cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"
 cp  "$HOME/personal/dotfiles/common/.envrc.sample" "$HOME/.envrc"
 cp "$HOME/personal/dotfiles/linux/restic-backup.conf.sample" "$HOME/.config/restic/restic-backup.conf"
-cp "~/personal/dotfiles/config/sample/.Xresources" "$HOME/.Xresources"
+cp "$HOME/personal/dotfiles/config/sample/.Xresources" "$HOME/.Xresources"
 
 echo "###############################################"
 echo "setup links"
