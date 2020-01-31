@@ -35,9 +35,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 
-/usr/bin/nodenv rehash
-/usr/bin/rbenv rehash
-exenv rehash
+type /usr/bin/nodenv && /usr/bin/nodenv rehash
+type /usr/bin/rbenv && /usr/bin/rbenv rehash
+type exenv && exenv rehash
 
 
 # should end up with something like
