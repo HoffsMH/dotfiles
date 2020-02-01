@@ -109,7 +109,8 @@ yay -S --noconfirm \
     discord \
     gnome-calculator \
     lolcat \
-    rescuetime2
+    rescuetime2 \
+    brave-bin
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
