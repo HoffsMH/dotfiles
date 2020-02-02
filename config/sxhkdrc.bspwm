@@ -32,7 +32,7 @@ hyper + {z,x}
   bspc node -f {prev.local,next.local}
 
 control + space
-  dmenu_run  -l 7
+  rofi -show combi -matching fuzzy
 
 control + Return
   kitty

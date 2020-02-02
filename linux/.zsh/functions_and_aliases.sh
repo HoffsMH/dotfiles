@@ -111,6 +111,8 @@ alias dwmsesh="export SESSION=dwm && startx"
 alias bspwmsesh="export SESSION=bspwm && startx"
 alias getwindowname="xprop | grep WM_CLASS"
 
+# rofi
+alias reloadrofi="rofi -dmenu -config $HOME/rofi/config.rasi"
 
 ######################################################
 # Restic and backup stuff
