@@ -11,6 +11,9 @@ mkdir -p "$HOME/.config/redshift"
 mkdir -p "$HOME/.config/ranger"
 mkdir -p "$HOME/.config/systemd/user/"
 mkdir -p "$HOME/.config/restic"
+mkdir -p "$HOME/.config/bspwm"
+mkdir -p "$HOME/.config/polybar"
+mkdir -p "$HOME/.config/picom"
 mkdir -p "$HOME/code/util"
 mkdir -p "$HOME/code/paid/"
 mkdir -p "$HOME/code/fun/"
@@ -71,11 +74,14 @@ ln -sf "$HOME/personal/dotfiles/common/.miex_helpers.exs" "$HOME/."
 ln -sf "$HOME/code/util/exenv" "$HOME/.exenv"
 
 # .config
-ln -sf "$HOME/personal/dotfiles/linux/sxhkdrc" "$HOME/.config/sxhkd/sxhkdrc"
+ln -sf "$HOME/personal/dotfiles/config/sxhkdrc.bspwm" "$HOME/.config/sxhkd/sxhkdrc"
 ln -sf "$HOME/personal/dotfiles/linux/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 ln -sf "$HOME/personal/dotfiles/linux/conky.conf" "$HOME/.config/conky/conky.conf"
 ln -sf "$HOME/personal/dotfiles/linux/redshift.conf" "$HOME/.config/redshift/"
 ln -sf "$HOME/personal/dotfiles/linux/rc.conf" "$HOME/.config/ranger/"
+ln -sf "$HOME/personal/dotfiles/config/bspwmrc" "$HOME/.config/bspwm/"
+ln -sf "$HOME/personal/dotfiles/config/polybarconfig" "$HOME/.config/polybar/config"
+ln -sf "$HOME/personal/dotfiles/config/picom.conf" "$HOME/.config/picom/"
 
 ln -sf ~/personal/dotfiles/linux/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ln -sf ~/personal/dotfiles/linux/Package\ Control.sublime-settings ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
