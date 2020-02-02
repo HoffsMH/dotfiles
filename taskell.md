@@ -3,6 +3,8 @@
 
 ## Warm
 
+- ctrl D while in kitty no longer closes the tab
+- kitty combine profiles
 
 ## Selected
 
