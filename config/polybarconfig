@@ -23,9 +23,9 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #adb4e0
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+primary = #aaffb52a
+secondary = #aae60053
+alert = #aabd2c40
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -56,8 +56,8 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm
-modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-center = xwindow
+modules-right = filesystem xbacklight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -79,23 +79,7 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label = %title:0:100:...%
 
 [module/filesystem]
 type = internal/fs
@@ -207,7 +191,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #aaf90000
 label = %percentage:2%%
 
 [module/memory]
@@ -215,7 +199,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #aa4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -224,7 +208,7 @@ interface = net1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = #aa9f78e1
 label-connected = %essid%
 
 format-disconnected =

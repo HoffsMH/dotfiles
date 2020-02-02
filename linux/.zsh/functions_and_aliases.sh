@@ -103,6 +103,9 @@ alias setwall="feh --bg-scale ~/.wall.jpg"
 
 alias xfcesesh="export SESSION=xfce4-session && startx"
 alias dwmsesh="export SESSION=dwm && startx"
+alias bspwmsesh="export SESSION=bspwm && startx"
+alias getwindowname="xprop | grep WM_CLASS"
+
 
 ######################################################
 # Restic and backup stuff
