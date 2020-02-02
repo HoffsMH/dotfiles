@@ -28,6 +28,7 @@ secondary = #aae60053
 alert = #aabd2c40
 
 [bar/main]
+dpi = 140
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 98%
 height = 30
