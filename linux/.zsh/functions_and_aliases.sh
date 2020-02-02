@@ -97,6 +97,11 @@ sethdmiscale() {
 
 alias setwall="feh --bg-scale ~/.wall.jpg"
 
+changewall() {
+  cp $1 ~/.wall.jpg
+  feh --bg-scale ~/.wall.jpg
+}
+
 ######################################################
 # WM and session
 ######################################################
