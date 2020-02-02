@@ -7,6 +7,7 @@
   - restic
     - b2
   - sublime
+    - enter liscense
   - gcloud
   - slack
   - pia

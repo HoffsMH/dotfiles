@@ -120,7 +120,8 @@ yay -S --noconfirm \
     bspwm \
     font-manager \
     slock \
-    siji-git
+    siji-git \
+    picom-git
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
