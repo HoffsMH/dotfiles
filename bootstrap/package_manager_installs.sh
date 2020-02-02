@@ -94,6 +94,7 @@ yay -S --noconfirm \
     google-chrome \
     deluge-git \
     otf-fira-code \
+    ttf-input \
     ruby-build \
     python-grip \
     pcloud-drive \
@@ -114,7 +115,10 @@ yay -S --noconfirm \
     gnome-calculator \
     lolcat \
     rescuetime2 \
-    brave-bin
+    brave-bin \
+    polybar \
+    bspwm \
+    font-manager
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
