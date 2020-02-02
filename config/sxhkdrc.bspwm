@@ -19,7 +19,16 @@ hyper + control + {h,j,k,l}
 hyper + {_,shift + }{1-9,0}
   bspc {desktop -f,node -d} '^{1-9,10}'
 
-control + @space
+hyper + space
+    bspc node -t floating
+
+hyper + shift + space
+    bspc node -t tiled
+
+hyper + {z,x}
+  bspc node -f {prev.local,next.local}
+
+control + space
   dmenu_run  -l 7
 
 control + Return

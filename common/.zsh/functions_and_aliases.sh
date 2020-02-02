@@ -209,3 +209,10 @@ alias ctmiex="MIX_ENV=test mix compile --force && tmiex"
 alias mphx="iex -S mix phx.server"
 alias mt="mix test"
 alias be="bundle exec"
+
+######################################################
+# Networking
+######################################################
+
+# print out wifi passwords
+alias wifipw="sudo ag psk= /etc/NetworkManager/system-connections"
