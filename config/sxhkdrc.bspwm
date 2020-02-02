@@ -4,6 +4,9 @@ hyper + shift + q
 hyper + t
   bspc desktop -l tiled
 
+hyper + s
+  bspc node -p {west,north,south,east,cancel}
+
 hyper + p
   bspc desktop -l monocle
 
@@ -11,7 +14,7 @@ hyper + Return
   bspc node -s biggest.local
 
 hyper + {_,shift + }{h,j,k,l}
-  bspc node -{f,n} {west,south,north,east}
+  bspc node -{f,n} {west,south,north,east,next,prev}
 
 hyper + control + {h,j,k,l}
   bspc node -s {west,south,north,east}
@@ -20,10 +23,7 @@ hyper + {_,shift + }{1-9,0}
   bspc {desktop -f,node -d} '^{1-9,10}'
 
 hyper + space
-    bspc node -t floating
-
-hyper + shift + space
-    bspc node -t tiled
+    bspc node -t '~{tiled,floating}'
 
 hyper + {z,x}
   bspc node -f {prev.local,next.local}
