@@ -122,7 +122,8 @@ yay -S --noconfirm \
     slock \
     siji-git \
     picom-git \
-    sxiv
+    sxiv \
+    rofi
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
