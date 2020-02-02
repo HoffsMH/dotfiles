@@ -1,5 +1,5 @@
 export EDITOR="subl3"
-export BROWSER="firefox"
+export BROWSER="brave"
 export TERMINAL="kitty"
 export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
