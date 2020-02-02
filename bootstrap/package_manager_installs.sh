@@ -118,7 +118,9 @@ yay -S --noconfirm \
     brave-bin \
     polybar \
     bspwm \
-    font-manager
+    font-manager \
+    slock \
+    siji-git
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
