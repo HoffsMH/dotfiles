@@ -14,6 +14,7 @@ mkdir -p "$HOME/.config/restic"
 mkdir -p "$HOME/.config/bspwm"
 mkdir -p "$HOME/.config/polybar"
 mkdir -p "$HOME/.config/picom"
+mkdir -p "$HOME/.config/sxiv/exec"
 mkdir -p "$HOME/code/util"
 mkdir -p "$HOME/code/paid/"
 mkdir -p "$HOME/code/fun/"
@@ -82,6 +83,7 @@ ln -sf "$HOME/personal/dotfiles/linux/rc.conf" "$HOME/.config/ranger/"
 ln -sf "$HOME/personal/dotfiles/config/bspwmrc" "$HOME/.config/bspwm/"
 ln -sf "$HOME/personal/dotfiles/config/polybarconfig" "$HOME/.config/polybar/config"
 ln -sf "$HOME/personal/dotfiles/config/picom.conf" "$HOME/.config/picom/"
+ln -sf "$HOME/personal/dotfiles/config/sxiv-key-handler" "$HOME/.config/sxiv/exec/key-handler"
 
 ln -sf ~/personal/dotfiles/linux/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ln -sf ~/personal/dotfiles/linux/Package\ Control.sublime-settings ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
