@@ -7,6 +7,10 @@ echo "###############################################"
 echo "PACMAN INSTALL BASIC RECIPE"
 echo "###############################################"
 
+#speed up aur makepkg
+sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
+sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
+
 sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm \
        pulsemixer \
