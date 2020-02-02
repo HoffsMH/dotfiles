@@ -11,10 +11,13 @@ hyper + p
   bspc desktop -l monocle
 
 hyper + Return
-  bspc node -s biggest.local
+  bspc node -s '{biggest.local,prev.local}'
 
-hyper + {_,shift + }{h,j,k,l}
-  bspc node -{f,n} {west,south,north,east,next,prev}
+hyper + shift + {h,j,k,l}
+  bspc node -n {west,south,north,east}
+
+hyper + {h,j,k,l}
+  bspc node -f {west,next.local,prev.local,east}
 
 hyper + control + {h,j,k,l}
   bspc node -s {west,south,north,east}
