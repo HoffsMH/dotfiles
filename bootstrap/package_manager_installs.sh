@@ -41,8 +41,7 @@ sudo pacman -S --noconfirm \
        figlet \
        zsh \
        the_silver_searcher \
-       ttf-linux-libertine \
-       ttf-inconsolata \
+       nerd-fonts-inconsolata \
        erlang \
        elixir \
        kitty \
@@ -93,8 +92,6 @@ yay -S --noconfirm \
     sublime-text-dev \
     google-chrome \
     deluge-git \
-    otf-fira-code \
-    ttf-input \
     ruby-build \
     python-grip \
     pcloud-drive \

@@ -16,7 +16,7 @@ configuration {
    blackselect:      #1A1F2B;
    darkgray:         #848484;
    scrollbarcolor:   #505050;
-   font: "Input Mono 14";
+   font: "Inconsolata 14";
    background-color: @blackdarkest;
 }
 
