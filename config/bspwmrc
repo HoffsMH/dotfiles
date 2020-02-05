@@ -3,8 +3,7 @@
 
 gap=15
 
-bspc monitor -n 1 -d 1 2 3 4 5 6 7 8 9
-bspc monitor -n 2 -d 1 2 3 4 5 6 7 8 9
+bspc monitor any  -d 1 2 3 4 5 6 7 8 9
 
 # polybar width is measured in percentage, so too must my horizontal paddings
 horizontal=$(xrandr | grep \* | awk '{print $1}' | cut -d "x" -f 1)
@@ -14,7 +13,7 @@ horizontal_padding=$(echo "($horizontal * $percentage) - 13" | bc -l)
 echo $horizontal_padding
 echo $horizontal
 
-bspc config border_width         1.5
+bspc config border_width         3
 bspc config window_gap          18
 
 bspc config window_gap $gap;

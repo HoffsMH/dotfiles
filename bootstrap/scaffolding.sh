@@ -30,6 +30,7 @@ sudo mkdir -p "/usr/local/opt/zlib/lib"
 mkdir -p "$HOME/.yt-dl-archive/"
 sudo mkdir -p /media/restic
 mkdir -p "$HOME/.config/sublime-text-3/Packages/User"
+sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
 
 
 echo "###############################################"

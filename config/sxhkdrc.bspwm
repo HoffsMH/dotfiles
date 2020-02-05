@@ -1,5 +1,5 @@
 hyper + e
-  bspc node -m next
+  bspc node -m next --follow
 
 hyper + r
   bspc monitor -f next
