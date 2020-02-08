@@ -36,3 +36,6 @@ control + alt + Right
 
 control + alt + Left
   xdotool search --name "firefox" key "ctrl+Page_Up"
+
+control + space
+  rofi -show combi -matching fuzzy

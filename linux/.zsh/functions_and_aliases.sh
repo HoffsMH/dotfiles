@@ -80,7 +80,7 @@ task() {
 alias subl="subl3"
 
 ######################################################
-# Displays and wallpaper
+# Displays/wallpaper and keyboard
 ######################################################
 
 setdmonpicale() {
@@ -102,6 +102,8 @@ changewall() {
   feh --bg-scale ~/.wall.jpg
 }
 
+alias kbdsetup="xmodmap ~/.Xmodmap || xset r rate 200 30"
+
 ######################################################
 # WM and session
 ######################################################
@@ -122,3 +124,10 @@ alias reloadrofi="rofi -dmenu -config $HOME/rofi/config.rasi"
 alias resticinit="restic init"
 alias resticbrowse="restic mount /media/restic"
 alias resticbackup="restic backup --verbose --tag systemd.timer $BACKUP_EXCLUDES $BACKUP_PATHS"
+
+###
+# grrrrr
+###
+
+alias mkup="sudo rm -fr ./tmp && make up"
+alias rmup="sudo rm -fr ./tmp && make up"
