@@ -117,6 +117,20 @@ alias getwindowname="xprop | grep WM_CLASS"
 alias reloadrofi="rofi -dmenu -config $HOME/rofi/config.rasi"
 
 ######################################################
+# bw
+######################################################
+
+bwunlock() {
+  export BW_SESSION=$(bw unlock --raw)
+}
+
+bwget() {
+  tl bw | xclip && echo "done"
+}
+
+
+
+######################################################
 # Restic and backup stuff
 ######################################################
 
@@ -131,3 +145,4 @@ alias resticbackup="restic backup --verbose --tag systemd.timer $BACKUP_EXCLUDES
 
 alias mkup="sudo rm -fr ./tmp && make up"
 alias rmup="sudo rm -fr ./tmp && make up"
+
