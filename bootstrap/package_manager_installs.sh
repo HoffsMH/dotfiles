@@ -101,6 +101,7 @@ yay -S --noconfirm \
     colorgrab \
     bcwc-pcie-git \
     bitwarden-bin \
+    bitwarden-cli \
     taskell \
     arandr \
     peek \
