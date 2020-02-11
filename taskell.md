@@ -1,10 +1,13 @@
 ## Cold
 
+- https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
+
 ## Warm
 
 - ctrl D while in kitty no longer closes the tab
 - kitty combine profiles
 - sxhkd  cleanup bspwm
+- add mimeopen portion to bootstrap
 
 ## Selected
 
