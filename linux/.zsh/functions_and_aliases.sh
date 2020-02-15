@@ -125,7 +125,7 @@ bwunlock() {
 }
 
 bwget() {
-  tl bw | xclip && echo "done"
+  tl bw  $@ | xclip && echo "done"
 }
 
 
