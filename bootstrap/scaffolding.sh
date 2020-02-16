@@ -78,7 +78,7 @@ ln -sf "$HOME/code/util/exenv" "$HOME/.exenv"
 
 # .config
 ln -sf "$HOME/personal/dotfiles/config/sxhkdrc.bspwm" "$HOME/.config/sxhkd/sxhkdrc"
-ln -sf "$HOME/personal/dotfiles/linux/kitty.conf" "$HOME/.config/kitty/kitty.conf"
+ln -sf "$HOME/personal/dotfiles/config/kitty.conf" "$HOME/.config/kitty/kitty.conf"
 ln -sf "$HOME/personal/dotfiles/linux/conky.conf" "$HOME/.config/conky/conky.conf"
 ln -sf "$HOME/personal/dotfiles/linux/redshift.conf" "$HOME/.config/redshift/"
 ln -sf "$HOME/personal/dotfiles/linux/rc.conf" "$HOME/.config/ranger/"
