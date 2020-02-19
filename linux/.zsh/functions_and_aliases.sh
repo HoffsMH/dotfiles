@@ -56,6 +56,7 @@ alias open="xdg-open"
 alias sucap="subl ~/personal/00-capture/capture.md"
 alias jf='SHELL=~/bin/r.shell ranger'
 alias jfa='jf ~/personal/media/audio'
+alias jfc='jf ~/personal/00-capture'
 
 ######################################################
 # docker
