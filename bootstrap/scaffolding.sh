@@ -67,7 +67,7 @@ ln -sf "$HOME/personal/dotfiles/common/.gitignore_global" "$HOME/."
 ln -sf "$HOME/personal/dotfiles/common/.gitconfig" "$HOME/."
 ln -sf "$HOME/personal/dotfiles/common/.fzf.zsh" "$HOME/.fzf.zsh"
 ln -sf "$HOME/code/util/oh-my-zsh" "$HOME/.oh-my-zsh"
-ln -sft "$HOME/bin" $HOME/personal/dotfiles/common/bin/*
+ln -sft "$HOME/bin" $HOME/personal/dotfiles/bin/*
 ln -sf "$HOME/personal/dotfiles/linux/.xinitrc" "$HOME/.xinitrc"
 ln -sf "$HOME/personal/dotfiles/linux/.Xmodmap" "$HOME/.Xmodmap"
 ln -sf "$HOME/personal/dotfiles/linux/.profile" "$HOME/.zprofile"
