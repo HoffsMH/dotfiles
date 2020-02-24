@@ -103,7 +103,7 @@ changewall() {
   feh --bg-scale ~/.wall.jpg
 }
 
-alias kbdsetup="xcape -t 200 -e Control_L=Escape || xmodmap ~/.Xmodmap || xset r rate 200 30"
+alias kbdsetup="xmodmap ~/.Xmodmap || xset r rate 200 30 || xcape -t 200 -e Control_L=Escape"
 
 ######################################################
 # WM and session
