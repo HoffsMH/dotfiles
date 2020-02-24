@@ -4,28 +4,24 @@ clear Mod1
 clear Mod4
 clear Mod3
 
-! 66 is x keycode for caps_lock on x220
-! 58 is tty keycode for caps_lock on x220
-! keycode 66 = Control_L
-keysym Caps_Lock = Control_L
+! caps
+keycode 66 = Control_L
+keycode 133 = Control_L
 
-! 64 is x keycode for Alt_L on x220
-! 56 is tty keycode for Alt_L on x220
-! keycode 64 = Control_L
-!keysym Alt_L = Control_L
+!default control L
+keycode 37 = Mode_switch
 
-! 133 is x keycode for Super_L on x220
-! 125 is tty keycode for Super_L on x220
-! keycode 133 = Alt_L
-keysym Super_L = Control_L
+! 64 is Alt_L
 
-! these are the keys above right and left arrow on thinkpads
-!keycode 166 = Prior
-!keycode 167 = Next
+! keycode
+keycode 108 = Hyper_L
+keycode 134 = Hyper_L
 
-!keycode 108 = Hyper_L
-keysym Super_R = Hyper_L
-keysym Alt_R = Hyper_L
+! j
+keycode 44 = j J Down
+keycode 43 = h H Left
+keycode 45 = k K Up
+keycode 46 = l L Right
 
 add Mod1 = Alt_L Alt_R
 add control = Control_L Control_R
