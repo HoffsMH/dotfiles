@@ -135,6 +135,17 @@ bwget() {
 
 alias ag="ag $* --pager 'less -R' -A 3 -B 3 --hidden"
 
+######################################################
+# Time
+######################################################
+
+settime() {
+  sudo ntpd -qg
+  sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
+  sudo hwclock -w
+}
+
+
 
 ######################################################
 # Restic and backup stuff
