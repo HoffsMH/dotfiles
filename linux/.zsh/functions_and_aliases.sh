@@ -7,7 +7,10 @@ alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo
 ######################################################
 # media
 ######################################################
+
 alias play="mpv --no-audio-display --loop-playlist"
+alias playa="mpv -vo null --no-audio-display --loop-playlist"
+alias playv="mpv --no-audio-display --loop-playlist"
 alias pm="pulsemixer"
 
 ######################################################
@@ -145,6 +148,11 @@ settime() {
   sudo hwclock -w
 }
 
+######################################################
+# network sleuthing
+######################################################
+
+alias nmapo="sudo nmap -O -v"
 
 
 ######################################################
