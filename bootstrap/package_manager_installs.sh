@@ -57,8 +57,7 @@ sudo pacman -S --noconfirm \
        xorg-fonts-encodings \
        xorg-xev \
        jdk-openjdk \
-       clipmenu \
-       clipnotify \
+       greenclip \
        ntfs-3g \
        poppler \
        redshift \
