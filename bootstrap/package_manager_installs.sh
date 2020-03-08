@@ -57,7 +57,6 @@ sudo pacman -S --noconfirm \
        xorg-fonts-encodings \
        xorg-xev \
        jdk-openjdk \
-       greenclip \
        ntfs-3g \
        poppler \
        redshift \
@@ -120,7 +119,8 @@ yay -S --noconfirm \
     siji-git \
     picom-git \
     sxiv \
-    rofi
+    rofi \
+    rofi-greenclip
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
