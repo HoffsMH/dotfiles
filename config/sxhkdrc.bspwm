@@ -49,6 +49,9 @@ hyper + {z,x}
 control + space
   rofi -show combi -matching fuzzy
 
+hyper + v
+  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
 control + Return
   kitty
 
