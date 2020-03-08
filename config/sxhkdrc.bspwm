@@ -50,7 +50,7 @@ control + space
   rofi -show combi -matching fuzzy
 
 hyper + v
-  rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+  rofi -modi "clipboard:greenclip print" -show clipboard -matching fuzzy -run-command '{cmd}'
 
 control + Return
   kitty
