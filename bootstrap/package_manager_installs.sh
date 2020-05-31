@@ -120,7 +120,8 @@ yay -S --noconfirm \
     picom-git \
     sxiv \
     rofi \
-    rofi-greenclip
+    rofi-greenclip \
+    sox
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"

@@ -4,6 +4,7 @@ alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 
 alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"'
 
+
 ######################################################
 # media
 ######################################################
@@ -60,6 +61,9 @@ alias sucap="subl ~/personal/00-capture/capture.md"
 alias jf='SHELL=~/bin/r.shell ranger'
 alias jfa='jf ~/personal/media/audio'
 alias jfc='jf ~/personal/00-capture'
+
+# open this file
+alias oalias="$EDITOR ~/personal/dotfiles/linux/.zsh/functions_and_aliases.sh"
 
 ######################################################
 # docker
