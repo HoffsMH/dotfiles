@@ -120,6 +120,7 @@ gcof() {
 }
 
 alias g="git"
+alias gb="git branch"
 alias gco="git checkout"
 # get branch name
 alias gbn="git rev-parse --abbrev-ref HEAD"
@@ -204,6 +205,7 @@ alias ya='yarn'
 
 # elixir
 alias miex="iex -S mix"
+alias miet="iex -S mix test"
 alias tmiex="MIX_ENV=test iex -S mix"
 alias ctmiex="MIX_ENV=test mix compile --force && tmiex"
 alias mphx="iex -S mix phx.server"

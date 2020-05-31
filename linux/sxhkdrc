@@ -39,3 +39,6 @@ control + alt + Left
 
 control + space
   rofi -show combi -matching fuzzy
+
+hyper + v
+  rofi -modi "clipboard:greenclip print" -show clipboard -matching fuzzy -run-command '{cmd}'
