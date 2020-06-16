@@ -136,7 +136,9 @@ bwunlock() {
 }
 
 bwget() {
+  pushd ~
   tl bw  $@ | xclip && echo "done"
+  popd
 }
 
 ######################################################
