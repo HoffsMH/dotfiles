@@ -20,4 +20,26 @@
     { "keys": ["ctrl+h"], "command": "prev_view" },
     { "keys": ["ctrl+]"], "command": "indent" },
   { "keys": ["ctrl+["], "command": "unindent" },
+  { "keys": ["ctrl+shift+9"], "command": "unindent" },
+  { "keys": ["ctrl+shift+0"], "command": "unindent" },
+  {
+    "keys": ["ctrl+shift+0"],
+    "command": "paredit_forward_slurp_sexp",
+    "context": [{"key": "should_paredit"}]
+   }
+  ,{
+    "keys": ["ctrl+shift+]"],
+    "command": "paredit_forward_barf_sexp",
+    "context": [{"key": "should_paredit"}]
+   }
+  ,{
+    "keys": ["ctrl+shift+9"],
+    "command": "paredit_backward_slurp_sexp",
+    "context": [{"key": "should_paredit"}]
+   }
+  ,{
+    "keys": ["ctrl+shift+["],
+    "command": "paredit_backward_barf_sexp",
+    "context": [{"key": "should_paredit"}]
+   }
 ]
