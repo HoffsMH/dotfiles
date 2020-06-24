@@ -13,7 +13,6 @@
 	"caret_style": "solid",
 	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
 	"create_window_at_startup": false,
-	"dpi_scale": 0.5,
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fold_buttons": false,
@@ -46,7 +45,7 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 19,
+	"font_size": 10,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
@@ -83,6 +82,7 @@
 	"tab_size": 2,
 	"theme": "ayu-mirage.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"ui_scale": 2.8,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": false,
 	"vintageous_use_sys_clipboard": true,
