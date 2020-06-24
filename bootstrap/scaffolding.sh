@@ -91,7 +91,7 @@ ln -sf "$HOME/personal/dotfiles/config/config.rasi" "$HOME/.config/rofi/config.r
 ln -sf ~/personal/dotfiles/config/sublime-text-3/Preferences.sublime-settings ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings
 ln -sf ~/personal/dotfiles/linux/Package\ Control.sublime-settings ~/.config/sublime-text-3/Packages/User/Package\ Control.sublime-settings
 ln -sf ~/personal/dotfiles/linux/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text-3/Packages/User/Default\ \(Linux\).sublime-keymap
-ln -sf ~/personal/dotfiles/common/ayu ~/.config/sublime-text-3/Packages/
+ln -sf ~/code/util/ayu ~/.config/sublime-text-3/Packages/
 
 
 
