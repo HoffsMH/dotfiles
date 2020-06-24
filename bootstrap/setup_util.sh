@@ -26,7 +26,7 @@ git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone git://github.com/HoffsMH/dwm.git
 git clone git://github.com/HoffsMH/dmenu.git
 git clone git://github.com/HoffsMH/ex-tl.git
-
+git clone git://github.com/HoffsMH/ayu.git
 
 # Install absolute latest of yt-dl
 # This should be extracted to its own script later
