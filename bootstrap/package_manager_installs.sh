@@ -25,7 +25,6 @@ sudo pacman -S --noconfirm \
        xorg-xsetroot \
        conky-cli \
        feh \
-       firefox \
        tree \
        docker \
        docker-compose \
@@ -95,7 +94,6 @@ yay -S --noconfirm \
     pcloud-drive \
     pmount \
     htop \
-    soulseekqt \
     colorgrab \
     bcwc-pcie-git \
     bitwarden-bin \
