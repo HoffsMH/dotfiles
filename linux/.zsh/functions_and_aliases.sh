@@ -4,6 +4,7 @@ alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 
 alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"'
 
+alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 
 ######################################################
 # media
