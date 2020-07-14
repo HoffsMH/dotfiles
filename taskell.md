@@ -37,3 +37,4 @@
     > use || echo "something didn' work"
 - kitty combine profiles
 - ctrl D while in kitty no longer closes the tab
+- gut restic systemd
