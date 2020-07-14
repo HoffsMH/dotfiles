@@ -13,6 +13,21 @@
   - pia
     - hookup to nmcli
 
+## chrome (development)
+  - ember inspector
+  - edit this cookie
+  - stayfocusd
+
+## brave
+  - stayfocused
+  - rescuetime
+  - bitwarden
+  - edit this cookie
+  - ublock origin
+  - ublock origin extra
+  - the great suspender
+  - vimium
+
 ## Let App download stuff
   - pcloud
   - syncthing
