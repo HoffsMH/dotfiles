@@ -23,7 +23,6 @@ sudo pacman -S --noconfirm \
        xclip \
        xorg-xclipboard \
        xorg-xsetroot \
-       conky-cli \
        feh \
        tree \
        docker \
@@ -40,7 +39,6 @@ sudo pacman -S --noconfirm \
        figlet \
        zsh \
        the_silver_searcher \
-       nerd-fonts-inconsolata \
        erlang \
        elixir \
        kitty \
@@ -69,7 +67,6 @@ sudo pacman -S --noconfirm \
        blueman \
        pyenv \
        filezilla \
-       zeal \
        restic \
        gwenview \
        xorg-xfontsel \
@@ -101,6 +98,7 @@ yay -S --noconfirm \
     taskell \
     arandr \
     peek \
+    conky-cli \
     libratbag \
     piper \
     inotify-tools \
@@ -119,6 +117,7 @@ yay -S --noconfirm \
     sxiv \
     rofi \
     rofi-greenclip \
+    nerd-fonts-inconsolata \
     sox
 
 echo "###############################################"
