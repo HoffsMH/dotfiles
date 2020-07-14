@@ -5,7 +5,6 @@
 ## Warm
 
 - ctrl D while in kitty no longer closes the tab
-- kitty combine profiles
 - sxhkd  cleanup bspwm
 - add mimeopen portion to bootstrap
 
@@ -34,3 +33,4 @@
     > it was clipmenud
 - systemctl scripts that work only if the service or unit is found
     > use || echo "something didn' work"
+- kitty combine profiles
