@@ -1,12 +1,13 @@
 ## Cold
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
+- make sample folder and follow suit for recursive links except cp instead of ln
 
 ## Warm
 
-- ctrl D while in kitty no longer closes the tab
 - sxhkd  cleanup bspwm
 - add mimeopen portion to bootstrap
+- complete list of chrome and brave extension installs on bootstrap readme
 
 ## Selected
 
@@ -21,6 +22,7 @@
 
 ## Doing
 
+- switching config to recursively link
 
 ## Done
 
@@ -34,3 +36,4 @@
 - systemctl scripts that work only if the service or unit is found
     > use || echo "something didn' work"
 - kitty combine profiles
+- ctrl D while in kitty no longer closes the tab
