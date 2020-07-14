@@ -7,7 +7,6 @@
 
 - sxhkd  cleanup bspwm
 - add mimeopen portion to bootstrap
-- complete list of chrome and brave extension installs on bootstrap readme
 
 ## Selected
 
@@ -16,13 +15,13 @@
     * [ ] restart stuff
     * [ ] machine specific only
     * [ ] good sample machine specific
+- switching config to recursively link
 
 ## Waiting on Something
 
 
 ## Doing
 
-- switching config to recursively link
 
 ## Done
 
@@ -38,3 +37,4 @@
 - kitty combine profiles
 - ctrl D while in kitty no longer closes the tab
 - gut restic systemd
+- complete list of chrome and brave extension installs on bootstrap readme
