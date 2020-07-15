@@ -1,3 +1,4 @@
 rm -fr ~/.Xmodmap
 
-ln -sf ~/personal/dotfiles/linux/.Xmodmap.mac ~/.Xmodmap
+ln -sf ~/personal/dotfiles/alts/.Xmodmap.mac ~/.Xmodmap
+
