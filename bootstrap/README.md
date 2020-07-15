@@ -1,13 +1,14 @@
 ## Accounts
   - bitwarden
+  - sublime
+    - package manager
+    - enter lisc
   - github
     - push changes to config
   - syncthing
   - pcloud
   - restic
     - b2
-  - sublime
-    - enter liscense
   - gcloud
   - slack
   - pia
@@ -19,6 +20,9 @@
   - stayfocusd
 
 ## brave
+  - settings
+    - no password
+    - long url bar
   - stayfocused
     - settings
   - rescuetime
@@ -34,3 +38,5 @@
   - pcloud
   - syncthing
   - sublime
+
+## work repos

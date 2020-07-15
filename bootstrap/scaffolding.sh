@@ -19,7 +19,11 @@ sudo mkdir -p "/usr/local/opt/zlib/lib"
 
 sudo mkdir -p /media/restic
 sudo chown $USER /media/restic
-sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+
+sudo rm -fr ~/.zshrc
+sudo rm -fr ~/.zprofile
+sudo rm -fr ~/.xinitrc
+sudo rm -fr ~/.Xmodmap
 
 echo "###############################################"
 echo "COPY sample files"
