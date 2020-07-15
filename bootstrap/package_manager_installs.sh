@@ -98,7 +98,7 @@ yay -S --noconfirm \
     taskell \
     arandr \
     peek \
-    conky-cli \
+    conky \
     libratbag \
     piper \
     inotify-tools \
@@ -160,11 +160,6 @@ pushd "$HOME"
 # install gcloud
 curl https://sdk.cloud.google.com | bash
 
-sudo chmod -x "$HOME/.config/systemd/user/restic-backup.timer"
-sudo chmod -x "$HOME/.config/systemd/user/restic-backup.service"
-
-systemctl --user enable restic-backup.timer || echo "restic systemctl failing"
-systemctl --user start restic-backup.timer || echo "restic systemctl failing"
 
 echo "###############################################"
 echo "Install TL"

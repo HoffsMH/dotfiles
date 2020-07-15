@@ -1,4 +1,3 @@
-#! bin/sh
 
 # https://unix.stackexchange.com/questions/9496/looping-through-files-with-spaces-in-the-names
 IFS=$'\n'
