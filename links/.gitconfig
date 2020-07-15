@@ -1,0 +1,6 @@
+[user]
+  name = HoffsMH
+  email = matthecker@pm.me
+[core]
+  editor = subl3 -n --wait
+  excludesfile = ~/.gitignore_global

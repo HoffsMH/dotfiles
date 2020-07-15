@@ -1,0 +1,44 @@
+@XF86MonBrightnessDown
+  light -U 5
+
+hyper + F1
+  light -U 5
+
+@XF86MonBrightnessUp
+  light -A 5
+
+@hyper + F2
+  light -A 5
+
+@XF86AudioLowerVolume
+  pulsemixer --change-volume -3
+
+@hyper + F11
+  pulsemixer --change-volume -3
+
+@XF86AudioRaiseVolume
+  pulsemixer --change-volume +3
+
+@hyper + F12
+  pulsemixer --change-volume +3
+
+@XF86KbdBrightnessUp
+  light -As "sysfs/leds/smc::kbd_backlight" 3
+
+@XF86KbdBrightnessDown
+  light -Us "sysfs/leds/smc::kbd_backlight" 3
+
+control + shift + 4
+  flameshot gui
+
+control + alt + Right
+  xdotool search --name "firefox" key "ctrl+Page_Down"
+
+control + alt + Left
+  xdotool search --name "firefox" key "ctrl+Page_Up"
+
+control + space
+  rofi -show combi -matching fuzzy
+
+hyper + v
+  rofi -modi "clipboard:greenclip print" -show clipboard -matching fuzzy -run-command '{cmd}'
