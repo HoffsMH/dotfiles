@@ -1,0 +1,4 @@
+.cache
+personal/jrnl
+personal/jrnl**
+**/**.gpg
