@@ -1,27 +1,19 @@
 ## Cold
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
-- make sample folder and follow suit for recursive links except cp instead of ln
 
 ## Warm
 
-- sxhkd  cleanup bspwm
-- add mimeopen portion to bootstrap
 
 ## Selected
 
-- merge linux and common config files
-- make child specs for machine specific make more sense
-    * [ ] restart stuff
-    * [ ] machine specific only
-    * [ ] good sample machine specific
-- switching config to recursively link
 
 ## Waiting on Something
 
 
 ## Doing
 
+- reinstall and record immeadiate actions in bootstrap readme
 
 ## Done
 
@@ -38,3 +30,8 @@
 - ctrl D while in kitty no longer closes the tab
 - gut restic systemd
 - complete list of chrome and brave extension installs on bootstrap readme
+- sxhkd  cleanup bspwm
+- merge linux and common config files
+- switching config to recursively link
+- add mimeopen portion to bootstrap
+- make sample folder and follow suit for recursive links except cp instead of ln
