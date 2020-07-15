@@ -1,6 +1,7 @@
 ## Cold
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
+- functions and aliases on ranger shim
 
 ## Warm
 
