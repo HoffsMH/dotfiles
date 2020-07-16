@@ -202,7 +202,7 @@ alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 ######################################################
 
 alias play="mpv --no-audio-display --loop-playlist"
-alias playa="mpv -vo null --no-audio-display --loop-playlist"
+alias playa="mpv -vo=null --no-audio-display --loop-playlist"
 alias playv="mpv --no-audio-display --loop-playlist"
 alias pm="pulsemixer"
 

@@ -1,5 +1,5 @@
 ## Accounts
-  - bitwarden
+   bitwarden
   - sublime
     - package manager
     - enter lisc
