@@ -39,4 +39,6 @@
   - syncthing
   - sublime
 
+## slack
+## github ssh keys
 ## work repos
