@@ -11,8 +11,8 @@
     - b2
   - gcloud
   - slack
-  - pia
-    - hookup to nmcli
+  - protonvpn
+    - go to website to get login
 
 ## chrome (development)
   - ember inspector

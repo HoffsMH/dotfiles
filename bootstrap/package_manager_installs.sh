@@ -118,7 +118,8 @@ yay -S --noconfirm \
     rofi \
     rofi-greenclip \
     nerd-fonts-inconsolata \
-    sox
+    sox \
+    protonvpn-cli-ng \
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"

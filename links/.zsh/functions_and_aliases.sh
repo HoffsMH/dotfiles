@@ -193,7 +193,11 @@ alias be="bundle exec"
 # takes large amount of text wraps it at 80 characters and puts it back into register
 alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 
-alias ytclear='cp -f "$HOME/personal/dotfiles/linux/dlscript.sh" "$HOME/bin/ytgo"'
+export ytgo_template_location="$HOME/personal/dotfiles/samples/bin/ytgo"
+export ytgo_location="$HOME/bin/ytgo"
+
+alias ytclear='cp -f $ytgo_template_location $ytgo_location'
+alias ytreport='cat $ytgo_location'
 
 alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 
@@ -201,8 +205,13 @@ alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 # media
 ######################################################
 
+# looping play
 alias play="mpv --no-audio-display --loop-playlist"
+
+# looping play with no video even if there is video
 alias playa="mpv -vo=null --no-audio-display --loop-playlist"
+
+# looping play with video even if there is no video
 alias playv="mpv --no-audio-display --loop-playlist"
 alias pm="pulsemixer"
 
