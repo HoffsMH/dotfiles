@@ -113,13 +113,16 @@ yay -S --noconfirm \
     font-manager \
     slock \
     siji-git \
-    picom-git \
     sxiv \
     rofi \
     rofi-greenclip \
     nerd-fonts-inconsolata \
     sox \
     protonvpn-cli-ng \
+    libxft-bgra \
+    stalonetray \
+    picom \
+    w3m
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
