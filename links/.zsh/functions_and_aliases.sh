@@ -307,6 +307,7 @@ alias setwall="feh --bg-scale ~/.wall.jpg"
 
 changewall() {
   cp $1 ~/.wall.jpg
+  cp $1 ~/personal/media/image/library/wall/wall-cp
   feh --bg-scale ~/.wall.jpg
 }
 
