@@ -1,7 +1,11 @@
 ## Cold
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
-- functions and aliases on ranger shim
+- picom bluring command and reinvestigate especially when i get a better laptop
+- dwm blocks to get clickable status bar
+- gtk fonts and get something non monospaced
+- redo rofi to look simpler
+- see if I can get collapsable systray into dwm
 
 ## Warm
 
@@ -14,7 +18,6 @@
 
 ## Doing
 
-- reinstall and record immeadiate actions in bootstrap readme
 
 ## Done
 
@@ -36,3 +39,5 @@
 - switching config to recursively link
 - add mimeopen portion to bootstrap
 - make sample folder and follow suit for recursive links except cp instead of ln
+- functions and aliases on ranger shim
+- reinstall and record immeadiate actions in bootstrap readme
