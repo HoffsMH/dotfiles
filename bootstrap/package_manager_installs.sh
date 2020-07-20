@@ -122,7 +122,8 @@ yay -S --noconfirm \
     libxft-bgra \
     stalonetray \
     picom \
-    w3m
+    w3m \
+    wego
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
