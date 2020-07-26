@@ -123,7 +123,11 @@ yay -S --noconfirm \
     stalonetray \
     picom \
     w3m \
-    wego
+    wego \
+    graphviz \
+    soulseekqt \
+    otf-ibm-plex \
+    adobe-base-14-fonts
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
@@ -177,3 +181,11 @@ mix escript.build
 mv ./tl ~/bin
 
 popd
+
+echo "###############################################"
+echo "Patch My Font"
+echo "###############################################"
+
+pushd ~/code/util/nerd-fonts
+
+
