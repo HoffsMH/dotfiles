@@ -27,6 +27,7 @@ sudo pacman -S --noconfirm \
        tree \
        docker \
        docker-compose \
+       pfetch \
        neofetch \
        openssh \
        sudo \
