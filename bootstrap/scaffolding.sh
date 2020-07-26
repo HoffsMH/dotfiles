@@ -25,6 +25,8 @@ sudo rm -fr ~/.zprofile
 sudo rm -fr ~/.xinitrc
 sudo rm -fr ~/.Xmodmap
 
+sudo cp -avr $HOME/personal/dotfiles/fonts/OTF/* /usr/share/fonts/OTF
+
 echo "###############################################"
 echo "COPY sample files"
 echo "###############################################"
