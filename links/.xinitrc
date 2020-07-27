@@ -61,7 +61,12 @@ fi
    exec dbus_args
  }
 
-(conky | while read LINE; do xsetroot -name "$LINE"; done) &
+# (conky | while read LINE; do xsetroot -name "$LINE"; done) &
+polybar -c ~/.config/polybar/config/polybarconfig main &
+
+# -c shadow effects
+# -b run in background
+picom -c --experimental-backends --backend glx -b --no-fading-openclose
 
 # start gnome keyring so I dont have to type password on every git push
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
