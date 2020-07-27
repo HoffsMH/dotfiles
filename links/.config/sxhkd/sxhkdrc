@@ -4,6 +4,9 @@
 hyper + F1
   light -U 5
 
+hyper + g
+  xclip -o | xargs xdg-open
+
 @XF86MonBrightnessUp
   light -A 5
 
