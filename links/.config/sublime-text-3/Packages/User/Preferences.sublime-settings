@@ -80,7 +80,7 @@
 	"show_navigation_bar": false,
 	"tab_completion": false,
 	"tab_size": 2,
-	"theme": "Default.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"ui_scale": 1.5,
 	"vintageous_use_ctrl_keys": true,
