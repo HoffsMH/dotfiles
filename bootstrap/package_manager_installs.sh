@@ -99,21 +99,18 @@ yay -S --noconfirm \
     taskell \
     arandr \
     peek \
-    conky \
     libratbag \
     piper \
     inotify-tools \
     bfg \
     discord \
     gnome-calculator \
-    lolcat \
     rescuetime2 \
     brave-bin \
     polybar \
     bspwm \
     font-manager \
     slock \
-    siji-git \
     sxiv \
     rofi \
     rofi-greenclip \
@@ -121,14 +118,10 @@ yay -S --noconfirm \
     sox \
     protonvpn-cli-ng \
     libxft-bgra \
-    stalonetray \
-    picom-ibhagwan-git \
+    picom-git \
     w3m \
-    wego \
     graphviz \
-    soulseekqt \
-    otf-ibm-plex \
-    adobe-base-14-fonts
+    soulseekqt
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
