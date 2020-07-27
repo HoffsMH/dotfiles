@@ -61,9 +61,6 @@ fi
    exec dbus_args
  }
 
-# (conky | while read LINE; do xsetroot -name "$LINE"; done) &
-polybar -c ~/.config/polybar/config/polybarconfig main &
-
 # -c shadow effects
 # -b run in background
 picom -c --experimental-backends --backend glx -b --no-fading-openclose
