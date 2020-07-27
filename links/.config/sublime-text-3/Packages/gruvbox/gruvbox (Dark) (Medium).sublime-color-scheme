@@ -5,7 +5,7 @@
   "originalAuthor": "Pavel Pertsev (https://github.com/morhetz)",
   "author": "Brian Reilly (https://github.com/Briles)",
   "variables": {
-    "bg": "#222222",
+    "bg": "#282828",
     "bg0": "#282828",
     "bg1": "#3C3836",
     "bg2": "#504945",

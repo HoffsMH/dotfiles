@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #212121
-background-alt = #444
+background = #282828
+background-alt = #665c54
 ;foreground = ${xrdb:color7:#222}
 foreground = #ebdbb2
 foreground-alt = #a89983
@@ -30,7 +30,7 @@ alert = #aabd2c40
 dpi = 140
 monitor = eDP
 width = 100%
-height = 40
+height = 35
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 6.0
@@ -50,7 +50,7 @@ module-margin-top = 50px
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = IBM Plex Sans Cond Text:size=12:antialias=true;
+font-0 = IBM Plex Sans Cond SmBld:size=13:antialias=true;
 font-1 = unifont:fontformat=truetype:size=15:antialias=false;0
 font-2 = siji:size=20
 

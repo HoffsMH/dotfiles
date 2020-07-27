@@ -122,7 +122,7 @@ yay -S --noconfirm \
     protonvpn-cli-ng \
     libxft-bgra \
     stalonetray \
-    picom \
+    picom-ibhagwan-git \
     w3m \
     wego \
     graphviz \
