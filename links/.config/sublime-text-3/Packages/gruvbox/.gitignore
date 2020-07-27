@@ -1,0 +1,22 @@
+*.log
+*.pid
+*.seed
+*.stTheme.cache
+*.sublime-workspace
+*.tmPreferences.cache
+*.tmlanguage.cache
+.DS_Store
+.grunt
+.lock-wscript
+build/Release
+coverage
+.nyc_output
+lib-cov
+logs
+node_modules
+pids
+sftp-config.json
+src/assets
+src/cc scripts
+src/samples
+src/screenshots

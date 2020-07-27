@@ -21,7 +21,7 @@ background = #212121
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #ebdbb2
-foreground-alt = #ebdbb2
+foreground-alt = #a89983
 primary = #aaffb52a
 secondary = #aae60053
 alert = #aabd2c40
@@ -30,7 +30,7 @@ alert = #aabd2c40
 dpi = 140
 monitor = eDP
 width = 100%
-height = 30
+height = 40
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 6.0
@@ -39,12 +39,14 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 5
 line-color = #f00
 
+padding-top = 20
 padding-left = 0
 padding-right = 2
 
+module-margin-top = 50px
 module-margin-left = 1
 module-margin-right = 2
 
@@ -52,12 +54,12 @@ font-0 = IBM Plex Sans Cond Text:size=12:antialias=true;
 font-1 = unifont:fontformat=truetype:size=15:antialias=false;0
 font-2 = siji:size=20
 
-;modules-left = bspwm
+modules-left = ewmh
 modules-center = xwindow
 modules-right = cpu memory wlan eth battery temperature date
 
-tray-position = right
-tray-padding = 2
+;tray-position = right
+;tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -73,6 +75,25 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/ewmh]
+type = internal/xworkspaces
+
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+pin-workspaces = false
+
+; Create click handler used to focus desktop
+; Default: true
+enable-click = false
+
+; Create scroll handlers used to cycle desktops
+; Default: true
+;enable-scroll = false
 
 [module/xwindow]
 type = internal/xwindow
@@ -167,24 +188,15 @@ format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
 interval = 5
-
-date =
 date-alt = " %b %Y-%m-%d"
-
 time = %I:%M%p
 time-alt = %I:%M:%S%p
 
-format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = ""
 
 label = %date% %time%
 
@@ -227,11 +239,9 @@ format-charging = <animation-charging> <label-charging>
 
 format-discharging-prefix = "D"
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = "F"
 format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -253,20 +263,18 @@ animation-discharging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 160
 
 format = <ramp> <label>
-format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
 
-label = %temperature-c%
-label-warn = %temperature-c%
+label = %temperature-f%
+label-warn = %temperature-f%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]

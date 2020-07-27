@@ -51,12 +51,10 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"1337 Color Scheme",
 		"1Self",
 		"A File Icon",
 		"Boxy Theme",
 		"Copy Filepath With Line Numbers",
-		"Future Funk - Color Scheme",
 		"Six",
 		"Vintage",
 		"Vintageous"
@@ -82,7 +80,7 @@
 	"show_navigation_bar": false,
 	"tab_completion": false,
 	"tab_size": 2,
-	"theme": "ayu-mirage.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"ui_scale": 1.5,
 	"vintageous_use_ctrl_keys": true,

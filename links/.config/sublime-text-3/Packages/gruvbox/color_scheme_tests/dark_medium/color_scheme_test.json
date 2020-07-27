@@ -1,0 +1,26 @@
+// COLOR SCHEME TEST "gruvbox/gruvbox (Dark) (Medium).sublime-color-scheme" "JSON"
+
+   {
+// ^ fg=#ebdbb2 fs=
+   "bool": false,
+// ^ fg=#ebdbb2 fs=
+//  ^^^^ fg=#83a598 fs=
+//      ^^ fg=#ebdbb2 fs=
+//         ^^^^^ fg=#d3869b fs=
+//              ^ fg=#ebdbb2 fs=
+
+   ,
+// ^ fg=#ebdbb2 bg=#FB4934 fs=
+
+  "array": [ /**/ ],
+//           ^^^^ fg=#928374 fs=italic
+
+  "num": 20.09,
+//       ^^^^^ fg=#D3869B fs=
+
+  "escape": "\n",
+//           ^^ fg=#FB4934 fs=
+
+  "unterminated string
+//                    ^ bg=#FB4934
+}
