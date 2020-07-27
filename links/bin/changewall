@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp $@ ~/.wall.jpg
+feh --bg-scale ~/.wall.jpg

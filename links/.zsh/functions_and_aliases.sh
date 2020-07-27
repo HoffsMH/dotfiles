@@ -24,6 +24,10 @@ hist() {
 # files/directory work
 ######################################################
 alias z='fasd_cd -d'
+zl() {
+  fasd_cd -d $1
+  $EDITOR .
+}
 
 # lsing on my music directory was getting annoying with the default color
 export EXA_COLORS="*.mp3=34"
@@ -304,11 +308,6 @@ sethdmiscale() {
 }
 
 alias setwall="feh --bg-scale ~/.wall.jpg"
-
-changewall() {
-  cp $1 ~/.wall.jpg
-  feh --bg-scale ~/.wall.jpg
-}
 
 alias kbdxcape="xcape -t 200 -e Control_L=Escape"
 alias kbdsetup="xmodmap ~/.Xmodmap && echo 'xmodmap' \
