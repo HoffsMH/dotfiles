@@ -44,7 +44,7 @@ control + space
   rofi -show combi -matching fuzzy
 
 hyper + v
-  rofi -modi "clipboard:greenclip print" -show clipboard -matching fuzzy -run-command '{cmd}'
+  rofi -modi ":greenclip print" -show  -matching fuzzy -run-command '{cmd}'
 
 hyper + {@XF86AudioMute,F10} ; w
   kitty wttr

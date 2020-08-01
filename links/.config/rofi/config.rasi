@@ -2,7 +2,7 @@ configuration {
     font:                           "IBM Plex Sans Cond SmBld 15";
     show-icons:                     true;
   icon-theme:           "Papirus-Dark";
-    display-drun:           " ";
+    display-drun:            " ";
     display-combi:           " ";
     drun-display-format:            "{name}";
     threads:                        0;
