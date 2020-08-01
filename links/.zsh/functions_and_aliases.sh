@@ -290,6 +290,7 @@ task() {
 # Text Editing
 ######################################################
 alias subl="subl3"
+alias sublr='rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && subl3'
 
 ######################################################
 # Displays/wallpaper and keyboard
@@ -339,6 +340,12 @@ bwget() {
   tl bw  $@ | xclip && echo "done"
   popd
 }
+
+######################################################
+# ricing
+######################################################
+
+alias polybar-workflow='exa ~/personal/dotfiles/links/.config/polybar/config/polybarconfig| entr polybar-msg cmd restart'
 
 ######################################################
 # searching
