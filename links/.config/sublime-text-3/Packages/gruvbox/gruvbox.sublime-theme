@@ -5,7 +5,7 @@
   "originalAuthor": "Pavel Pertsev (https://github.com/morhetz)",
   "author": "Brian Reilly (https://github.com/Briles)",
   "variables": {
-    "bg": "var(--background)",
+    "bg": "color(var(--background) l(+ 10%))",
     "background": "var(bg)",
     "bg0": "var(bg)",
     "bg_gs": "color(var(bg) s(0%))",
@@ -16,7 +16,7 @@
     "fg_gs": "color(var(fg) s(0%))",
     "fg1_gs": "color(var(fg1) s(0%))",
     "border": "color(var(bg) l(- 10%))",
-    "container": "color(var(bg) l(- 5%))",
+    "container": "color(var(--background))",
     "panelRow": "color(var(bg) l(+ 2.35%))",
     "borderSofter": "color(var(bg) l(+ 6.5%))",
     "containerSofter": "color(var(bg) l(+ 2.8%))",
@@ -932,7 +932,7 @@
     },
     {
       "class": "tab_label",
-      "font.size": 11,
+      "font.size": 14,
       "font.italic": false,
       "font.bold": false
     },
