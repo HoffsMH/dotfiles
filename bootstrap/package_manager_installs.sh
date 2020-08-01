@@ -120,7 +120,8 @@ yay -S --noconfirm \
     picom-git \
     w3m \
     graphviz \
-    soulseekqt
+    soulseekqt \
+    xfce4-sensors-plugin-nvidia
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"

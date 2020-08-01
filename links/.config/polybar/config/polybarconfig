@@ -54,10 +54,12 @@ module-margin-right = 2
 font-0 = IBM Plex Sans Cond SmBld:size=13:antialias=true;
 font-1 = IBM Plex Mono Text:size=12:antialias=true;1
 font-2 = IBM Plex Mono Text:size=14:antialias=true;1
+font-3 = IBM Plex Mono Text:size=8:antialias=true;1
+font-4 = IBM Plex Mono Text:size=6:antialias=true;1
 
 modules-left = dwm
 modules-center = xwindow
-modules-right = cpu memory wlan battery temperature date
+modules-right = cpu battery date
 
 ;tray-position = right
 ;tray-maxsize = 25
@@ -135,7 +137,7 @@ label-urgent-padding = 2
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
 label-empty = %name%
-label-empty-background = ${colors.primary}
+label-empty-background = ${colors.background}
 label-empty-padding = 2
 
 [module/xwindow]
@@ -157,7 +159,7 @@ type = internal/cpu
 interval = 2
 format-prefix = "%{T3}﬙"
 format-prefix-foreground = ${colors.primary}
-label = " %{T2}%percentage:2%%"
+label = "%{T4}%percentage:2%%"
 
 [module/memory]
 type = internal/memory
@@ -201,7 +203,7 @@ label-connected = %local_ip%
 type = internal/date
 interval = 5
 date-alt = " %b %Y-%m-%d"
-time = %I:%M%p
+time = %b %m-%d %I:%M%p
 time-alt = %I:%M:%S%p
 
 format-prefix-foreground = ${colors.light-blue}
@@ -218,13 +220,13 @@ full-at = 98
 format-prefix-foreground = ${colors.light-blue}
 
 format-charging-prefix-foreground = ${colors.light-blue}
-label-charging = "%{T2}%percentage:2%%"
+label-charging = "%{T4}%percentage:%%"
 format-charging-prefix = "%{T2}"
-format-charging = %{T2}<ramp-capacity> <label-charging>
+format-charging = %{T2}<ramp-capacity><label-charging>
 
 format-discharging-prefix-foreground = ${colors.light-blue}
 format-discharging-prefix =
-format-discharging = <ramp-capacity> %{T2}<label-discharging>
+format-discharging = %{T2}<ramp-capacity><label-discharging>
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.light-blue}
@@ -239,8 +241,8 @@ type = internal/temperature
 thermal-zone = 0
 warn-temperature = 160
 
-format = %{T2}<ramp> %{T2}<label>
-format-warn = "%{T2}<ramp> %{T2}<label-warn>"
+format = %{T4}<ramp> %{T4}<label>
+format-warn = "%{T4}<ramp> %{T4}<label-warn>"
 
 label = %temperature-f%
 label-warn = %temperature-f%

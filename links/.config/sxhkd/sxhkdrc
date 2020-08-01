@@ -16,16 +16,13 @@ hyper + g
 @XF86AudioLowerVolume
   pulsemixer --change-volume -3
 
-@hyper + F11
-  pulsemixer --change-volume -3
-
 @XF86AudioRaiseVolume
   pulsemixer --change-volume +3
 
-hyper + @XF86AudioRaiseVolume
-  kitty pulsemixer
+{@hyper + F11, @hyper + @XF86AudioLowerVolume}
+  kitty htop
 
-@hyper + F12
+{@hyper + @XF86AudioRaiseVolume, @hyper + F12}
   kitty pulsemixer
 
 @XF86KbdBrightnessUp
@@ -48,3 +45,6 @@ control + space
 
 hyper + v
   rofi -modi "clipboard:greenclip print" -show clipboard -matching fuzzy -run-command '{cmd}'
+
+hyper + {@XF86AudioMute,F10} ; w
+  kitty wttr
