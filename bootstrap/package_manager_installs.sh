@@ -107,7 +107,7 @@ yay -S --noconfirm \
     gnome-calculator \
     rescuetime2 \
     brave-bin \
-    polybar \
+    polybar-dwm-module \
     bspwm \
     font-manager \
     slock \
@@ -175,11 +175,3 @@ mix escript.build
 mv ./tl ~/bin
 
 popd
-
-echo "###############################################"
-echo "Patch My Font"
-echo "###############################################"
-
-pushd ~/code/util/nerd-fonts
-
-
