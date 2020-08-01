@@ -24,9 +24,10 @@ hist() {
 # files/directory work
 ######################################################
 alias z='fasd_cd -d'
+
 zl() {
   fasd_cd -d $1
-  $EDITOR .
+  subl .
 }
 
 # lsing on my music directory was getting annoying with the default color
@@ -267,7 +268,7 @@ alias jfa='jf ~/personal/media/audio'
 alias jfc='jf ~/personal/00-capture'
 
 # open this file
-alias oalias="$EDITOR ~/personal/dotfiles/linux/.zsh/functions_and_aliases.sh"
+alias oalias="subl ~/.zsh/functions_and_aliases.sh"
 
 ######################################################
 # docker
@@ -289,8 +290,8 @@ task() {
 ######################################################
 # Text Editing
 ######################################################
-alias subl="subl3"
-alias sublr='rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && subl3'
+alias sublr="subl3"
+alias subl='rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && subl3'
 
 ######################################################
 # Displays/wallpaper and keyboard
