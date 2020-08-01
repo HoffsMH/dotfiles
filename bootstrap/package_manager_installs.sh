@@ -121,7 +121,7 @@ yay -S --noconfirm \
     w3m \
     graphviz \
     soulseekqt \
-    xfce4-sensors-plugin-nvidia
+    nmap
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"

@@ -73,13 +73,13 @@ untar(){
 # touch that builds path to the file if it doesnt exist
 t() {
     if [ $# -lt 1 ]; then
-        echo "Missing argument";
-        return 1;
+      echo "Missing argument";
+      return 1;
     fi
 
     for f in "$@"; do
-        mkdir -p -- "$(dirname -- "$f")"
-        touch -- "$f"
+      mkdir -p -- "$(dirname -- "$f")"
+      touch -- "$f"
     done
 }
 
@@ -147,9 +147,6 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 # useful when trying to show some text to someone across the internet. replacement for pastebin
 alias gistm='gist -c -s'
 
-# difi is a tool that displays diffs in the browser
-alias installdifi='npm install -g diff2html-cli'
-alias dif2='diff2html'
 
 # usage: $ gd master | difi
 alias difi='diff2html -i stdin -s side'
@@ -218,17 +215,20 @@ alias playa="mpv -vo=null --no-audio-display --loop-playlist"
 
 # looping play with video even if there is no video
 alias playv="mpv --no-audio-display --loop-playlist"
-alias pm="pulsemixer"
 
 ######################################################
 # clipboard
 ######################################################
+
+# cptext bash script for copying text arguments
 alias xpaste="xclip -o"
 alias xclip="/usr/bin/xclip -selection clipboard"
 
 ######################################################
 # history
 ######################################################
+
+# puts a fuzzy found history command in buffer
 fh() {
     local seshist=$([ -n "$ZSH_NAME" ] && fc -l 1 || history)
     local zshhist=$(cat ~/.zsh_history)
@@ -237,12 +237,14 @@ fh() {
     print -z $(echo $zshhist $seshist | fzf +s --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
 
-fhl() {
-    local seshist=$([ -n "$ZSH_NAME" ] && fc -l 1 || history)
-    local zshhist=$(cat ~/.zsh_history)
 
-    # linux needs -r
-    print $(echo $zshhist $seshist | fzf +s --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
+# copies history commend to clipboard
+fhl() {
+  local seshist=$([ -n "$ZSH_NAME" ] && fc -l 1 || history)
+  local zshhist=$(cat ~/.zsh_history)
+
+  # linux needs -r
+  cptext $(echo $zshhist $seshist | fzf +s --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
 
 ######################################################
@@ -256,6 +258,9 @@ alias utsp="sudo umount /mnt/tsp* |
   sudo umount /mnt/phone_* |
   sudo umount /mnt/camera_* |
   sudo umount /mnt/black_*"
+
+alias rm='echo "This is not the command you are looking for."; false'
+alias trm='tl rm'
 
 ######################################################
 # files
@@ -291,7 +296,7 @@ task() {
 # Text Editing
 ######################################################
 alias sublr="subl3"
-alias subl='rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && subl3'
+alias subl='\rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && subl3'
 
 ######################################################
 # Displays/wallpaper and keyboard
@@ -323,7 +328,6 @@ alias kbdsetup="xmodmap ~/.Xmodmap && echo 'xmodmap' \
 alias xfcesesh="export SESSION=xfce4-session && startx"
 alias dwmsesh="export SESSION=dwm && startx"
 alias bspwmsesh="export SESSION=bspwm && startx"
-alias getwindowname="xprop | grep WM_CLASS"
 
 # rofi
 alias reloadrofi="rofi -dmenu -config $HOME/rofi/config.rasi"
