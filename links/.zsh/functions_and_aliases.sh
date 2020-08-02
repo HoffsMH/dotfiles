@@ -314,7 +314,7 @@ sethdmiscale() {
   setdmonpicale "HDMI-0" $1
 }
 
-alias setwall="feh --bg-scale ~/.wall.jpg"
+alias setwall="feh --bg-fill ~/.wall.jpg"
 
 alias kbdxcape="xcape -t 200 -e Control_L=Escape"
 alias kbdsetup="xmodmap ~/.Xmodmap && echo 'xmodmap' \

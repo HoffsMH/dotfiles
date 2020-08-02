@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cp $@ ~/personal/dotfiles/links/.wall.jpg
-feh --bg-scale ~/.wall.jpg
+cp "$@" "$HOME/personal/dotfiles/links/.wall.jpg"
+feh --bg-fill ~/.wall.jpg
