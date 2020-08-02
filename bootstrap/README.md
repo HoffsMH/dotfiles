@@ -26,6 +26,7 @@
   - stayfocused
     - settings
   - rescuetime
+  - dark new tab
   - bitwarden
   - edit this cookie
   - ublock origin
