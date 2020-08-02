@@ -1,4 +1,8 @@
 #!/bin/bash
 
-~/bin/reload-polybar
+if ! pgrep -x "polybar" ; then
+  echo "polybar not loaded"
+  ~/bin/reload-polybar
+fi
+
 ~/bin/setwall

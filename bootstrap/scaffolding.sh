@@ -25,19 +25,23 @@ sudo rm -fr ~/.zprofile
 sudo rm -fr ~/.xinitrc
 sudo rm -fr ~/.Xmodmap
 
+sudo mkdir -p /usr/share/fonts/OTF
 sudo cp -avr $HOME/personal/dotfiles/fonts/OTF/* /usr/share/fonts/OTF
 
 echo "###############################################"
 echo "COPY sample files"
 echo "###############################################"
 
-./samples.sh
+"$HOME/personal/dotfiles/bootstrap/samples.sh"
 
 echo "###############################################"
 echo "setup links"
 echo "###############################################"
 
-./links.sh
+"$HOME/personal/dotfiles/bootstrap/links.sh"
+
+rm -fr "$HOME/.config/sublime-text-3/Packages/gruvbox"
+ln -sf "$HOME/personal/dotfiles/links/.config/sublime-text-3/Packages/gruvbox" "$HOME/.config/sublime-text-3/Packages"
 
 # media libraries
 ln -sf "$HOME/pCloudDrive/personal/media/image/library" "$HOME/personal/media/image/"
@@ -48,7 +52,6 @@ ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/tex
 # home
 ln -sf "$HOME/code/util/oh-my-zsh" "$HOME/.oh-my-zsh"
 ln -sf "$HOME/code/util/exenv" "$HOME/.exenv"
-ln -sf "$HOME/code/util/ayu" "$HOME/.config/sublime-text-3/Packages/"
 
 chmod +x "$HOME/bin/ytgo"
 sudo chmod 600 "$HOME/.envrc"

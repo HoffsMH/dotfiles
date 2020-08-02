@@ -2,81 +2,66 @@
 
 set -e
 
-echo "###############################################"
-echo "PACMAN INSTALL BASIC RECIPE"
-echo "###############################################"
 
 #speed up aur makepkg
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 
-sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm \
-       pulsemixer \
-       gnutls \
-       vim \
-       fzf \
-       fasd \
-       exa \
-       jq \
-       xclip \
-       xorg-xclipboard \
-       xorg-xsetroot \
-       feh \
-       tree \
-       docker \
-       docker-compose \
-       pfetch \
-       neofetch \
-       openssh \
-       sudo \
-       networkmanager \
-       mpv \
-       light \
-       sxhkd \
-       scrot \
-       grub \
-       figlet \
-       zsh \
-       the_silver_searcher \
-       erlang \
-       elixir \
-       kitty \
-       fzf \
-       evtest \
-       xcape \
-       noto-fonts \
-       noto-fonts-cjk \
-       noto-fonts-emoji \
-       xorg-fonts-misc \
-       xorg-font-util \
-       xorg-fonts-alias \
-       xorg-fonts-encodings \
-       xorg-xev \
-       jdk-openjdk \
-       ntfs-3g \
-       poppler \
-       redshift \
-       axel \
-       syncthing \
-       zathura \
-       zathura-pdf-poppler \
-       flameshot \
-       seahorse \
-       entr \
-       blueman \
-       pyenv \
-       filezilla \
-       restic \
-       gwenview \
-       xorg-xfontsel \
-       xdotool
 
 echo "###############################################"
 echo "YAY BASIC RECIPE"
 echo "###############################################"
 
+sudo pacman -Syu
+yay -Syu
 yay -S --noconfirm \
+    gnutls \
+    exa \
+    jq \
+    xclip \
+    xorg-xclipboard \
+    xorg-xsetroot \
+    feh \
+    tree \
+    neofetch \
+    openssh \
+    mpv \
+    light \
+    scrot \
+    figlet \
+    the_silver_searcher \
+    erlang \
+    elixir \
+    kitty \
+    evtest \
+    xcape \
+    xorg-font-util \
+    xorg-fonts-encodings \
+    xorg-xev \
+    jdk-openjdk \
+    ntfs-3g \
+    poppler \
+    redshift \
+    axel \
+    syncthing \
+    zathura \
+    zathura-pdf-poppler \
+    flameshot \
+    seahorse \
+    entr \
+    blueman \
+    pyenv \
+    filezilla \
+    xorg-xfontsel \
+    restic \
+    pfetch \
+    xdotool \
+    sxhkd \
+    fasd \
+    fzf \
+    pulsemixer \
+    docker \
+    docker-compose \
     direnv \
     rbenv \
     nodenv \
@@ -87,7 +72,6 @@ yay -S --noconfirm \
     google-chrome \
     deluge-git \
     ruby-build \
-    python-grip \
     pcloud-drive \
     pmount \
     htop \
@@ -113,10 +97,8 @@ yay -S --noconfirm \
     sxiv \
     rofi \
     rofi-greenclip \
-    nerd-fonts-inconsolata \
     sox \
     protonvpn-cli-ng \
-    libxft-bgra \
     picom-git \
     w3m \
     graphviz \
