@@ -130,6 +130,13 @@ sudo systemctl start "syncthing@$USER.service"
 sudo systemctl enable "cpupower"
 sudo systemctl start "cpupower"
 
+# use dunst for notifications
+systemctl disable --user xfce4-notifyd.service || echo "stock notifications already uninstalled"
+systemctl stop --user xfce4-notifyd.service || echo "stock notifications already stopped"
+systemctl enable --user dunst.service
+systemctl start --user dunst.service
+
+
 source ~/.zprofile
 
 # stable versions of everything as my default
