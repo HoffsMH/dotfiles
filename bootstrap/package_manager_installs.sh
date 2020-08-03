@@ -15,6 +15,7 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    dunst \
     gnutls \
     exa \
     jq \
