@@ -9,13 +9,15 @@
 
 ## Warm
 
-- dunst working
+- get some sort of network benchmarking
+- get some sort of cpu benchmarking
 
 ## Selected
 
 
 ## Waiting on Something
 
+- dunst working
 
 ## Doing
 
