@@ -82,7 +82,7 @@
 	"tab_size": 2,
 	"theme": "gruvbox.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"ui_scale": 1.5,
+	"ui_scale": 1.0,
 	"vintageous_use_ctrl_keys": true,
 	"vintageous_use_super_keys": false,
 	"vintageous_use_sys_clipboard": true,
