@@ -18,6 +18,9 @@
   - ember inspector
   - edit this cookie
   - stayfocusd
+  - system border
+  - gtk to get my gtk theme
+  - devtools dark mode
 
 ## brave
   - settings
