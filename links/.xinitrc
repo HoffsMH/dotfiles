@@ -65,6 +65,8 @@ fi
 # -b run in background
 picom -c --experimental-backends --backend glx -b --no-fading-openclose
 
+dunst &
+
 # start gnome keyring so I dont have to type password on every git push
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK

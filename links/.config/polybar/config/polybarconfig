@@ -17,6 +17,7 @@
 ;==========================================================
 
 [colors]
+bar-background= #00000000
 background = #282828
 background-alt = #665c54
 foreground = #ebdbb2
@@ -27,16 +28,17 @@ secondary = #aae60053
 alert = #aabd2c40
 
 [bar/main]
+radius = 10px
 enable-ipc = true
 monitor = ${env:MONITOR}
 width = 100%
-height = 35
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 ;radius = 6.0
 fixed-center = true
 
-background = ${colors.background}
+background = ${colors.bar-background}
 foreground = ${colors.foreground}
 
 line-size = 5
@@ -44,11 +46,9 @@ line-color = #f00
 
 padding-top = 20
 padding-left = 0
-padding-right = 2
+paddingright = 2
 
 module-margin-top = 50px
-module-margin-left = 1
-module-margin-right = 2
 
 font-0 = IBM Plex Sans Cond SmBld:size=13:antialias=true;
 font-1 = IBM Plex Mono Text:size=12:antialias=true;1
@@ -79,9 +79,9 @@ enable-tags-click = true
 ; Left-click to set secondary layout, right-click to switch to previous layout
 enable-layout-click = false
 ; Scroll to cycle between available layouts
-enable-layout-scroll = false
+enable-layout-scroll = true
 ; Wrap when scrolling and reaching begining/end of layouts
-layout-scroll-wrap = false
+layout-scroll-wrap = true
 ; Reverse scroll direction
 layout-scroll-reverse = false
 
@@ -135,13 +135,15 @@ label-urgent-padding = 2
 
 ; empty = Unselected and unoccupied tag
 ; This can be set to an empty string to hide empty tags
-label-empty = %name%
+label-empty =
 label-empty-background = ${colors.background}
 label-empty-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:100:...%
+format-background = ${colors.background}
+format-padding = 5px
 
 [module/filesystem]
 type = internal/fs
@@ -156,7 +158,8 @@ label-unmounted-foreground = ${colors.foreground-alt}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "%{T3}﬙"
+format-background = ${colors.background}
+format-prefix = "  %{T3}﬙"
 format-prefix-foreground = ${colors.primary}
 label = "%{T4}%percentage:2%%"
 
@@ -204,6 +207,9 @@ interval = 5
 date-alt = " %b %Y-%m-%d"
 time = %b %m-%d %I:%M%p
 time-alt = %I:%M:%S%p
+format-background = ${colors.background}
+format-padding = 3px
+
 
 format-prefix-foreground = ${colors.light-blue}
 format-prefix = ""

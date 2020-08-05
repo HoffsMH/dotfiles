@@ -19,10 +19,10 @@ hyper + g
 @XF86AudioRaiseVolume
   pulsemixer --change-volume +3
 
-{@hyper + F11, @hyper + @XF86AudioLowerVolume}
+{@hyper + F11, @hyper + @XF86AudioLowerVolume, @hyper + minus}
   kitty htop
 
-{@hyper + @XF86AudioRaiseVolume, @hyper + F12}
+{@hyper + @XF86AudioRaiseVolume, @hyper + F12, @hyper + equal}
   kitty pulsemixer
 
 @XF86KbdBrightnessUp

@@ -27,7 +27,7 @@ alias z='fasd_cd -d'
 
 zl() {
   fasd_cd -d $1
-  subl .
+  subl3 .
 }
 
 # lsing on my music directory was getting annoying with the default color
