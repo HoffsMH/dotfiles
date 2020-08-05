@@ -2,22 +2,25 @@
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
 - picom bluring command and reinvestigate especially when i get a better laptop
-- dwm blocks to get clickable status bar
-- gtk fonts and get something non monospaced
-- redo rofi to look simpler
-- see if I can get collapsable systray into dwm
 
 ## Warm
 
 - get some sort of network benchmarking
 - get some sort of cpu benchmarking
+- get stalone tray centered and huge
+- multi bar setup for gaps + subtle rounding
+    > https://github.com/mut-ex/my-i3-dotfiles
+    * [ ] https://www.reddit.com/r/unixporn/comments/du6ms3/i3gaps_rounded_corners_everywhere/
+- gtk theme that matches gruvbox better
+- dunst actions how to
+- thunar default save location
+- picom full shadows working on every window type
 
 ## Selected
 
 
 ## Waiting on Something
 
-- dunst working
 
 ## Doing
 
@@ -44,3 +47,7 @@
 - make sample folder and follow suit for recursive links except cp instead of ln
 - functions and aliases on ranger shim
 - reinstall and record immeadiate actions in bootstrap readme
+- dunst working
+- see if I can get collapsable systray into dwm
+    > just use stalonetray
+- redo rofi to look simpler
