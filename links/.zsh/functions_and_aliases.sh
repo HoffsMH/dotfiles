@@ -200,6 +200,7 @@ export ytgo_location="$HOME/bin/ytgo"
 
 alias ytclear='cp -f $ytgo_template_location $ytgo_location'
 alias ytreport='cat $ytgo_location'
+alias ytsubl='subl3 ~/bin/ytgo'
 
 alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 

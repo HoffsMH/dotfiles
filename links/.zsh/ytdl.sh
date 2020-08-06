@@ -2,22 +2,6 @@
 # youtube-dl
 ######################
 
-ytv() {
-    local clip=$(/usr/bin/xclip -o)
-    local url=${1:-$clip}
-
-    echo "ytdlv $url" >> ~/bin/ytgo
-    echo "ytdlv $url"
-}
-
-yta() {
-    local clip=$(/usr/bin/xclip -o)
-    local url=${1:-$clip}
-
-    echo "ytdla $url" >> ~/bin/ytgo
-    echo "ytdla $url"
-}
-
 #!/bin/bash
 
 # -x, --extract-audio              Convert video files to audio-only files

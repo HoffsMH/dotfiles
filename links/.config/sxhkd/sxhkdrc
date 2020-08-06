@@ -19,11 +19,6 @@ hyper + g
 @XF86AudioRaiseVolume
   pulsemixer --change-volume +3
 
-{@hyper + F11, @hyper + @XF86AudioLowerVolume, @hyper + minus}
-  kitty htop
-
-{@hyper + @XF86AudioRaiseVolume, @hyper + F12, @hyper + equal}
-  kitty pulsemixer
 
 @XF86KbdBrightnessUp
   light -As "sysfs/leds/smc::kbd_backlight" 3
@@ -46,5 +41,17 @@ control + space
 hyper + v
   rofi -modi ":greenclip print" -show  -matching fuzzy -run-command '{cmd}'
 
-hyper + {@XF86AudioMute,F10} ; w
+@hyper + {@XF86AudioMute,F10} ; w
   kitty wttr
+
+@hyper + {F11, @XF86AudioLowerVolume, minus}
+  kitty htop
+
+@hyper + {@XF86AudioRaiseVolume, F12, equal}
+  kitty pulsemixer
+
+@hyper + @shift + y ; a
+  ~/bin/yta
+
+@hyper + @shift + y ; v
+  ~/bin/ytv

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+clip=$(/usr/bin/xclip -o)
+url=${1:-$clip}
+
+echo "ytdlv $url" >> ~/bin/ytgo
+echo "ytdlv $url"
