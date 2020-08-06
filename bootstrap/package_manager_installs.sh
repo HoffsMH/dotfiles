@@ -26,6 +26,7 @@ yay -S --noconfirm \
     feh \
     tree \
     neofetch \
+    pfetch \
     openssh \
     mpv \
     light \
@@ -53,10 +54,8 @@ yay -S --noconfirm \
     entr \
     blueman \
     pyenv \
-    filezilla \
     xorg-xfontsel \
     restic \
-    pfetch \
     xdotool \
     sxhkd \
     fasd \
@@ -72,7 +71,6 @@ yay -S --noconfirm \
     ranger \
     sublime-text-dev \
     google-chrome \
-    deluge-git \
     ruby-build \
     pcloud-drive \
     pmount \
@@ -88,12 +86,10 @@ yay -S --noconfirm \
     piper \
     inotify-tools \
     bfg \
-    discord \
     gnome-calculator \
     rescuetime2 \
     brave-bin \
     polybar-dwm-module \
-    bspwm \
     font-manager \
     slock \
     sxiv \
@@ -103,9 +99,6 @@ yay -S --noconfirm \
     protonvpn-cli-ng \
     picom-git \
     w3m \
-    graphviz \
-    soulseekqt \
-    nmap
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
