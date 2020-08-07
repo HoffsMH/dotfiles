@@ -76,7 +76,6 @@ yay -S --noconfirm \
     pmount \
     htop \
     colorgrab \
-    bcwc-pcie-git \
     bitwarden-bin \
     bitwarden-cli \
     taskell \
@@ -159,3 +158,6 @@ mix escript.build
 mv ./tl ~/bin
 
 popd
+
+yay -R --noconfirm \
+    firefox
