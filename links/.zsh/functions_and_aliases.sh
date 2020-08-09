@@ -198,7 +198,10 @@ alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 export ytgo_template_location="$HOME/personal/dotfiles/samples/bin/ytgo"
 export ytgo_location="$HOME/bin/ytgo"
 
-alias ytclear='cp -f $ytgo_template_location $ytgo_location'
+ytclear() {
+  tl rm $yto_location
+  cp -f $ytgo_template_location $ytgo_location
+}
 alias ytreport='cat $ytgo_location'
 alias ytsubl='subl3 ~/bin/ytgo'
 

@@ -55,3 +55,6 @@ hyper + v
 
 @hyper + @shift + y ; v
   ~/bin/ytv
+
+@hyper + @shift + p
+  notify-send "playing $(xclip -o)" && mpv --no-audio-display --loop-playlist $(xclip -o)
