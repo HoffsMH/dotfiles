@@ -51,14 +51,16 @@ paddingright = 2
 module-margin-top = 50px
 
 font-0 = IBM Plex Sans Cond SmBld:size=13:antialias=true;
-font-1 = IBM Plex Mono Text:size=12:antialias=true;1
-font-2 = IBM Plex Mono Text:size=14:antialias=true;1
-font-3 = IBM Plex Mono Text:size=8:antialias=true;1
-font-4 = IBM Plex Mono Text:size=6:antialias=true;1
+font-1 = IBM Plex Mono Text:size=12;1
+font-2 = IBM Plex Mono Text:size=14;1
+font-3 = IBM Plex Mono Text:size=8;1
+font-4 = IBM Plex Mono Text:size=6;1
+font-5 = IBM Plex Sans Cond SmBld:size=10:antialias=true;
+font-6 = IBM Plex Sans Cond SmBld:size=8:antialias=true;
 
 modules-left = dwm
 modules-center = xwindow
-modules-right = cpu battery date
+modules-right = cpu vpn network battery date
 
 ;tray-position = right
 ;tray-maxsize = 25
@@ -171,41 +173,12 @@ format-prefix-foreground = ${colors.light-blue}
 label = " %{T2}%percentage_used%%"
 label-active-font = 1
 
-[module/wlan]
-type = internal/network
-interface = net1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = wlp4s0
-interval = 3.0
-
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
 
 [module/date]
 type = internal/date
 interval = 5
 date-alt = " %b %Y-%m-%d"
-time = %b %m-%d %I:%M%p
+time = %a %b %m-%d %I:%M%p
 time-alt = %I:%M:%S%p
 format-background = ${colors.background}
 format-padding = 3px
@@ -229,7 +202,7 @@ label-charging = "%{T4}%percentage:%%"
 format-charging-prefix = "%{T2}"
 format-charging = %{T2}<ramp-capacity><label-charging>
 
-format-discharging-prefix-foreground = ${colors.light-blue}
+fomat-connecte-discharging-prefix-foreground = ${colors.light-blue}
 format-discharging-prefix =
 format-discharging = %{T2}<ramp-capacity><label-discharging>
 
@@ -300,3 +273,37 @@ margin-top = 5
 margin-bottom = 5
 
 ; vim:ft=dosini
+
+[module/network]
+type = internal/network
+; Name of the network interface to display. You can get the names of the
+; interfaces on your machine with `ip link`
+; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
+interface = wlp4s0
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+
+
+; Accumulate values from all interfaces
+; when querying for up/downspeed rate
+; Default: false
+accumulate-stats = true
+
+format-connected-background = ${colors.background}
+format-connected-spacing = 0
+
+label-connected = "%{F#689d6a}%{F-}%downspeed:2%%{F-} %{F#689d6a}%{T7}%{F-}%upspeed:2%%{F-}"
+format-connected = "%{T6}%{F#83a598}  直%{F-} <label-connected>"
+format-connected-padding = 2
+
+[module/vpn]
+type = internal/network
+; Name of the network interface to display. You can get the names of the
+; interfaces on your machine with `ip link`
+; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
+interface = proton0
+
+; Seconds to sleep between updates
+; Default: 1
