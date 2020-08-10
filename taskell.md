@@ -2,6 +2,7 @@
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
 - picom bluring command and reinvestigate especially when i get a better laptop
+- put all the system specific things into environment  via envrc  (dont forget to fill out the samplefile too) and then pull from that in poly bar and whatever else is capable of pulling from environment... unfortch that sublimetext might need to be a sample :(
 
 ## Warm
 
