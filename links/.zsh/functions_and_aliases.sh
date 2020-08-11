@@ -303,6 +303,14 @@ alias sublr="subl3"
 alias subl='\rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && subl3'
 
 ######################################################
+# getting random text for passwords and secrets
+######################################################
+
+random_key() {
+  cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
+}
+
+######################################################
 # Displays/wallpaper and keyboard
 ######################################################
 

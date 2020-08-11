@@ -61,6 +61,7 @@ fi
    exec dbus_args
  }
 
+source "$HOME/.envrc"
 # -c shadow effects
 # -b run in background
 picom -c --experimental-backends --backend glx -b --no-fading-openclose
