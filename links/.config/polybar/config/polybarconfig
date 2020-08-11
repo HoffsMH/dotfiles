@@ -184,14 +184,16 @@ full-at = 98
 format-prefix-foreground = ${colors.light-blue}
 
 format-charging-prefix-foreground = ${colors.light-blue}
+format-charging-background = ${colors.background}
 label-charging = "%{T6}%percentage:%%"
 format-charging-prefix = "%{T2}"
 format-charging = %{T6}<ramp-capacity><label-charging>
 
 fomat-connecte-discharging-prefix-foreground = ${colors.light-blue}
-format-discharging-prefix =
+format-discharging-background = ${colors.background}
 format-discharging = %{T6}<ramp-capacity><label-discharging>
 
+format-full-background = ${colors.background}
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.light-blue}
 format-full = "%{T2}<label-full>"
@@ -219,35 +221,6 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.light-blue}
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close =  cancel
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
