@@ -23,7 +23,7 @@ defmodule M do
   end
 
   def lookup(call) do
-    [Enum, Map, List, String, Kernel, File, Path]
+    [Atom, Enum, Map, List, String, Kernel, File, Path]
     |> Enum.group_by(&(&1), &lookup(&1, call))
   end
 
