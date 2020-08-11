@@ -42,13 +42,6 @@ fixed-center = true
 background = ${colors.bar-background}
 foreground = ${colors.foreground}
 
-line-size = 5
-line-color = #f00
-
-padding-top = 20
-padding-left = 0
-paddingright = 2
-
 module-margin-top = 50px
 
 font-0 = IBM Plex Sans Cond SmBld:size=13:antialias=true;
@@ -63,17 +56,9 @@ modules-left = dwm
 modules-center = xwindow
 modules-right = cpu vpn network battery date
 
-;tray-position = right
-;tray-maxsize = 25
-;tray-padding = 5
-;tray-background = #0063ff
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
 [module/dwm]
 type = internal/dwm
-format = <label-tags> <label-layout> <label-floating>
+format = <label-tags><label-layout><label-floating>
 ; Path to dwm socket (default: /tmp/dwm.sock)
 ; socket-path = /tmp/dwm.sock
 
@@ -162,9 +147,9 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/cpu
 interval = 2
 format-background = ${colors.background}
-format-prefix = "  %{T3}﬙"
+format-prefix = "  %{T6}﬙"
 format-prefix-foreground = ${colors.primary}
-label = "%{T4}%percentage:2%%"
+label = "%{T6}%percentage:2%%"
 
 [module/memory]
 type = internal/memory
@@ -182,7 +167,7 @@ date-alt = " %b %Y-%m-%d"
 time = %a %b %m-%d %I:%M%p
 time-alt = %I:%M:%S%p
 format-background = ${colors.background}
-format-padding = 3px
+format-padding = 3
 
 
 format-prefix-foreground = ${colors.light-blue}
@@ -199,13 +184,13 @@ full-at = 98
 format-prefix-foreground = ${colors.light-blue}
 
 format-charging-prefix-foreground = ${colors.light-blue}
-label-charging = "%{T4}%percentage:%%"
+label-charging = "%{T6}%percentage:%%"
 format-charging-prefix = "%{T2}"
-format-charging = %{T2}<ramp-capacity><label-charging>
+format-charging = %{T6}<ramp-capacity><label-charging>
 
 fomat-connecte-discharging-prefix-foreground = ${colors.light-blue}
 format-discharging-prefix =
-format-discharging = %{T2}<ramp-capacity><label-discharging>
+format-discharging = %{T6}<ramp-capacity><label-discharging>
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.light-blue}
@@ -214,6 +199,9 @@ ramp-capacity-0 = ""
 ramp-capacity-1 = ""
 ramp-capacity-2 = ""
 ramp-capacity-foreground = ${colors.light-blue}
+format-charging-padding = 2
+format-discharging-padding = 2
+format-full-padding = 2
 
 [module/temperature]
 type = internal/temperature
@@ -263,17 +251,7 @@ menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
 
-[global/wm]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
 
 [module/network]
 type = internal/network
@@ -297,7 +275,8 @@ format-connected-spacing = 0
 
 label-connected = "%{F#689d6a}%{F-}%downspeed:2%%{F-} %{F#689d6a}%{T7}%{F-}%upspeed:2%%{F-}"
 format-connected = "%{T6}%{F#83a598}  直%{F-} <label-connected>"
-format-connected-padding = 2
+
+format-connected-padding = 3
 
 [module/vpn]
 type = internal/network
