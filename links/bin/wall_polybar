@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source "$HOME/.envrc"
+
 if ! pgrep -x "polybar" ; then
   echo "polybar not loaded"
   ~/bin/reload-polybar

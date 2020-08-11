@@ -28,6 +28,7 @@ secondary = #aae60053
 alert = #aabd2c40
 
 [bar/main]
+dpi = ${env:DPI}
 radius = 10px
 enable-ipc = true
 monitor = ${env:MONITOR}
@@ -279,7 +280,7 @@ type = internal/network
 ; Name of the network interface to display. You can get the names of the
 ; interfaces on your machine with `ip link`
 ; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
-interface = wlp4s0
+interface = ${env:IFNAME}
 
 ; Seconds to sleep between updates
 ; Default: 1
