@@ -16,5 +16,6 @@ yay -S --noconfirm \
   deluge-git \
   graphviz \
   filezilla \
-  nmap
+  nmap \
+  balena-etcher
 

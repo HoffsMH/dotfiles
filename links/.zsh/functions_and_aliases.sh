@@ -353,6 +353,7 @@ bwunlock() {
 bwget() {
   pushd ~
   tl bw  $@ | xclip && echo "done"
+  tl start_greenclip
   popd
 }
 
