@@ -147,9 +147,11 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/cpu
 interval = 2
 format-background = ${colors.background}
-format-prefix = "  %{T6}﬙"
+format-prefix = "%{T6}﬙"
+format-prefix-padding =  2
 format-prefix-foreground = ${colors.primary}
 label = "%{T6}%percentage:2%%"
+format = "<label>     "
 
 [module/memory]
 type = internal/memory
@@ -247,7 +249,7 @@ format-connected-background = ${colors.background}
 format-connected-spacing = 0
 
 label-connected = "%{F#689d6a}%{F-}%downspeed:2%%{F-} %{F#689d6a}%{T7}%{F-}%upspeed:2%%{F-}"
-format-connected = "%{T6}%{F#83a598}  直%{F-} <label-connected>"
+format-connected = "%{T6}%{F#83a598}直%{F-}<label-connected>"
 
 format-connected-padding = 3
 
@@ -260,3 +262,6 @@ interface = proton0
 
 ; Seconds to sleep between updates
 ; Default: 1
+format-connected-background = ${colors.background}
+
+format-connected = "%{T6}%{F#83a598}[vpn]%{F-}"

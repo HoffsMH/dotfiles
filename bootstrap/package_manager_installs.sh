@@ -15,6 +15,11 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    fwup \
+    python-pillow-git \
+    openssh-askpass \
+    squashfs-tools \
+    ncurses5-compat-libs \
     stalonetray \
     dunst \
     gnutls \
