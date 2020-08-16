@@ -134,15 +134,24 @@ systemctl start --user dunst.service
 source ~/.zprofile
 
 # stable versions of everything as my default
-/usr/bin/rbenv install 2.7.0 || echo "ruby install failed"
 ~/.exenv/bin/exenv install 1.9.4 || echo "elixir install failed"
 /usr/bin/nodenv install 13.6.0 || echo "node install failed"
 
 pushd "$HOME"
 
-/usr/bin/rbenv local 2.7.0
-~/.exenv/bin/exenv local 1.9.4
-/usr/bin/nodenv local 13.6.0 --compile
+asdf plugin add ruby
+asdf plugin add elixir
+asdf plugin add nodejs
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+
+asdf install ruby 2.7.0
+asdf install elixir 1.9.4
+asdf install nodejs 13.6.0
+
+asdf global ruby 2.7.0
+asdf global elixir 1.9.4
+asdf gloabl nodejs 13.6.0
+
 
 # install gcloud
 curl https://sdk.cloud.google.com | bash
