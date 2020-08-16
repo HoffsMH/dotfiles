@@ -26,3 +26,4 @@ testem.log
 yarn-error.log
 .__babel_tmp
 .ruby-version
+.tool-versions

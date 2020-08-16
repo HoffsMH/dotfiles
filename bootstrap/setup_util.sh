@@ -9,16 +9,15 @@ pushd "$HOME/code/util"
 
 rm -rf oh-my-zsh
 rm -rf spaceship-prompt
-rm -rf exenv
 rm -fr ex-tl
 rm -rf zsh-autopair
 rm -rf zsh-syntax-highlighting
 rm -rf dwm
+rm -fr asdf
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git
 git clone git://github.com/denysdovhan/spaceship-prompt.git
-git clone git://github.com/exenv/exenv.git
-git clone git://github.com/mururu/elixir-build.git ~/code/util/exenv/plugins/elixir-build
+git clone git://github.com/asdf-vm/asdf.git
 
 git clone git://github.com/hlissner/zsh-autopair.git
 git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
@@ -36,11 +35,17 @@ pushd ~/code/util/dwm
 sudo make clean install
 popd
 
-
 # will get exenv on our path
 source ~/.zprofile
 pushd ~/code/util/exenv
  ./src/configure && make -C src
 popd
 
+pushd ~/code/util/asdf
+  git checkout "$(git describe --abbrev=0 --tags)"
+popd
+ln -sf "$HOME/code/util/asdf" "$HOME/.asdf"
 
+
+asdf plugin add nodejs
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'

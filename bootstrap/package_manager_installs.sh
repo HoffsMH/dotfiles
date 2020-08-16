@@ -58,7 +58,6 @@ yay -S --noconfirm \
     seahorse \
     entr \
     blueman \
-    pyenv \
     xorg-xfontsel \
     restic \
     xdotool \
@@ -69,9 +68,6 @@ yay -S --noconfirm \
     docker \
     docker-compose \
     direnv \
-    rbenv \
-    nodenv \
-    nodenv-node-build-git \
     slack-desktop \
     ranger \
     sublime-text-dev \

@@ -4,10 +4,12 @@ eval "$(direnv hook zsh)"
 # https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
 
-eval "$(exenv init -)"
-eval "$(nodenv init -)"
+. $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit
+compinit
 
-# needed to install python using pyenv
+#python build env stuff
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
 export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
