@@ -133,10 +133,6 @@ systemctl start --user dunst.service
 
 source ~/.zprofile
 
-# stable versions of everything as my default
-~/.exenv/bin/exenv install 1.9.4 || echo "elixir install failed"
-/usr/bin/nodenv install 13.6.0 || echo "node install failed"
-
 pushd "$HOME"
 
 asdf plugin add ruby
