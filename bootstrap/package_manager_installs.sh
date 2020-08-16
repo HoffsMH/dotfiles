@@ -98,6 +98,7 @@ yay -S --noconfirm \
     sox \
     protonvpn-cli-ng \
     picom-git \
+    expect \
     w3m \
 
 echo "###############################################"
@@ -148,7 +149,10 @@ asdf global elixir 1.9.4
 asdf global nodejs 13.6.0
 
 # install gcloud
-curl https://sdk.cloud.google.com | bash
+mkdir -p "$HOME/.config/google-cloud-sdk"
+curl https://sdk.cloud.google.com >> "$HOME/.config/google-cloud-sdk/install.sh"
+chmod +x "$HOME/.config/google-cloud-sdk/install.sh"
+$HOME/personal/dotfiles/bootstrap/install-google-cloud-sdk.exp
 
 echo "###############################################"
 echo "Install TL"
