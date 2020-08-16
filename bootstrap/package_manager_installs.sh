@@ -130,7 +130,6 @@ systemctl stop --user xfce4-notifyd.service || echo "stock notifications already
 systemctl enable --user dunst.service
 systemctl start --user dunst.service
 
-
 source ~/.zprofile
 
 pushd "$HOME"
@@ -146,12 +145,10 @@ asdf install nodejs 13.6.0
 
 asdf global ruby 2.7.0
 asdf global elixir 1.9.4
-asdf gloabl nodejs 13.6.0
-
+asdf global nodejs 13.6.0
 
 # install gcloud
 curl https://sdk.cloud.google.com | bash
-
 
 echo "###############################################"
 echo "Install TL"
