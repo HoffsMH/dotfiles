@@ -1,9 +1,10 @@
 configuration {
     font:                           "IBM Plex Sans Cond SmBld 15";
     show-icons:                     true;
-  icon-theme:           "Papirus-Dark";
+    icon-sized: 0;
     display-drun:            " ";
     display-combi:           " ";
+    display-run:             "";
     drun-display-format:            "{name}";
     threads:                        0;
     scroll-method:                  0;
@@ -41,7 +42,7 @@ window {
 }
 
 prompt {
-    enabled:            true;
+  enabled:            true;
   padding:            4px 8px 0px 4px;
   background-color:         @background;
   text-color:           @foreground;
@@ -103,15 +104,14 @@ element {
 }
 
 element-icon {
-    size:                           100px;
-    border:                         0px;
+    background-color: rgba ( 0, 0, 0, 0 % );
+    size:             1.2000ch ;
+    text-color:       inherit;
 }
 
 element-text {
-    expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;
-    margin:                         5px 10px 0px 10px;
 }
 
 element normal.urgent,

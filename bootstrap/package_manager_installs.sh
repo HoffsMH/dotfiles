@@ -13,6 +13,7 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    lxappearance \
     fwup \
     python-pillow-git \
     openssh-askpass \

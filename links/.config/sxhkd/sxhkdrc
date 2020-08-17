@@ -36,7 +36,7 @@ control + alt + Left
   xdotool search --name "firefox" key "ctrl+Page_Up"
 
 control + space
-  rofi -show combi -matching fuzzy
+  rofi -show drun -matching fuzzy
 
 hyper + v
   rofi -modi ":greenclip print" -show  -matching fuzzy -run-command '{cmd}'
