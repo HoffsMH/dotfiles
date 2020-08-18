@@ -35,11 +35,7 @@ pushd ~/code/util/dwm
 sudo make clean install
 popd
 
-# will get exenv on our path
 source ~/.zprofile
-pushd ~/code/util/exenv
- ./src/configure && make -C src
-popd
 
 pushd ~/code/util/asdf
   git checkout "$(git describe --abbrev=0 --tags)"

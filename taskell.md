@@ -28,7 +28,6 @@
 
 ## Done
 
-- exenv installation automated
 - get rid of ST its no longer needed
 - polybar setup and dotfile
 - mouse resizing and moving

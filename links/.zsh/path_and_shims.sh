@@ -26,10 +26,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 # should end up with something like
 # ie always prefer version management over system
 
-# /Users/<user>/.rbenv/shims:
-# /Users/<user>/.rvm/bin:
-# /Users/<user>/.nodenv/shims:
-# /Users/<user>/.nodenv/bin:
+# /Users/<user>/.asdf/shims:
 # /Users/<user>/bin:
 # /usr/local/bin:
 # /usr/bin:
