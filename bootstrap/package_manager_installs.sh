@@ -133,6 +133,8 @@ source ~/.zprofile
 
 pushd "$HOME"
 
+. $HOME/.asdf/asdf.sh
+
 asdf plugin add ruby
 asdf plugin add elixir
 asdf plugin add nodejs

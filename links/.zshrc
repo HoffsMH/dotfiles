@@ -20,3 +20,5 @@ if [ -f '/home/hoffs/.config/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/hoffs/.config/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/hoffs/.config/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
+
+stty -ixon
