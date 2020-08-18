@@ -127,7 +127,7 @@ sudo systemctl start "cpupower"
 systemctl disable --user xfce4-notifyd.service || echo "stock notifications already uninstalled"
 systemctl stop --user xfce4-notifyd.service || echo "stock notifications already stopped"
 systemctl enable --user dunst.service
-systemctl start --user dunst.service
+systemctl start --user dunst.service || echo "starting dunst failed"
 
 source ~/.zprofile
 
