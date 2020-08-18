@@ -78,7 +78,6 @@ yay -S --noconfirm \
     colorgrab \
     bitwarden-bin \
     bitwarden-cli \
-    taskell \
     arandr \
     peek \
     libratbag \
