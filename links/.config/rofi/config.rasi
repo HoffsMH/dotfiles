@@ -68,7 +68,7 @@ entry {
     horizontal-align:               0;
     placeholder:                    "Search";
     blink:                          true;
-    font:             "IBM Plex Sans Cond SmBld 25";
+    font:             "IBM Plex Sans Cond SmBld 30";
 }
 
 case-indicator {

@@ -29,7 +29,6 @@ alert = #aabd2c40
 
 [bar/main]
 dpi = ${env:DPI}
-radius = 10px
 enable-ipc = true
 monitor = ${env:MONITOR}
 width = 100%
@@ -39,7 +38,7 @@ height = 30
 ;radius = 6.0
 fixed-center = true
 
-background = ${colors.bar-background}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 module-margin-top = 50px
