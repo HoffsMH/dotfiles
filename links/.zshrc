@@ -15,8 +15,6 @@ source ~/.zsh/util.sh
 
 pfetch
 
-stty -ixon
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/hoffs/.config/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hoffs/.config/google-cloud-sdk/google-cloud-sdk/path.zsh.inc'; fi
 
