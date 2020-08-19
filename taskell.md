@@ -9,9 +9,6 @@
 - get some sort of network benchmarking
 - get some sort of cpu benchmarking
 - get stalone tray centered and huge
-- multi bar setup for gaps + subtle rounding
-    > https://github.com/mut-ex/my-i3-dotfiles
-    * [ ] https://www.reddit.com/r/unixporn/comments/du6ms3/i3gaps_rounded_corners_everywhere/
 - gtk theme that matches gruvbox better
 - dunst actions how to
 - thunar default save location
@@ -19,6 +16,7 @@
 
 ## Selected
 
+- dunst expiration
 
 ## Waiting on Something
 
