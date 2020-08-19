@@ -38,6 +38,9 @@ control + alt + Left
 control + space
   rofi -show drun -matching fuzzy
 
+alt + space
+  rofi -show run -matching fuzzy
+
 hyper + v
   rofi -modi ":greenclip print" -show  -matching fuzzy -run-command '{cmd}'
 
