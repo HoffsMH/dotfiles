@@ -68,7 +68,7 @@ entry {
     horizontal-align:               0;
     placeholder:                    "Search";
     blink:                          true;
-    font:             "IBM Plex Sans Cond SmBld 30";
+    font:             "IBM Plex Sans Cond SmBld 35";
 }
 
 case-indicator {
@@ -80,12 +80,12 @@ case-indicator {
 
 listview {
     background-color:               @background;
-    columns:                        1;
-    lines:                          10;
-    spacing:                        10px;
+    columns:                        2;
+    spacing:                        30px;
     cycle:                          false;
-    dynamic:                        true;
     layout:                         vertical;
+    lines: 4;
+    max-lines: 4;
 }
 
 mainbox {
@@ -93,6 +93,9 @@ mainbox {
     children:                       [ inputbar, message, listview ];
     spacing:                        15px;
     padding:                        40px;
+    lines:                          5;
+    dynamic: false;
+    max-lines: 5;
 }
 
 element {

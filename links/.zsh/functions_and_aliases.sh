@@ -401,3 +401,9 @@ alias resticbackup="restic backup --verbose --tag systemd.timer $BACKUP_EXCLUDES
 alias mkup="sudo rm -fr ./tmp && make up"
 alias rmup="sudo rm -fr ./tmp && make up"
 
+
+######################################################
+# INFO
+######################################################
+
+alias deviceinfo='sudo dmidecode | ag --pager cat -A 9 -B 0 "System Information"'
