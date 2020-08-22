@@ -100,6 +100,9 @@ yay -S --noconfirm \
     picom-git \
     expect \
     w3m \
+    yubikey-manager \
+    yubiky-manager-qt \
+    yubioath-desktop
 
 echo "###############################################"
 echo "UNINSTALL BASIC RECIPE (remove cruft)"
