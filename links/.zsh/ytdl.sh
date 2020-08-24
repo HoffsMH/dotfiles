@@ -38,6 +38,9 @@
 
 # If I always specificy the same archive I should be safe just spamming this command and being sure im not filling up HD un-necessarily
 
+mkdir -p ~/.config/.yt-dl-archive
+touch ~/.config/.yt-dl-archive/archive
+
 ytdlv() {
     clipboard=$(/usr/bin/xclip -o)
     yturl=${1:-$clipboard}
