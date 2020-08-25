@@ -42,7 +42,8 @@ ring() {
   if system_muted; then
     printf "\a"
   else
-    eval echo "\$$bell" | base64 --decode | /usr/bin/play -V0 -v 4 -qt mp3 - &
+    eval echo "\$$bell" | base64 --decode | /usr/bin/play -V0 -v 1 -qt mp3 - &
+    notify-send "Ring!"
   fi
 }
 
