@@ -10,8 +10,8 @@ set -e
 
 ./misc_admin.sh
 
-#./link_recipe_mac_hardware.sh
+# ./link_recipe_mac_hardware.sh
 
-./misc/gen_ssh_keys.sh
+# ./misc/gen_ssh_keys.sh
 
 
