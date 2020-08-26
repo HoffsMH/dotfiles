@@ -13,6 +13,7 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    gopass \
     linux-lts-acpi_call \
     taskell \
     lxappearance \
