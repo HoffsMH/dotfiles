@@ -93,5 +93,5 @@
     "vintageous_use_super_keys": false,
 
     // Propagate copy actions to the system clipboard.
-    "vintageous_use_sys_clipboard": false
+    "vintageous_use_sys_clipboard": true
 }
