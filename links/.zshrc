@@ -13,7 +13,8 @@ source "$HOME/.zsh/functions_and_aliases.sh"
 source ~/.zsh/hooks.sh
 source ~/.zsh/util.sh
 
-export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
+# export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 pfetch
 

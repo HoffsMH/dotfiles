@@ -360,6 +360,10 @@ yubistart() {
   systemctl --user restart --now yubikey-agent
 }
 
+gpgstart() {
+  gpgconf --launch gpg-agent
+}
+
 ######################################################
 # ricing
 ######################################################
