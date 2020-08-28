@@ -39,9 +39,7 @@ echo "setup links"
 echo "###############################################"
 
 "$HOME/personal/dotfiles/bootstrap/links.sh"
-
-rm -fr "$HOME/.config/sublime-text-3/Packages/gruvbox"
-ln -sf "$HOME/personal/dotfiles/links/.config/sublime-text-3/Packages/gruvbox" "$HOME/.config/sublime-text-3/Packages"
+"$HOME/personal/dotfiles/bootstrap/links-cleanup.sh"
 
 # media libraries
 ln -sf "$HOME/pCloudDrive/personal/media/image/library" "$HOME/personal/media/image/"
