@@ -63,14 +63,3 @@ installytdl() {
     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
 }
-
-ytdlalb() {
-    clipboard=$(/usr/bin/xclip -o)
-    yturl=${2:-$clipboard}
-    albumname=$1
-
-    echo  downloading "$yturl"
-
-    youtube-dl  -x  -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/archive --audio-format 'mp3' -i --audio-quality 0 -o "~/personal/media/audio/capture/$albumname/%(title)s-%(uploader)s-%(id)s.%(ext)s" $yturl
-}
-

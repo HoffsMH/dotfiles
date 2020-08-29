@@ -2,16 +2,16 @@
 
 set -e
 
-./scaffolding.sh
+"$HOME/personal/dotfiles/bootstrap/scaffolding.sh"
 
-./setup_util.sh
+"$HOME/personal/dotfiles/bootstrap/setup-util.sh"
 
-./package_manager_installs.sh
+"$HOME/personal/dotfiles/bootstrap/install/run.sh"
 
-./misc_admin.sh
+"$HOME/personal/dotfiles/bootstrap/misc/admin.sh"
 
-# ./link_recipe_mac_hardware.sh
+# ./links/mac-hardware.sh
 
-# ./misc/gen_ssh_keys.sh # no longer needed with yubikey
+# ./misc/gen-ssh-keys.sh # no longer needed with yubikey
 
 

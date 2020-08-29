@@ -23,3 +23,5 @@ do
     ln -sf "$i" "$h$newdirn/$basen"
   fi
 done
+
+"$HOME/personal/dotfiles/bootstrap/links/cleanup.sh"

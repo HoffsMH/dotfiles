@@ -23,3 +23,5 @@ do
     fi
   fi
 done
+
+"$HOME/personal/dotfiles/bootstrap/links/cleanup.sh"

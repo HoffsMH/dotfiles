@@ -103,21 +103,12 @@ yay -S --noconfirm \
     w3m \
     yubikey-manager \
     yubiky-manager-qt \
-    yubioath-desktop
+    yubioath-desktop \
+    yajl
+
 
 echo "###############################################"
-echo "UNINSTALL BASIC RECIPE (remove cruft)"
-echo "###############################################"
-
-# I dont want a greeter
- sudo systemctl disable lightdm.service || echo "lightdm already uninstalled"
- sudo pacman -Rs --noconfirm lightdm \
-       light-locker \
-       lightdm-gtk-greeter \
-       lightdm-gtk-greeter-settings || echo "lightdm already uninstalled"
-
-echo "###############################################"
-echo "install lanuguages and enable services"
+echo "enable services"
 echo "###############################################"
 
 sudo systemctl enable docker.service
@@ -135,42 +126,8 @@ systemctl stop --user xfce4-notifyd.service || echo "stock notifications already
 systemctl enable --user dunst.service
 systemctl start --user dunst.service || echo "starting dunst failed"
 
-source ~/.zprofile
-
-pushd "$HOME"
-
-. $HOME/.asdf/asdf.sh
-
-asdf plugin add ruby
-asdf plugin add elixir
-asdf plugin add nodejs
-bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
-
-asdf install ruby 2.7.0
-asdf install elixir 1.9.4
-asdf install nodejs 13.6.0
-
-asdf global ruby 2.7.0
-asdf global elixir 1.9.4
-asdf global nodejs 13.6.0
-
-# install gcloud
-mkdir -p "$HOME/.config/google-cloud-sdk"
-curl https://sdk.cloud.google.com >> "$HOME/.config/google-cloud-sdk/install.sh"
-chmod +x "$HOME/.config/google-cloud-sdk/install.sh"
-$HOME/personal/dotfiles/bootstrap/install-google-cloud-sdk.exp
-
-echo "###############################################"
-echo "Install TL"
-echo "###############################################"
-
-pushd ~/code/util/ex-tl
-mix local.hex --force
-mix deps.get --force
-mix escript.build
-mv ./tl ~/bin
-
-popd
-
-yay -R --noconfirm \
-    firefox
+"$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
+"$HOME/personal/dotfiles/bootstrap/install/gcloud.sh"
+"$HOME/personal/dotfiles/bootstrap/install/dwm.sh"
+"$HOME/personal/dotfiles/bootstrap/install/tl.sh"
+"$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"

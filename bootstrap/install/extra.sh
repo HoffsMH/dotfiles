@@ -17,5 +17,6 @@ yay -S --noconfirm \
   graphviz \
   filezilla \
   nmap \
-  balena-etcher
+  balena-etcher \
+  vagrant
 

@@ -1,1 +1,0 @@
-genfstab -U /mnt
