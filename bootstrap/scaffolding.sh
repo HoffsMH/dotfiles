@@ -38,8 +38,8 @@ echo "###############################################"
 echo "setup links"
 echo "###############################################"
 
-"$HOME/personal/dotfiles/bootstrap/links.sh"
-"$HOME/personal/dotfiles/bootstrap/links-cleanup.sh"
+"$HOME/personal/dotfiles/bootstrap/links/links.sh"
+"$HOME/personal/dotfiles/bootstrap/links/links-cleanup.sh"
 
 # media libraries
 ln -sf "$HOME/pCloudDrive/personal/media/image/library" "$HOME/personal/media/image/"
