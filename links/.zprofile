@@ -1,4 +1,4 @@
-export EDITOR="subl3"
+export EDITOR="/usr/bin/subl3 -n --wait"
 export BROWSER="brave"
 export TERMINAL="kitty"
 export READER="zathura"
