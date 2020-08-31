@@ -25,11 +25,6 @@ hist() {
 ######################################################
 alias z='fasd_cd -d'
 
-zl() {
-  fasd_cd -d $1
-  subl3 .
-}
-
 # lsing on my music directory was getting annoying with the default color
 export EXA_COLORS="*.mp3=34"
 
@@ -82,6 +77,8 @@ t() {
       touch -- "$f"
     done
 }
+
+alias pass="gopass"
 
 ######################################################
 # git
