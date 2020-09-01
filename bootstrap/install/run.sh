@@ -67,8 +67,6 @@ yay -S --noconfirm \
     fasd \
     fzf \
     pulsemixer \
-    docker \
-    docker-compose \
     direnv \
     slack-desktop \
     ranger \
@@ -111,9 +109,6 @@ echo "###############################################"
 echo "enable services"
 echo "###############################################"
 
-sudo systemctl enable docker.service
-sudo systemctl start docker.service
-
 sudo systemctl enable "syncthing@$USER.service"
 sudo systemctl start "syncthing@$USER.service"
 
@@ -130,3 +125,4 @@ systemctl start --user dunst.service || echo "starting dunst failed"
 "$HOME/personal/dotfiles/bootstrap/install/gcloud.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dwm.sh"
 "$HOME/personal/dotfiles/bootstrap/install/tl.sh"
+"$HOME/personal/dotfiles/bootstrap/install/docker.sh"

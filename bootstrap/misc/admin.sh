@@ -18,6 +18,4 @@ sudo ntpd -qg
 sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
 sudo hwclock -w
 
-sudo usermod -aG docker $USER
-
 "$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"
