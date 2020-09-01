@@ -102,7 +102,7 @@ yay -S --noconfirm \
     expect \
     w3m \
     yubikey-manager \
-    yubiky-manager-qt \
+    yubikey-manager-qt \
     yubioath-desktop \
     yajl
 
