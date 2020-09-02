@@ -18,5 +18,6 @@ yay -S --noconfirm \
   filezilla \
   nmap \
   balena-etcher \
-  vagrant
+  vagrant \
+  zenmap
 
