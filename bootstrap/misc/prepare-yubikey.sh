@@ -9,11 +9,14 @@
 # admin > passwd set pins (pins never go in pw vault)
 gpg --edit-card
 
+# disable OTP annoyance from accidently touching card
 ykman config usb -d OTP
 ykman config usb --no-touch-eject
 
-ykman openpgp set-touch SIG FIXED
-ykman openpgp set-touch AUT FIXED
-ykman openpgp set-touch ENC FIXED
+ykman openpgp set-touch SIG CACHED-FIXED
+ykman openpgp set-touch AUT CACHED-FIXED
+ykman openpgp set-touch ENC CACHED-FIXED
+ykman openpgp set-touch ATT CACHED-FIXED
+
 ykman openpgp set-pin-retries 4 4 4
 
