@@ -362,6 +362,7 @@ gpgstart() {
 }
 
 alias gpg-reload-card='gpg-connect-agent "scd serialno" "learn --force" /bye'
+alias gpg-import-my-key='curl mhkr.io/gpg | gpg --import'
 
 ######################################################
 # ricing
