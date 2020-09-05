@@ -19,7 +19,6 @@ hyper + g
 @XF86AudioRaiseVolume
   pulsemixer --change-volume +3
 
-
 @XF86KbdBrightnessUp
   light -As "sysfs/leds/smc::kbd_backlight" 3
 
@@ -58,6 +57,9 @@ hyper + v
 
 @hyper + @shift + y ; v
   ~/bin/ytv
+
+@hyper + @shift + y ; w
+  notify-send "starting download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/library/wall/wall-cp/. && notify-send "wall paper download of $(xclip -o)"
 
 @hyper + @shift + p
   notify-send "playing $(xclip -o)" && mpv --no-audio-display --loop-playlist $(xclip -o)

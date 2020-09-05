@@ -361,6 +361,8 @@ gpgstart() {
   gpgconf --launch gpg-agent
 }
 
+alias gpg-reload-card='gpg-connect-agent "scd serialno" "learn --force" /bye'
+
 ######################################################
 # ricing
 ######################################################

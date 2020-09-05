@@ -16,6 +16,8 @@ source ~/.zsh/util.sh
 # export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
+export TERM=st-256color
+
 pfetch
 
 # The next line updates PATH for the Google Cloud SDK.
