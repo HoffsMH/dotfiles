@@ -22,22 +22,6 @@
   - gtk to get my gtk theme
   - devtools dark mode
 
-## brave
-  - settings
-    - no password
-    - long url bar
-  - stayfocused
-    - settings
-  - rescuetime
-  - dark new tab
-  - bitwarden
-  - edit this cookie
-  - ublock origin
-  - ublock origin extra
-  - the great suspender
-    - settings
-  - vimium
-
 ## Let App download stuff
   - pcloud
   - syncthing
