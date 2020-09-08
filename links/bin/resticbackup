@@ -1,0 +1,3 @@
+#!/bin/bash
+
+restic backup --verbose $BACKUP_EXCLUDES $BACKUP_PATHS

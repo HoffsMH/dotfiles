@@ -398,9 +398,7 @@ alias nmapo="sudo nmap -O -v"
 ######################################################
 
 # specify your repo with env variable or -r
-alias resticinit="restic init"
 alias resticbrowse="restic mount /media/restic"
-alias resticbackup="restic backup --verbose --tag systemd.timer $BACKUP_EXCLUDES $BACKUP_PATHS"
 
 ###
 # grrrrr
