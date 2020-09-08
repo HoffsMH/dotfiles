@@ -20,6 +20,8 @@ do
       echo "$h$newdirn/$basen"
       mkdir -p "$h$newdirn"
       cp "$i" "$h$newdirn/$basen"
+      chmod o-rwx "$h$newdirn/$basen"
+      chmod a-rwx "$h$newdirn/$basen"
     fi
   fi
 done

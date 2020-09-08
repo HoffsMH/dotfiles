@@ -19,6 +19,8 @@ do
 
       echo "$h$newdirn/$basen"
       mkdir -p "$h$newdirn"
+      chmod o-rwx "$i"
+      chmod a-rwx "$i"
       ln -sf "$i" "$h$newdirn/$basen"
     fi
   fi
