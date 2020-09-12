@@ -13,6 +13,8 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    cups \
+    cups-pdf \
     sshpass \
     gopass \
     linux-lts-acpi_call \
