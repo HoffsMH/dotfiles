@@ -353,16 +353,12 @@ bwget() {
   popd
 }
 
-yubistart() {
-  systemctl --user restart --now yubikey-agent
-}
-
 gpgstart() {
   gpgconf --launch gpg-agent
 }
 
 alias gpg-reload-card='gpg-connect-agent "scd serialno" "learn --force" /bye'
-alias gpg-import-my-key='curl mhkr.io/gpg | gpg --import'
+alias gpg-import-my-key='curl mhkr.io/key.pub | gpg --import'
 
 ######################################################
 # ricing
