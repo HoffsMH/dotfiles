@@ -13,6 +13,7 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    manjaro-architect \
     cups \
     cups-pdf \
     sshpass \
