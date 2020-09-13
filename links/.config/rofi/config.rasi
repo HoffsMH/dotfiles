@@ -101,14 +101,13 @@ mainbox {
 element {
     background-color:               @background;
     text-color:                     @foreground;
-    orientation:                    vertical;
     border-radius:                  0px;
     padding:                        10px 10px 10px 10px;
 }
 
 element-icon {
     background-color: rgba ( 0, 0, 0, 0 % );
-    size:             1.2000ch ;
+    size:             4ch ;
     text-color:       inherit;
 }
 
