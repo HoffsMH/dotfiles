@@ -3,16 +3,15 @@
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
 - picom bluring command and reinvestigate especially when i get a better laptop
 - put all the system specific things into environment  via envrc  (dont forget to fill out the samplefile too) and then pull from that in poly bar and whatever else is capable of pulling from environment... unfortch that sublimetext might need to be a sample :(
+- picom full shadows working on every window type
+- gtk theme that matches gruvbox better
 
 ## Warm
 
 - get some sort of network benchmarking
 - get some sort of cpu benchmarking
 - get stalone tray centered and huge
-- gtk theme that matches gruvbox better
-- dunst actions how to
 - thunar default save location
-- picom full shadows working on every window type
 
 ## Selected
 
@@ -49,3 +48,4 @@
 - see if I can get collapsable systray into dwm
     > just use stalonetray
 - redo rofi to look simpler
+- dunst actions how to
