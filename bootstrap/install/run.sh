@@ -90,7 +90,6 @@ yay -S --noconfirm \
     inotify-tools \
     bfg \
     gnome-calculator \
-    rescuetime2 \
     brave-bin \
     polybar-dwm-module \
     font-manager \
@@ -108,6 +107,8 @@ yay -S --noconfirm \
     yubioath-desktop \
     yajl
 
+# yay -S --noconfirm \
+#     rescuetime2
 
 echo "###############################################"
 echo "enable services"
