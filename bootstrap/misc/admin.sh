@@ -18,4 +18,8 @@ sudo ntpd -qg
 sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
 sudo hwclock -w
 
+curl mhkr.io/key.pub | gpg --import
+gpg --edit-key matthecker@pm.me
+gpg-connect-agent "scd serialno" "learn --force" /bye
+
 "$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"
