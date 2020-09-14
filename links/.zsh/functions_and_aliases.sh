@@ -414,5 +414,5 @@ compressdisk() {
   sudo dd if=$1 status=progress conv=sparse | gzip -c > ~/personal/media/software/capture/$(basename $1).img.gz
 }
 compressedimgtodisk() {
-  gzip -cd < $1| dd of=$2 status=progress
+  gzip -cd < $1| sudo dd of=$2 status=progress
 }

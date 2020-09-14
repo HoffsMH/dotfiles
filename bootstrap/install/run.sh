@@ -12,7 +12,8 @@ echo "###############################################"
 
 sudo pacman -Syu
 yay -Syu
-yay -S --noconfirm \
+yay -Sc --noconfirm \
+    pigz \
     manjaro-architect \
     cups \
     cups-pdf \
@@ -107,7 +108,7 @@ yay -S --noconfirm \
     yubioath-desktop \
     yajl
 
-# yay -S --noconfirm \
+# yay -Sc --noconfirm \
 #     rescuetime2
 
 echo "###############################################"

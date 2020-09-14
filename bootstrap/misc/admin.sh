@@ -22,4 +22,9 @@ curl mhkr.io/key.pub | gpg --import
 gpg --edit-key matthecker@pm.me
 gpg-connect-agent "scd serialno" "learn --force" /bye
 
+pushd ~
+  git clone git@mhkr.io:/srv/git/pass.git .password-store
+  git remote add origin git@mhkr.io:/srv/git/pass.git
+popd
+
 "$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"
