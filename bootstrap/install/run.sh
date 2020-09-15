@@ -103,13 +103,10 @@ yay -S --noconfirm \
     picom-git \
     expect \
     w3m \
-    yubikey-manager \
-    yubikey-manager-qt \
-    yubioath-desktop \
     yajl
 
-# yay -Sc --noconfirm \
-#     rescuetime2
+yay -S --noconfirm \
+    rescuetime2 || echo "rescuetime2 failed"
 
 echo "###############################################"
 echo "enable services"
