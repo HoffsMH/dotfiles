@@ -12,7 +12,7 @@ echo "###############################################"
 
 sudo pacman -Syu
 yay -Syu
-yay -Sc --noconfirm \
+yay -S --noconfirm \
     pigz \
     manjaro-architect \
     cups \
