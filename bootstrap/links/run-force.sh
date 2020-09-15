@@ -21,7 +21,7 @@ do
       mkdir -p "$h$newdirn"
 
     fi
-    chmod a-rwx "$i"
+    chmod go-rwx "$i"
     chmod u+rw "$i"
     ln -sf "$i" "$h$newdirn/$basen"
   fi
