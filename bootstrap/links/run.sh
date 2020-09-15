@@ -20,7 +20,7 @@ do
       echo "$h$newdirn/$basen"
       mkdir -p "$h$newdirn"
 
-      chmod a-rwx "$i"
+      chmod go-rwx "$i"
       chmod u+rw "$i"
       ln -sf "$i" "$h$newdirn/$basen"
     fi

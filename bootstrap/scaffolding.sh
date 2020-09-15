@@ -13,6 +13,7 @@ mkdir -p "$HOME/personal/media/audio/capture/"
 mkdir -p "$HOME/personal/media/video/capture/"
 mkdir -p "$HOME/personal/media/image/capture"
 mkdir -p "$HOME/personal/media/text/capture"
+mkdir -p "$HOME/personal/media/software/capture"
 mkdir -p "$HOME/personal/jrnl"
 
 sudo mkdir -p "/usr/local/opt/zlib/lib"
