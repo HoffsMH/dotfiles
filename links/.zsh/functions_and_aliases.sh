@@ -416,3 +416,10 @@ compressdisk() {
 compressedimgtodisk() {
   gzip -cd < $1| sudo dd of=$2 status=progress
 }
+
+######################################################
+# PASS
+######################################################
+
+alias passedit='pass edit -e "$EDITOR --wait"'
+alias passc="pass show -c"
