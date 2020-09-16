@@ -19,11 +19,10 @@ sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
 sudo hwclock -w
 
 "$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"
+# "$HOME/personal/dotfiles/bootstrap/install/yubikey.sh"
 
-"$HOME/personal/dotfiles/bootstrap/install/yubikey.sh"
-
-pushd ~
-  git clone git@mhkr.io:/srv/git/pass.git .password-store
-  git remote add origin git@mhkr.io:/srv/git/pass.git
-popd
+# pushd ~
+#   git clone git@mhkr.io:/srv/git/pass.git .password-store
+#   git remote add origin git@mhkr.io:/srv/git/pass.git
+# popd
 
