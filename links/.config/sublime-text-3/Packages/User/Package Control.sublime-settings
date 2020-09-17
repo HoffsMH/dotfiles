@@ -2,25 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Babel",
-		"BracketHighlighter",
-		"Direnv",
-		"Dockerfile Syntax Highlighting",
-		"Elixir",
-		"ElixirSublime",
-		"Elm Syntax Highlighting",
-		"Enhanced Clojure",
-		"External REPL",
-		"Git",
-		"Handlebars",
-		"MarkdownPreview",
-		"Parinfer",
-		"Pretty JSON",
-		"Splunk Conf File Syntax Highlighting",
-		"SublimeLinter",
-		"SublimeREPL",
-		"Terraform",
-		"ToggleNeoVintageous"
 	],
 	"installed_packages":
 	[
