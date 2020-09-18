@@ -179,7 +179,6 @@ alias pyenvinstall="CPPFLAGS='-I/usr/local/opt/zlib/include' pyenv install -v"
 # JS/Ember
 alias ya='yarn'
 
-
 # elixir
 alias miex="iex -S mix"
 alias miet="iex -S mix test"
@@ -195,13 +194,8 @@ alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
 export ytgo_template_location="$HOME/personal/dotfiles/samples/bin/ytgo"
 export ytgo_location="$HOME/bin/ytgo"
 
-ytclear() {
-  tl rm $yto_location
-  cp -f $ytgo_template_location $ytgo_location
-}
 alias ytreport='cat $ytgo_location'
 alias ytsubl='subl3 ~/bin/ytgo'
-
 alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 
 ######################################################
@@ -237,7 +231,6 @@ fh() {
     # linux needs -r
     print -z $(echo $zshhist $seshist | fzf +s --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
-
 
 # copies history commend to clipboard
 fhl() {
@@ -291,7 +284,6 @@ task() {
     taskell
     popd
 }
-
 
 ######################################################
 # Text Editing
@@ -398,13 +390,12 @@ alias nmapo="sudo nmap -O -v"
 # specify your repo with env variable or -r
 alias resticbrowse="restic mount /media/restic"
 
-###
+#######################
 # grrrrr
-###
+#######################
 
 alias mkup="sudo rm -fr ./tmp && make up"
 alias rmup="sudo rm -fr ./tmp && make up"
-
 
 ######################################################
 # INFO
