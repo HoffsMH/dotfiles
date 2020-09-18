@@ -61,5 +61,8 @@ hyper + v
 @hyper + @shift + y ; w
   notify-send "starting download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/library/wall/wall-cp/. && notify-send "wall paper download of $(xclip -o)"
 
+@hyper + @shift + y ; m
+  notify-send "starting meme download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/library/meme/. && notify-send "meme download of $(xclip -o)"
+
 @hyper + @shift + p
   notify-send "playing $(xclip -o)" && mpv --no-audio-display --loop-playlist $(xclip -o)
