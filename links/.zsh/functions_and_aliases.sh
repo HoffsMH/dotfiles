@@ -279,11 +279,7 @@ alias dockerstartdaemon='sudo systemctl stop docker.service'
 # stop the docker daemon
 alias dockerstopdaemon='sudo systemctl start docker.service'
 
-task() {
-    pushd $HOME/personal/01-schedule/board
-    taskell
-    popd
-}
+alias task='taskell "$HOME/personal/00-capture/board/taskell.md"'
 
 ######################################################
 # Text Editing
