@@ -412,3 +412,5 @@ compressedimgtodisk() {
 
 alias passedit='pass edit -e "$EDITOR --wait"'
 alias passc="pass show -c"
+
+alias gcor='git checkout links/.config/ranger'

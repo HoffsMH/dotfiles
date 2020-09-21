@@ -24,6 +24,9 @@ sudo rm -fr ~/.zshrc
 sudo rm -fr ~/.zprofile
 sudo rm -fr ~/.xinitrc
 sudo rm -fr ~/.Xmodmap
+sudo rm -fr ~/Documents
+sudo rm -fr ~/Downloads
+sudo rm -fr ~/Desktop
 
 sudo mkdir -p /usr/share/fonts/OTF
 sudo cp -avr $HOME/personal/dotfiles/fonts/OTF/* /usr/share/fonts/OTF
