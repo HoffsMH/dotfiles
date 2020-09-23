@@ -1,16 +1,9 @@
+
 #! /bin/bash
 
 echo "###############################################"
 echo "yubikey wiring"
 echo "###############################################"
-
-yay -S --noconfirm \
-    yubikey-manager \
-    yubikey-manager-qt \
-    yubioath-desktop
-
-sudo systemctl enable "pcscd.service"
-sudo systemctl start "pcscd.service"
 
 curl mhkr.io/key.pub | gpg --import
 fpr=$(curl mhkr.io/key.pub | gpg --with-fingerprint --with-colons | grep fpr | cut -d ':' -f 10)

@@ -20,5 +20,6 @@ sudo hwclock -w
 
 "$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"
 
-"$HOME/personal/dotfiles/bootstrap/install/yubikey.sh"
+"$HOME/personal/dotfiles/bootstrap/install/yubikey-software.sh"
+"$HOME/personal/dotfiles/bootstrap/install/yubikey-device.sh"
 
