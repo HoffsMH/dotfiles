@@ -127,7 +127,7 @@ systemctl enable --user dunst.service
 systemctl start --user dunst.service || echo "starting dunst failed"
 
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
-"$HOME/personal/dotfiles/bootstrap/install/gcloud.sh"
+# "$HOME/personal/dotfiles/bootstrap/install/gcloud.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dwm.sh"
 "$HOME/personal/dotfiles/bootstrap/install/tl.sh"
 "$HOME/personal/dotfiles/bootstrap/install/docker.sh"

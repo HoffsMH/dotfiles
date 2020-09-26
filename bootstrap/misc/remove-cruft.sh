@@ -12,4 +12,4 @@ echo "###############################################"
        lightdm-gtk-greeter-settings || echo "lightdm already uninstalled"
 
 yay -R --noconfirm \
-    firefox
+    firefox || echo "firefox already uninstalled"
