@@ -2,9 +2,7 @@
 
 source "$HOME/.envrc"
 
-if ! pgrep -x "polybar" ; then
-  echo "polybar not loaded"
-  ~/bin/reload-polybar
-fi
+pkill "^polybar"
+~/bin/reload-polybar
 
 ~/bin/setwall
