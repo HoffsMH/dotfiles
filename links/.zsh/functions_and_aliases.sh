@@ -404,10 +404,10 @@ alias rmup="sudo rm -fr ./tmp && make up"
 alias deviceinfo='sudo dmidecode | ag --pager cat -A 9 -B 0 "System Information"'
 
 compressdisk() {
-  sudo dd if=$1 status=progress conv=sparse | gzip -c > ~/personal/media/software/capture/$(basename $1).img.gz
+  sudo dd if=$1 status=progress conv=sparse | xz -T 0 -v -v -c -z > ~/personal/media/software/capture/$(basename $1).iso.xz
 }
 compressedimgtodisk() {
-  gzip -cd < $1| sudo dd of=$2 status=progress
+  xz -T 0 -v -v -c -d < $1 | sudo dd of=$2 status=progress
 }
 
 ######################################################
