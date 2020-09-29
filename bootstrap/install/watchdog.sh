@@ -9,5 +9,5 @@ echo "###############################################"
 yay -S --noconfirm \
   watchdog
 
-systemctl enable  watchdog.service || echo "enabling dunst failed"
-systemctl start   watchdog.service || echo "starting dunst failed"
+systemctl enable  watchdog.service || echo "enabling watchdog failed"
+systemctl start   watchdog.service || echo "starting watchdog failed"
