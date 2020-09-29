@@ -47,7 +47,7 @@ ytdlv() {
 
     echo  downloading "$yturl"
 
-    youtube-dl -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/archive -o "~/personal/media/video/capture/%(title)s-%(id)s.%(ext)s" $yturl
+    youtube-dl -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/video -o "~/personal/media/video/capture/%(title)s-%(id)s.%(ext)s" $yturl
 }
 
 ytdla() {
@@ -56,7 +56,7 @@ ytdla() {
 
     echo  downloading "$yturl"
 
-    youtube-dl  -x  -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/archive --audio-format 'mp3' -i --audio-quality 0 -o "~/personal/media/audio/capture/%(title)s-%(uploader)s-%(id)s.%(ext)s" $yturl
+    youtube-dl  -x  -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/audio --audio-format 'mp3' -i --audio-quality 0 -o "~/personal/media/audio/capture/%(title)s-%(uploader)s-%(id)s.%(ext)s" $yturl
 }
 
 installytdl() {
