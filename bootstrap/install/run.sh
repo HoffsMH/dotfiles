@@ -15,7 +15,7 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
-    pigz \
+    parallel \
     manjaro-architect \
     cups \
     cups-pdf \

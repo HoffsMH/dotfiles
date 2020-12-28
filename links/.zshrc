@@ -35,3 +35,4 @@ if [ -f '/home/hoffs/.config/google-cloud-sdk/google-cloud-sdk/completion.zsh.in
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

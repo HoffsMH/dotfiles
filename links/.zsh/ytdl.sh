@@ -45,18 +45,30 @@ ytdlv() {
     clipboard=$(/usr/bin/xclip -o)
     yturl=${1:-$clipboard}
 
-    echo  downloading "$yturl"
+    if [ -z "$2" ]
+      then
+        dir_name=""
+      else
+        dir_name="/$2"
+    fi
+    echo  downloading "$yturl" to "$dir_name"
 
-    youtube-dl -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/video -o "~/personal/media/video/capture/%(title)s-%(id)s.%(ext)s" $yturl
+    youtube-dl -c --sleep-interval 2 --max-sleep-interval 4 --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/video -o "~/personal/media/video/capture$dir_name/%(title)s-%(id)s.%(ext)s" $yturl
 }
 
 ytdla() {
     clipboard=$(/usr/bin/xclip -o)
     yturl=${1:-$clipboard}
 
-    echo  downloading "$yturl"
+    if [ -z "$2" ]
+      then
+        dir_name=""
+      else
+        dir_name="/$2"
+    fi
+    echo  downloading "$yturl" to "$dir_name"
 
-    youtube-dl  -x  -c --sleep-interval 2 --max-sleep-interval 4 --yes-playlist --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/audio --audio-format 'mp3' -i --audio-quality 0 -o "~/personal/media/audio/capture/%(title)s-%(uploader)s-%(id)s.%(ext)s" $yturl
+    youtube-dl  -x  -ci --sleep-interval 2 --max-sleep-interval 4 --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/audio --audio-format 'mp3' --audio-quality 0 -o "~/personal/media/audio/capture$dir_name/%(title)s-%(uploader)s-%(id)s.%(ext)s" $yturl
 }
 
 installytdl() {
