@@ -16,7 +16,10 @@ source ~/.zsh/fzf_settings.sh
 source "$HOME/.zsh/ytdl.sh"
 source "$HOME/.zsh/functions_and_aliases.sh"
 
-# # shell hooks
+# path and shims
+source "$HOME/.zsh/path_and_shims.sh"
+
+# shell hooks
 source ~/.zsh/hooks.sh
 source ~/.zsh/util.sh
 
