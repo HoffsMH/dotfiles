@@ -99,7 +99,6 @@ yay -S --noconfirm \
     slock \
     sxiv \
     rofi \
-    rofi-greenclip \
     sox \
     protonvpn-cli-ng \
     picom-git \

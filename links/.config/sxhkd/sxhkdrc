@@ -40,9 +40,6 @@ control + space
 alt + space
   rofi -show run -matching fuzzy
 
-hyper + v
-  rofi -modi ":greenclip print" -show  -matching fuzzy -run-command '{cmd}'
-
 @hyper + {0,@XF86AudioMute,F10} ; w
   kitty wttr
 
