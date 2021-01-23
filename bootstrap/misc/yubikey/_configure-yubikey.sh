@@ -6,7 +6,8 @@
 # this will register the secret keys on the card
 # gpg --card-status
 
-# admin > passwd set pins (pins never go in pw vault)
+# admin(on) > passwd set pins (pins never go in pw vault)
+# admin(on) > url
 gpg --edit-card
 
 # disable OTP annoyance from accidently touching card
