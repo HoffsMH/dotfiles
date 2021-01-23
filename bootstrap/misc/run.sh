@@ -19,7 +19,6 @@ sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
 sudo hwclock -w
 
 "$HOME/personal/dotfiles/bootstrap/misc/remove-cruft.sh"
-
-"$HOME/personal/dotfiles/bootstrap/install/yubikey-software.sh"
-"$HOME/personal/dotfiles/bootstrap/install/yubikey-device.sh"
+"$HOME/personal/dotfiles/bootstrap/misc/import-gpg-keys.sh"
+"$HOME/personal/dotfiles/bootstrap/misc/pull-down-password-store.sh"
 

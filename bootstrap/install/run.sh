@@ -65,9 +65,7 @@ yay -S --noconfirm \
     zathura-pdf-poppler \
     flameshot \
     seahorse \
-    entr \
     blueman \
-    xorg-xfontsel \
     restic \
     xdotool \
     sxhkd \
@@ -103,7 +101,6 @@ yay -S --noconfirm \
     protonvpn-cli-ng \
     picom-git \
     expect \
-    w3m \
     yajl
 
 yay -S --noconfirm \
@@ -126,9 +123,8 @@ systemctl enable --user dunst.service
 systemctl start --user dunst.service || echo "starting dunst failed"
 
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
-# "$HOME/personal/dotfiles/bootstrap/install/gcloud.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dwm.sh"
 "$HOME/personal/dotfiles/bootstrap/install/tl.sh"
 "$HOME/personal/dotfiles/bootstrap/install/docker.sh"
 "$HOME/personal/dotfiles/bootstrap/install/yt-dl.sh"
-"$HOME/personal/dotfiles/bootstrap/install/watchdog.sh"
+"$HOME/personal/dotfiles/bootstrap/install/yubikey-software.sh"

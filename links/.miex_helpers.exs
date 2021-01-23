@@ -2,8 +2,7 @@ Code.compiler_options(ignore_module_conflict: false)
 
 defmodule M do
   def mx(task) do
-    Mix.Task.reenable task
-    Mix.Task.run task, []
+    mx(task, [])
   end
 
   def mx(task, args) do
@@ -33,6 +32,6 @@ defmodule M do
   end
 
   def export_similar?({export, _}, call) do
-    String.jaro_distance(Atom.to_string(export), call) > 0.60
+    String.jaro_distance(Atom.to_string(export), call) > 0.70
   end
 end

@@ -4,7 +4,6 @@ echo "###############################################"
 echo "CREATE DIRS"
 echo "###############################################"
 
-mkdir -p "$HOME/code/util"
 mkdir -p "$HOME/code/paid/"
 mkdir -p "$HOME/code/fun/"
 mkdir -p "$HOME/personal/00-capture/"

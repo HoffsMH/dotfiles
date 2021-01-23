@@ -8,10 +8,6 @@ set -e
 
 "$HOME/personal/dotfiles/bootstrap/install/run.sh"
 
-"$HOME/personal/dotfiles/bootstrap/misc/admin.sh"
+"$HOME/personal/dotfiles/bootstrap/misc/run.sh"
 
 # ./links/mac-hardware.sh
-
-# ./misc/gen-ssh-keys.sh # no longer needed with yubikey
-
-
