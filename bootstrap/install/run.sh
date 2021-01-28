@@ -27,7 +27,6 @@ yay -S --noconfirm \
     lxappearance \
     fwup \
     python-pillow-git \
-    openssh-askpass \
     squashfs-tools \
     ncurses5-compat-libs \
     stalonetray \
@@ -50,6 +49,7 @@ yay -S --noconfirm \
     the_silver_searcher \
     erlang \
     elixir \
+    st \
     kitty \
     evtest \
     xcape \
@@ -100,9 +100,7 @@ yay -S --noconfirm \
     rofi \
     sox \
     protonvpn-cli-ng \
-    picom-git \
-    expect \
-    yajl
+    picom-git
 
 yay -S --noconfirm \
     rescuetime2 || echo "rescuetime2 failed"
