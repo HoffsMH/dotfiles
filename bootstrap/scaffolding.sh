@@ -47,6 +47,7 @@ ln -sf "$HOME/pCloudDrive/personal/media/image/library" "$HOME/personal/media/im
 ln -sf "$HOME/pCloudDrive/personal/media/audio/library" "$HOME/personal/media/audio/"
 ln -sf "$HOME/pCloudDrive/personal/media/video/library" "$HOME/personal/media/video/"
 ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/text/"
+ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/text/"
 
 # home
 ln -sf "$HOME/code/util/oh-my-zsh" "$HOME/.oh-my-zsh"

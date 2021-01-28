@@ -15,6 +15,7 @@ echo "###############################################"
 sudo pacman -Syu
 yay -Syu
 yay -S --noconfirm \
+    trezor-suite-appimage \
     parallel \
     manjaro-architect \
     cups \
