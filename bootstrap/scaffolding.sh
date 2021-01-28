@@ -50,7 +50,6 @@ ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/tex
 ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/text/"
 
 # home
-ln -sf "$HOME/code/util/oh-my-zsh" "$HOME/.oh-my-zsh"
 ln -sf "$HOME/code/util/asdf" "$HOME/.asdf"
 
 chmod +x "$HOME/bin/ytgo"

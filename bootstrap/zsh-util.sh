@@ -3,11 +3,10 @@
 set -e
 
 echo "###############################################"
-echo "GET UTILS"
+echo "ZSH UTIL"
 echo "###############################################"
 
-mkdir -p "$HOME/code/util"
-pushd "$HOME/code/util"
+pushd "$HOME"
 
 rm -rf oh-my-zsh
 rm -rf powerlevel10k
