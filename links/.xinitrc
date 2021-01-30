@@ -64,7 +64,7 @@ fi
 source "$HOME/.envrc"
 # -c shadow effects
 # -b run in background
-picom -c --experimental-backends --backend glx -b --no-fading-openclose
+# picom -c --experimental-backends --backend glx -b --no-fading-openclose
 
 dunst &
 
