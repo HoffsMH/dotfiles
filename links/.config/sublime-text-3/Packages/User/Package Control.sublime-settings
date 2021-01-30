@@ -5,7 +5,6 @@
 	],
 	"installed_packages":
 	[
-		"3D Tool (Async Burst-Mode)",
 		"Babel",
 		"BetterFindBuffer",
 		"BracketHighlighter",
@@ -30,13 +29,11 @@
 		"Golang Build",
 		"Handlebars",
 		"Highlight Trailing Whitespace",
-		"IcedCoffeeScript",
 		"InsertDate",
 		"JSON Reindent",
 		"Leiningen",
 		"LiveReload",
 		"MarkdownPreview",
-		"Marked App Menu",
 		"NeoVintageous",
 		"Package Control",
 		"PackageResourceViewer",
@@ -50,11 +47,9 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-clj-kondo",
 		"SublimeLinter-eslint",
-		"SublimeREPL",
 		"Terrafmt",
 		"Terraform",
 		"ToggleNeoVintageous",
-		"Zen Tabs",
-		"zenburn"
+		"Zen Tabs"
 	]
 }
