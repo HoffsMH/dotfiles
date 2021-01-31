@@ -6,3 +6,4 @@ fpr=$(curl mhkr.io/key.pub | gpg --with-fingerprint --with-colons | grep fpr | c
 echo  "$fpr:6:" | gpg --homedir "$HOME/.gnupg" --import-ownertrust
 
 gpg-connect-agent "scd serialno" "learn --force" /bye
+gpg-connect-agent reloadagent /bye
