@@ -356,12 +356,6 @@ alias gpg-import-my-key='curl mhkr.io/key.pub | gpg --import'
 alias addoath="ykman oath add -t $1 $(xclip -o)"
 
 ######################################################
-# ricing
-######################################################
-
-alias polybar-workflow='exa ~/personal/dotfiles/links/.config/polybar/config/polybarconfig| entr polybar-msg cmd restart'
-
-######################################################
 # searching
 ######################################################
 

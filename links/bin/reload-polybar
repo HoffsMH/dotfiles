@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-for m in $(polybar --list-monitors | cut -d":" -f1); do
-    echo " MONITOR IS  $m"
-    MONITOR=$m polybar --reload main -c ~/.config/polybar/config/polybarconfig > /dev/null 2>&1 &
-done

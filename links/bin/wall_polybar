@@ -1,8 +1,0 @@
-#!/bin/bash
-
-source "$HOME/.envrc"
-
-pkill "^polybar"
-~/bin/reload-polybar
-
-~/bin/setwall

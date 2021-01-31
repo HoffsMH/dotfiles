@@ -93,7 +93,6 @@ yay -S --noconfirm \
     bfg \
     gnome-calculator \
     brave-bin \
-    polybar-dwm-module \
     font-manager \
     slock \
     sxiv \
