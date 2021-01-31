@@ -26,7 +26,6 @@ yay -S --noconfirm \
     taskell \
     lxappearance \
     fwup \
-    python-pillow-git \
     squashfs-tools \
     ncurses5-compat-libs \
     stalonetray \
@@ -84,7 +83,6 @@ yay -S --noconfirm \
     htop \
     colorgrab \
     bitwarden-bin \
-    bitwarden-cli \
     arandr \
     peek \
     libratbag \
@@ -97,8 +95,7 @@ yay -S --noconfirm \
     slock \
     sxiv \
     sox \
-    protonvpn-cli-ng \
-    picom-git
+    protonvpn-cli-ng
 
 yay -S --noconfirm \
     rescuetime2 || echo "rescuetime2 failed"
