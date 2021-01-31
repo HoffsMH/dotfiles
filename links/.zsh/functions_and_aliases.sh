@@ -107,6 +107,7 @@ alias gbn="git rev-parse --abbrev-ref HEAD"
 
 alias gopen="git open origin &"
 alias gcf="git clean -f -d"
+alias lines-of-code="git ls-files | xargs wc -l"
 
 # finds text across all commits, be careful when searching to not use common terms
 # useful for searching for code that you knew existed at one point
@@ -262,7 +263,7 @@ alias trm='tl rm'
 
 alias open="xdg-open"
 alias sucap="subl ~/personal/00-capture/capture.md"
-alias jf='TERM=kitty SHELL=~/bin/r.shell ranger'
+alias jf='TERM=st SHELL=~/bin/r.shell ranger'
 alias jfc='jf ~/personal/00-capture'
 alias jfa='jf ~/personal/media/audio'
 alias jfi='jf ~/personal/media/image'
