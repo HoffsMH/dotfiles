@@ -83,7 +83,7 @@
 
     // Name of program to use when starting a ":shell".
     // Example: gnome-terminal
-    "vintageous_terminal": "kitty",
+    "vintageous_terminal": "st",
 
     // Enable key bindings prefaced by the control-key.
     "vintageous_use_ctrl_keys": false,

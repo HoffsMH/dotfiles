@@ -34,20 +34,17 @@ control + alt + Right
 control + alt + Left
   xdotool search --name "firefox" key "ctrl+Page_Up"
 
-control + space
-  rofi -show drun -matching fuzzy
-
 alt + space
   rofi -show run -matching fuzzy
 
 @hyper + {0,@XF86AudioMute,F10} ; w
-  kitty wttr
+  st wttr
 
 @hyper + {F11, @XF86AudioLowerVolume, minus}
-  kitty htop
+  st htop
 
 @hyper + {@XF86AudioRaiseVolume, F12, equal}
-  kitty pulsemixer
+  st pulsemixer
 
 @hyper + @shift + y ; a
   ~/bin/yta

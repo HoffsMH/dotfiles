@@ -1,6 +1,6 @@
 export EDITOR="/usr/bin/subl3"
 export BROWSER="brave"
-export TERMINAL="kitty"
+export TERMINAL="st"
 export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
 
