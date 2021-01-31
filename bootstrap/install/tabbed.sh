@@ -1,16 +1,16 @@
 #! /bin/bash
 
 echo "###############################################"
-echo "DWM"
+echo "TABBED"
 echo "###############################################"
 
 mkdir -p "$HOME/code/util"
 pushd "$HOME/code/util"
 
-rm -rf dwm
+rm -rf tabbed
 
-git clone git://github.com/HoffsMH/dwm-clean.git
+git clone git://github.com/HoffsMH/tabbed.git
 
-pushd ~/code/util/dwm-clean
+pushd ~/code/util/tabbed
   sudo make clean install
 popd

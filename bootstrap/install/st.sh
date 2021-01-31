@@ -1,16 +1,16 @@
 #! /bin/bash
 
 echo "###############################################"
-echo "DWM"
+echo "ST"
 echo "###############################################"
 
 mkdir -p "$HOME/code/util"
 pushd "$HOME/code/util"
 
-rm -rf dwm
+rm -rf st
 
-git clone git://github.com/HoffsMH/dwm-clean.git
+git clone git://github.com/HoffsMH/st.git
 
-pushd ~/code/util/dwm-clean
+pushd ~/code/util/st
   sudo make clean install
 popd

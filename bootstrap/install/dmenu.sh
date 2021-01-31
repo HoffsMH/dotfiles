@@ -1,16 +1,16 @@
 #! /bin/bash
 
 echo "###############################################"
-echo "DWM"
+echo "DMENU"
 echo "###############################################"
 
 mkdir -p "$HOME/code/util"
 pushd "$HOME/code/util"
 
-rm -rf dwm
+rm -rf dmenu
 
-git clone git://github.com/HoffsMH/dwm-clean.git
+git clone git://github.com/HoffsMH/dmenu.git
 
-pushd ~/code/util/dwm-clean
+pushd ~/code/util/dmenu
   sudo make clean install
 popd

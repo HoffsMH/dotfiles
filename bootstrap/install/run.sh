@@ -97,7 +97,6 @@ yay -S --noconfirm \
     font-manager \
     slock \
     sxiv \
-    rofi \
     sox \
     protonvpn-cli-ng \
     picom-git
@@ -122,7 +121,10 @@ systemctl enable --user dunst.service
 systemctl start --user dunst.service || echo "starting dunst failed"
 
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
+"$HOME/personal/dotfiles/bootstrap/install/dmenu.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dwm.sh"
+"$HOME/personal/dotfiles/bootstrap/install/st.sh"
+"$HOME/personal/dotfiles/bootstrap/install/tabbed.sh"
 "$HOME/personal/dotfiles/bootstrap/install/tl.sh"
 "$HOME/personal/dotfiles/bootstrap/install/docker.sh"
 "$HOME/personal/dotfiles/bootstrap/install/yt-dl.sh"
