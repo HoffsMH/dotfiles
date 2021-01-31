@@ -141,10 +141,6 @@ alias gr1="git reset HEAD~1"
 # pretty git log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-# creates a secret gist and copys url
-# useful when trying to show some text to someone across the internet. replacement for pastebin
-alias gistm='gist -c -s'
-
 
 # usage: $ gd master | difi
 alias difi='diff2html -i stdin -s side'
@@ -327,10 +323,6 @@ alias kbdsetup="xmodmap ~/.Xmodmap && echo 'xmodmap' \
 
 alias xfcesesh="export SESSION=xfce4-session && startx"
 alias dwmsesh="export SESSION=dwm && startx"
-alias bspwmsesh="export SESSION=bspwm && startx"
-
-# rofi
-alias reloadrofi="rofi -dmenu -config $HOME/rofi/config.rasi"
 
 ######################################################
 # bw
@@ -359,7 +351,11 @@ alias addoath="ykman oath add -t $1 $(xclip -o)"
 # searching
 ######################################################
 
-alias ag="ag $* --pager 'less -R' -A 3 -B 3 --hidden"
+alias ag="/usr/bin/ag $* -U --pager 'less -R' -A 3 -B 3 \
+  --hidden \
+  --ignore .git \
+  --ignore '**google-chrome**' \
+  --ignore '**Brave-Browser**'"
 
 ######################################################
 # Time
@@ -376,7 +372,6 @@ settime() {
 ######################################################
 
 alias nmapo="sudo nmap -O -v"
-
 
 ######################################################
 # Restic and backup stuff

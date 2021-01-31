@@ -34,9 +34,6 @@ control + alt + Right
 control + alt + Left
   xdotool search --name "firefox" key "ctrl+Page_Up"
 
-alt + space
-  rofi -show run -matching fuzzy
-
 @hyper + {0,@XF86AudioMute,F10} ; w
   st wttr
 

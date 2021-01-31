@@ -14,3 +14,4 @@
 .emacs.d/settings/*.el
 .emacs.d/projectile-bookmarks.eld
 common/bin/ytgo
+links/.config/google-chrome/Default/Preferences
