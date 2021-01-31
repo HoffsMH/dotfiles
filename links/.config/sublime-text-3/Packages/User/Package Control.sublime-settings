@@ -16,10 +16,8 @@
 		"Elixir",
 		"ElixirSublime",
 		"ElixirSyntax",
-		"Elm Syntax Highlighting",
 		"Emmet",
 		"ExpandRegion",
-		"External REPL",
 		"FileIcons",
 		"Git",
 		"Git Config",
@@ -38,15 +36,12 @@
 		"paredit",
 		"Parinfer",
 		"Path Tools",
-		"Pretty JSON",
 		"Sass",
 		"Sort Lines By Selection",
 		"Splunk Conf File Syntax Highlighting",
 		"SublimeLinter",
 		"SublimeLinter-eslint",
-		"Terrafmt",
-		"Terraform",
 		"ToggleNeoVintageous",
-		"Zen Tabs"
-	]
+		"Zen Tabs",
+	],
 }

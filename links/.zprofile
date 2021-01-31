@@ -1,4 +1,4 @@
-export EDITOR="/usr/bin/subl3"
+export EDITOR="/opt/sublime_text/sublime_text"
 export BROWSER="brave"
 export TERMINAL="st"
 export READER="zathura"
