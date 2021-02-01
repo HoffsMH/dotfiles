@@ -3,6 +3,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 setopt INC_APPEND_HISTORY
 
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=1000
+setopt appendhistory
 
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker mix)
