@@ -3,17 +3,25 @@
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
 - put all the system specific things into environment  via envrc  (dont forget to fill out the samplefile too) and then pull from that in poly bar and whatever else is capable of pulling from environment... unfortch that sublimetext might need to be a sample :(
 - gtk theme that matches gruvbox better
+- get a sample vim config going
+- get some sort of cpu benchmarking
+- get some sort of network benchmarking
+- get stalone tray centered and huge
 
 ## Warm
 
-- get some sort of network benchmarking
-- get some sort of cpu benchmarking
-- get stalone tray centered and huge
 - thunar default save location
-- go utils
 - get rofi out of tl
 - get polybar out of tl
 - get bw out of tl
+- separate system for go binarys
+    * [ ] gopass
+    * [ ] rck
+    * [ ] dck
+    * [ ] restic?
+    * [ ] axel?
+- get out of fzf altogether in favor of dmenu
+- get an lf rig up
 
 ## Selected
 

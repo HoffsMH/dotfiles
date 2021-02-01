@@ -12,90 +12,89 @@ echo "###############################################"
 echo "YAY BASIC RECIPE"
 echo "###############################################"
 
+installs=(
+    "parallel"
+    "manjaro-architect"
+    "wmctrl"
+    "cups"
+    "cups-pdf"
+    "sshpass"
+    "gopass"
+    "linux-lts-acpi_call"
+    "taskell"
+    "lxappearance"
+    "fwup"
+    "squashfs-tools"
+    "ncurses5-compat-libs"
+    "stalonetray"
+    "dunst"
+    "gnutls"
+    "exa"
+    "jq"
+    "xclip"
+    "xorg-xclipboard"
+    "xorg-xsetroot"
+    "feh"
+    "pfetch"
+    "openssh"
+    "mpv"
+    "light"
+    "scrot"
+    "the_silver_searcher"
+    "erlang"
+    "elixir"
+    "evtest"
+    "xcape"
+    "xorg-font-util"
+    "xorg-fonts-encodings"
+    "xorg-xev"
+    "jdk-openjdk"
+    "ntfs-3g"
+    "poppler"
+    "redshift"
+    "axel"
+    "syncthing"
+    "zathura"
+    "zathura-pdf-poppler"
+    "flameshot"
+    "seahorse"
+    "bluez-utils"
+    "restic"
+    "xdotool"
+    "sxhkd"
+    "fasd"
+    "fzf"
+    "pulsemixer"
+    "direnv"
+    "slack-desktop"
+    "ranger"
+    "sublime-text-dev"
+    "google-chrome"
+    "pcloud-drive"
+    "pmount"
+    "htop"
+    "colorgrab"
+    "bitwarden-bin"
+    "arandr"
+    "peek"
+    "libratbag"
+    "piper"
+    "inotify-tools"
+    "bfg"
+    "gnome-calculator"
+    "brave-bin"
+    "font-manager"
+    "slock"
+    "sxiv"
+    "sox"
+    "protonvpn-cli-ng"
+)
+
 sudo pacman -Syu
 yay -Syu
-yay -S --noconfirm \
-    trezor-suite-appimage \
-    parallel \
-    manjaro-architect \
-    cups \
-    cups-pdf \
-    sshpass \
-    gopass \
-    linux-lts-acpi_call \
-    taskell \
-    lxappearance \
-    fwup \
-    squashfs-tools \
-    ncurses5-compat-libs \
-    stalonetray \
-    dunst \
-    gnutls \
-    exa \
-    jq \
-    xclip \
-    xorg-xclipboard \
-    xorg-xsetroot \
-    feh \
-    tree \
-    neofetch \
-    pfetch \
-    openssh \
-    mpv \
-    light \
-    scrot \
-    figlet \
-    the_silver_searcher \
-    erlang \
-    elixir \
-    st \
-    kitty \
-    evtest \
-    xcape \
-    xorg-font-util \
-    xorg-fonts-encodings \
-    xorg-xev \
-    jdk-openjdk \
-    ntfs-3g \
-    poppler \
-    redshift \
-    axel \
-    syncthing \
-    zathura \
-    zathura-pdf-poppler \
-    flameshot \
-    seahorse \
-    blueman \
-    restic \
-    xdotool \
-    sxhkd \
-    fasd \
-    fzf \
-    pulsemixer \
-    direnv \
-    slack-desktop \
-    ranger \
-    sublime-text-dev \
-    google-chrome \
-    ruby-build \
-    pcloud-drive \
-    pmount \
-    htop \
-    colorgrab \
-    bitwarden-bin \
-    arandr \
-    peek \
-    libratbag \
-    piper \
-    inotify-tools \
-    bfg \
-    gnome-calculator \
-    brave-bin \
-    font-manager \
-    slock \
-    sxiv \
-    sox \
-    protonvpn-cli-ng
+
+echo $installs
+echo $installs | xargs yay -S --noconfirm
 
 yay -S --noconfirm \
     rescuetime2 || echo "rescuetime2 failed"
