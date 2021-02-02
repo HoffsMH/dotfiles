@@ -1,0 +1,7 @@
+set hidden
+set dircounts
+set incsearch
+set mouse
+set icons
+
+map D delete
