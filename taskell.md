@@ -19,7 +19,7 @@
     * [ ] rck
     * [ ] dck
     * [ ] restic?
-    * [ ] axel?
+    * [ ] lf
 - get out of fzf altogether in favor of dmenu
 - get an lf rig up
 

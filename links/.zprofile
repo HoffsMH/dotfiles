@@ -1,6 +1,6 @@
 export EDITOR="/usr/bin/subl"
 export BROWSER="brave"
-export TERMINAL="st"
+export TERMINAL="st-256color"
 export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
 
