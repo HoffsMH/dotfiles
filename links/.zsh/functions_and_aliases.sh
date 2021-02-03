@@ -226,7 +226,7 @@ fh() {
     local zshhist=$(cat ~/.zsh_history)
 
     # linux needs -r
-    print -z $(echo $zshhist $seshist | fzf +s --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
+    print -z $(echo $zshhist $seshist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
 
 # copies history commend to clipboard
@@ -235,7 +235,7 @@ fhl() {
   local zshhist=$(cat ~/.zsh_history)
 
   # linux needs -r
-  cptext $(echo $zshhist $seshist | fzf +s --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
+  cptext $(echo $zshhist $seshist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
 
 ######################################################
