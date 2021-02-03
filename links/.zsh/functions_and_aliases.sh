@@ -259,13 +259,13 @@ alias trm='tl rm'
 
 alias open="xdg-open"
 alias sucap="subl ~/personal/00-capture/capture.md"
-alias jf='TERM=st SHELL=~/bin/r.shell ranger'
-alias jfc='lf ~/personal/00-capture'
-alias jfa='lf ~/personal/media/audio'
-alias jfi='lf ~/personal/media/image'
-alias jfs='lf ~/personal/media/software'
-alias jfs='lf ~/personal/media/text'
-alias jfv='lf ~/personal/media/video'
+alias jf='OPENER=~/bin/linkhandler lf'
+alias jfc='jf ~/personal/00-capture'
+alias jfa='jf ~/personal/media/audio'
+alias jfi='jf ~/personal/media/image'
+alias jfs='jf ~/personal/media/software'
+alias jfs='jf ~/personal/media/text'
+alias jfv='jf ~/personal/media/video'
 
 # open this file
 alias oalias="subl ~/.zsh/functions_and_aliases.sh"

@@ -7,8 +7,9 @@ echo "###############################################"
 
 extras=(
   # "bfg"
+  "zoom"
   # "figlet"
-  # "ruby-build" # may need a mkdir somewhere in /
+  # "ruby-build" # may need sudo mkdir -p "/usr/local/opt/zlib/lib"
   # "neofetch"
   # "trezor-suite-appimage"
   # "phoronix-test-suite"

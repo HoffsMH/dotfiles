@@ -11,9 +11,6 @@
 ## Warm
 
 - thunar default save location
-- get rofi out of tl
-- get polybar out of tl
-- get bw out of tl
 - separate system for go binarys
     * [ ] gopass
     * [ ] rck
@@ -21,17 +18,21 @@
     * [ ] restic?
     * [ ] lf
 - get out of fzf altogether in favor of dmenu
-- get an lf rig up
 
 ## Selected
 
 - dunst expiration
+- lf playing selection -- working on folders
+- lf aliasing
+- lf open shell in location
+- lf run command with $f pre-filled
 
 ## Waiting on Something
 
 
 ## Doing
 
+- xmonad exploration
 
 ## Done
 
@@ -61,3 +62,8 @@
 - dunst actions how to
 - picom bluring command and reinvestigate especially when i get a better laptop -- WONTFIX
 - picom full shadows working on every window type -- WONTFIX
+- lf opening things works
+- get an lf rig up
+- get rofi out of tl
+- get polybar out of tl
+- get bw out of tl

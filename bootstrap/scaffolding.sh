@@ -14,8 +14,6 @@ mkdir -p "$HOME/personal/media/text/capture"
 mkdir -p "$HOME/personal/media/software/capture"
 mkdir -p "$HOME/personal/jrnl"
 
-sudo mkdir -p "/usr/local/opt/zlib/lib"
-
 sudo mkdir -p /media/restic
 sudo chown $USER /media/restic
 
