@@ -46,7 +46,8 @@ ctrl + space
 @hyper + @shift + y ; m
   notify-send "starting meme download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/library/meme/. && notify-send "meme download of $(xclip -o)"
 
+@hyper + @shift + y ; i
+  xclip -o && notify-send "starting image download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/capture/. && notify-send "image download of $(xclip -o)"
+
 @hyper + @shift + p
   notify-send "playing $(xclip -o)" && mpv --no-audio-display --loop-playlist $(xclip -o)
-
-
