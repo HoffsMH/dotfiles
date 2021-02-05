@@ -130,6 +130,7 @@ alias gs="git status"
 alias gr="git reset"
 alias gf="git fetch"
 alias gcm="git commit -m "
+alias gc="git commit"
 alias grb='git rebase'
 alias grba='git rebase --abort'
 alias grbc='git rebase --continue'
@@ -196,7 +197,7 @@ export ytgo_template_location="$HOME/personal/dotfiles/samples/bin/ytgo"
 export ytgo_location="$HOME/bin/ytgo"
 
 alias ytreport='cat $ytgo_location'
-alias ytsubl='subl3 ~/bin/ytgo'
+alias eyt='$EDITOR ~/bin/ytgo'
 alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 
 ######################################################
