@@ -8,12 +8,10 @@ echo "###############################################"
 
 pushd "$HOME"
 
-rm -rf oh-my-zsh
-rm -rf powerlevel10k
-rm -rf zsh-autopair
-rm -rf zsh-syntax-highlighting
+rm -rf .powerlevel10k
+rm -rf .zsh-autopair
+rm -rf .fast-syntax-highlighting
 
-git clone git://github.com/robbyrussell/oh-my-zsh.git
-git clone git://github.com/romkatv/powerlevel10k.git
-git clone git://github.com/hlissner/zsh-autopair.git
-git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone git://github.com/romkatv/powerlevel10k.git .powerlevel10k
+git clone git://github.com/hlissner/zsh-autopair.git .zsh-autopair
+git clone git://github.com/zdharma/fast-syntax-highlighting.git .fast-syntax-highlighting
