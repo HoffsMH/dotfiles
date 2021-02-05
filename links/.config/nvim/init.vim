@@ -14,6 +14,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   " gcc to comment a single line and gc while selecting to
   " comment a selection
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-surround'
 
   " Passive gain, just colors Hex codes #eee, no binds added
   Plug 'ap/vim-css-color'
@@ -36,6 +37,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   " Language specific stuff
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'elixir-editors/vim-elixir'
+  Plug 'mattn/emmet-vim'
 call plug#end()
 
 
@@ -200,6 +202,10 @@ nnoremap <C-S-f> :Ag<cr>
 
 nnoremap q :close<cr>
 nnoremap <C-\> :vsp<cr>
+
+nnoremap <leader>c :e ~/personal/00-capture/capture.md<cr>
+
+
 set autowriteall
 
 augroup custom_term
