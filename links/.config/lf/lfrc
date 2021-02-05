@@ -10,6 +10,7 @@ set icons
 set shell zsh
 
 map D delete
+map L playfolder
 
 # cmds/functions
 cmd open ${{
@@ -26,5 +27,16 @@ cmd open ${{
     esac
 }}
 
+cmd delete ${{
+	tl rm -rf -- "$fx"
+}}
+
 map A rename # at the very end
 map <enter> shell
+
+cmd playfolder ${{
+  play "$fx"
+}}
+
+
+cmd setbg "$1"
