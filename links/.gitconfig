@@ -2,5 +2,5 @@
   name = HoffsMH
   email = matthecker@pm.me
 [core]
-  editor = subl3 -n --wait
+  editor = nvim
   excludesfile = ~/.gitignore_global
