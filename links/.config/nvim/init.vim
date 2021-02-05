@@ -18,6 +18,8 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   " Passive gain, just colors Hex codes #eee, no binds added
   Plug 'ap/vim-css-color'
 
+  Plug 'airblade/vim-gitgutter'
+
   " Somewhat Passive gain, not changing any settings, no binds added
   Plug 'mhinz/vim-startify'
 
@@ -56,6 +58,7 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
+set updatetime=200
 
 " Some basics:
 	nnoremap c "_c

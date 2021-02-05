@@ -20,4 +20,3 @@ ykman openpgp set-touch ENC CACHED-FIXED
 ykman openpgp set-touch ATT CACHED-FIXED
 
 ykman openpgp set-pin-retries 4 4 4
-
