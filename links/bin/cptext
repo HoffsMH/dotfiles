@@ -1,4 +1,4 @@
 #! /usr/bin/bash
 
 
-echo -n $@ | xclip -selection clipboard
+echo -n $@ | xclip -selection clipboard | echo ""

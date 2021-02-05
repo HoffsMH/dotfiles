@@ -42,7 +42,7 @@ mkdir -p ~/.config/.yt-dl-archive
 touch ~/.config/.yt-dl-archive/archive
 
 ytdlv() {
-    clipboard=$(/usr/bin/xclip -o)
+    clipboard=$(/usr/bin/xclip -o || echo "")
     yturl=${1:-$clipboard}
 
     if [ -z "$2" ]
@@ -57,7 +57,7 @@ ytdlv() {
 }
 
 ytdla() {
-    clipboard=$(/usr/bin/xclip -o)
+    clipboard=$(/usr/bin/xclip -o || echo "")
     yturl=${1:-$clipboard}
 
     if [ -z "$2" ]
