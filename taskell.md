@@ -25,6 +25,7 @@
 - dunst expiration
 - vim gitgutter bg color --
 - vim editor config or maybe some way to pick up tab rules from the file
+- fine ressurect tmux for devops tasks
 
 ## Waiting on Something
 

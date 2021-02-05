@@ -6,8 +6,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-# sets up oh-my-zsh
-source ~/.zsh/oh_my_zsh_settings.sh
+export ZSH="$HOME/.zsh"
+setopt INC_APPEND_HISTORY
+
+export PISTOL_CHROMA_STYLE=arduino
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=1000
+setopt appendhistory
+
+unalias -a
+
 
 # fzf settings
 source ~/.zsh/fzf_settings.sh
