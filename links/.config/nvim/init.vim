@@ -36,11 +36,20 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
+
+" set window title depending on file
 set title
+
+" tells vim that the background is dark
 set bg=dark
+
 set go=a
+
+" https://vim.fandom.com/wiki/Using_the_mouse_for_Vim_in_an_xterm
+" all mouse support ?
 set mouse=a
-set nohlsearch
+
+" use the sytem clipboard
 set clipboard+=unnamedplus
 
 set noshowmode
@@ -96,7 +105,9 @@ set noshowcmd
     autocmd BufRead,BufNewFile xresources,xdefaults set filetype=xdefaults
     autocmd BufWritePost .Xresources,Xdefaults,xresources,xdefaults !xrdb %
 
-" Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
+" Turns off highlighting on the bits of code that are changed, so the line that
+" is changed is highlighted but the actual text that has changed stands out on
+" the line and is readable.
 if &diff
     highlight! link DiffText MatchParen
 endif
@@ -166,6 +177,7 @@ command! -nargs=* Ag call fzf#run({
 \ 'sink*':    function('<sid>ag_handler'),
 \ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
 \            '--multi --bind=ctrl-a:select-all,ctrl-d:deselect-all '.
+\	     '--no-preview '.
 \            '--color hl:68,hl+:110',
 \ 'down':    '50%'
 \ })
@@ -179,7 +191,7 @@ let g:floaterm_width=100
 tnoremap <Esc> <C-\><C-N>
 
 " fzf
-nnoremap <C-p> :GFiles<cr>
+nnoremap <C-p> :FloatermNew fzf<cr>
 nnoremap <C-b> :Buffers<cr>
 nnoremap <C-S-f> :Ag<cr>
 
@@ -191,3 +203,11 @@ augroup custom_term
     autocmd!
     autocmd TermOpen * setlocal bufhidden=hide
 augroup END
+
+" automatically updates even during mundane events
+autocmd CursorHold * update
+autocmd CursorHold,CursorHoldI * update
+autocmd TextChanged,TextChangedI <buffer> silent write
+
+" example of how to set syntax on certain annoying files
+au BufReadPost *.ezt set syntax=html
