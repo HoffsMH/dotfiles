@@ -18,17 +18,13 @@
     * [ ] restic?
     * [ ] lf
 - get out of fzf altogether in favor of dmenu
+- lf run command with $f pre-filled
 
 ## Selected
 
 - dunst expiration
-- lf playing selection -- working on folders
-- lf aliasing
-- lf run command with $f pre-filled
 - vim gitgutter bg color --
 - vim editor config or maybe some way to pick up tab rules from the file
-- vim bul commenting
-- vim indention level indicators
 
 ## Waiting on Something
 
@@ -76,3 +72,7 @@
 - lf open shell in location -- workaround just press enter and zsh
 - try vim fzf.vim -- installed and now I want to uninstall
 - figure out switching between files fast in vim -- :q ed
+- lf playing selection -- working on folders
+- lf aliasing -- dont seem to need yet? since open script reads my mind
+- vim bul commenting
+- vim indention level indicators
