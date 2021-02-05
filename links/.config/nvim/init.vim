@@ -8,20 +8,41 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
-Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
-Plug 'kien/ctrlp'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-commentary'
-Plug 'ap/vim-css-color'
+  " passive gain  no binds added
+  " Plug 'bling/vim-airline'
+
+  " gcc to comment a single line and gc while selecting to
+  " comment a selection
+  Plug 'tpope/vim-commentary'
+
+  " Passive gain, just colors Hex codes #eee, no binds added
+  Plug 'ap/vim-css-color'
+
+  " Somewhat Passive gain, not changing any settings, no binds added
+  Plug 'mhinz/vim-startify'
+
+  Plug 'terryma/vim-expand-region'
+  Plug 'mg979/vim-visual-multi'
+
+  " <leader>t to get a term
+  Plug 'voldikss/vim-floaterm'
+
+  Plug 'morhetz/gruvbox'
+
+  Plug 'Yggdroot/indentLine'
+
+  " Language specific stuff
+  Plug 'mustache/vim-mustache-handlebars'
+  Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 set title
-set bg=light
+set bg=dark
 set go=a
 set mouse=a
 set nohlsearch
 set clipboard+=unnamedplus
+
 set noshowmode
 set noruler
 set laststatus=0
@@ -34,34 +55,21 @@ set noshowcmd
 	syntax on
 	set encoding=utf-8
 	set number relativenumber
+
 " Enable autocompletion:
 	set wildmode=longest,list,full
+
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Perform dot commands over visual blocks:
 	vnoremap . :normal .<CR>
-" Goyo plugin makes text more readable when writing prose:
-	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
+
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
+
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
-
-" Nerd tree
-	map <leader>n :NERDTreeToggle<CR>
-	autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-    if has('nvim')
-        let NERDTreeBookmarksFile = stdpath('data') . '/NERDTreeBookmarks'
-    else
-        let NERDTreeBookmarksFile = '~/.vim' . '/NERDTreeBookmarks'
-    endif
-
-" vimling:
-	nm <leader><leader>d :call ToggleDeadKeys()<CR>
-	imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
-	nm <leader><leader>i :call ToggleIPA()<CR>
-	imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
-	nm <leader><leader>q :call ToggleProse()<CR>
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h
@@ -72,54 +80,21 @@ set noshowcmd
 " Replace ex mode with gq
 	map Q gq
 
-" Check file in shellcheck:
-	map <leader>s :!clear && shellcheck -x %<CR>
-
-" Open my bibliography file in split
-	map <leader>b :vsp<space>$BIB<CR>
-	map <leader>r :vsp<space>$REFER<CR>
-
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
-
-" Compile document, be it groff/LaTeX/markdown/etc.
-	map <leader>c :w! \| !compiler "<c-r>%"<CR>
-
-" Open corresponding .pdf/.html or preview
-	map <leader>p :!opout <c-r>%<CR><CR>
-
-" Runs a script that cleans out tex build files whenever I close out of a .tex file.
-	autocmd VimLeave *.tex !texclear %
-
-" Ensure files are read as what I want:
-	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-	map <leader>v :VimwikiIndex
-	let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
-	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
-	autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
-	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
 " Save file as sudo on files that require root permission
 	cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
-" Enable Goyo by default for mutt writing
-	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
-	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo | set bg=light
-	autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :Goyo\|x!<CR>
-	autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo\|q!<CR>
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
-	autocmd BufWritePre * %s/\s\+$//e
+    autocmd BufWritePre * %s/\s\+$//e
     autocmd BufWritePre * %s/\n\+\%$//e
     autocmd BufWritePre *.[ch] %s/\%$/\r/e
 
-" When shortcut files are updated, renew bash and ranger configs with new material:
-	autocmd BufWritePost bm-files,bm-dirs !shortcuts
 " Run xrdb whenever Xdefaults or Xresources are updated.
-	autocmd BufRead,BufNewFile xresources,xdefaults set filetype=xdefaults
-	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
-" Recompile dwmblocks on config edit.
-	autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }
+    autocmd BufRead,BufNewFile xresources,xdefaults set filetype=xdefaults
+    autocmd BufWritePost .Xresources,Xdefaults,xresources,xdefaults !xrdb %
 
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
@@ -143,6 +118,76 @@ function! ToggleHiddenAll()
         set showcmd
     endif
 endfunction
-nnoremap <leader>h :call ToggleHiddenAll()<CR>
 
-map <q> <Nop>
+
+nnoremap <leader>h :call ToggleHiddenAll()<CR>
+nnoremap <leader>t :FloatermNew<CR>
+
+
+au BufRead,BufNewFile *.md setlocal textwidth=80
+set nowrap
+hi Visual term=reverse cterm=reverse guibg=Grey
+set shiftwidth=2
+
+let &colorcolumn = join(range(81,999), ',')
+highlight ColorColumn ctermbg=240 guibg=white
+
+map <C-e> <Plug>(expand_region_expand)
+
+function! s:ag_to_qf(line)
+  let parts = split(a:line, ':')
+  return {'filename': parts[0], 'lnum': parts[1], 'col': parts[2],
+        \ 'text': join(parts[3:], ':')}
+endfunction
+
+function! s:ag_handler(lines)
+  if len(a:lines) < 2 | return | endif
+
+  let cmd = get({'ctrl-x': 'split',
+               \ 'ctrl-v': 'vertical split',
+               \ 'ctrl-t': 'tabe'}, a:lines[0], 'e')
+  let list = map(a:lines[1:], 's:ag_to_qf(v:val)')
+
+  let first = list[0]
+  execute cmd escape(first.filename, ' %#\')
+  execute first.lnum
+  execute 'normal!' first.col.'|zz'
+
+  if len(list) > 1
+    call setqflist(list)
+    copen
+    wincmd p
+  endif
+endfunction
+
+command! -nargs=* Ag call fzf#run({
+\ 'source':  printf('ag --nogroup --column --color "%s"',
+\                   escape(empty(<q-args>) ? '^(?=.)' : <q-args>, '"\')),
+\ 'sink*':    function('<sid>ag_handler'),
+\ 'options': '--ansi --expect=ctrl-t,ctrl-v,ctrl-x --delimiter : --nth 4.. '.
+\            '--multi --bind=ctrl-a:select-all,ctrl-d:deselect-all '.
+\            '--color hl:68,hl+:110',
+\ 'down':    '50%'
+\ })
+
+set background=dark
+colorscheme gruvbox
+autocmd ColorScheme * highlight! link SignColumn LineNr
+
+let g:floaterm_height=45
+let g:floaterm_width=100
+tnoremap <Esc> <C-\><C-N>
+
+" fzf
+nnoremap <C-p> :GFiles<cr>
+nnoremap <C-b> :Buffers<cr>
+nnoremap <C-S-f> :Ag<cr>
+
+nnoremap q :close<cr>
+nnoremap <C-\> :vsp<cr>
+set autowriteall
+
+augroup custom_term
+    autocmd!
+    autocmd TermOpen * setlocal bufhidden=hide
+augroup END

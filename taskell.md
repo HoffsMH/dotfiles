@@ -24,8 +24,11 @@
 - dunst expiration
 - lf playing selection -- working on folders
 - lf aliasing
-- lf open shell in location
 - lf run command with $f pre-filled
+- vim gitgutter bg color --
+- vim editor config or maybe some way to pick up tab rules from the file
+- vim bul commenting
+- vim indention level indicators
 
 ## Waiting on Something
 
@@ -67,3 +70,9 @@
 - get rofi out of tl
 - get polybar out of tl
 - get bw out of tl
+- basic switch from tabbed to tmux
+- dmenu script for switching window
+- dmenu script for launching apps sorted on history and add ; at end to launch in terminal
+- lf open shell in location -- workaround just press enter and zsh
+- try vim fzf.vim -- installed and now I want to uninstall
+- figure out switching between files fast in vim -- :q ed

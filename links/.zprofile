@@ -1,4 +1,4 @@
-export EDITOR="/usr/bin/subl"
+export EDITOR="/usr/bin/nvim"
 export BROWSER="brave"
 export TERMINAL="st-256color"
 export READER="zathura"
@@ -15,4 +15,3 @@ export SESSION=dwm
 
 # path and shims
 source "$HOME/.zsh/path_and_shims.sh"
-

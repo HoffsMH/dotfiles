@@ -3,6 +3,7 @@
 ######################################################
 
 alias zource="source ~/.zshrc"
+alias vim="nvim"
 
 ######################################################
 # Disk management
@@ -97,6 +98,9 @@ gcof() {
             fzf-tmux -l30 -- --no-hscroll --ansi +m -d "\t" -n 2 --preview-window=hidden
           ) || return
     git checkout $(echo "$target" | awk '{print $2}')
+}
+ed() {
+	vim $(fzf)
 }
 
 alias g="git"
@@ -258,7 +262,7 @@ alias trm='tl rm'
 ######################################################
 
 alias open="xdg-open"
-alias sucap="subl ~/personal/00-capture/capture.md"
+alias ecap="$EDITOR ~/personal/00-capture/capture.md"
 alias jf='OPENER=~/bin/linkhandler lf'
 alias jfc='jf ~/personal/00-capture'
 alias jfa='jf ~/personal/media/audio'
@@ -404,7 +408,7 @@ compressedimgtodisk() {
 # PASS
 ######################################################
 
-alias passedit='pass edit -e "$EDITOR --wait"'
+alias passedit='pass edit -e "$EDITOR"'
 alias passc="pass show -c"
 
 alias gcor='git checkout links/.config/ranger'

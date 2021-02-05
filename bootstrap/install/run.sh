@@ -13,6 +13,7 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "pistol-git"
     "arandr"
     "axel"
     "bitwarden-bin"

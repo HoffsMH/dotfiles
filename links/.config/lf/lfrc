@@ -1,8 +1,13 @@
+#!/bin/zsh
+
+set previewer pistol
+
 set hidden
 set dircounts
 set incsearch
 set mouse
 set icons
+set shell zsh
 
 map D delete
 
@@ -20,3 +25,6 @@ cmd open ${{
         *) for f in "$fx"; do setsid -f $OPENER "$f" >/dev/null 2>&1; done;;
     esac
 }}
+
+map A rename # at the very end
+map <enter> shell
