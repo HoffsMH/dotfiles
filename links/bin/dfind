@@ -1,0 +1,4 @@
+#!/bin/bash
+set -eu -o pipefail
+
+(find -type f -printf '%P\n') | dmenu -p 'Fuzzy File:' -i -l 10 | xclip -selection clipboard

@@ -6,14 +6,6 @@ alias zource="source ~/.zshrc"
 alias vim="nvim"
 
 ######################################################
-# Disk management
-######################################################
-
-daisy() {
-    du -hs $@ | sort -hr
-}
-
-######################################################
 # history
 ######################################################
 
@@ -64,19 +56,6 @@ untar(){
     else
         echo "'$1' is not a valid file"
     fi
-}
-
-# touch that builds path to the file if it doesnt exist
-t() {
-    if [ $# -lt 1 ]; then
-      echo "Missing argument";
-      return 1;
-    fi
-
-    for f in "$@"; do
-      mkdir -p -- "$(dirname -- "$f")"
-      touch -- "$f"
-    done
 }
 
 alias pass="gopass"
@@ -204,9 +183,6 @@ alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 # media
 ######################################################
 
-# looping play
-alias play="mpv --no-audio-display --loop-playlist"
-
 # looping play with no video even if there is video
 alias playa="mpv -vo=null --no-audio-display --loop-playlist"
 
@@ -218,7 +194,6 @@ alias playv="mpv --no-audio-display --loop-playlist"
 ######################################################
 
 # cptext bash script for copying text arguments
-alias xpaste="xclip -o"
 alias xclip="/usr/bin/xclip -selection clipboard"
 
 ######################################################
@@ -335,12 +310,6 @@ alias dwmsesh="export SESSION=dwm && startx"
 
 bwunlock() {
   export BW_SESSION=$(bw unlock --raw)
-}
-
-bwget() {
-  pushd ~
-  tl bw  $@ | xclip && echo "done"
-  popd
 }
 
 gpgstart() {

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ag --hidden -f --ignore-dir=".git" -g "" "$@"
