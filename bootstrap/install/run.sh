@@ -29,7 +29,7 @@ installs=(
     "evtest"
     "exa"
     "fasd"
-    "feh"
+    "xwallpaper"
     "flameshot"
     "font-manager"
     "fwup"
