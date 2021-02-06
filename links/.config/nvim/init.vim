@@ -61,6 +61,8 @@ set noruler
 set laststatus=0
 set noshowcmd
 set updatetime=200
+set autoread
+au CursorHold * checktime
 
 " Some basics:
 	nnoremap c "_c
