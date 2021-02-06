@@ -9,8 +9,8 @@ set mouse
 set icons
 set shell zsh
 
-map D delete
 map L playfolder
+map D delete
 
 # cmds/functions
 cmd open ${{
@@ -27,9 +27,6 @@ cmd open ${{
     esac
 }}
 
-cmd delete ${{
-	tl rm -rf -- "$fx"
-}}
 
 map A rename # at the very end
 map <enter> shell
