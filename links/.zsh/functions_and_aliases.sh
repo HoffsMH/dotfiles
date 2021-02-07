@@ -22,8 +22,8 @@ alias z='fasd_cd -d'
 export EXA_COLORS="*.mp3=34"
 
 #fancy ls command
-alias l="exa -laFGgh"
-alias ls="exa -Fla"
+alias l="exa -laFGgh --icons"
+alias ls="exa -Fla --icons"
 
 # alias l="ls -laFGgohq"
 # alias ls='ls -Fa'
