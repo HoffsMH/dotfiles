@@ -2,29 +2,20 @@
 
 - https://gist.github.com/TiZ-EX1/b92275f08a9570c773ba
 - put all the system specific things into environment  via envrc  (dont forget to fill out the samplefile too) and then pull from that in poly bar and whatever else is capable of pulling from environment... unfortch that sublimetext might need to be a sample :(
-- gtk theme that matches gruvbox better
-- get a sample vim config going
-- get some sort of cpu benchmarking
-- get some sort of network benchmarking
-- get stalone tray centered and huge
-
-## Warm
-
-- thunar default save location
 - separate system for go binarys
     * [ ] gopass
     * [ ] rck
     * [ ] dck
     * [ ] restic?
     * [ ] lf
-- get out of fzf altogether in favor of dmenu
-- lf run command with $f pre-filled
+- thunar default save location
+
+## Warm
+
+- get all aliases out of zsh it can only slow down startup and couples the shell to the useful commands
 
 ## Selected
 
-- dunst expiration
-- vim gitgutter bg color --
-- vim editor config or maybe some way to pick up tab rules from the file
 - fine ressurect tmux for devops tasks
 
 ## Waiting on Something
@@ -77,3 +68,9 @@
 - lf aliasing -- dont seem to need yet? since open script reads my mind
 - vim bul commenting
 - vim indention level indicators
+- get out of fzf altogether in favor of dmenu -- no bad idea
+- lf run command with $f pre-filled -- almost but not worth it yet
+- vim gitgutter bg color --
+- vim editor config or maybe some way to pick up tab rules from the file
+- gtk theme that matches gruvbox better
+- get a sample vim config going
