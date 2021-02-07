@@ -1,1 +1,12 @@
-tl cap "$@"
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    clipboard=$(xclip -o || echo "")
+    selection=$(echo "$clipboard" | dmenu)
+  else
+    selection=$@
+fi
+
+tl cap $selection
+notify-send "cap: ${selection}"
