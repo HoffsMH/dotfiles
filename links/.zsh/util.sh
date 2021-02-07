@@ -2,6 +2,4 @@
 
 source "$HOME/.fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
-source "$HOME/.powerlevel10k/powerlevel10k.zsh-theme"
-
 source "$HOME/.zsh-autopair/autopair.zsh"

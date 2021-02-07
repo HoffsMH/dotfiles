@@ -31,6 +31,7 @@ installs=(
     "dunst" # notifications
     "elixir"
     "erlang"
+    "starship" # fast terminal prompt
     "evtest"
     "exa" # alternative to ls
     "fasd" # fuzzy find and switch to recently used directories
