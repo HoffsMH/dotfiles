@@ -1,3 +1,4 @@
+
 format = """
 $username\
 $hostname\
@@ -51,3 +52,6 @@ $battery\
 $time\
 $status\
 $character"""
+
+[directory]
+style =	"bold blue"

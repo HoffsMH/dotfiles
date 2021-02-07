@@ -38,6 +38,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'elixir-editors/vim-elixir'
   Plug 'mattn/emmet-vim'
+  Plug 'cespare/vim-toml'
 call plug#end()
 
 

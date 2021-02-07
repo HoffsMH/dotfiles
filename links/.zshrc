@@ -27,6 +27,13 @@ source ~/.zsh/util.sh
 # export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
+set_win_title(){
+    mydir=$(pwd)
+    base=$(basename $mydir)
+    echo -ne "\033]0; $base \007"
+}
+precmd_functions+=(set_win_title)
+
 pfetch
 eval "$(starship init zsh)"
 
