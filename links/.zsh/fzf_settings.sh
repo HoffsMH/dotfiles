@@ -13,7 +13,7 @@ export FZF_DEFAULT_OPTS='
                   --bind "ctrl-y:execute-silent(echo {} | xclip)+abort"
 		  --preview "(pistol {}) 2> /dev/null | head -500"'
 
-export FZF_DEFAULT_COMMAND='git ls-tree -r --name-only HEAD || agg'
+export FZF_DEFAULT_COMMAND='git ls-tree -r --name-only HEAD || fd --type file'
 
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_CTRL_T_OPTS=$FZF_DEFAULT_OPTS

@@ -16,6 +16,7 @@ installs=(
     "pistol-git"
     "arandr"
     "axel"
+    "fd"
     "bitwarden-bin"
     "bluez-utils"
     "brave-bin"
