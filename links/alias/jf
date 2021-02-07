@@ -1,0 +1,3 @@
+#!/bin/bash
+
+OPENER=~/bin/linkhandler lf

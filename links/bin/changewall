@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cp "$@" "$HOME/personal/dotfiles/links/.wall.jpg"
-feh --bg-fill ~/.wall.jpg
+xwallpaper --focus ~/.wall.jpg
