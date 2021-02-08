@@ -78,9 +78,6 @@ gcof() {
           ) || return
     git checkout $(echo "$target" | awk '{print $2}')
 }
-ed() {
-	vim $(fzf)
-}
 
 alias g="git"
 alias gb="git branch"

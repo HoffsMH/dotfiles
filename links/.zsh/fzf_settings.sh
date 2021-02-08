@@ -18,10 +18,3 @@ export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_CTRL_T_OPTS=$FZF_DEFAULT_OPTS
 export FZF_CTRL_R_OPTS="--height 40% --reverse --no-preview "
-
-# old preview using rougify
-                  # --preview "(
-                  #     highlight -O ansi -l {} ||
-                  #     rougify {} ||
-                  #     cat {}
-                  #   ) 2> /dev/null | head -500"'

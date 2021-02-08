@@ -15,6 +15,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   " comment a selection
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-surround'
+  Plug 'junegunn/vim-easy-align'
 
   " Passive gain, just colors Hex codes #eee, no binds added
   Plug 'ap/vim-css-color'
