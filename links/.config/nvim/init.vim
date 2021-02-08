@@ -8,14 +8,15 @@ if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autolo
 endif
 
 call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"'))
-  " passive gain  no binds added
-  " Plug 'bling/vim-airline'
 
   " gcc to comment a single line and gc while selecting to
   " comment a selection
   Plug 'tpope/vim-commentary'
+
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
+  Plug 'jiangmiao/auto-pairs'
+
 
   " Passive gain, just colors Hex codes #eee, no binds added
   Plug 'ap/vim-css-color'
@@ -38,7 +39,6 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   " Language specific stuff
   Plug 'mustache/vim-mustache-handlebars'
   Plug 'elixir-editors/vim-elixir'
-  Plug 'mattn/emmet-vim'
   Plug 'cespare/vim-toml'
 call plug#end()
 

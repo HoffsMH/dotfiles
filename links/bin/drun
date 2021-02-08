@@ -17,5 +17,5 @@ mv "$cache.$$" "$cache"
 
 case "$run" in
     *\;) exec $(echo $term ${run%;}) ;;
-    *)   exec "$run" ;;
+    *)   exec $run ;;
 esac
