@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/usr/bin/fd $@ -H
+/usr/bin/fd --type f -H -E ".git" $@
