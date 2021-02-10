@@ -8,6 +8,7 @@ export SAVEHIST=1000
 setopt appendhistory
 
 unalias -a
+bindkey -me
 
 
 # fzf settings
