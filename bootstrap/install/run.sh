@@ -15,6 +15,8 @@ echo "###############################################"
 installs=(
     "tokei" # count lines of code
     "bat" # alternative to cat
+    "dust"
+    "ripgrep"
     "pistol-git" # syntax highlighting
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme

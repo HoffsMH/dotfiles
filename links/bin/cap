@@ -3,7 +3,7 @@
 if [ $# -eq 0 ]
   then
     clipboard=$(xclip -o || echo "")
-    selection=$(echo "$clipboard" | dmenu)
+    selection=$(echo "$clipboard" || dmenu)
   else
     selection=$@
 fi
