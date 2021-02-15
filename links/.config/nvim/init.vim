@@ -16,6 +16,8 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'dense-analysis/ale'
+  Plug 'ruanyl/vim-gh-line'
 
 
   " Passive gain, just colors Hex codes #eee, no binds added
