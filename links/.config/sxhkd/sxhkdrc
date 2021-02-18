@@ -22,9 +22,6 @@ hyper + g
 control + shift + 4
   flameshot gui
 
-alt + shift + space
-  ~/personal/dotfiles/run-recent
-
 alt + space
   ~/bin/switch
 

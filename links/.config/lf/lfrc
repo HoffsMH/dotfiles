@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 set previewer pistol
+set ratios 1:2:1
 
 set hidden
 set dircounts
