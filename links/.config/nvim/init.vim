@@ -12,7 +12,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   " gcc to comment a single line and gc while selecting to
   " comment a selection
   Plug 'tpope/vim-commentary'
-
+  Plug 'amadeus/vim-mjml'
   Plug 'tpope/vim-surround'
   Plug 'junegunn/vim-easy-align'
   Plug 'jiangmiao/auto-pairs'
@@ -90,6 +90,8 @@ au CursorHold * checktime
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
+	map <leader>z :noh<CR>
+	map <leader>y :let @+ = join([expand('%'), line(".")], ':')<cr>
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 	set splitbelow splitright
@@ -205,15 +207,15 @@ let g:floaterm_width=100
 tnoremap <Esc> <C-\><C-N>
 
 " fzf
-nnoremap <C-p> :FloatermNew fzf<cr>
-nnoremap <C-b> :Buffers<cr>
-nnoremap <C-S-f> :Ag<cr>
+nnoremap <C-p> :FloatermNew --height=0.95 --width=0.95 fzf<cr>
+nnoremap <leader>l :FloatermNew --height=0.95 --width=0.95 lf .<cr>
+nnoremap <C-S-f> :Ag <space>
 
 nnoremap q :close<cr>
 nnoremap <C-\> :vsp<cr>
 
 nnoremap <leader>c :e ~/personal/00-capture/capture.md<cr>
-
+nnoremap <leader>i :e ~/.config/nvim/init.vim<cr>
 
 set autowriteall
 
@@ -231,3 +233,6 @@ autocmd TextChanged,TextChangedI <buffer> silent write
 au BufReadPost *.ezt set syntax=html
 
 autocmd FileType javascript setlocal expandtab
+
+" code folding setup press zm and zr and zR to modify by indent level
+set fdm=indent fdls=4 fdn=4

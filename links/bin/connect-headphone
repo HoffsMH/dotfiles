@@ -1,3 +1,4 @@
 #!/bin/bash
 
 echo -e "power on\nconnect 00:1B:66:88:36:C8\n" |  bluetoothctl --
+echo -e "power on\nconnect 00:1B:66:88:36:C8\n" |  bluetoothctl --

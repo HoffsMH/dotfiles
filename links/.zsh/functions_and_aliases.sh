@@ -289,9 +289,6 @@ sethdmiscale() {
 }
 
 alias kbdxcape="xcape -t 200 -e Control_L=Escape"
-alias kbdsetup="xmodmap ~/.Xmodmap && echo 'xmodmap' \
- || xset r rate 200 30 && echo 'xset rate' \
- || xcape -t 200 -e Control_L=Escape && echo 'xcape' "
 
 ######################################################
 # WM and session

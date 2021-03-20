@@ -8,5 +8,6 @@ if [ $# -eq 0 ]
     selection=$@
 fi
 
-tl cap $selection
-notify-send "cap: ${selection}"
+echo "- [ ] $selection" >> ~/personal/00-capture/grocery.md
+
+notify-send "groc: ${selection}"

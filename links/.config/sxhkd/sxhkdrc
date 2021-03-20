@@ -5,7 +5,7 @@
   light -A 5
 
 hyper + g
-  xclip -o | xargs xdg-open
+  xclip -selection clipboard -o | xargs xdg-open
 
 @XF86AudioLowerVolume
   pulsemixer --change-volume -3
