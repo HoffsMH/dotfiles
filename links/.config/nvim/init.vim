@@ -78,6 +78,7 @@ au CursorHold * checktime
 	set encoding=utf-8
 	" set number relativenumber
 	set nonumber
+	nmap <leader>n :set invnumber<CR>
 
 " Enable autocompletion:
 	set wildmode=longest,list,full
@@ -235,4 +236,4 @@ au BufReadPost *.ezt set syntax=html
 autocmd FileType javascript setlocal expandtab
 
 " code folding setup press zm and zr and zR to modify by indent level
-set fdm=indent fdls=4 fdn=4
+set fdm=indent fdls=2 fdn=2

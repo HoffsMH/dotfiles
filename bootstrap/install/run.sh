@@ -15,7 +15,6 @@ echo "###############################################"
 installs=(
     "tokei" # count lines of code
     "bat" # alternative to cat
-    "dust"
     "ripgrep"
     "pistol-git" # syntax highlighting
     "gruvbox-material-gtk-theme-git" # just for the icons
@@ -54,7 +53,7 @@ installs=(
     "light" # backlight and keyboard like control for laptops
     "linux-lts-acpi_call"
     "lxappearance" # managing gtk themes
-    "manjaro-architect" # for installing manjaro on other disks
+    # "manjaro-architect" # for installing manjaro on other disks
     "mpv" # audio and video player
     "ncurses5-compat-libs"
     "ntfs-3g" # for viewing and manipulating windows filesystems
@@ -93,8 +92,8 @@ installs=(
     "xorg-fonts-encodings"
     "xorg-xclipboard"
     "xorg-xev"
-    "xmonad" # window manager
-    "xmonad-contrib" # window manager
+    # "xmonad" # window manager
+    # "xmonad-contrib" # window manager
     "xorg-xsetroot"
     "zathura" # pdf viewer
     "zathura-pdf-poppler"
