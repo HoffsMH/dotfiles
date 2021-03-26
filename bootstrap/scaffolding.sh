@@ -1,5 +1,7 @@
 set -e
 
+sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
+
 echo "###############################################"
 echo "CREATE DIRS"
 echo "###############################################"

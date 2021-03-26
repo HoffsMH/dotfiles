@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 set -e
 
@@ -16,7 +16,6 @@ installs=(
     "tokei" # count lines of code
     "bat" # alternative to cat
     "ripgrep"
-    "pistol-git" # syntax highlighting
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
     "arandr" # arranging screens and saving screen configs
@@ -51,7 +50,6 @@ installs=(
     "jq" # command line json parser
     "libratbag"
     "light" # backlight and keyboard like control for laptops
-    "linux-lts-acpi_call"
     "lxappearance" # managing gtk themes
     # "manjaro-architect" # for installing manjaro on other disks
     "mpv" # audio and video player
@@ -97,6 +95,8 @@ installs=(
     "xorg-xsetroot"
     "zathura" # pdf viewer
     "zathura-pdf-poppler"
+    "ntp"
+    "openssh"
 )
 
 sudo pacman -Syu
@@ -107,6 +107,9 @@ echo $installs | xargs yay -S --noconfirm
 
 yay -S --noconfirm \
     rescuetime2 || echo "rescuetime2 failed"
+
+yay -S --noconfirm \
+    pistol-git || echo "pistol failed"
 
 echo "###############################################"
 echo "enable services"
@@ -121,7 +124,7 @@ sudo systemctl start "cpupower"
 # use dunst for notifications
 systemctl disable --user xfce4-notifyd.service || echo "stock notifications already uninstalled"
 systemctl stop --user xfce4-notifyd.service || echo "stock notifications already stopped"
-systemctl enable --user dunst.service
+systemctl enable --user dunst.service || echo "dunst service not found"
 systemctl start --user dunst.service || echo "starting dunst failed"
 
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
