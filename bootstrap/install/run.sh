@@ -151,8 +151,8 @@ systemctl stop --user xfce4-notifyd.service || echo "stock notifications already
 systemctl enable --user dunst.service || echo "dunst service not found"
 systemctl start --user dunst.service || echo "starting dunst failed"
 
-systemctl enable bluetooth.service || echo "dunst service not found"
-systemctl start bluetooth.service || echo "starting dunst failed"
+sudo systemctl enable bluetooth.service || echo "dunst service not found"
+sudo systemctl start bluetooth.service || echo "starting dunst failed"
 
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dmenu.sh"
