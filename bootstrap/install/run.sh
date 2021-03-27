@@ -6,6 +6,8 @@ set -e
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sudo sed 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -T 0 -c -z -)/' /etc/makepkg.conf
 
+"$HOME/personal/dotfiles/bootstrap/install/yay.sh"
+
 echo "###############################################"
 echo "YAY BASIC RECIPE"
 echo "###############################################"
