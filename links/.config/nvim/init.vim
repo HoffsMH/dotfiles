@@ -33,6 +33,7 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
   Plug 'mg979/vim-visual-multi'
 
   " <leader>t to get a term
+  " Plug 'voldikss/vim-floaterm' , { 'commit': 'b838dd126c4fc0a595590d495c35a1f75483aa3d'}
   Plug 'voldikss/vim-floaterm'
 
   Plug 'morhetz/gruvbox'
@@ -208,8 +209,8 @@ let g:floaterm_width=100
 tnoremap <Esc> <C-\><C-N>
 
 " fzf
-nnoremap <C-p> :FloatermNew --height=0.95 --width=0.95 fzf<cr>
-nnoremap <leader>l :FloatermNew --height=0.95 --width=0.95 lf .<cr>
+nnoremap <C-p> :FloatermNew --opener=edit --height=0.95 --width=0.95 fzf<cr>
+nnoremap <leader>l :FloatermNew --opener=edit --height=0.95 --width=0.95 lf .<cr>
 nnoremap <C-S-f> :Ag <space>
 
 nnoremap q :close<cr>
