@@ -11,6 +11,7 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "kitty"
     "tokei" # count lines of code
     "ripgrep"
     "tmux"

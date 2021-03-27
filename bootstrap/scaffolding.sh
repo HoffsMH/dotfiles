@@ -2,10 +2,6 @@ set -e
 
 sudo sed -i 's/^#\s*\(%wheel\s\+ALL=(ALL)\s\+NOPASSWD:\s\+ALL\)/\1/' /etc/sudoers
 
-sudo echo "LANG=en_US.UTF-8" >> /etc/locale.conf
-sudo echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-sudo echo "en_US ISO-8859-1" >> /etc/locale.gen
-locale-gen
 
 echo "###############################################"
 echo "CREATE DIRS"
