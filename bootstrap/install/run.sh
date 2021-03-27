@@ -14,8 +14,8 @@ echo "###############################################"
 
 installs=(
     "tokei" # count lines of code
-    "bat" # alternative to cat
     "ripgrep"
+    "tmux"
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
     "arandr" # arranging screens and saving screen configs
@@ -38,7 +38,6 @@ installs=(
     "xwallpaper" # set the wall paper
     "flameshot" # take a screenshot of a specific area on screen
     "font-manager" # manage fonts
-    "fwup" # for burning images to firmware
     "fzf" # cli fuzzy finder
     "gnome-calculator" # calculator
     "gnutls"
@@ -97,6 +96,7 @@ installs=(
     "zathura-pdf-poppler"
     "ntp"
     "openssh"
+    "xorg-xinit"
 )
 
 sudo pacman -Syu
@@ -110,6 +110,10 @@ yay -S --noconfirm \
 
 yay -S --noconfirm \
     pistol-git || echo "pistol failed"
+
+# for burning images to firmware
+yay -S --noconfirm \
+    fwup-git || echo "fwup-git failed"
 
 echo "###############################################"
 echo "enable services"
