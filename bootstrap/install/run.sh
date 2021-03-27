@@ -17,6 +17,7 @@ installs=(
     "tmux"
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
+    "arc-gruvbox-theme"
     "arandr" # arranging screens and saving screen configs
     "axel" # downloader
     "fd" # alternative to find
@@ -51,6 +52,7 @@ installs=(
     "light" # backlight and keyboard like control for laptops
     "lxappearance" # managing gtk themes
     # "manjaro-architect" # for installing manjaro on other disks
+    "archiso"
     "mpv" # audio and video player
     "ncurses5-compat-libs"
     "ntfs-3g" # for viewing and manipulating windows filesystems
@@ -63,7 +65,9 @@ installs=(
     "pmount" # personal drive mounting system that doesn't require sudo
     "poppler" # pdf library
     "protonvpn-cli-ng" # vpn provider
+    "pulseaudio-alsa"
     "pulsemixer" # mixer and volume control
+    "unclutter"
     "lf-git" # vim like file manager
     "redshift" # blue light reducer
     "restic" # remote backup
@@ -85,8 +89,15 @@ installs=(
     "xcape"
     "xclip" # clipboard command interface
     "xdotool"
+    "mediainfo"
+    "xorg-xprop"
+    "bc"
+    "xorg-backlight"
+    "xorg-xdpyinfo"
     "xorg-font-util"
     "xorg-fonts-encodings"
+    "noto-fonts"
+    "noto-fonts-emoji"
     "xorg-xclipboard"
     "xorg-xev"
     # "xmonad" # window manager
@@ -96,24 +107,31 @@ installs=(
     "zathura-pdf-poppler"
     "ntp"
     "openssh"
+    "xorg-server"
+    "xorg-xwininfo"
     "xorg-xinit"
+    "rescuetime2"
+    "pistol-git"
+    # "fwup"
 )
 
 sudo pacman -Syu
 yay -Syu
 
 echo $installs
-echo $installs | xargs yay -S --noconfirm
-
-yay -S --noconfirm \
-    rescuetime2 || echo "rescuetime2 failed"
-
-yay -S --noconfirm \
-    pistol-git || echo "pistol failed"
-
-# for burning images to firmware
-yay -S --noconfirm \
-    fwup-git || echo "fwup-git failed"
+for i in $installs
+do
+  echo "###############################################"
+  echo "INSTALLING $i"
+  echo "###############################################"
+  if yay -S --noconfirm $i ; then
+  echo "###############################################"
+  echo "SUCCEEDED $i"
+  echo "###############################################"
+  else
+    echo "- $i\n" >> failures.md
+  fi
+done
 
 echo "###############################################"
 echo "enable services"
