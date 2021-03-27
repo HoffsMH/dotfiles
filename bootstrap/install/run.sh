@@ -114,6 +114,7 @@ installs=(
     "xorg-xinit"
     "rescuetime2"
     "pistol-git"
+    "cpupower"
     # "fwup"
 )
 
