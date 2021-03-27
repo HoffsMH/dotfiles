@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]
+  then
+    selection=$(fzf)
+    $EDITOR ${selection:-"."}
+  else
+    selection=$(fd $@ . --type file | fzf)
+    $EDITOR ${selection:-"."}
+fi
