@@ -21,6 +21,7 @@ installs=(
     "axel" # downloader
     "fd" # alternative to find
     "bitwarden-bin" # legacy -- will one day get rid of this
+    "bluez"
     "bluez-utils" # connect to bluetooth devices
     "brave-bin" # browser
     "colorgrab" # grab color hex from anywhere on screen
@@ -129,6 +130,9 @@ systemctl disable --user xfce4-notifyd.service || echo "stock notifications alre
 systemctl stop --user xfce4-notifyd.service || echo "stock notifications already stopped"
 systemctl enable --user dunst.service || echo "dunst service not found"
 systemctl start --user dunst.service || echo "starting dunst failed"
+
+systemctl enable bluetooth.service || echo "dunst service not found"
+systemctl start bluetooth.service || echo "starting dunst failed"
 
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dmenu.sh"
