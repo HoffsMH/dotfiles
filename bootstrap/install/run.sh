@@ -17,6 +17,7 @@ installs=(
     "tokei" # count lines of code
     "ripgrep"
     "tmux"
+    "xcursor-breeze"
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
     "arc-gruvbox-theme"
