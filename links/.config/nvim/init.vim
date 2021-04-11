@@ -237,4 +237,4 @@ au BufReadPost *.ezt set syntax=html
 autocmd FileType javascript setlocal expandtab
 
 " code folding setup press zm and zr and zR to modify by indent level
-set fdm=indent fdls=2 fdn=2
+set fdm=indent fdls=5 fdn=5

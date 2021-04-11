@@ -47,4 +47,4 @@ ctrl + space
   xclip -o && notify-send "starting image download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/capture/. && notify-send "image download of $(xclip -o)"
 
 @hyper + @shift + p
-  notify-send "playing $(xclip -o)" && mpv --no-audio-display --loop-playlist $(xclip -o)
+  notify-send "playing $(xpaste)" && mpv --no-audio-display --loop-playlist $(xclip -o)
