@@ -69,7 +69,9 @@ installs=(
     "poppler" # pdf library
     "protonvpn-cli-ng" # vpn provider
     "pulseaudio-alsa"
+    "pulseaudio-bluetooth"
     "pulsemixer" # mixer and volume control
+    "thunar"
     "unclutter"
     "lf-git" # vim like file manager
     "redshift" # blue light reducer
