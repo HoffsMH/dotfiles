@@ -65,7 +65,7 @@ set clipboard+=unnamedplus
 
 set noshowmode
 set noruler
-set laststatus=0
+set laststatus=2
 set noshowcmd
 set updatetime=200
 set autoread
@@ -77,8 +77,7 @@ au CursorHold * checktime
 	filetype plugin on
 	syntax on
 	set encoding=utf-8
-	" set number relativenumber
-	set nonumber
+	set number
 	nmap <leader>n :set invnumber<CR>
 
 " Enable autocompletion:
@@ -226,6 +225,11 @@ augroup custom_term
     autocmd TermOpen * setlocal bufhidden=hide
 augroup END
 
+augroup ok
+  au!
+  au FileType * setlocal expandtab
+augroup END
+
 " automatically updates even during mundane events
 autocmd CursorHold * update
 autocmd CursorHold,CursorHoldI * update
@@ -234,7 +238,8 @@ autocmd TextChanged,TextChangedI <buffer> silent write
 " example of how to set syntax on certain annoying files
 au BufReadPost *.ezt set syntax=html
 
-autocmd FileType javascript setlocal expandtab
+autocmd FileType javascript setlocal expandtab!
+autocmd FileType handlebars setlocal expandtab!
 
 " code folding setup press zm and zr and zR to modify by indent level
 set fdm=indent fdls=5 fdn=5
