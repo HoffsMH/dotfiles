@@ -261,8 +261,7 @@ alias task='taskell "$HOME/personal/00-capture/board/taskell.md"'
 ######################################################
 # Text Editing
 ######################################################
-alias sublr="subl3"
-alias subl='\rm -rf ~/.config/sublime-text-3/Local/Auto\ Save\ Session.sublime_session && /usr/bin/subl'
+alias subl='\rm -rf ~/.config/sublime-text/Local/Auto\ Save\ Session.sublime_session && /usr/bin/subl'
 
 ######################################################
 # getting random text for passwords and secrets
