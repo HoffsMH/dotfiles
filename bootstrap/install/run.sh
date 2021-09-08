@@ -55,7 +55,6 @@ installs=(
     "light" # backlight and keyboard like control for laptops
     "lxappearance" # managing gtk themes
     # "manjaro-architect" # for installing manjaro on other disks
-    "archiso"
     "mpv" # audio and video player
     "ncurses5-compat-libs"
     "ntfs-3g" # for viewing and manipulating windows filesystems
@@ -72,12 +71,12 @@ installs=(
     "pulseaudio-bluetooth"
     "pulsemixer" # mixer and volume control
     "thunar"
-    "unclutter"
     "lf-git" # vim like file manager
     "redshift" # blue light reducer
     "restic" # remote backup
     "scrot" # total screenshot taker
     "seahorse"
+    "sublime-text-4"
     "slack-desktop"
     "slock"
     "sox"

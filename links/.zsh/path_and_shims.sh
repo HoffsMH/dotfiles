@@ -27,7 +27,7 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 
 # should end up with something like
-# ie always prefer version management over system
+# ie always prefer version management, and personal binaries over system
 
 # /Users/<user>/.asdf/shims:
 # /Users/<user>/bin:

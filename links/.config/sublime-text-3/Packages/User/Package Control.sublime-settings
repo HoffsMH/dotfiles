@@ -2,6 +2,16 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"Babel",
+		"Elixir",
+		"ElixirSyntax",
+		"Git Config",
+		"LiveReload",
+		"NeoVintageous",
+		"PackageResourceViewer",
+		"Parinfer",
+		"SublimeLinter",
+		"SublimeLinter-eslint",
 	],
 	"installed_packages":
 	[
@@ -42,6 +52,6 @@
 		"SublimeLinter",
 		"SublimeLinter-eslint",
 		"ToggleNeoVintageous",
-		"Zen Tabs",
+		"Zen Tabs"
 	],
 }

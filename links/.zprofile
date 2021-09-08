@@ -1,10 +1,10 @@
-export EDITOR="/usr/bin/nvim"
+export EDITOR="/usr/bin/subl"
 export BROWSER="brave"
-export TERMINAL="st-256color"
 export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export TERM=st-256color
+export TERM="st-256color"
+export TERMINAL="st-256color"
 
 export QT_QPA_PLATFORMTHME="qt5ct"
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
