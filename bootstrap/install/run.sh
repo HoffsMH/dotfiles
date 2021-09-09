@@ -21,6 +21,7 @@ installs=(
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
     "arc-gruvbox-theme"
+    "networkmanager-iwd"
     "arandr" # arranging screens and saving screen configs
     "axel" # downloader
     "fd" # alternative to find
@@ -54,7 +55,6 @@ installs=(
     "libratbag"
     "light" # backlight and keyboard like control for laptops
     "lxappearance" # managing gtk themes
-    # "manjaro-architect" # for installing manjaro on other disks
     "mpv" # audio and video player
     "ncurses5-compat-libs"
     "ntfs-3g" # for viewing and manipulating windows filesystems
@@ -112,7 +112,6 @@ installs=(
     "rescuetime2"
     "pistol-git"
     "cpupower"
-    # "fwup"
 )
 
 sudo pacman -Syu
@@ -125,10 +124,13 @@ do
   echo "INSTALLING $i"
   echo "###############################################"
   if yay -S --noconfirm $i ; then
-  echo "###############################################"
-  echo "SUCCEEDED $i"
-  echo "###############################################"
+    echo "###############################################"
+    echo "SUCCEEDED $i"
+    echo "###############################################"
   else
+    echo "###############################################"
+    echo "FAILED $i"
+    echo "###############################################"
     echo "- $i\n" >> failures.md
   fi
 done
