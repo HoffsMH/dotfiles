@@ -1,4 +1,5 @@
 export EDITOR="/usr/bin/subl"
+export WAIT_EDITOR="/usr/bin/subl -n -w"
 export BROWSER="brave"
 export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
