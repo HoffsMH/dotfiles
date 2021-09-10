@@ -8,7 +8,7 @@
 
 # admin(on) > passwd set pins (pins never go in pw vault)
 # admin(on) > url
-gpg --edit-card
+# gpg --edit-card
 
 # disable OTP annoyance from accidently touching card
 ykman config usb -d OTP

@@ -76,4 +76,7 @@ export SSH_AUTH_SOCK
 
 tl startx &
 
+$HOME/.screenlayout/main.sh &
+
 exec $SESSION
+

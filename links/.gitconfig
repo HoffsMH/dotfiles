@@ -2,5 +2,5 @@
   name = HoffsMH
   email = matthecker@pm.me
 [core]
-  editor = nvim
+  editor = "$WAIT_EDITOR"
   excludesfile = ~/.gitignore_global
