@@ -105,6 +105,7 @@ installs=(
     "ntp"
     "openssh"
     "xorg-xinit"
+    "xorg-server"
     "rescuetime2"
     "pistol-git"
     "cpupower"
