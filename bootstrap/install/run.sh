@@ -64,7 +64,7 @@ installs=(
     "peek" # Screen cast gifs
     "pfetch" # simple screen fetch
     "piper" # adjusting mouse settings
-    "pmount" # personal drive mounting system that doesn't require sudo
+    "udisks2" # personal drive mounting system that doesn't require sudo
     "poppler" # pdf library
     "protonvpn-cli-ng" # vpn provider
     "pulseaudio-alsa"
@@ -88,13 +88,11 @@ installs=(
     "neovim"
     "syncthing"
     "taskell"
-    "the_silver_searcher"
     "wmctrl"
     "xcape"
     "xclip" # clipboard command interface
     "xdotool"
     "mediainfo"
-    "bc"
     "xorg-font-util"
     "xorg-fonts-encodings"
     "noto-fonts"
@@ -112,6 +110,8 @@ installs=(
     "rescuetime2"
     "pistol-git"
     "cpupower"
+    "xfce4"
+    "xfce4-goodies"
 )
 
 sudo pacman -Syu
