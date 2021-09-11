@@ -6,8 +6,6 @@ set -e
 sudo sed -i '/MAKEFLAGS=/c\MAKEFLAGS="-j$(nproc)"' /etc/makepkg.conf
 sudo sed 's/COMPRESSXZ=(xz -c -z -)/COMPRESSXZ=(xz -T 0 -c -z -)/' /etc/makepkg.conf
 
-"$HOME/personal/dotfiles/bootstrap/install/yay.sh"
-
 echo "###############################################"
 echo "YAY BASIC RECIPE"
 echo "###############################################"
@@ -16,7 +14,7 @@ installs=(
     "kitty"
     "tokei" # count lines of code
     "ripgrep"
-    "zellij-git"
+    "zellij"
     "xcursor-breeze"
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme

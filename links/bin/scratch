@@ -1,0 +1,5 @@
+#!/bin/bash
+
+session=$(zellij list-sessions | sed 1q)
+
+zellij attach $session
