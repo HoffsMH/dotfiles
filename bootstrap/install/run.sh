@@ -97,8 +97,6 @@ installs=(
     "noto-fonts-emoji"
     "xorg-xclipboard"
     "xorg-xev"
-    # "xmonad" # window manager
-    # "xmonad-contrib" # window manager
     "xorg-xsetroot"
     "zathura" # pdf viewer
     "zathura-pdf-poppler"
