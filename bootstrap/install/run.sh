@@ -14,7 +14,7 @@ installs=(
     "kitty"
     "tokei" # count lines of code
     "ripgrep"
-    "zellij"
+    "zellij-git"
     "xcursor-breeze"
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
