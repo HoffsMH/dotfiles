@@ -18,7 +18,6 @@ installs=(
     "xcursor-breeze"
     "gruvbox-material-gtk-theme-git" # just for the icons
     "gruvbox-dark-gtk" # my gtk theme
-    "arc-gruvbox-theme"
     "network-manager-applet"
     "arandr" # arranging screens and saving screen configs
     "axel" # downloader
