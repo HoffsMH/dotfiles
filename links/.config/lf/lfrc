@@ -32,8 +32,17 @@ cmd open ${{
 map A rename # at the very end
 map <enter> shell
 
+
 cmd playfolder ${{
-  play "$fx"
+
+  IFS=$'\n' local lines=($(echo $fs))
+  playlist=""
+  for i in $lines
+  do
+    playlist+="\"${i}\" "
+  done
+
+  play $playlist
 }}
 
 
