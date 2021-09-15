@@ -47,7 +47,7 @@ ctrl + space
   notify-send "queueing $(xpaste)" && echo "$(xclip -o) $(xclip -o)" >> ~/personal/media/video/playlist
 
 @hyper + @shift + p ; p
-  notify-send "playing $(xpaste)" && mpv $(sed 1q ~/personal/media/video/playlist) & sed -i '1d' ~/personal/media/video/playlist
+  notify-send "playing $(xpaste)" && mpv "$(sed 1q ~/personal/media/video/playlist)" & sed -i '1d' ~/personal/media/video/playlist
 
 @hyper + @shift + p ; i
   notify-send $(cat ~/personal/media/video/playlist)

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+url=$(xpaste)
+
+title=$(youtube-dl -e $url)
+
+
+pueue -g playlist play "$url" "$title"
+
