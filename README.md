@@ -2,6 +2,7 @@
 
 make sure that
 
+run script
 - media capture folders are empty
 - dotfiles pushed up
 - all work repos pushed up

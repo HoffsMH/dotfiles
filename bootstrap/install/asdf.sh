@@ -28,17 +28,20 @@ pushd "$HOME"
 asdf plugin add ruby
 asdf plugin add elixir
 asdf plugin add nodejs
+asdf plugin add rust
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 
 # zlib directories need to be present ahead of time in order for asdf to
 # install new versions of ruby
 sudo mkdir -p /usr/local/opt/zlib/lib
-asdf install ruby
-asdf install elixir
-asdf install nodejs
+asdf install ruby latest
+asdf install elixir latest
+asdf install nodejs latest
+asdf install rust latest
 
-asdf global ruby 2.7.0
-asdf global elixir 1.9.4
-asdf global nodejs 13.6.0
+asdf global ruby latest
+asdf global elixir latest
+asdf global nodejs latest
+asdf global rust latest
 
 popd
