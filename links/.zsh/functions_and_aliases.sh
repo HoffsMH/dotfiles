@@ -4,6 +4,7 @@
 
 alias zource="source ~/.zshrc"
 alias vim="nvim"
+alias p="pueue"
 
 ######################################################
 # history

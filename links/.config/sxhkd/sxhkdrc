@@ -43,11 +43,6 @@ ctrl + space
 @hyper + @shift + d ; i
   xclip -o && notify-send "starting image download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/capture/. && notify-send "image download of $(xclip -o)"
 
-@hyper + @shift + p ; q
-  notify-send "queueing $(xpaste)" && echo "$(xclip -o) $(xclip -o)" >> ~/personal/media/video/playlist
-
 @hyper + @shift + p ; p
-  notify-send "playing $(xpaste)" && mpv "$(sed 1q ~/personal/media/video/playlist)" & sed -i '1d' ~/personal/media/video/playlist
+  enq $(xpaste)
 
-@hyper + @shift + p ; i
-  notify-send $(cat ~/personal/media/video/playlist)

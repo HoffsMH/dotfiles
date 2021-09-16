@@ -1,9 +1,15 @@
 #!/bin/bash
 
-url=$(xpaste)
+if [ "$#" -gt 0 ]; then
+  url="$1"
+else
+  url=$(xpaste)
+fi
 
-title=$(youtube-dl -e $url)
+title=$(youtube-dl -e "$url" 2> /dev/null)
 
 
-pueue -g playlist play "$url" "$title"
+pueue add -g playlist 'play "'$url'" "'$title'"'
+
+notify-send "enqueueing: $title $(basename "$url")"
 

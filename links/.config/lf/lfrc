@@ -34,15 +34,16 @@ map <enter> shell
 
 
 cmd playfolder ${{
-
   IFS=$'\n' local lines=($(echo $fs))
   playlist=""
+
   for i in $lines
   do
     playlist+="\"${i}\" "
+    enq $i
   done
 
-  play $playlist
+  #play $playlist
 }}
 
 

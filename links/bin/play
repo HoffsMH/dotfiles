@@ -1,7 +1,6 @@
 #!/bin/bash
-if [ "$#" -gt 1 ]
-then
-  eval "mpv --loop-playlist $@"
-else
-  mpv --loop-playlist "$1"
-fi
+
+notify-send "playing $(basename "$1") $(basename "$2")"
+echo "$1"
+
+mpv --player-operation-mode=pseudo-gui "$1"
