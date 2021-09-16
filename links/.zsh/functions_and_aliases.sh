@@ -17,7 +17,6 @@ hist() {
 ######################################################
 # files/directory work
 ######################################################
-alias z='fasd_cd -d'
 
 # lsing on my music directory was getting annoying with the default color
 export EXA_COLORS="*.mp3=34"
