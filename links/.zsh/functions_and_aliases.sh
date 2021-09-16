@@ -295,6 +295,7 @@ alias kbdxcape="xcape -t 200 -e Control_L=Escape"
 
 alias xfcesesh="export SESSION=xfce4-session && startx"
 alias dwmsesh="export SESSION=dwm && startx"
+alias leftwmsesh="SESSION=\"dbus-launch leftwm\" && startx"
 
 ######################################################
 # bw
