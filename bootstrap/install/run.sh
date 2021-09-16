@@ -31,7 +31,7 @@ installs=(
     "erlang"
     "evtest"
     "exa" # alternative to ls
-    "fasd" # fuzzy find and switch to recently used directories
+    "zoxide-git"
     "fd-git" # alternative to find
     "flameshot" # take a screenshot of a specific area on screen
     "font-manager" # manage fonts
@@ -71,7 +71,7 @@ installs=(
     "pistol-git"
     "poppler" # pdf library
     "protonvpn-cli-ng" # vpn provider
-    "pueue" # process queue
+    "pueue-git" # process queue
     "pulseaudio-alsa"
     "pulseaudio-bluetooth"
     "pulsemixer" # mixer and volume control
