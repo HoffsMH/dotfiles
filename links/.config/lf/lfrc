@@ -49,8 +49,8 @@ cmd playfolder ${{
 
 cmd setbg "$1"
 
-cmd fasd_dir ${{
-   res="$(fasd -dl | grep -iv cache | fzf 2>/dev/tty | sed 's/\\/\\\\/g;s/"/\\"/g')"
+cmd zoxide_dir ${{
+   res="$(zoxide query -l | grep -iv cache | fzf 2>/dev/tty | sed 's/\\/\\\\/g;s/"/\\"/g')"
    if [ -d "$res" ]; then
       cmd="cd"
    else
@@ -59,4 +59,4 @@ cmd fasd_dir ${{
  lf -remote "send $id $cmd \"$res\""
  }}
 
-map go :fasd_dir
+map go :zoxide_dir

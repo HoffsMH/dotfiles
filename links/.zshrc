@@ -37,9 +37,6 @@ precmd_functions+=(set_win_title)
 
 pfetch
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/hoffs/.config/google-cloud-sdk/path.zsh.inc' ]; then . '/home/hoffs/.config/google-cloud-sdk/path.zsh.inc'; fi
 

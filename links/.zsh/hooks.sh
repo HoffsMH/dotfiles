@@ -1,13 +1,13 @@
 # https://github.com/direnv/direnv
 eval "$(direnv hook zsh)"
 
-# https://github.com/clvv/fasd
-eval "$(fasd --init auto)"
-
 . $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit
 compinit
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 #python build env stuff
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
