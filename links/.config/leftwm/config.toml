@@ -1,12 +1,23 @@
 modkey = "Mod3"
-mousekey = "Modk3"
-workspaces = []
-tags = [ "", "", "", "", "", "" ]
+mousekey = "Mod3"
+tags = [ "1", "2", "3", "4" ]
 layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
-scratchpad = []
-disable_current_tag_swap = false
+disable_current_tag_swap = true
 focus_behaviour = "Sloppy"
 focus_new_windows = true
+
+[[workspaces]]
+y = 0
+x = 0
+height = 1440
+width = 2560
+
+[[workspaces]]
+y = 0
+x = 2560
+height = 2560
+width = 1440
+
 
 [[keybind]]
 command = "CloseWindow"
@@ -20,14 +31,13 @@ key = "r"
 
 [[scratchpad]]
 name = "scratch" # This is the name which is referenced when calling (case-sensitive)
-value = "scratch" # The command to load the application if it isn't started
-
+value = "kitty" # The command to load the application if it isn't started
 
 [[keybind]]
 command = "ToggleScratchPad"
 value = "scratch" # Name set for the scratchpad
 modifier = ["modkey"]
-key = "Space"
+key = "space"
 
 [[keybind]]
 command = "SetLayout"
@@ -72,11 +82,6 @@ key = "k"
 command = "MoveWindowDown"
 modifier = ["modkey", "Shift"]
 key = "j"
-
-[[keybind]]
-command = "MoveWindowTop"
-modifier = ["modkey"]
-key = "Return"
 
 [[keybind]]
 command = "FocusWindowUp"
@@ -184,55 +189,6 @@ modifier = ["modkey"]
 key = "9"
 
 [[keybind]]
-command = "MoveToTag"
-value = "1"
-modifier = ["modkey", "Shift"]
-key = "1"
-
-[[keybind]]
-command = "MoveToTag"
-value = "2"
-modifier = ["modkey", "Shift"]
-key = "2"
-
-[[keybind]]
-command = "MoveToTag"
-value = "3"
-modifier = ["modkey", "Shift"]
-key = "3"
-
-[[keybind]]
-command = "MoveToTag"
-value = "4"
-modifier = ["modkey", "Shift"]
-key = "4"
-
-[[keybind]]
-command = "MoveToTag"
-value = "5"
-modifier = ["modkey", "Shift"]
-key = "5"
-
-[[keybind]]
-command = "MoveToTag"
-value = "6"
-modifier = ["modkey", "Shift"]
-key = "6"
-
-[[keybind]]
-command = "MoveToTag"
-value = "7"
-modifier = ["modkey", "Shift"]
-key = "7"
-
-[[keybind]]
-command = "MoveToTag"
-value = "8"
-modifier = ["modkey", "Shift"]
-key = "8"
-
-[[keybind]]
-command = "MoveToTag"
-value = "9"
-modifier = ["modkey", "Shift"]
-key = "9"
+command = "SwapTags"
+modifier = ["modkey"]
+key = "w"
