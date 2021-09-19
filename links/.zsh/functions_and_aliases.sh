@@ -63,6 +63,7 @@ alias pass="gopass"
 ######################################################
 # git
 ######################################################
+
 # fuzzy finder for checking out git branchs
 gcof() {
     local tags branches target
@@ -82,6 +83,7 @@ gcof() {
 alias g="git"
 alias gb="git branch"
 alias gco="git checkout"
+
 # get branch name
 alias gbn="git rev-parse --abbrev-ref HEAD"
 
@@ -177,16 +179,6 @@ alias eyt='$EDITOR ~/bin/ytgo'
 alias pacman-refresh='sudo pacman-mirrors -f && sudo pacman -Syyu'
 
 ######################################################
-# media
-######################################################
-
-# looping play with no video even if there is video
-alias playa="mpv -vo=null --no-audio-display --loop-playlist"
-
-# looping play with video even if there is no video
-alias playv="mpv --no-audio-display --loop-playlist"
-
-######################################################
 # clipboard
 ######################################################
 
@@ -204,15 +196,6 @@ fh() {
 
     # linux needs -r
     print -z $(echo $zshhist $seshist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
-}
-
-# copies history commend to clipboard
-fhl() {
-  local seshist=$([ -n "$ZSH_NAME" ] && fc -l 1 || history)
-  local zshhist=$(cat ~/.zsh_history)
-
-  # linux needs -r
-  cptext $(echo $zshhist $seshist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
 
 ######################################################
@@ -244,7 +227,7 @@ alias jfs='jf ~/personal/media/text'
 alias jfv='jf ~/personal/media/video'
 
 # open this file
-alias oalias="subl ~/.zsh/functions_and_aliases.sh"
+alias oalias="$EDITOR ~/.zsh/functions_and_aliases.sh"
 
 ######################################################
 # docker
@@ -295,7 +278,7 @@ alias kbdxcape="xcape -t 200 -e Control_L=Escape"
 
 alias xfcesesh="export SESSION=xfce4-session && startx"
 alias dwmsesh="export SESSION=dwm && startx"
-alias leftwmsesh="SESSION=\"dbus-launch leftwm\" && startx"
+alias awesomesesh="export SESSION=awesome && startx"
 
 ######################################################
 # bw
@@ -313,16 +296,6 @@ alias gpg-reload-card='gpg-connect-agent "scd serialno" "learn --force" /bye'
 alias gpg-import-my-key='curl mhkr.io/key.pub | gpg --import'
 
 alias addoath="ykman oath add -t $1 $(xclip -o)"
-
-######################################################
-# searching
-######################################################
-
-alias ag="/usr/bin/ag $* -U --pager 'less -R' -A 3 -B 3 \
-  --hidden \
-  --ignore .git \
-  --ignore '**google-chrome**' \
-  --ignore '**Brave-Browser**'"
 
 ######################################################
 # Time
@@ -355,23 +328,8 @@ alias mkup="sudo rm -fr ./tmp && make up"
 alias rmup="sudo rm -fr ./tmp && make up"
 
 ######################################################
-# INFO
-######################################################
-
-alias deviceinfo='sudo dmidecode | ag --pager cat -A 9 -B 0 "System Information"'
-
-compressdisk() {
-  sudo dd if=$1 status=progress conv=sparse | xz -T 0 -v -v -c -z > ~/personal/media/software/capture/$(basename $1).iso.xz
-}
-compressedimgtodisk() {
-  xz -T 0 -v -v -c -d < $1 | sudo dd of=$2 status=progress
-}
-
-######################################################
 # PASS
 ######################################################
 
 alias passedit='pass edit -e "$WAIT_EDITOR"'
-alias passc="pass show -c"
-
-alias gcor='git checkout links/.config/ranger'
+alias passc="pass show -C"
