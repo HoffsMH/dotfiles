@@ -16,14 +16,18 @@
 
 ## Selected
 
-- fine ressurect tmux for devops tasks
+- clear out .config links of no longer used programs
+- install awesome-git in install/run.sh
+- awesome puts slack on 4 when in one monitor mode
+- pressing hyper_space does not result in lua error
+- scratch command will always get a good session even when there are multiple
+- pueue startup not tied to startx
 
 ## Waiting on Something
 
 
 ## Doing
 
-- xmonad exploration
 
 ## Done
 
@@ -74,3 +78,5 @@
 - vim editor config or maybe some way to pick up tab rules from the file
 - gtk theme that matches gruvbox better
 - get a sample vim config going
+- xmonad exploration
+- awesomewm exploration
