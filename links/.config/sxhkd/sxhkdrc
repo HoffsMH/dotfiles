@@ -45,4 +45,3 @@ ctrl + space
 
 @hyper + @shift + p ; p
   enq $(xpaste)
-
