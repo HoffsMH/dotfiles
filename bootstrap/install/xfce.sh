@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 
 #! /bin/bash
@@ -15,5 +15,19 @@ installs=(
 )
 
 echo $installs
-
-echo $installs | xargs yay -S --noconfirm
+for i in $installs
+do
+  echo "###############################################"
+  echo "INSTALLING $i"
+  echo "###############################################"
+  if yay -S --noconfirm $i ; then
+    echo "###############################################"
+    echo "SUCCEEDED $i"
+    echo "###############################################"
+  else
+    echo "###############################################"
+    echo "FAILED $i"
+    echo "###############################################"
+    echo "- $i\n" >> failures.md
+  fi
+done
