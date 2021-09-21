@@ -86,13 +86,11 @@ end)
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
-awful.tag({ "", "", "", "", "", "", "scratch", "mpv" }, s, awful.layout.layouts[1])
-
 
 -- @DOC_FOR_EACH_SCREEN@
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-    -- awful.tag({ "", "", "", "", "", "" }, s, awful.layout.layouts[1])
+        awful.tag({ "", "", "", "", "", "", "scratch", "mpv" }, s, awful.layout.layouts[1])
 
    -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -375,7 +373,10 @@ client.connect_signal("request::default_keybindings", function()
             end,
                 {description = "move to master", group = "client"}),
 
-        awful.key({ modkey,           }, "o",      function (c) c:move_to_screen()               end,
+        awful.key({ modkey,           }, "o",
+            function (c)
+                c:move_to_screen()
+            end,
                 {description = "move to screen", group = "client"}),
 
         awful.key({ modkey,           }, "n",
@@ -484,7 +485,7 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule       = { class = "Slack"     },
-        properties = { screen = 2, tag = "1" }
+        properties = { screen = 2, tag = "" }
     }
 
     ruled.client.append_rule {
