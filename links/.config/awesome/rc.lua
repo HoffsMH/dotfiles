@@ -17,7 +17,6 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 -- Declarative object management
 local ruled = require("ruled")
-local tyrannical = require("tyrannical")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
