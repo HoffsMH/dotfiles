@@ -469,6 +469,11 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     ruled.client.append_rule {
+        rule_all       = { class = "Google-chrome", role = "pop-up"  },
+        properties = { floating = false }
+    }
+
+    ruled.client.append_rule {
         rule       = { class = "Subl"     },
         properties = { screen = 1, tag = "" }
     }
