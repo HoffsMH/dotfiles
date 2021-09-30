@@ -28,6 +28,8 @@
 
 ## Doing
 
+- change gaps in awesome and review keybinds
+- awesome keybind for temp hiding window?
 
 ## Done
 
