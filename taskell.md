@@ -19,9 +19,14 @@
 - clear out .config links of no longer used programs
 - install awesome-git in install/run.sh
 - awesome puts slack on 4 when in one monitor mode
-- pressing hyper_space does not result in lua error
+- pressing hyper_space does not result in lua error first time
 - scratch command will always get a good session even when there are multiple
 - pueue startup not tied to startx
+- awesome menu icon
+- increment and decrement gaps on awesome wm
+- research different possible layouts
+- research titlebar themes
+- research hiding and showing windows keybind
 
 ## Waiting on Something
 

@@ -12,6 +12,8 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "awesome-git" # wm
+    "git-delta-git" # diff viewer
     "ansible" # cfm
     "arandr" # arranging screens and saving screen configs
     "axel" # downloader
