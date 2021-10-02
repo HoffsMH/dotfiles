@@ -13,12 +13,12 @@
 ## Warm
 
 - get all aliases out of zsh it can only slow down startup and couples the shell to the useful commands
+- awesome keybind for temp hiding window?
 
 ## Selected
 
 - clear out .config links of no longer used programs
 - install awesome-git in install/run.sh
-- awesome puts slack on 4 when in one monitor mode
 - pressing hyper_space does not result in lua error first time
 - scratch command will always get a good session even when there are multiple
 - pueue startup not tied to startx
@@ -34,7 +34,6 @@
 ## Doing
 
 - change gaps in awesome and review keybinds
-- awesome keybind for temp hiding window?
 
 ## Done
 
@@ -87,3 +86,4 @@
 - get a sample vim config going
 - xmonad exploration
 - awesomewm exploration
+- awesome puts slack on 4 when in one monitor mode

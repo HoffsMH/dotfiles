@@ -375,7 +375,7 @@ client.connect_signal("request::default_keybindings", function()
             end,
                 {description = "move to master", group = "client"}),
 
-        awful.key({ modkey,           }, "o",
+        awful.key({ modkey,           }, "e",
             function (c)
                 c:move_to_screen()
             end,
@@ -492,7 +492,7 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule       = { class = "Slack"     },
-        properties = { screen = 2, tag = "" }
+        properties = { screen = screen.count()>1 and 2 or 1, tag = screen.count()>1 and "" or "" }
     }
 
     ruled.client.append_rule {
