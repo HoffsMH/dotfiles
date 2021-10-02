@@ -280,6 +280,20 @@ awful.keyboard.append_global_keybindings({
             t.gap = beautiful.useless_gap
         end,
               {description = "set tile", group = "layout"}),
+
+    awful.key({ modkey,  }, ",",
+        function ()
+            local t = awful.screen.focused().selected_tag
+            t.gap = t.gap -  10
+        end,
+              {description = "decrement gaps on current tag", group = "layout"}),
+
+    awful.key({ modkey,  }, ".",
+        function ()
+            local t = awful.screen.focused().selected_tag
+            t.gap = t.gap + 10
+        end,
+              {description = "decrement gaps on current tag", group = "layout"}),
 })
 
 -- @DOC_NUMBER_KEYBINDINGS@
@@ -375,7 +389,7 @@ client.connect_signal("request::default_keybindings", function()
             end,
                 {description = "move to master", group = "client"}),
 
-        awful.key({ modkey,           }, "e",
+        awful.key({ modkey, "Shift"    }, "e",
             function (c)
                 c:move_to_screen()
             end,
