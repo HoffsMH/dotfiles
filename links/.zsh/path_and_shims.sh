@@ -15,9 +15,9 @@ export PATH=$HOME/.pyenv/bin:$PATH
 export PATH=$ASDF_DATA_DIR/shims:$PATH
 
 export PATH=/usr/local/go/bin:$PATH
-export GOPATH=$HOME/code/go
-export GOBIN=$HOME/code/go/bin
-export PATH=$GOBIN:$PATH
+# export GOPATH=$HOME/code/go
+# export GOBIN=$HOME/code/go/bin
+# export PATH=$GOBIN:$PATH
 
 # rust env
 export PATH="$HOME/.cargo/bin:$PATH"
