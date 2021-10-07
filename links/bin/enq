@@ -11,5 +11,7 @@ title=$(youtube-dl -e "$url" 2> /dev/null)
 
 pueue add -g playlist 'play "'$url'" "'$title'"'
 
+echo 'play "'$url'" "'$title'"' >> ~/.playhist
+
 notify-send "enqueueing: $title $(basename "$url")"
 
