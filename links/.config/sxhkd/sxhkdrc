@@ -44,4 +44,7 @@ ctrl + space
   xclip -o && notify-send "starting image download of $(xclip -o)" && axel -c $(xclip -o) -o ~/personal/media/image/capture/. && notify-send "image download of $(xclip -o)"
 
 @hyper + @shift + p ; p
+  play $(xpaste)
+
+@hyper + @shift + p ; q
   enq $(xpaste)
