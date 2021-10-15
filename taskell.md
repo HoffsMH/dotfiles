@@ -22,7 +22,7 @@
 - research different possible layouts
 - research titlebar themes
 - research hiding and showing windows keybind
-- clear out .config links of no longer used programs
+- ytdl functions as shell scripts
 
 ## Waiting on Something
 
@@ -87,3 +87,4 @@
 - increment and decrement gaps on awesome wm
 - pressing hyper_space does not result in lua error first time
 - scratch command will always get a good session even when there are multiple
+- clear out .config links of no longer used programs
