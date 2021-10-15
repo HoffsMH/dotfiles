@@ -12,6 +12,7 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "lazygit-git" # git gui
     "acpi" # battery monitor
     "acpid"
     "ansible" # cfm

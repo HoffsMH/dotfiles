@@ -11,7 +11,7 @@ alias p="pueue"
 ######################################################
 
 hist() {
-    cat ~/.zsh_history | ag $@
+    cat ~/.zsh_history | rg $@
 }
 
 ######################################################
@@ -89,7 +89,6 @@ alias gbn="git rev-parse --abbrev-ref HEAD"
 
 alias gopen="git open origin &"
 alias gcf="git clean -f -d"
-alias lines-of-code="git ls-files | xargs wc -l"
 
 # finds text across all commits, be careful when searching to not use common terms
 # useful for searching for code that you knew existed at one point
@@ -319,13 +318,6 @@ alias nmapo="sudo nmap -O -v"
 
 # specify your repo with env variable or -r
 alias resticbrowse="restic mount /media/restic"
-
-#######################
-# grrrrr
-#######################
-
-alias mkup="sudo rm -fr ./tmp && make up"
-alias rmup="sudo rm -fr ./tmp && make up"
 
 ######################################################
 # PASS

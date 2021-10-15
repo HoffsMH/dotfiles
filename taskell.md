@@ -18,8 +18,6 @@
 
 ## Selected
 
-- pressing hyper_space does not result in lua error first time
-- scratch command will always get a good session even when there are multiple
 - pueue startup not tied to startx
 - research different possible layouts
 - research titlebar themes
@@ -87,3 +85,5 @@
 - change gaps in awesome and review keybinds
 - install awesome-git in install/run.sh
 - increment and decrement gaps on awesome wm
+- pressing hyper_space does not result in lua error first time
+- scratch command will always get a good session even when there are multiple
