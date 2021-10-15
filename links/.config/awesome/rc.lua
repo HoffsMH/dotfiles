@@ -220,10 +220,10 @@ awful.keyboard.append_global_keybindings({
 
             if scratch then
                 awful.tag.viewtoggle(scratchtag)
+                scratch:activate()
             else
                 awful.spawn(terminal)
             end
-            scratch:activate()
         end,
         {description = "open scratch"}),
 
