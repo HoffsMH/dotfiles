@@ -12,10 +12,11 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
-    "awesome-git" # wm
-    "git-delta-git" # diff viewer
+    "acpi" # battery monitor
+    "acpid"
     "ansible" # cfm
     "arandr" # arranging screens and saving screen configs
+    "awesome-git" # wm
     "axel" # downloader
     "bandwhich-git" # bandwidth monitoring tool
     "bitwarden-bin" # legacy -- will one day get rid of this
@@ -33,12 +34,12 @@ installs=(
     "erlang"
     "evtest"
     "exa" # alternative to ls
-    "zoxide-git"
     "fd-git" # alternative to find
     "flameshot" # take a screenshot of a specific area on screen
     "font-manager" # manage fonts
     "fzf" # cli fuzzy finder
     "gfold-git" # see git repo status across many repos
+    "git-delta-git" # diff viewer
     "gnome-calculator" # calculator
     "gnutls"
     "google-chrome" # for front-end testing fidelity
@@ -116,6 +117,7 @@ installs=(
     "zathura-pdf-poppler"
     "zellij-git"
     "zip"
+    "zoxide-git"
 )
 
 sudo pacman -Syu

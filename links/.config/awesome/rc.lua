@@ -19,6 +19,7 @@ local naughty = require("naughty")
 local ruled = require("ruled")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local battery_widget = require("battery-widget.battery")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -154,6 +155,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
+            battery_widget(),
             mytextclock,
             s.mylayoutbox,
         },
@@ -590,10 +592,9 @@ end)
 -- }}}
 
 -- Enable sloppy focus, so that focus follows mouse.
--- used to be: 
+-- used to be:
 -- client.connect_signal("mouse::enter", function(c)
 
 -- client.connect_signal("mouse::click", function(c)
 --     c:activate { context = "mouse_enter", raise = false }
 -- end)
-
