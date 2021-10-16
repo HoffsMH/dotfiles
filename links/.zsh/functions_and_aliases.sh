@@ -64,6 +64,7 @@ alias pass="gopass"
 # git
 ######################################################
 
+alias lzg="lazygit"
 # fuzzy finder for checking out git branchs
 gcof() {
     local tags branches target
@@ -165,7 +166,13 @@ alias tmiex="MIX_ENV=test iex -S mix"
 alias ctmiex="MIX_ENV=test mix compile --force && tmiex"
 alias mphx="iex -S mix phx.server"
 alias mt="mix test"
+
+# ruby
 alias be="bundle exec"
+
+# golang
+alias gob="go build"
+alias got="go test"
 
 # takes large amount of text wraps it at 80 characters and puts it back into register
 alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
