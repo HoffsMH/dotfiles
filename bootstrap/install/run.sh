@@ -12,11 +12,11 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
-    "lazygit-git" # git gui
     "acpi" # battery monitor
     "acpid"
     "ansible" # cfm
     "arandr" # arranging screens and saving screen configs
+    "arc-icon-theme" # needed for battery widget in awesome wm
     "awesome-git" # wm
     "axel" # downloader
     "bandwhich-git" # bandwidth monitoring tool
@@ -25,6 +25,7 @@ installs=(
     "bluez"
     "bluez-utils" # connect to bluetooth devices
     "brave-bin" # browser
+    "cht.sh" # fast help
     "colorgrab" # grab color hex from anywhere on screen
     "cpupower"
     "cups" # printing
@@ -52,6 +53,7 @@ installs=(
     "jdk-openjdk"
     "jq" # command line json parser
     "kitty"
+    "lazygit-git" # git gui
     "lf-git" # vim like file manager
     "libratbag"
     "light" # backlight and keyboard like control for laptops
@@ -83,6 +85,7 @@ installs=(
     "rescuetime2"
     "restic" # remote backup
     "ripgrep"
+    "ristretto" # no keybind memory needed image browser
     "scrot" # total screenshot taker
     "seahorse"
     "slack-desktop"

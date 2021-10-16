@@ -9,4 +9,8 @@
 	"color_scheme": "Packages/gruvbox/gruvbox (Dark) (Medium).sublime-color-scheme",
 	"highlight_modified_tabs": true,
 	"theme": "gruvbox.sublime-theme",
+	"added_words":
+	[
+		"if"
+	],
 }

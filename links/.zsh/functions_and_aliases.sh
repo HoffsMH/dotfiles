@@ -172,7 +172,7 @@ alias be="bundle exec"
 
 # golang
 alias gob="go build"
-alias got="go test"
+alias got="go test -v"
 
 # takes large amount of text wraps it at 80 characters and puts it back into register
 alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
