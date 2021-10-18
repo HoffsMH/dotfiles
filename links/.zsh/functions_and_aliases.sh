@@ -158,6 +158,8 @@ alias pyenvinstall="CPPFLAGS='-I/usr/local/opt/zlib/include' pyenv install -v"
 
 # JS/Ember
 alias ya='yarn'
+alias "gob"="go build"
+alias "got"="go test"
 
 # elixir
 alias miex="iex -S mix"
