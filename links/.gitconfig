@@ -4,6 +4,11 @@
 [core]
   editor = "$WAIT_EDITOR"
   excludesfile = ~/.gitignore_global
+[pager]
+    diff = delta --theme=gruvbox-dark
+    log = delta --theme=gruvbox-dark
+    reflog = delta --theme=gruvbox-dark
+    show = delta --theme=gruvbox-dark
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
