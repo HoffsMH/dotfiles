@@ -23,6 +23,7 @@ installs=(
     "bitwarden-bin" # legacy -- will one day get rid of this
     "blueman-git" # bluetooth gui
     "bluez"
+    "chafa"
     "bluez-utils" # connect to bluetooth devices
     "brave-bin" # browser
     "cht.sh" # fast help
@@ -54,6 +55,7 @@ installs=(
     "jq" # command line json parser
     "kitty"
     "lazygit-git" # git gui
+    "postgresql"
     "lf-git" # vim like file manager
     "libratbag"
     "light" # backlight and keyboard like control for laptops
@@ -102,6 +104,9 @@ installs=(
     "taskell"
     "thunar"
     "tokei" # count lines of code
+    "code"
+    "dbeaver"
+    "gimp"
     "udisks2" # personal drive mounting system that doesn't require sudo
     "unzip"
     "wmctrl"
