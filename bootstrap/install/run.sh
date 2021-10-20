@@ -127,6 +127,7 @@ installs=(
     "tmux" # lovehate this
     "zip"
     "zoxide-git"
+    "postgresql"
 )
 
 sudo pacman -Syu
