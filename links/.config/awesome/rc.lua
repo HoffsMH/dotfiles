@@ -481,7 +481,11 @@ ruled.client.connect_signal("request::rules", function()
                 "pop-up",         -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
-        properties = { floating = true, titlebars_enabled = true }
+        properties = {
+            floating = true,
+            titlebars_enabled = true,
+            placement = awful.placement.centered,
+         }
     }
 
     ruled.client.append_rule {
