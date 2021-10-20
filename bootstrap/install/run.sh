@@ -124,7 +124,7 @@ installs=(
     "xwallpaper" # set the wall paper
     "zathura" # pdf viewer
     "zathura-pdf-poppler"
-    "tmux-git"
+    "tmux" # lovehate this
     "zip"
     "zoxide-git"
 )

@@ -490,6 +490,16 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     ruled.client.append_rule {
+        rule       = { name = "Open Files"  },
+        properties = {
+            floating = true,
+            placement = awful.placement.centered,
+            width = "900",
+            height = "700"
+        }
+    }
+
+    ruled.client.append_rule {
         rule       = { class = "Subl"     },
         properties = { screen = 1, tag = "" }
     }
@@ -513,7 +523,7 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule       = { class = "scratch"     },
-        properties = { focus = false, tag = "scratch" }
+        properties = { floating = false, focus = false, tag = "scratch" }
     }
 
     ruled.client.append_rule {
