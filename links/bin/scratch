@@ -1,3 +1,3 @@
 #!/bin/bash
 
-zellij attach --create main
+tmux new-session -A main
