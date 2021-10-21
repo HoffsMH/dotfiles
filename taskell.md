@@ -18,11 +18,13 @@
 
 ## Selected
 
-- pueue startup not tied to startx
 - research different possible layouts
+- centered floating capture file scratch tag together with new timecap go utility
 - research titlebar themes
 - research hiding and showing windows keybind
 - ytdl functions as shell scripts
+- sublime pane generation and navigation that makes sense
+- awesome focus notified window
 
 ## Waiting on Something
 

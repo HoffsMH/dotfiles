@@ -307,6 +307,8 @@ awful.keyboard.append_global_keybindings({
         description = "only view tag",
         group       = "tag",
         on_press    = function (index)
+            -- should go to screen 1 every time
+            awful.screen.focus(screen.primary)
             local screen = awful.screen.focused()
             local tag = screen.tags[index]
             if tag then
