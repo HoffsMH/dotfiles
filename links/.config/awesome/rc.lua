@@ -39,9 +39,11 @@ end)
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
 
+terminal = "kitty"
 -- @DOC_DEFAULT_APPLICATIONS@
 -- This is used later as the default terminal and editor to run.
-terminal = "kitty --class scratch scratch"
+scratchterminal = "kitty --class scratch scratch"
+capterminal = "ecap"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -62,7 +64,7 @@ myawesomemenu = {
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+                                    { "open terminal", scratchterminal }
                                   }
                         })
 
@@ -91,7 +93,7 @@ mytextclock = wibox.widget.textclock()
 -- @DOC_FOR_EACH_SCREEN@
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-        awful.tag({ "", "", "", "", "", "", "scratch", "mpv" }, s, awful.layout.layouts[1])
+        awful.tag({ "", "", "", "", "", "", "scratch", "mpv", "cap" }, s, awful.layout.layouts[1])
 
    -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -112,7 +114,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     s.mytaglist = awful.widget.taglist {
         screen  = s,
         filter  = function (t)
-            return not (t.name == "scratch") and not (t.name == "mpv")
+            return not (t.name == "scratch") and not (t.name == "mpv") and not (t.name == "cap")
         end,
         buttons = {
             awful.button({ }, 1, function(t) t:view_only() end),
@@ -222,10 +224,24 @@ awful.keyboard.append_global_keybindings({
                 awful.tag.viewtoggle(scratchtag)
                 scratch:activate()
             else
-                awful.spawn(terminal)
+                awful.spawn(scratchterminal)
             end
         end,
         {description = "open scratch"}),
+
+    awful.key({ modkey,           }, "c", function ()
+            local screen = awful.screen.focused()
+            local captag = screen.tags[9]
+            local cap = captag:clients()[1]
+
+            if cap then
+                awful.tag.viewtoggle(captag)
+                cap:activate()
+            else
+                awful.spawn(capterminal)
+            end
+        end,
+        {description = "open cap"}),
 
     awful.key({ modkey,           }, "m", function ()
             local screen = awful.screen.focused()
@@ -533,6 +549,17 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     ruled.client.append_rule {
+        rule       = { class = "cap"     },
+        properties = {
+            titlebars_enabled = false,
+            floating = true,
+            focus = false,
+            tag = "cap",
+            placement = awful.placement.centered,
+        }
+    }
+
+    ruled.client.append_rule {
         rule       = { class = "mpv"     },
         properties = { focus = false, tag = "mpv" }
     }
@@ -581,7 +608,7 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 client.connect_signal("property::floating", function(c)
-    if c.floating then
+    if c.floating  and c.class ~= "cap" then
         awful.titlebar.show(c)
     else
         awful.titlebar.hide(c)
