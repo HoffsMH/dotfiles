@@ -8,5 +8,5 @@ if [ $# -eq 0 ]
     selection=$@
 fi
 
-tl cap $selection
+timecat cap ~/personal/00-capture/time $selection
 notify-send "cap: ${selection}"

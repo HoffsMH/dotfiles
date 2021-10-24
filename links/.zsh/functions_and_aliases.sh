@@ -226,7 +226,6 @@ alias trm='tl rm'
 ######################################################
 
 alias open="xdg-open"
-alias ecap="$EDITOR ~/personal/00-capture/capture.md"
 alias jfc='jf ~/personal/00-capture'
 alias jfa='jf ~/personal/media/audio'
 alias jfi='jf ~/personal/media/image'
