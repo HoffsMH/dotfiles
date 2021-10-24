@@ -26,7 +26,7 @@ installs=(
     "chafa"
     "bluez-utils" # connect to bluetooth devices
     "brave-bin" # browser
-    "cht.sh" # fast help
+    "cht.sh-git" # fast help
     "colorgrab" # grab color hex from anywhere on screen
     "cpupower"
     "cups" # printing
