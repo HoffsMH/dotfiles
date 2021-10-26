@@ -48,7 +48,7 @@ ln -sf "$HOME/pCloudDrive/personal/media/image/library" "$HOME/personal/media/im
 ln -sf "$HOME/pCloudDrive/personal/media/audio/library" "$HOME/personal/media/audio/"
 ln -sf "$HOME/pCloudDrive/personal/media/video/library" "$HOME/personal/media/video/"
 ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/text/"
-ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/text/"
+ln -sf "$HOME/pCloudDrive/personal/media/software/library" "$HOME/personal/media/software/"
 
 # home
 ln -sf "$HOME/code/util/asdf" "$HOME/.asdf"

@@ -230,7 +230,7 @@ alias jfc='jf ~/personal/00-capture'
 alias jfa='jf ~/personal/media/audio'
 alias jfi='jf ~/personal/media/image'
 alias jfs='jf ~/personal/media/software'
-alias jfs='jf ~/personal/media/text'
+alias jft='jf ~/personal/media/text'
 alias jfv='jf ~/personal/media/video'
 
 # open this file

@@ -522,6 +522,16 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     ruled.client.append_rule {
+        rule       = { name = "Save File"  },
+        properties = {
+            floating = true,
+            placement = awful.placement.centered,
+            width = "900",
+            height = "700"
+        }
+    }
+
+    ruled.client.append_rule {
         rule       = { class = "Subl"     },
         properties = { screen = 1, tag = "" }
     }
