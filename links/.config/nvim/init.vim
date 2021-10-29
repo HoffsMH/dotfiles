@@ -20,6 +20,9 @@ call plug#begin(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/plugged"
 "  Plug 'pangloss/vim-javascript'
   Plug 'ruanyl/vim-gh-line'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'prabirshrestha/vim-lsp'
+
+  Plug 'ludovicchabant/vim-gutentags'
 
 
   " Passive gain, just colors Hex codes #eee, no binds added

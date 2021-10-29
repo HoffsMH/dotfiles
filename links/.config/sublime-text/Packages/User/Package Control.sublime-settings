@@ -3,10 +3,12 @@
 	"installed_packages":
 	[
 		"BetterFindBuffer",
+		"Dockerfile Syntax Highlighting",
 		"Elixir",
 		"Emmet",
 		"ESLint",
 		"ExpandRegion",
+		"File History",
 		"GitHubinator",
 		"GoImports",
 		"gruvbox",

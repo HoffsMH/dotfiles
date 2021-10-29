@@ -1,7 +1,7 @@
 [
 	{ "keys": ["ctrl+n"], "command": "move", "args": {"by": "lines", "forward": true} },
-	{ "keys": ["ctrl+p"], "command": "move", "args": {"by": "lines", "forward": false} },
 	{ "keys": ["ctrl+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+  { "keys": ["ctrl+p"],       "command": "open_recently_closed_file" },
 
   { "keys": ["ctrl+k", "l"], "command": "travel_to_pane", "args": {"direction": "right"} },
   { "keys": ["ctrl+k", "h"], "command": "travel_to_pane", "args": {"direction": "left"} },
@@ -57,5 +57,7 @@
     "keys": ["ctrl+shift+["],
     "command": "paredit_backward_barf_sexp",
     "context": [{"key": "should_paredit"}]
-   }
+   },
+
+  { "keys": ["ctrl+tab"], "command": "noop" },
 ]
