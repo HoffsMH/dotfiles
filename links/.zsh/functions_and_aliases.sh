@@ -97,9 +97,9 @@ gsearch() { git log -S$1 -p }
 gpoc() { git pull origin $(gbn) --rebase }
 gpuc() { git push origin $(gbn) $1 }
 
-alias gcopybranchname="gbn | tr -d '\r\n' |tee /dev/stderr | pbcopy"
+alias gcopybranchname="gbn | tr -d '\r\n' |tee /dev/stderr | xclip"
 # if working in a repository where the convention is to name prs after branches
-alias gcopyprname="gbn | sed -e 's/-/ /g' | tr -d '\r\n' |tee /dev/stderr | pbcopy"
+alias gcopyprname="gbn | sed -e 's/-/ /g' | tr -d '\r\n' |tee /dev/stderr | xclip"
 
 alias gpu="git push origin"
 alias gd="git diff"
