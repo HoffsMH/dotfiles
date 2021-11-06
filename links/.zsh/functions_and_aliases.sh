@@ -103,6 +103,9 @@ alias gcopyprname="gbn | sed -e 's/-/ /g' | tr -d '\r\n' |tee /dev/stderr | xcli
 
 alias gpu="git push origin"
 alias gd="git diff"
+gdn() {
+ git diff "HEAD~$1"
+}
 alias ga="git add"
 alias gs="git status"
 alias gr="git reset"

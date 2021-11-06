@@ -25,6 +25,7 @@
 - ytdl functions as shell scripts
 - sublime pane generation and navigation that makes sense
 - awesome focus notified window
+- hyper + and hyper - makes a floating window bigger or smaller
 
 ## Waiting on Something
 
