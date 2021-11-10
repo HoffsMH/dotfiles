@@ -335,5 +335,4 @@ alias resticbrowse="restic mount /media/restic"
 ######################################################
 
 alias passedit='pass edit -e "$WAIT_EDITOR"'
-alias passc="pass show -C"
 
