@@ -150,7 +150,7 @@ alias dockercleanc='docker rm $(docker ps -aq)'
 # cleans volumes
 alias dockercleanv='docker volume rm $(docker volume ls --filter dangling=true -q)'
 # cleans images
-alias dockercleani='docker rmi -f $(docker images -q)'
+alias dockercleani='docker rmi -f $(docker images -q -a)'
 
 alias dockernuke='dockerstopc || dockercleanc || dockercleani || dockercleanv'
 
