@@ -39,6 +39,7 @@ installs=(
     "exa" # alternative to ls
     "fd-git" # alternative to find
     "flameshot" # take a screenshot of a specific area on screen
+    "webkit2gtk" # undocumented dependency of font-manager :(
     "font-manager" # manage fonts
     "fzf" # cli fuzzy finder
     "gfold-git" # see git repo status across many repos
@@ -177,3 +178,4 @@ sudo systemctl start bluetooth.service || echo "starting dunst failed"
 "$HOME/personal/dotfiles/bootstrap/install/docker.sh"
 "$HOME/personal/dotfiles/bootstrap/install/yt-dl.sh"
 "$HOME/personal/dotfiles/bootstrap/install/yubikey-software.sh"
+"$HOME/personal/dotfiles/bootstrap/install/timecat.sh"
