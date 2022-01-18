@@ -19,6 +19,7 @@ installs=(
     "arc-icon-theme" # needed for battery widget in awesome wm
     "awesome-git" # wm
     "axel" # downloader
+    "debtap"
     "bandwhich-git" # bandwidth monitoring tool
     "bitwarden-bin" # legacy -- will one day get rid of this
     "blueman-git" # bluetooth gui
