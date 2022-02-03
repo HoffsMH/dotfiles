@@ -13,7 +13,9 @@ echo "###############################################"
 
 installs=(
     "acpi" # battery monitor
+    "iptables-nft" # docker compose will try to use an option on the legacy version of iptables that no longer exists
     "acpid"
+    "dnsutils" # dig
     "ansible" # cfm
     "arandr" # arranging screens and saving screen configs
     "arc-icon-theme" # needed for battery widget in awesome wm

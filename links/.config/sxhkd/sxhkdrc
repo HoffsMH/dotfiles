@@ -7,6 +7,9 @@
 hyper + g
   xclip -selection clipboard -o | xargs xdg-open
 
+hyper + shift + c
+  ecap -d 0
+
 @XF86AudioLowerVolume
   pulsemixer --change-volume -3
 
