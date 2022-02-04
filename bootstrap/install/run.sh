@@ -36,6 +36,11 @@ installs=(
     "cups-pdf" # printings
     "direnv" # env var management
     "dunst" # notifications
+    "wg-quick"
+    "ledger-live" # crypto : (
+    "ytfzf" # youtube fzf
+    "resolvconf"
+    "zoom" # in a post covid world
     "elixir"
     "erlang"
     "evtest"

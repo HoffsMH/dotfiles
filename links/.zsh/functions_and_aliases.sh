@@ -330,6 +330,9 @@ alias nmapo="sudo nmap -O -v"
 # specify your repo with env variable or -r
 alias resticbrowse="restic mount /media/restic"
 
+alias udmount="udisksctl mount -b"
+alias udunmount="udisksctl unmount -b"
+
 ######################################################
 # PASS
 ######################################################
