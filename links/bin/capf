@@ -8,5 +8,8 @@ if [ $# -eq 0 ]
     selection=$@
 fi
 
-timecat cap ~/personal/00-capture/time "$selection"
-notify-send "cap: ${selection}"
+capfile=$(timecat cap ~/personal/00-capture/time "$selection")
+
+echo $capfile
+
+kitty --class cap nvim "$capfile"
