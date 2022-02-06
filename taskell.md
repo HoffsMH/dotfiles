@@ -16,17 +16,6 @@
 - awesome keybind for temp hiding window?
 - awesome menu icon
 
-## Selected
-
-- research different possible layouts
-- centered floating capture file scratch tag together with new timecap go utility
-- research titlebar themes
-- research hiding and showing windows keybind
-- ytdl functions as shell scripts
-- sublime pane generation and navigation that makes sense
-- awesome focus notified window
-- hyper + and hyper - makes a floating window bigger or smaller
-
 ## Waiting on Something
 
 
@@ -91,3 +80,4 @@
 - pressing hyper_space does not result in lua error first time
 - scratch command will always get a good session even when there are multiple
 - clear out .config links of no longer used programs
+- get a paru installation working as a backup
