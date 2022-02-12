@@ -25,6 +25,13 @@ installs=(
     "bandwhich-git" # bandwidth monitoring tool
     "bitwarden-bin" # legacy -- will one day get rid of this
     "blueman-git" # bluetooth gui
+    "etcher" # burning pis and boot discs
+    "poppler"
+    "ffmpegthumbnailer"
+    "imagemagick"
+    "ueberzug" # kitty image and video preview
+    "iso-image"
+    "wkhtmltopdf"
     "bluez"
     "chafa"
     "bluez-utils" # connect to bluetooth devices

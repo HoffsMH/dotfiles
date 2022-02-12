@@ -60,3 +60,6 @@ cmd zoxide_dir ${{
  }}
 
 map go :zoxide_dir
+
+set previewer ~/.config/lf/preview
+set cleaner ~/.config/lf/cleaner
