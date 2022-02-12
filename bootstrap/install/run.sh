@@ -20,6 +20,7 @@ installs=(
     "arandr" # arranging screens and saving screen configs
     "arc-icon-theme" # needed for battery widget in awesome wm
     "awesome-git" # wm
+    "bat" # rust cat
     "axel" # downloader
     "debtap"
     "bandwhich-git" # bandwidth monitoring tool
