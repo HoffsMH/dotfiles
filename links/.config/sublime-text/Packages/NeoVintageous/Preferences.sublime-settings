@@ -14,6 +14,7 @@
     // Valid values are: fill, outline, underline, squiggly_underline,
     // stippled_underline.
     "neovintageous_search_cur_style": "fill",
+    "neovintageous_smartcase": true,
 
     // Incremental search style.
     // Valid values are: fill, outline, underline, squiggly_underline,
