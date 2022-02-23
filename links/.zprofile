@@ -15,5 +15,8 @@ export GTK_THEME="gruvbox-dark-gtk"
 
 export SESSION=awesome
 
+export SAVEHIST=4000
+export SHARE_HISTORY=true
+
 # path and shims
 source "$HOME/.zsh/path_and_shims.sh"

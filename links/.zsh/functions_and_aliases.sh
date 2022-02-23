@@ -203,11 +203,10 @@ alias xclip="/usr/bin/xclip -selection clipboard"
 
 # puts a fuzzy found history command in buffer
 fh() {
-    local seshist=$([ -n "$ZSH_NAME" ] && fc -l 1 || history)
     local zshhist=$(cat ~/.zsh_history)
 
     # linux needs -r
-    print -z $(echo $zshhist $seshist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
+    print -z $(echo $zshhist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
 }
 
 ######################################################
