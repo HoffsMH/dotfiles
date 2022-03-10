@@ -1,0 +1,7 @@
+#!/bin/bash
+
+branchname=$(git rev-parse --abbrev-ref HEAD)
+
+pushd ~/code/paid/anvyl-cli
+
+./anvyl-cli.rb app -l -w "$branchname" -a master
