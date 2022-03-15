@@ -96,7 +96,8 @@ alias gcf="git clean -f -d"
 # useful for searching for code that you knew existed at one point
 gsearch() { git log -S$1 -p }
 gpoc() { git pull origin $(gbn) --rebase }
-gpuc() { git push origin $(gbn) $1 }
+gpuc() { gpoc && git push origin $(gbn) $1 }
+gpucf() { gpoc && gpuc -f }
 
 alias gcopybranchname="gbn | tr -d '\r\n' |tee /dev/stderr | xclip"
 # if working in a repository where the convention is to name prs after branches

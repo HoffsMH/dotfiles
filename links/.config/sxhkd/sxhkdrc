@@ -16,6 +16,9 @@ hyper + shift + c
 @XF86AudioRaiseVolume
   pulsemixer --change-volume +3
 
+@XF86AudioMute
+  pulsemixer --toggle-mute
+
 @XF86KbdBrightnessUp
   light -As "sysfs/leds/smc::kbd_backlight" 3
 

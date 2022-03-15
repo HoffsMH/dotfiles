@@ -3,5 +3,9 @@
 branchname=$(git rev-parse --abbrev-ref HEAD)
 
 pushd ~/code/paid/anvyl-cli
+source .envrc
 
 ./anvyl-cli.rb app -l -w "$branchname" -a master
+./anvyl-cli.rb app -s
+
+popd
