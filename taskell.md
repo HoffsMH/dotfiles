@@ -9,12 +9,14 @@
     * [ ] restic?
     * [ ] lf
 - thunar default save location
+- time for a way to "minimize" windows through keypress
 
 ## Warm
 
 - get all aliases out of zsh it can only slow down startup and couples the shell to the useful commands
 - awesome keybind for temp hiding window?
 - awesome menu icon
+- time for an actual deck layout within awesomewm tag 1 is getting crowded
 
 ## Waiting on Something
 

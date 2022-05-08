@@ -3,6 +3,7 @@
 	"installed_packages":
 	[
 		"BetterFindBuffer",
+		"Blame Explorer",
 		"Dockerfile Syntax Highlighting",
 		"Elixir",
 		"Emmet",
