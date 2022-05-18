@@ -166,7 +166,64 @@ local function apply_size_hints(c, width, height, useless_gap)
     return width + 2 * bw + useless_gap, height + 2 * bw + useless_gap
 end
 
-local function tile_group(gs, cls, wa, orientation, fact, group, useless_gap)
+function dump(o)
+    if type(o) == 'table' then
+        local s = '{ '
+        for k,v in pairs(o) do
+                if type(k) ~= 'number' then k = '"'..k..'"' end
+                s = s .. '['..k..'] = ' .. dump(v) .. ','
+        end
+        return s .. '} '
+    else
+        return tostring(o)
+    end
+end
+
+local function log(text)
+    local out = io.open(os.getenv("HOME").."/.config/awesome/log", "a")
+    -- out:write(text.."\n")
+    io.close(out)
+end
+
+local function deck_client(idx, start, client_count, avail_width, avail_height, area_x, area_y)
+
+    local client_count = client_count + 1
+    local xoffset = avail_width * 0.03 / (client_count - 1)
+    local yoffset = avail_height * 0.03 / (client_count - 1)
+    log("(client_count - 1) "..(client_count - 1))
+    log("avail_height * 0.1 "..avail_height * 0.1)
+    -- get the relative index of the client
+    local idx = idx - (start - 1)
+
+
+    if client_count == 1 then
+        local g = {
+            x = area_x,
+            y = area_y,
+            width = avail_width,
+            height = avail_height,
+        }
+        log("g "..dump(g))
+        return g
+    else
+        local g = {
+            x = area_x + (idx - 1) * xoffset,
+            y = area_y + (idx - 1) * yoffset,
+            width = avail_width - (xoffset * (client_count - 1)),
+            height = avail_height - (yoffset * (client_count - 1)),
+
+            -- width = avail_width,
+            -- height = avail_height,
+        }
+        log("avail_height "..avail_height)
+        log("yoffset "..yoffset)
+        log("client_count "..client_count)
+        log("g "..dump(g))
+        return g
+    end
+end
+
+local function tile_group(gs, cls, wa, orientation, fact, group, useless_gap, is_master)
     -- get our orientation right
     local height = "height"
     local width = "width"
@@ -206,14 +263,19 @@ local function tile_group(gs, cls, wa, orientation, fact, group, useless_gap)
     local coord = wa[y]
     local used_size = 0
     local unused = wa[height]
+    local group_count = group.last - group.first
     for c = group.first,group.last do
         local geom = {}
         local hints = {}
-        local i = c - group.first +1
-        geom[width] = size
-        geom[height] = math.max(1, math.floor(unused * fact[i] / total_fact))
-        geom[x] = group.coord
-        geom[y] = coord
+        local i = c - group.first + 1
+        if not is_master then
+            geom = deck_client(c, group.first, group_count, size, wa[height], group.coord, wa[y])
+        else
+            geom[width] = size
+            geom[height] = math.max(1, math.floor(unused * fact[i] / total_fact))
+            geom[x] = group.coord
+            geom[y] = coord
+        end
         gs[cls[c]] = geom
         hints.width, hints.height = apply_size_hints(cls[c], geom.width, geom.height, useless_gap)
         coord = coord + hints[height]
@@ -224,6 +286,8 @@ local function tile_group(gs, cls, wa, orientation, fact, group, useless_gap)
 
     return used_size
 end
+
+
 
 local function do_tile(param, orientation)
     local t = param.tag or capi.screen[param.screen].selected_tag
@@ -277,9 +341,11 @@ local function do_tile(param, orientation)
                 data[0] = {}
             end
             coord = coord + tile_group(gs, cls, wa, orientation, data[0],
-                                       {first=1, last=nmaster, coord = coord, size = size}, useless_gap)
+                                       {first=1, last=nmaster, coord = coord, size = size}, useless_gap, true)
         end
 
+        -- its time to place non master clients and there are clients that
+        -- are not master to place
         if not place_master and nother > 0 then
             local last = nmaster
 
@@ -292,13 +358,17 @@ local function do_tile(param, orientation)
                 -- Try to get equal width among remaining columns
                 local size = math.min( (wasize - (coord - wa[x])) / (ncol - i + 1) )
                 local first = last + 1
+                -- gets how many clients to tile for this column 
+                --                  number of remaining clients
+                --                                   number of remainig columns
+                --                                               one off error
                 last = last + math.floor((#cls - last)/(ncol - i + 1))
                 -- tile the column and update our current x coordinate
                 if not data[i] then
                     data[i] = {}
                 end
                 coord = coord + tile_group(gs, cls, wa, orientation, data[i],
-                                           { first = first, last = last, coord = coord, size = size }, useless_gap)
+                                           { first = first, last = last, coord = coord, size = size }, useless_gap, false)
             end
         end
         place_master = not place_master

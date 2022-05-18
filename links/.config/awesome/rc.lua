@@ -12,6 +12,7 @@ require("awful.autofocus")
 local wibox = require("wibox")
 
 local tile_deck = require("tile_deck")
+
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -39,6 +40,9 @@ end)
 -- @DOC_LOAD_THEME@
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("~/.config/awesome/theme.lua")
+
+
+-- local bling = require("bling")
 
 terminal = "kitty"
 -- @DOC_DEFAULT_APPLICATIONS@
@@ -81,7 +85,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Table of layouts to cover with awful.layout.inc, order matters.
 tag.connect_signal("request::default_layouts", function()
     awful.layout.append_default_layouts({
-        awful.layout.suit.tile,
+        tile_deck,
         awful.layout.suit.max,
     })
 end)
@@ -137,6 +141,9 @@ screen.connect_signal("request::desktop_decoration", function(s)
             awful.button({ }, 3, function() awful.menu.client_list { theme = { width = 250 } } end),
             awful.button({ }, 4, function() awful.client.focus.byidx(-1) end),
             awful.button({ }, 5, function() awful.client.focus.byidx( 1) end),
+        },
+        layout = {
+            layout = wibox.layout.fixed.horizontal
         }
     }
 
@@ -211,7 +218,7 @@ awful.keyboard.append_global_keybindings({
               {description = "focus the next screen", group = "screen"}),
 
     awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the next screen", group = "screen"}),
+              {description = "focus the prev screen", group = "screen"}),
 
     awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
               {description = "focus the previous screen", group = "screen"}),
@@ -253,7 +260,7 @@ awful.keyboard.append_global_keybindings({
                 awful.tag.viewtoggle(mpvtag)
             end
         end,
-        {description = "open scratch"}),
+        {description = "open mpv"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
@@ -287,13 +294,13 @@ awful.keyboard.append_global_keybindings({
         function ()
             awful.layout.set(awful.layout.suit.max)
             local t = awful.screen.focused().selected_tag
-            t.gap = 0
+            -- t.gap = 0
         end,
               {description = "set monocle", group = "layout"}),
 
     awful.key({ modkey,  }, "t",
         function ()
-            awful.layout.set(awful.layout.suit.tile)
+            awful.layout.set(tile_deck)
 
             local t = awful.screen.focused().selected_tag
             t.gap = beautiful.useless_gap
@@ -304,6 +311,7 @@ awful.keyboard.append_global_keybindings({
         function ()
             local t = awful.screen.focused().selected_tag
             t.gap = t.gap -  10
+            beautiful.useless_gap = t.gap
         end,
               {description = "decrement gaps on current tag", group = "layout"}),
 
@@ -311,6 +319,7 @@ awful.keyboard.append_global_keybindings({
         function ()
             local t = awful.screen.focused().selected_tag
             t.gap = t.gap + 10
+            beautiful.useless_gap = t.gap
         end,
               {description = "decrement gaps on current tag", group = "layout"}),
 })
