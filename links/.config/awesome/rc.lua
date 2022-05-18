@@ -11,6 +11,7 @@ require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
 
+local tile_deck = require("tile_deck")
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
