@@ -17,6 +17,7 @@
 - awesome keybind for temp hiding window?
 - awesome menu icon
 - time for an actual deck layout within awesomewm tag 1 is getting crowded
+- bookmarking into capture also bulk bookmarking
 
 ## Waiting on Something
 
