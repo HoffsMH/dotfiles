@@ -87,7 +87,7 @@ end)
 
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %a %b %d, %I:%M %p ")
 
 
 -- @DOC_FOR_EACH_SCREEN@

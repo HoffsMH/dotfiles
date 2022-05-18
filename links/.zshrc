@@ -5,17 +5,19 @@ export PISTOL_CHROMA_STYLE=arduino
 export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=1000
 export SAVEHIST=1000
+setopt -o appendhistory
 setopt appendhistory
+setopt -o sharehistory
 
 unalias -a
-bindkey -me
-
+bindkey -e
 
 # fzf settings
 source ~/.zsh/fzf_settings.sh
 
 # all my stuff
 source "$HOME/.zsh/ytdl.sh"
+source "$HOME/.zsh/zsh-vi-mode.plugin.zsh"
 source "$HOME/.zsh/functions_and_aliases.sh"
 
 # path and shims
