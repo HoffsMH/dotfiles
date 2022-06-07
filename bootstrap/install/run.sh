@@ -71,6 +71,8 @@ installs=(
     "jdk-openjdk"
     "jq" # command line json parser
     "kitty"
+    "pinentry-dispatch"
+    "pinentry-git"
     "lazygit-git" # git gui
     "postgresql"
     "lf-git" # vim like file manager
@@ -122,7 +124,8 @@ installs=(
     "thunar"
     "tokei" # count lines of code
     "code"
-    "dbeaver"
+    
+    "dbeaver" # sql exploration
     "gimp"
     "udisks2" # personal drive mounting system that doesn't require sudo
     "unzip"
