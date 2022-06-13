@@ -9,7 +9,7 @@ pushd "$HOME/code/util"
 
 rm -fr ex-tl
 
-git clone git://github.com/HoffsMH/ex-tl.git
+git clone https://github.com/HoffsMH/ex-tl
 
 pushd ~/code/util/ex-tl
   mix local.hex --force

@@ -9,7 +9,7 @@ pushd "$HOME/code/util"
 
 rm -fr timecat
 
-git clone git://github.com/HoffsMH/timecat.git
+git clone https://github.com/HoffsMH/timecat
 
 pushd ~/code/util/timecat
   ./bin/install

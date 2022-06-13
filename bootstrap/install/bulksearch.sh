@@ -1,16 +1,16 @@
 #! /bin/bash
 
 echo "###############################################"
-echo "DMENU"
+echo "Install bulksearch"
 echo "###############################################"
 
 mkdir -p "$HOME/code/util"
 pushd "$HOME/code/util"
 
-rm -rf dmenu
+rm -fr bulksearch
 
-git clone https://github.com/HoffsMH/dmenu
+git clone https://github.com/HoffsMH/bulksearch
 
-pushd ~/code/util/dmenu
-  sudo make clean install
+pushd ~/code/util/bulksearch
+
 popd

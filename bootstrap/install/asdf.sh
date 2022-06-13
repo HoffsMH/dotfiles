@@ -8,7 +8,7 @@ pushd "$HOME/code/util"
 
 rm -fr asdf
 
-git clone git://github.com/asdf-vm/asdf.git
+git clone https://github.com/asdf-vm/asdf
 
 echo "###############################################"
 echo "install languages"
