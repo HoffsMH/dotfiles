@@ -20,7 +20,6 @@ installs=(
     "arc-icon-theme" # needed for battery widget in awesome wm
     "awesome-git" # wm
     "axel" # downloader
-    "bandwhich-git" # bandwidth monitoring tool
     "bat" # rust cat
     "bitwarden-bin" # legacy -- will one day get rid of this
     "blueman-git" # bluetooth gui
@@ -42,7 +41,9 @@ installs=(
     "dnsutils" # dig
     "dunst" # notifications
     "elixir"
+    "entr" # useful little thing
     "erlang"
+    "monero-gui"
     "etcher" # burning pis and boot discs
     "evtest"
     "exa" # alternative to ls
@@ -78,7 +79,7 @@ installs=(
     "light" # backlight and keyboard like control for laptops
     "lxappearance" # managing gtk themes
     "mediainfo"
-    "mlvd" # vpn
+    "mullvad-vpn" # vpn
     "mpv" # audio and video player
     "ncurses5-compat-libs"
     "neovim"
