@@ -177,7 +177,7 @@ do
     echo "###############################################"
     echo "FAILED $i"
     echo "###############################################"
-    echo "- $i\n" >> failures.md
+    echo "- $i\n" >> "$HOME/failures.md"
   fi
 done
 
