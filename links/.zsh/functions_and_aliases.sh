@@ -1,4 +1,20 @@
 ######################################################
+# manjaro
+######################################################
+
+alias mirrors-f="sudo pacman-mirrors -f"
+alias update-f="sudo pacman -Syyu --overwrite '*'"
+alias keyring-f="sudo pacman -S manjaro-keyring"
+
+# sudo pacman-key --init
+# sudo pacman-key --populate manjaro archlinux
+
+
+
+
+
+
+######################################################
 # zsh
 ######################################################
 
@@ -207,16 +223,9 @@ fh() {
     local zshhist=$(cat ~/.zsh_history)
 
     # linux needs -r
-    print -z $(echo $zshhist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
+    print -z $(fho)
 }
 
-# puts a fuzzy found history command into stdout for copying or otherwise
-fho() {
-    local zshhist=$(cat ~/.zsh_history)
-
-    # linux needs -r
-    print  $(echo $zshhist | fzf +s --no-preview --tac | sed -r 's/( *: *[0-9]*:0;\*? *)|( *[0-9]*\*? *)//' | sed -r 's/\\/\\\\/g')
-}
 
 ######################################################
 # disks
