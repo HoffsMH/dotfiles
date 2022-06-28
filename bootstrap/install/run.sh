@@ -14,7 +14,8 @@ echo "###############################################"
 installs=(
     "acpi" # battery monitor
     "acpid"
-    "unrar-libre"
+    "p7zip" # 7z
+    "unrar-libre" # winrar
     "ansible" # cfm
     "anydesk" # remote desk 
     "arandr" # arranging screens and saving screen configs
