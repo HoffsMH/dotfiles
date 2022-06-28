@@ -9,11 +9,6 @@ alias keyring-f="sudo pacman -S manjaro-keyring"
 # sudo pacman-key --init
 # sudo pacman-key --populate manjaro archlinux
 
-
-
-
-
-
 ######################################################
 # zsh
 ######################################################
@@ -324,16 +319,6 @@ alias gpg-reload-card='gpg-connect-agent "scd serialno" "learn --force" /bye'
 alias gpg-import-my-key='curl mhkr.io/key.pub | gpg --import'
 
 alias addoath="ykman oath add -t $1 $(xclip -o)"
-
-######################################################
-# Time
-######################################################
-
-settime() {
-  sudo ntpd -qg
-  sudo timedatectl set-timezone "$(curl --fail https://ipapi.co/timezone)"
-  sudo hwclock -w
-}
 
 ######################################################
 # network sleuthing
