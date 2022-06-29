@@ -29,6 +29,7 @@ asdf plugin add ruby
 asdf plugin add elixir
 asdf plugin add nodejs
 asdf plugin add rust
+asdf plugin add python
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 
 # zlib directories need to be present ahead of time in order for asdf to
@@ -38,10 +39,13 @@ asdf install ruby latest
 asdf install elixir latest
 asdf install nodejs latest
 asdf install rust latest
+asdf install python latest
+asdf install python 2.7.13
 
 asdf global ruby latest
 asdf global elixir latest
 asdf global nodejs latest
 asdf global rust latest
+asdf global python 2.7.13 latest
 
 popd

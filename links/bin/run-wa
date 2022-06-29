@@ -19,9 +19,10 @@ eval '$(direnv hook zsh)'
 chmod +x ~/bin/temp-cmd
 
 set -e
-direnv exec . ~/bin/temp-cmd && notify-send "COMMAND: $@
+direnv exec . ~/bin/temp-cmd 2> ~/bin/temp-err  && notify-send "COMMAND: $@
  DONE: success" || notify-send "COMMAND: $@
- DONE: failure"
+ DONE: failure $(cat ~/bin/temp-err)"
 
 \rm -fr ~/bin/temp-cmd
+\rm -fr ~/bin/temp-err
 
