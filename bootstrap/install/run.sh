@@ -11,6 +11,7 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "xorg-xinput" # adjusting touchpad settings
     "acpi" # battery monitor
     "acpid"
     "p7zip" # 7z
