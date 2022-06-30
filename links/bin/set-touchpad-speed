@@ -1,0 +1,1 @@
+id="12"; speed=5.00; xinput set-prop $id "Coordinate Transformation Matrix" $speed, 0, 0, 0, $speed, 0, 0, 0, 1
