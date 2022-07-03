@@ -205,12 +205,16 @@ alias xclip="/usr/bin/xclip -selection clipboard"
 # history
 ######################################################
 
-# puts a fuzzy found history command in buffer
 fh() {
-    local zshhist=$(cat ~/.zsh_history)
-
-    # linux needs -r
     print -z $(fho)
+}
+
+######################################################
+# which
+######################################################
+
+fb() {
+    print -z $(fbo)
 }
 
 
