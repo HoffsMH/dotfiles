@@ -104,7 +104,6 @@ installs=(
     "postgresql"
     "postgresql"
     "protonvpn-cli-ng" # vpn provider
-    "pueue-git" # process queue
     "pulseaudio-alsa"
     "pulseaudio-bluetooth"
     "pulsemixer" # mixer and volume control
