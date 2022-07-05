@@ -12,6 +12,8 @@ echo "###############################################"
 
 installs=(
     "xorg-xinput" # adjusting touchpad settings
+    "samba"
+    "manjaro-settings-samba"
     "acpi" # battery monitor
     "acpid"
     "p7zip" # 7z
