@@ -17,6 +17,7 @@ installs=(
     "acpi" # battery monitor
     "acpid"
     "p7zip" # 7z
+    "calibre" # e-book reading
     "unrar-libre" # winrar
     "ansible" # cfm
     "anydesk" # remote desk 
@@ -133,7 +134,6 @@ installs=(
     "thunar"
     "tmux" # lovehate this
     "tokei" # count lines of code
-    "code"
     "dbeaver" # sql exploration
     "gimp"
     "udisks2" # personal drive mounting system that doesn't require sudo
