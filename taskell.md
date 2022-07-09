@@ -18,6 +18,8 @@
 - awesome menu icon
 - time for an actual deck layout within awesomewm tag 1 is getting crowded
 - bookmarking into capture also bulk bookmarking
+- keybind to just move ALL clients from one to another screen
+- keybind to focus master no matter where in stack you are
 
 ## Waiting on Something
 

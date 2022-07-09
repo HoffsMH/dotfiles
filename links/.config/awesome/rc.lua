@@ -194,6 +194,20 @@ awful.keyboard.append_global_keybindings({
 
 -- Focus related keybindings
 awful.keyboard.append_global_keybindings({
+
+    awful.key({ modkey,           }, "a",
+        function ()
+            current = client.focus
+            master = awful.client.getmaster()
+
+            if current == master then
+                awful.client.focus.history.previous ()
+            else
+                client.focus = awful.client.getmaster()
+            end
+        end,
+        {description = "focus next by index", group = "client"}
+    ),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -543,18 +557,18 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule       = { class = "Subl"     },
-        properties = { screen = 1, tag = "" }
+        properties = { screen = screen.primary, tag = "" }
     }
 
     ruled.client.append_rule {
         rule       = { class = "Google-chrome"     },
-        properties = { screen = 1, tag = "" }
+        properties = { screen = screen.primary, tag = "" }
     }
 
 -- awful.tag({ "", "", "", "", "", "", "scratch" }, s, awful.layout.layouts[1])
     ruled.client.append_rule {
         rule       = { class = "Brave-browser"     },
-        properties = { screen = 1, tag = "" }
+        properties = { screen = screen.primary, tag = "" }
     }
 
 

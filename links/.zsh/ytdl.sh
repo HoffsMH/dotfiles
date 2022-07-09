@@ -70,8 +70,3 @@ ytdla() {
 
     youtube-dl  --add-metadata -x  -ci --sleep-interval 2 --max-sleep-interval 4 --no-warnings --playlist-reverse --download-archive ~/.config/.yt-dl-archive/audio --audio-format 'mp3' --audio-quality 0 -o "~/personal/media/audio/capture$dir_name/%(title)s-%(uploader)s-%(id)s.%(ext)s" $yturl
 }
-
-installytdl() {
-    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-    sudo chmod a+rx /usr/local/bin/youtube-dl
-}
