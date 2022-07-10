@@ -694,18 +694,18 @@ fi
 if [ ! -z "$CONFIRMROOTPASSWORD" ]
 then
 
-# simple command to put the results of lsblk (just the names of the devices) into an array and make that array populate the options	
-#     let i=0
-#     W=()
-#     while read -r line; do
-#         let i=$i+1
-#         W+=($line "")
-#     done < <( lsblk -dn -o NAME )
-#     SDCARD=$(dialog --title "Manjaro ARM Installer v${VERSION}" \
-#     --menu "Choose your SDCard/eMMC/USB - Be sure the correct drive is selected! 
-# WARNING! This WILL destroy the data on it!" 20 50 10 \
-#     "${W[@]}" 3>&2 2>&1 1>&3)
-SDCARD="sdb"
+simple command to put the results of lsblk (just the names of the devices) into an array and make that array populate the options	
+    let i=0
+    W=()
+    while read -r line; do
+        let i=$i+1
+        W+=($line "")
+    done < <( lsblk -dn -o NAME )
+    SDCARD=$(dialog --title "Manjaro ARM Installer v${VERSION}" \
+    --menu "Choose your SDCard/eMMC/USB - Be sure the correct drive is selected! 
+WARNING! This WILL destroy the data on it!" 20 50 10 \
+    "${W[@]}" 3>&2 2>&1 1>&3)
+# SDCARD="sdb"
 
 # add /dev/ to the selected option above
     DEV_NAME=$SDCARD
