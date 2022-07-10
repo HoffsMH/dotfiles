@@ -27,7 +27,7 @@ PASSWORD="changeme"
 CONFIRMPASSWORD="changeme"
 CONFIRMROOTPASSWORD="changeme"
 ROOTPASSWORD="changeme"
-SDCARD="/dev/sdb"
+SDCARD=""
 SDTYP=""
 SDDEV=""
 DEV_NAME=""
@@ -694,7 +694,7 @@ fi
 if [ ! -z "$CONFIRMROOTPASSWORD" ]
 then
 
-simple command to put the results of lsblk (just the names of the devices) into an array and make that array populate the options	
+# simple command to put the results of lsblk (just the names of the devices) into an array and make that array populate the options	
     let i=0
     W=()
     while read -r line; do
