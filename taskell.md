@@ -20,6 +20,7 @@
 - bookmarking into capture also bulk bookmarking
 - keybind to just move ALL clients from one to another screen
 - keybind to focus master no matter where in stack you are
+- just get a simple mp3 into dotfiles and make it link to something for `timer` command to play
 
 ## Waiting on Something
 
