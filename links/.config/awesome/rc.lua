@@ -557,12 +557,13 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule       = { class = "Subl"     },
-        properties = { screen = screen.primary, tag = "" }
+        properties = { screen = screen.count()>1 and 2 or 1,
+        tag = "" }
     }
 
     ruled.client.append_rule {
         rule       = { class = "Google-chrome"     },
-        properties = { screen = screen.primary, tag = "" }
+        properties = { screen = screen.count()>1 and 2 or 1, tag = "" }
     }
 
 -- awful.tag({ "", "", "", "", "", "", "scratch" }, s, awful.layout.layouts[1])
