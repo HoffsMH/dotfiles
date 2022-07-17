@@ -44,11 +44,11 @@ echo "###############################################"
 "$HOME/personal/dotfiles/bootstrap/links/run.sh"
 
 # media libraries
-ln -sf "$HOME/pCloudDrive/personal/media/image/library" "$HOME/personal/media/image/"
+ln -sf "/mnt/storage/data/personal/media/image/library" "$HOME/personal/media/image/"
 ln -sf "/mnt/storage/data/personal/media/audio/library" "$HOME/personal/media/audio/"
-ln -sf "$HOME/pCloudDrive/personal/media/video/library" "$HOME/personal/media/video/"
-ln -sf "$HOME/pCloudDrive/personal/media/text/library" "$HOME/personal/media/text/"
-ln -sf "$HOME/pCloudDrive/personal/media/software/library" "$HOME/personal/media/software/"
+ln -sf "/mnt/storage/data/personal/media/video/library" "$HOME/personal/media/video/"
+ln -sf "/mnt/storage/data/personal/media/text/library" "$HOME/personal/media/text/"
+ln -sf "/mntstorage/data/personal/media/software/library" "$HOME/personal/media/software/"
 
 # home
 ln -sf "$HOME/code/util/asdf" "$HOME/.asdf"
