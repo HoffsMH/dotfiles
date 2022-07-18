@@ -11,6 +11,7 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "python-crcmod" # used to download stuff fast
     "xorg-xinput" # adjusting touchpad settings
     "samba"
     "manjaro-settings-samba"
