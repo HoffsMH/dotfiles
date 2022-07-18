@@ -45,3 +45,18 @@ git clone https://github.com/HoffsMH/bulksearch
 pushd ~/code/util/bulksearch
   ./bin/install
 popd
+
+echo "###############################################"
+echo "Install caseshift"
+echo "###############################################"
+
+mkdir -p "$HOME/code/util"
+pushd "$HOME/code/util"
+
+rm -fr caseshift
+
+git clone https://github.com/HoffsMH/caseshift
+
+pushd ~/code/util/caseshift
+  ./bin/install
+popd

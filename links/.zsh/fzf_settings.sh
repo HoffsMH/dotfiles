@@ -9,9 +9,10 @@ fi
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
 export FZF_DEFAULT_OPTS='
-                  --border
-                  --bind "ctrl-y:execute-silent(echo {} | xclip)+abort"
-		  --preview "(pistol {}) 2> /dev/null | head -500"'
+--border
+--bind "ctrl-y:execute-silent(echo {} | xclip)+abort"
+--preview "(pistol {}) 2> /dev/null | head -500"
+'
 
 export FZF_DEFAULT_COMMAND='fd --type file'
 
