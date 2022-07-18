@@ -48,7 +48,7 @@ ln -sf "/mnt/storage/data/personal/media/image/library" "$HOME/personal/media/im
 ln -sf "/mnt/storage/data/personal/media/audio/library" "$HOME/personal/media/audio/"
 ln -sf "/mnt/storage/data/personal/media/video/library" "$HOME/personal/media/video/"
 ln -sf "/mnt/storage/data/personal/media/text/library" "$HOME/personal/media/text/"
-ln -sf "/mntstorage/data/personal/media/software/library" "$HOME/personal/media/software/"
+ln -sf "/mnt/storage/data/personal/media/software/library" "$HOME/personal/media/software/"
 
 # home
 ln -sf "$HOME/code/util/asdf" "$HOME/.asdf"
