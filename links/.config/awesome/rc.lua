@@ -227,12 +227,6 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey,           }, "e", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
 
-    awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end,
-              {description = "focus the prev screen", group = "screen"}),
-
-    awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
-              {description = "focus the previous screen", group = "screen"}),
-
     awful.key({ modkey,           }, "space", function ()
             local screen = awful.screen.focused()
             local scratchtag = screen.tags[7]
@@ -302,18 +296,17 @@ awful.keyboard.append_global_keybindings({
 
     awful.key({ modkey,  }, "p",
         function ()
-            awful.layout.set(awful.layout.suit.max)
+            awful.layout.set(tile_deck)
             local t = awful.screen.focused().selected_tag
-            -- t.gap = 0
+            t.master_count = 0
         end,
               {description = "set monocle", group = "layout"}),
 
     awful.key({ modkey,  }, "t",
         function ()
             awful.layout.set(tile_deck)
-
             local t = awful.screen.focused().selected_tag
-            t.gap = beautiful.useless_gap
+            t.master_count = 1
         end,
               {description = "set tile", group = "layout"}),
 
