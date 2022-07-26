@@ -11,6 +11,8 @@ echo "YAY BASIC RECIPE"
 echo "###############################################"
 
 installs=(
+    "age" # simple encryption
+    "net-tools" # for netstat
     "python-crcmod" # used to download stuff fast
     "xorg-xinput" # adjusting touchpad settings
     "samba"
@@ -153,7 +155,7 @@ installs=(
     "xorg-fonts-encodings"
     "xorg-server"
     "xorg-xclipboard"
-    "xorg-xev"
+    "xorg-xev" # x event
     "xorg-xinit"
     "xorg-xsetroot"
     "xwallpaper" # set the wall paper
@@ -162,7 +164,7 @@ installs=(
     "zathura-pdf-poppler"
     "zip"
     "zoom" # in a post covid world
-    "zoxide-git"
+    "zoxide-git" # fuzzy finder cd
 )
 
 sudo pacman -Syu
