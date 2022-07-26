@@ -16,9 +16,14 @@ retainCount=$4 # how many you wish to retain for that category in storage
 datestr=$(date +%Y-%m-%d)
 hostname=$(cat /etc/hostname)
 userhome="/home/$user"
+
 capturedir="$userhome/$subdir"
-backupstaging="$userhome/.backup/staging/$category"
-backupDir="/mnt/storage/data/backups/workstation"
+
+backupstaging="$userhome/.backup/staging/$category/$subdir"
+dataDir="/mnt/storage/data"
+
+backupDir="$dataDir/backups/workstation/$category/$subdir"
+
 excludesfile="$userhome/.backup/excludes"
 
 mkdir -p $backupstaging
@@ -30,13 +35,17 @@ else
   tar -czvf "$backupstaging/$datestr-$hostname-$user-$subdir-backup.tar.gz" $capturedir
 fi
 
-if [[ -d "$backupDir" ]]
+  echo "looking for dataDir"
+if [[ -d "$dataDir" ]]
 then
-  rsync -zvhr --remove-source-files $backupstaging $backupDir
+  echo "found dataDir"
+  mkdir -p $backupDir
+
+  rsync -zvhr --remove-source-files "$backupstaging/" $backupDir
 
   # assumes sorted alphabetically so all files must begin with $datestr
-  deletes=$(/usr/bin/ls -r "$backupDir/$category" | tail -n +$(($retainCount + 1))  )
-  pushd "$backupDir/$category"
+  deletes=$(/usr/bin/ls -r "$backupDir" | tail -n +$(($retainCount + 1))  )
+  pushd "$backupDir"
 
   for i in $deletes
   do
