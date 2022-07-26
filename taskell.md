@@ -10,13 +10,13 @@
     * [ ] lf
 - thunar default save location
 - time for a way to "minimize" windows through keypress
+- go jrnl
 
 ## Warm
 
 - get all aliases out of zsh it can only slow down startup and couples the shell to the useful commands
+    > my thoughts on this has changed, if I want autocomplete then I want an alias but if my arguments are usually files or there are no arguments then its a bash script
 - awesome keybind for temp hiding window?
-- awesome menu icon
-- time for an actual deck layout within awesomewm tag 1 is getting crowded
 - bookmarking into capture also bulk bookmarking
 - keybind to just move ALL clients from one to another screen
 - keybind to focus master no matter where in stack you are
@@ -87,3 +87,5 @@
 - scratch command will always get a good session even when there are multiple
 - clear out .config links of no longer used programs
 - get a paru installation working as a backup
+- awesome menu icon
+- time for an actual deck layout within awesomewm tag 1 is getting crowded
