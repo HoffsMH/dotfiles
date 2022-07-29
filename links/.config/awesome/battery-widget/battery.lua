@@ -162,8 +162,6 @@ local function worker(user_args)
             if enable_battery_warning and status ~= 'Charging' and os.difftime(os.time(), last_battery_check) > 300 then
                 -- if 5 minutes have elapsed since the last warning
                 last_battery_check = os.time()
-
-                show_battery_warning()
             end
         elseif (charge >= 15 and charge < 40) then batteryType = "battery-caution%s-symbolic"
         elseif (charge >= 40 and charge < 60) then batteryType = "battery-low%s-symbolic"
