@@ -1,4 +1,4 @@
-export EDITOR="/usr/bin/subl"
+export EDITOR="/usr/bin/nvim"
 export WAIT_EDITOR="/usr/bin/subl -n -w"
 export BROWSER="brave"
 export READER="zathura"
@@ -15,7 +15,7 @@ export GTK_THEME="gruvbox-dark-gtk"
 
 export SESSION=awesome
 
-export SAVEHIST=4000
+export SAVEHIST=40000
 export SHARE_HISTORY=true
 
 # path and shims
