@@ -1,37 +1,6 @@
-vim.opt.colorcolumn = "80"
-vim.opt.clipboard = "unnamedplus"
-vim.opt.nu = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.hlsearch = search
-vim.opt.incsearch = true
-vim.opt.smartindent = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.wrap = false
-vim.opt.list = true
-vim.opt.foldlevel = 5
+require('set')
+require('binds')
 
-vim.opt.listchars="tab:>-,space:.,eol:¬"
-
-vim.g.netrw_banner = 0
-
-local nnoremap = require('keymap').nnoremap
-
-vim.g.mapleader = " "
-
--- keybind to switch between folding methods so I can prefer syntx
-
-nnoremap("<leader>pv", "<cmd>Ex<cr>")
-nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
-nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
-nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
-nnoremap("<leader>.", "<cmd>e ~/.config/nvim<cr>")
-nnoremap("q:", "<Nop>")
-
--- make this keep expandign
-nnoremap("<C-e>", "<Plug>(expand_region_expand)")
 
 -- to install packer
 -- git clone --depth 1 https://github.com/wbthomason/packer.nvim\
@@ -51,7 +20,9 @@ require('packer').startup(function(use)
   use 'nvim-lua/plenary.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'terrortylor/nvim-comment'
-
+  use 'mbbill/undotree'
+	use 'ThePrimeagen/harpoon'
+	use 'neovim/nvim-lspconfig'
 end)
 
 require('nvim_comment').setup({
@@ -83,24 +54,23 @@ require('nvim-treesitter.configs').setup {
 			"glimmer"
     },
 
+    indent = {
+      enable = true
+    },
 
-  highlight = {
-    -- `false` will disable the whole extension
-    enable = true,
 
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = true,
-  },
+    highlight = {
+      -- `false` will disable the whole extension
+      enable = true,
+
+      -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+      -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+      -- Using this option may slow down your editor, and you may see some duplicate highlights.
+      -- Instead of true it can also be a list of languages
+      additional_vim_regex_highlighting = true,
+    },
 }
 
-local vim = vim
-local opt = vim.opt
-
-opt.foldmethod = "indent"
-opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 local parser_config = require'nvim-treesitter.parsers'.get_parser_configs()
 parser_config.gotmpl = {
@@ -116,14 +86,22 @@ parser_config.gotmpl = {
 vim.api.nvim_command([[colorscheme gruvbox]])
 
 
+require('telescope').setup{
+  defaults = {
+    livegrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      '--ignore-vcs',
+      '-u' -- thats the new thing
+    },
+  }
+}
+-- parentPartRelationships
 
-
-
-
-
--- vim.api.nvim_command([[let mapleader = ","]])
--- vim.api.nvim_command([[nnoremap <SPACE> <Nop>]])
-
-
--- vim.api.nvim_command([[nnoremap <C-p> Telescope find_files<cr>]])
+require'lspconfig'.ember.setup{}
 
