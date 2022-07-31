@@ -34,6 +34,9 @@ end)
 -- this breaks editing of files opened in read-only mode 
 
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI <buffer> silent write]])
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.rb silent write]])
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.hbs silent write]])
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.lua silent write]])
 
 require('set')
 require('binds')
@@ -60,11 +63,12 @@ require('nvim_comment').setup({
 
 require('nvim-treesitter.configs').setup {
     ensure_installed = {
-	    "c",
-	    "lua",
-	    "javascript",
-	    "go",
-			"glimmer"
+      "c",
+      "lua",
+      "javascript",
+      "go",
+      "glimmer",
+      "ruby"
     },
 
     indent = {

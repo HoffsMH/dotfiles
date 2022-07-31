@@ -38,8 +38,10 @@ nnoremap("q:", "<Nop>")
 nnoremap("<C-e>", "<Plug>(expand_region_expand)")
 
 -- require'lspconfig'.ember.setup{}
+--
+require'lspconfig'.solargraph.setup{}
 
--- nnoremap("gd", function() vim.lsp.buf.definition() end)
+nnoremap("gd", function() vim.lsp.buf.definition() end)
 
 -- require'lspconfig'.gopls.setup{}
 
