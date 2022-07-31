@@ -69,8 +69,8 @@ local function worker(user_args)
     }
 
     battery_widget = wibox.widget {
-        icon_widget,
         level_widget,
+        icon_widget,
         layout = wibox.layout.fixed.horizontal,
     }
     -- Popup with battery info
