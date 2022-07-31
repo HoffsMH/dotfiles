@@ -89,28 +89,13 @@ end)
 
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock(" %a %b %d, %I:%M %p ")
+mytextclock = wibox.widget.textclock(" %I:%M %p ")
 
 
 -- @DOC_FOR_EACH_SCREEN@
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
-        awful.tag({ "", "", "", "", "", "", "scratch", "mpv", "cap" }, s, awful.layout.layouts[1])
-
-   -- Create a promptbox for each screen
-    s.mypromptbox = awful.widget.prompt()
-
-    -- Create an imagebox widget which will contain an icon indicating which layout we're using.
-    -- We need one layoutbox per screen.
-    s.mylayoutbox = awful.widget.layoutbox {
-        screen  = s,
-        buttons = {
-            awful.button({ }, 1, function () awful.layout.inc( 1) end),
-            awful.button({ }, 3, function () awful.layout.inc(-1) end),
-            awful.button({ }, 4, function () awful.layout.inc(-1) end),
-            awful.button({ }, 5, function () awful.layout.inc( 1) end),
-        }
-    }
+    awful.tag({ "", "", "", "", "", "", "scratch", "mpv", "cap" }, s, awful.layout.layouts[1])
 
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
@@ -147,16 +132,28 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
     -- @DOC_WIBAR@
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({
+			position = "top",
+			screen = s,
+			height = 40,
+			layout = wibox.layout.align.horizontal,
+			shape = function(cr, width, height)
+					gears.shape.rounded_rect(cr, width, height, RADIUS)
+			end,
+			margins = {
+					top   = 14,
+					right = 14,
+					left = 14
+			},
+		})
 
     -- @DOC_SETUP_WIDGETS@
     -- Add widgets to the wibox
-    s.mywibox.widget = {
+     s.mywibox.widget = {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
-            s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
@@ -164,7 +161,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
             wibox.widget.systray(),
             battery_widget(),
             mytextclock,
-            s.mylayoutbox,
         },
     }
 end)
