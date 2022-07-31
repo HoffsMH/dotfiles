@@ -18,9 +18,22 @@ require('packer').startup(function(use)
   use 'mbbill/undotree'
   use 'ThePrimeagen/harpoon'
   use 'neovim/nvim-lspconfig'
-	use 'voldikss/vim-floaterm'
-	use 'ptzz/lf.vim'
+  use 'voldikss/vim-floaterm'
+  use 'ptzz/lf.vim'
 end)
+
+-- Thumb up for elegance and simplicity! Worked like a breeze! [One needs to put this in his _vimrc.] – 
+-- llinfeng
+--  Aug 22, 2016 at 19:12
+-- This doesn't literally solve the problem posed, but it seems a really good substitute. Can this be marked as the solution? – 
+-- philo vivero
+--  Sep 28, 2019 at 2:07
+-- autocmd TextChanged,TextChangedI * silent write works for any buffer. – 
+-- ayorgo
+--  Jun 22, 2020 at 21:45
+-- this breaks editing of files opened in read-only mode 
+
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI <buffer> silent write]])
 
 require('set')
 require('binds')
