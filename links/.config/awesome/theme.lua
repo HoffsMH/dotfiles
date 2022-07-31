@@ -16,7 +16,7 @@ theme.font          = "IBM Plex Sans Cond SmBld 9"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#689d69"
-theme.bg_urgent     = "#ff0000"
+theme.bg_urgent     = "#d79920"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 

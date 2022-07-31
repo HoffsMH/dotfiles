@@ -90,6 +90,7 @@ end)
 
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock(" %I:%M %p ")
+mytextclock.forced_width = 90
 
 
 -- @DOC_FOR_EACH_SCREEN@
@@ -138,7 +139,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 			height = 40,
 			layout = wibox.layout.align.horizontal,
 			shape = function(cr, width, height)
-					gears.shape.rounded_rect(cr, width, height, RADIUS)
+					gears.shape.rounded_rect(cr, width, height, 10)
 			end,
 			margins = {
 					top   = 14,
@@ -159,7 +160,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             wibox.widget.systray(),
-            battery_widget(),
+            battery_widget({ show_current_level = true, font = "IBM Plex Sans Cond SmBld 7" }),
             mytextclock,
         },
     }
