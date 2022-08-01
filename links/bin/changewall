@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cp "$@" "$HOME/personal/dotfiles/links/.wall.jpg"
-xwallpaper --focus ~/.wall.jpg
+xwallpaper --zoom ~/.wall.jpg
