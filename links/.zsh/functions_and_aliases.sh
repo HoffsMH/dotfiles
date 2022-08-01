@@ -184,9 +184,6 @@ alias be="bundle exec"
 alias gob="go build"
 alias got="go test -v"
 
-# takes large amount of text wraps it at 80 characters and puts it back into register
-alias wrap80="xclip -o | fold -w 80 -s | xclip -selection clipboard"
-
 export ytgo_template_location="$HOME/personal/dotfiles/samples/bin/ytgo"
 export ytgo_location="$HOME/bin/ytgo"
 
