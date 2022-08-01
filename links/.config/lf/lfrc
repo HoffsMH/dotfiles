@@ -11,6 +11,7 @@ set icons
 set shell zsh
 
 map L playfolder
+map <c-l> fzffolder
 map D delete
 
 # cmds/functions
@@ -21,7 +22,7 @@ cmd open ${{
   image/x-xcf) setsid -f gimp "$f" >/dev/null 2>&1 ;;
   image/svg+xml) display -- "$f" ;;
   image/*) rotdir "$f" | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" | sxiv -aio 2>/dev/null | lf-select ;;
-  audio/*) play "$f" ;;
+  audio/*) echo "$fx" | play ;;
   video/*) play "$f" ;;
   application/pdf|application/vnd*|application/epub*) setsid -f zathura "$f" >/dev/null 2>&1 ;;
         *) for f in "$fx"; do setsid -f $OPENER "$f" >/dev/null 2>&1; done;;
@@ -34,17 +35,17 @@ map <enter> shell
 
 
 cmd playfolder ${{
-  IFS=$'\n' local lines=($(echo $fs))
-  playlist=""
-
-  for i in $lines
-  do
-    playlist+="\"${i}\" "
-    enq $i
-  done
+  echo "$fx" | play
 
   #play $playlist
 }}
+
+cmd fzffolder ${{
+  fzf | play
+
+  #play $playlist
+}}
+
 
 
 cmd setbg "$1"
@@ -57,7 +58,7 @@ cmd zoxide_dir ${{
       cmd="select"
    fi
  lf -remote "send $id $cmd \"$res\""
- }}
+}}
 
 map go :zoxide_dir
 
