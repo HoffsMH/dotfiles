@@ -20,7 +20,30 @@ require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'voldikss/vim-floaterm'
   use 'ptzz/lf.vim'
+  use {
+    'tanvirtin/vgit.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
 end)
+
+require('vgit').setup({
+  settings = {
+    live_blame = {
+      enabled = false
+    },
+
+    authorship_code_lens = {
+      enabled = false,
+    },
+  }
+})
+
+-- vgit
+vim.o.updatetime = 300
+vim.o.incsearch = false
+vim.wo.signcolumn = 'yes'
 
 -- Thumb up for elegance and simplicity! Worked like a breeze! [One needs to put this in his _vimrc.] – 
 -- llinfeng
@@ -37,6 +60,7 @@ vim.api.nvim_command([[autocmd TextChanged,TextChangedI <buffer> silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.rb silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.hbs silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.lua silent write]])
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.js silent write]])
 
 require('set')
 require('binds')
@@ -115,6 +139,20 @@ require('telescope').setup{
       '--column',
       '--smart-case',
       '--ignore-vcs',
+      '--hidden',
+      '-u' -- thats the new thing
+    },
+
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      '--ignore-vcs',
+      '--hidden',
       '-u' -- thats the new thing
     },
   }
