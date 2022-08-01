@@ -14,16 +14,16 @@ local theme = {}
 
 theme.font          = "IBM Plex Sans Cond SmBld 9"
 
-theme.bg_normal     = "#222222"
+theme.bg_normal     = "#272727"
 theme.bg_focus      = "#689d69"
 theme.bg_urgent     = "#d79920"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = "#a89983"
+theme.fg_focus      = "#272727"
+theme.fg_urgent     = "#272727"
+theme.fg_minimize   = "#a89983"
 
 theme.useless_gap         = dpi(20)
 theme.border_width        = dpi(3)
