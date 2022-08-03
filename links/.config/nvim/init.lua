@@ -146,9 +146,8 @@ require('telescope').setup{
       '--line-number',
       '--column',
       '--smart-case',
-      '--ignore-vcs',
       '--hidden',
-      '-u' -- thats the new thing
+      '--ignore-vcs',
     },
 
     vimgrep_arguments = {
@@ -159,17 +158,16 @@ require('telescope').setup{
       '--line-number',
       '--column',
       '--smart-case',
-      '--ignore-vcs',
       '--hidden',
-      '-u' -- thats the new thing
+      '--ignore-vcs',
     },
   },
 
-  extensions = {
-    live_grep_args = {
-      auto_quoting = true, -- enable/disable auto-quoting
-    }
-  }
+  -- extensions = {
+  --   live_grep_args = {
+  --     auto_quoting = true, -- enable/disable auto-quoting
+  --   }
+  -- }
 }
 
 

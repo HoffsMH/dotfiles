@@ -101,6 +101,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
     -- Create a taglist widget
     s.mytaglist = awful.widget.taglist {
         screen  = s,
+        disable_icon = true,
+
         filter  = function (t)
             return not (t.name == "scratch") and not (t.name == "mpv") and not (t.name == "cap")
         end,
@@ -159,7 +161,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            wibox.widget.systray(),
+            -- wibox.widget.systray(),
             battery_widget({ show_current_level = true, font = "IBM Plex Sans Cond SmBld 7" }),
             mytextclock,
         },
