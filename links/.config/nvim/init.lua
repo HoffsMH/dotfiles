@@ -12,7 +12,14 @@ require('packer').startup(function(use)
   use { 'terryma/vim-expand-region', as = 'expand_region' }
   use 'andymass/vim-matchup'
   use 'rstacruz/vim-closer'
-  use 'nvim-telescope/telescope.nvim'
+  use { 'nvim-telescope/telescope.nvim',
+    requires = {
+      { "nvim-telescope/telescope-live-grep-args.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("live_grep_args")
+    end
+  }
   use 'kyazdani42/nvim-web-devicons'
   use 'terrortylor/nvim-comment'
   use 'mbbill/undotree'
@@ -61,6 +68,7 @@ vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.rb silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.hbs silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.lua silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.js silent write]])
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.yml silent write]])
 
 require('set')
 require('binds')
@@ -155,6 +163,12 @@ require('telescope').setup{
       '--hidden',
       '-u' -- thats the new thing
     },
+  },
+
+  extensions = {
+    live_grep_args = {
+      auto_quoting = true, -- enable/disable auto-quoting
+    }
   }
 }
 
