@@ -12,11 +12,27 @@ echo "###############################################"
 
 installs=(
     "age" # simple encryption
+    "clamav" # anti-virus
     "net-tools" # for netstat
     "python-crcmod" # used to download stuff fast
     "xorg-xinput" # adjusting touchpad settings
     "samba"
     "manjaro-settings-samba"
+    "cronie" # cront implementation that includes anacron
+    "zstd"
+    "iftop"
+    "mednafen" # snes
+
+    "sysstat" # pidstat cifsiostat iostat
+    "usbutils" # lsusb bus and device id
+
+    "nmap" # gimme da open ports
+
+    "soulseekqt" # shhe
+    "cups" # : (, stands for "Cant Usually Print Stuff"
+    "cups-pdf" #
+
+    "brlaser" # vs "brother-hll2300d" try both if needed
     "acpi" # battery monitor
     "acpid"
     "p7zip" # 7z
