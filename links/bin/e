@@ -1,3 +1,12 @@
 #!/bin/zsh
 
-$EDITOR $@
+directoryctx=$(basename $(pwd))
+socketfile=$(echo "/tmp/nvimsocket-$directoryctx")
+
+echo "looking for socketfile $socketfile"
+if [ -S "$socketfile" ]; then
+  echo "found socket file"
+  nvr --remote --servername "$socketfile" $@
+else
+  /usr/bin/nvim --listen /tmp/nvimsocket-"$directoryctx"  $@
+fi
