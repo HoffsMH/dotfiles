@@ -1,4 +1,4 @@
-local nnoremap = require('keymap').nnoremap
+local nnoremap = require('hoffs.keymap').nnoremap
 
 vim.g.mapleader = " "
 
@@ -20,17 +20,15 @@ nnoremap("<leader>s", function() require("harpoon.ui").nav_file(2) end, silent)
 nnoremap("<leader>d", function() require("harpoon.ui").nav_file(3) end, silent)
 nnoremap("<leader>f", function() require("harpoon.ui").nav_file(4) end, silent)
 
-
 -- LF
 nnoremap("<leader>jf", "<cmd>Lf<cr>")
 
 -- neogit
--- nnoremap("<leader>m", "<cmd>Neogit<cr>")
-nnoremap("<leader>m", function() require('neogit').open({ }) end, silent)
+nnoremap("<leader>m", "<cmd>! trun lzg<cr>")
+-- nnoremap("<leader>m", function() require('neogit').open({ }) end, silent)
 
 
-nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
-nnoremap("<C-p>", "<cmd>Telescope find_files<cr>")
+nnoremap("<C-p>", "<cmd>Telescope find_files hidden=true<cr>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
 nnoremap("<leader>fg", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 nnoremap("<leader>fb", "<cmd>Telescope buffers<cr>")
