@@ -27,48 +27,36 @@ require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'voldikss/vim-floaterm'
   use 'ptzz/lf.vim'
-  use {
-    'tanvirtin/vgit.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
+
+
+    use { 
+      'TimUntersberger/neogit', 
+      requires = { 
+        'nvim-lua/plenary.nvim',
+        'sindrets/diffview.nvim' 
+      }
     }
-  }
 end)
-
-require('vgit').setup({
-  settings = {
-    live_blame = {
-      enabled = false
-    },
-
-    authorship_code_lens = {
-      enabled = false,
-    },
-  }
-})
 
 -- vgit
 vim.o.updatetime = 300
 vim.o.incsearch = false
 vim.wo.signcolumn = 'yes'
 
--- Thumb up for elegance and simplicity! Worked like a breeze! [One needs to put this in his _vimrc.] – 
--- llinfeng
---  Aug 22, 2016 at 19:12
--- This doesn't literally solve the problem posed, but it seems a really good substitute. Can this be marked as the solution? – 
--- philo vivero
---  Sep 28, 2019 at 2:07
--- autocmd TextChanged,TextChangedI * silent write works for any buffer. – 
--- ayorgo
---  Jun 22, 2020 at 21:45
--- this breaks editing of files opened in read-only mode 
+require("neogit").setup {
+  integrations = {
+      diffview = true
+    },
+}
 
+-- one day I will figure out how to just make this work on all files everywhere
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI <buffer> silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.rb silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.hbs silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.lua silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.js silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.yml silent write]])
+vim.api.nvim_command([[au FocusGained * :checktime]])
 
 require('set')
 require('binds')
