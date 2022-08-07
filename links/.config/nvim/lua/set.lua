@@ -10,6 +10,7 @@ opt.expandtab = true
 opt.shiftwidth = 2
 opt.hlsearch = false
 opt.incsearch = true
+opt.autoread = true
 
 opt.smartindent = true
 
