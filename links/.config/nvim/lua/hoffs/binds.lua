@@ -24,7 +24,7 @@ nnoremap("<leader>f", function() require("harpoon.ui").nav_file(4) end, silent)
 nnoremap("<leader>jf", "<cmd>Lf<cr>")
 
 -- neogit
-nnoremap("<leader>m", "<cmd>! trun lzg<cr>")
+-- nnoremap("<leader>m", "<cmd>! trun lzg<cr>")
 -- nnoremap("<leader>m", function() require('neogit').open({ }) end, silent)
 
 
@@ -42,12 +42,12 @@ nnoremap("q:", "<Nop>")
 -- make this keep expandign
 nnoremap("<C-e>", "<Plug>(expand_region_expand)")
 
--- require'lspconfig'.ember.setup{}
 --
-require'lspconfig'.solargraph.setup{}
 
 nnoremap("gd", function() vim.lsp.buf.definition() end)
 
+-- require'lspconfig'.ember.setup{}
+require'lspconfig'.solargraph.setup{}
 -- require'lspconfig'.gopls.setup{}
 
 -- require'lspconfig'.tsserver.setup{}

@@ -1,48 +1,8 @@
--- to install packer
--- git clone --depth 1 https://github.com/wbthomason/packer.nvim\
---  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+require("hoffs.set")
+require("hoffs.packer")
+require('hoffs.binds')
 
-vim.api.nvim_command('packadd packer.nvim')
-
-require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'ellisonleao/gruvbox.nvim', as = 'gruvbox' }
-  use { 'terryma/vim-expand-region', as = 'expand_region' }
-  use 'andymass/vim-matchup'
-  use 'rstacruz/vim-closer'
-  use { 'nvim-telescope/telescope.nvim',
-    requires = {
-      { "nvim-telescope/telescope-live-grep-args.nvim" },
-    },
-    config = function()
-      require("telescope").load_extension("live_grep_args")
-    end
-  }
-  use 'kyazdani42/nvim-web-devicons'
-  use 'terrortylor/nvim-comment'
-  use 'mbbill/undotree'
-  use 'ThePrimeagen/harpoon'
-  use 'neovim/nvim-lspconfig'
-  use 'voldikss/vim-floaterm'
-  use 'ptzz/lf.vim'
-
-
-
-    use { 
-      'TimUntersberger/neogit', 
-      requires = { 
-        'nvim-lua/plenary.nvim',
-        'sindrets/diffview.nvim' 
-      }
-    }
-end)
-
--- vgit
-vim.o.updatetime = 300
-vim.o.incsearch = false
-vim.wo.signcolumn = 'yes'
+vim.api.nvim_command([[colorscheme gruvbox]])
 
 
 -- one day I will figure out how to just make this work on all files everywhere
@@ -52,10 +12,8 @@ vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.hbs silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.lua silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.js silent write]])
 vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.yml silent write]])
-vim.api.nvim_command([[au FocusGained * :checktime]])
+vim.api.nvim_command([[autocmd TextChanged,TextChangedI *.scss silent write]])
 
-require('hoffs.set')
-require('hoffs.binds')
 
 require('nvim_comment').setup({
 	-- Linters prefer comment and line to have a space in between markers
@@ -104,7 +62,6 @@ require('nvim-treesitter.configs').setup {
     },
 }
 
-vim.api.nvim_command([[colorscheme gruvbox]])
 
 
 require('telescope').setup{
@@ -120,25 +77,8 @@ require('telescope').setup{
       '--hidden',
       '--ignore-vcs'
     },
-
-    livegrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-      '--hidden',
-      '--ignore-vcs'
-    },
   },
-
-  -- extensions = {
-  --   live_grep_args = {
-  --     auto_quoting = true, -- enable/disable auto-quoting
-  --   }
-  -- }
 }
+
 
 
