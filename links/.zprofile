@@ -1,5 +1,5 @@
-export EDITOR="/usr/bin/nvim"
-export WAIT_EDITOR="/usr/bin/subl -n -w"
+export EDITOR="$HOME/bin/e"
+export WAIT_EDITOR="$HOME/bin/e"
 export BROWSER="brave"
 export READER="zathura"
 export XDG_CONFIG_HOME="$HOME/.config"
