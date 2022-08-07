@@ -22,6 +22,7 @@ installs=(
     "zstd"
     "iftop"
     "mednafen" # snes
+    "neovim-remote"
 
     "sysstat" # pidstat cifsiostat iostat
     "usbutils" # lsusb bus and device id
