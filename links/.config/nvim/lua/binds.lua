@@ -24,6 +24,11 @@ nnoremap("<leader>f", function() require("harpoon.ui").nav_file(4) end, silent)
 -- LF
 nnoremap("<leader>jf", "<cmd>Lf<cr>")
 
+-- neogit
+-- nnoremap("<leader>m", "<cmd>Neogit<cr>")
+nnoremap("<leader>m", function() require('neogit').open({ }) end, silent)
+
+
 nnoremap("<leader>ff", "<cmd>Telescope find_files<cr>")
 nnoremap("<C-p>", "<cmd>Telescope find_files<cr>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<cr>")
