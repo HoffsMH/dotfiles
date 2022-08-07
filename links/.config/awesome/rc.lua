@@ -546,19 +546,19 @@ ruled.client.connect_signal("request::rules", function()
 
     ruled.client.append_rule {
         rule       = { class = "Subl"     },
-        properties = { screen = screen.primary or 1,
+        properties = { screen = screen.primary,
         tag = "" }
     }
 
     ruled.client.append_rule {
         rule       = { class = "Google-chrome"     },
-        properties = { screen = screen.primary or 1, tag = "" }
+        properties = { screen = screen.primary, tag = "" }
     }
 
 -- awful.tag({ "", "", "", "", "", "", "scratch" }, s, awful.layout.layouts[1])
     ruled.client.append_rule {
         rule       = { class = "Brave-browser"     },
-        properties = { screen = screen.primary or 1, tag = "" }
+        properties = { screen = screen.primary, tag = "" }
     }
 
 
