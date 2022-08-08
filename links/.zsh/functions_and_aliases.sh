@@ -92,15 +92,13 @@ alias gco="git checkout"
 # get branch name
 alias gbn="git rev-parse --abbrev-ref HEAD"
 
-alias gopen="git open origin &"
 alias gcf="git clean -f -d"
 
 # finds text across all commits, be careful when searching to not use common terms
 # useful for searching for code that you knew existed at one point
 gsearch() { git log -S$1 -p }
+
 gpoc() { git pull origin $(gbn) --rebase }
-gpuc() { git push origin $(gbn) $1 }
-gpucf() { gpoc && gpuc -f }
 
 alias gcopybranchname="gbn | tr -d '\r\n' |tee /dev/stderr | xclip"
 # if working in a repository where the convention is to name prs after branches
@@ -108,9 +106,12 @@ alias gcopyprname="gbn | sed -e 's/-/ /g' | tr -d '\r\n' |tee /dev/stderr | xcli
 
 alias gpu="git push origin"
 alias gd="git diff"
+
+# see diff from n commits ago
 gdn() {
  git diff "HEAD~$1"
 }
+
 alias ga="git add"
 alias gs="git status"
 alias gr="git reset"
@@ -131,10 +132,6 @@ alias gr1="git reset HEAD~1"
 
 # pretty git log
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-
-
-# usage: $ gd master | difi
-alias difi='diff2html -i stdin -s side'
 
 # diffs your version of the current branch vs the internet's version
 # useful with difi to see updated branch on origin
@@ -166,8 +163,6 @@ alias pyenvinstall="CPPFLAGS='-I/usr/local/opt/zlib/include' pyenv install -v"
 
 # JS/Ember
 alias ya='yarn'
-alias "gob"="go build"
-alias "got"="go test"
 
 # elixir
 alias miex="iex -S mix"
@@ -218,14 +213,6 @@ fb() {
 ######################################################
 # disks
 ######################################################
-# unmounts my camera and external HD and anything else I can think of
-alias utsp="sudo umount /mnt/tsp* |
-  sudo umount /mnt/Untitled* |
-  sudo umount /mnt/PMHOME |
-  sudo umount /mnt/pi_* |
-  sudo umount /mnt/phone_* |
-  sudo umount /mnt/camera_* |
-  sudo umount /mnt/black_*"
 
 alias rm='echo "This is not the command you are looking for."; false'
 alias trm='tl rm'
