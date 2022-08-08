@@ -24,15 +24,22 @@ resolve_relative_path() {
     fi
 }
 
-while read i
-do
-  case $i in
-    /*) echo "$i" >> ~/.pl ;;
-    *) echo "$(resolve_relative_path "$i")" >> ~/.pl ;;
-  esac
-  # echo $i
-  # echo $i >> ~/.pl
-done;
+echo "any args?"
+if [ "$#" -gt 0 ]; then
+    echo "got an arg"
+    echo $1 >> ~/.pl
+  else
+    while read i
+    do
+      case $i in
+        /*) echo "$i" >> ~/.pl ;;
+        *) echo "$(resolve_relative_path "$i")" >> ~/.pl ;;
+      esac
+      # echo $i
+      # echo $i >> ~/.pl
+    done;
+fi
+
 
 mpv --playlist="$HOME/.pl"
 
