@@ -2,7 +2,8 @@
 # https://unix.stackexchange.com/questions/9496/looping-through-files-with-spaces-in-the-names
 IFS=$'\n'
 
-files=$(find $HOME/personal/dotfiles/links -name '*')
+porcelaindir="$HOME/personal/dotfiles/links"
+files=$(find $porcelaindir -name '*')
 h="$HOME"
 
 for i in $files
@@ -11,18 +12,27 @@ do
   then
     dirn=$(dirname $i)
     basen=$(basename $i)
+    newdirn=${dirn/$porcelaindir}
 
-    newdirn=${dirn/$HOME\/personal\/dotfiles\/links/}
+    newlink="$h$newdirn/$basen"
 
-    if [ ! -f "$h$newdirn/$basen" ]
+    if [ ! -f "$newlink" ]
     then
 
-      echo "$h$newdirn/$basen"
+      echo "$newlink"
+
       mkdir -p "$h$newdirn"
 
+      # subtract read and write from
+      # group and others
       chmod go-rwx "$i"
+
+      # add read and write to
+      # owner
       chmod u+rw "$i"
-      ln -sf "$i" "$h$newdirn/$basen"
+
+      # link real file to new link location
+      ln -sf "$i" "$newlink"
     fi
   fi
 done
