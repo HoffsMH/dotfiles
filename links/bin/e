@@ -6,7 +6,11 @@ socketfile=$(echo "/tmp/nvimsocket-$directoryctx")
 echo "looking for socketfile $socketfile"
 if [ -S "$socketfile" ]; then
   echo "found socket file"
-  nvr --remote --servername "$socketfile" $@
+  if [ $1 = "."  ]; then
+    echo "already open"
+  else
+    nvr --remote --servername "$socketfile" $@
+  fi
 else
   /usr/bin/nvim --listen /tmp/nvimsocket-"$directoryctx"  $@
 fi
