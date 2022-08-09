@@ -7,7 +7,7 @@ echo "###############################################"
 
 extras=(
   # "bfg"
-  "zoom"
+  # "zoom"
   # "figlet"
   # "ruby-build" # may need sudo mkdir -p "/usr/local/opt/zlib/lib"
   # "neofetch"
@@ -20,9 +20,11 @@ extras=(
   # "graphviz"
   # "filezilla"
   # "nmap"
-  "balena-etcher"
+  # "balena-etcher"
   # "vagrant"
   # "zenm"
+  # "pcsx2"
+  # "mednafen"
 )
 
 echo $extras
