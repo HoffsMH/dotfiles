@@ -19,10 +19,19 @@ installs=(
     "samba"
     "manjaro-settings-samba"
     "cronie" # cront implementation that includes anacron
-    "zstd"
+    "zstd" # facebooks compression
     "iftop"
     "mednafen" # snes
     "neovim-remote"
+    "libinput"
+
+    "yubikey-manager"
+    "yubikey-manager-qt"
+    "yubioath-desktop"
+
+    "manjaro-arm-installer" # also bin
+
+    "manjaro-arm-tools"
 
     "sysstat" # pidstat cifsiostat iostat
     "usbutils" # lsusb bus and device id
@@ -44,6 +53,8 @@ installs=(
     "arandr" # arranging screens and saving screen configs
     "arc-icon-theme" # needed for battery widget in awesome wm
     "awesome-git" # wm
+
+    "git-lfs"
     "axel" # downloader
     "bat" # rust cat
     "bitwarden-bin" # legacy -- will one day get rid of this
@@ -224,12 +235,13 @@ systemctl start --user dunst.service || echo "starting dunst failed"
 sudo systemctl enable bluetooth.service || echo "dunst service not found"
 sudo systemctl start bluetooth.service || echo "starting dunst failed"
 
+sudo systemctl enable "pcscd.service"
+sudo systemctl start "pcscd.service"
+
 "$HOME/personal/dotfiles/bootstrap/install/asdf.sh"
 "$HOME/personal/dotfiles/bootstrap/install/dmenu.sh"
-"$HOME/personal/dotfiles/bootstrap/install/dwm.sh"
 "$HOME/personal/dotfiles/bootstrap/install/tl.sh"
 "$HOME/personal/dotfiles/bootstrap/install/docker.sh"
 "$HOME/personal/dotfiles/bootstrap/install/yt-dl.sh"
-"$HOME/personal/dotfiles/bootstrap/install/yubikey-software.sh"
 "$HOME/personal/dotfiles/bootstrap/install/timecat.sh"
 "$HOME/personal/dotfiles/bootstrap/install/paru.sh"
